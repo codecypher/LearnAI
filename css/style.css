@@ -1,0 +1,14 @@
+mark {
+    color: red;
+}
+
+.image-preview {
+    display: block;
+    margin: 4em auto;
+    width: 75%;
+    height: auto;
+}
+
+.caption  {
+    margin: 2em auto;
+}
