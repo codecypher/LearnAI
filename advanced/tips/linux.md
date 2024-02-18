@@ -154,7 +154,6 @@ You can now run your first Tmux command.
   Ctrl+b ?
 ```
 
-
 ### Creating Named Tmux Sessions
 
 By default, Tmux sessions are named numerically. Named sessions are useful when you run multiple Tmux sessions. 
@@ -167,11 +166,6 @@ By default, Tmux sessions are named numerically. Named sessions are useful when 
 
 It is always a good idea to choose a descriptive session name.
 
-
-sshfs jeff@206.189.229.7:/home/jeff /Users/jholmes/mnt/codecypher
-sshfs jeff@codecypher:/home/jeff ~/mnt/codecypher -oauto_cache,reconnect,defer_permissions,negative_vncache,noappledouble,volname=codecypher
-
-
 ### Detach from Tmux Session
 
 Detach from the Tmux session and return to your normal shell: 
@@ -181,7 +175,6 @@ Detach from the Tmux session and return to your normal shell:
 ```
 
 The program running in the Tmux session will continue to run after you detach from the session.
-
 
 ### Reattach to Tmux Session
 
@@ -216,7 +209,6 @@ To attach to a session first, you need to find the name of the session.
 
 When Tmux is started, it reads its configuration parameters from `~/.tmux.conf` if the file is present.
 
-
 ### Resize Panes
 
 The size of each pane can be changed: CTRL+b:
@@ -237,7 +229,6 @@ We can specify a different cell than the one we are currently working in.
 Resize Cell 2 (lower right):
 
 resize-pane –t 2 --R 5 : Moves the boundary line 5 cells to the right.
-
 
 ### tmux Tutorials
 
