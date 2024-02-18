@@ -1,10 +1,23 @@
-LICENSE
+LICENSES
 
-CC BY-SA 4.0
+The content of this project itself is licensed under the Creative Commons Attribution Share Alike 4.0 International (CC-BY-SA-4.0) and any source code contained in content is licensed under the GNU Affero General Public License v3.0 or later (AGPL-3.0-or-later). 
+
+
+CC-BY-SA-4.0
 
 Creative Commons Attribution Share Alike 4.0 International
 
 Similar to CC-BY-4.0 but requires derivatives be distributed under the same or a similar, compatible license.
 
 https://creativecommons.org/licenses/by-sa/4.0/
+
+
+-----
+
+
+AGPL-3.0-or-later
+
+GNU Affero General Public License v3.0 or later
+
+https://spdx.org/licenses/AGPL-3.0-or-later.html
 
