@@ -1,6 +1,6 @@
 # How to Learn AI
 
-[How to Learn AI](https://medium.com/geekculture/how-to-learn-ai-7bb743f0bbdf)
+[How to Learn AI](https://pub.towardsai.net/how-to-learn-ai-1b9814ed3681)
 
 [How to Learn Python for Machine Learning](https://machinelearningmastery.com/how-to-learn-python-for-machine-learning/)
 
@@ -18,20 +18,17 @@ Choosing an ML learning resource is primarliy a matter of personal preference. I
 
 ## Consulting and Freelance
 
-If you ever do consulting or freelance work in the U.S. for $$, you should be aware that there are legal implications and I found [TODO] to be a clear, concise resource on the topic. I am sure there are similar rules and regulations in the EU and elsewhere.
+If you ever do paid consulting or freelance work in the U.S., you should be aware that there are legal implications and I found [TODO] to be a clear, concise resource on the topic. I am sure there are similar rules and regulations in the EU and elsewhere.
 
 
 ## References
 
-[Applied Machine Learning Process](https://machinelearningmastery.com/start-here/#process)
+[1]: [Applied Machine Learning Process](https://machinelearningmastery.com/start-here/#process)
 
-[Understand Machine Learning Algorithms](https://machinelearningmastery.com/start-here/#algorithms)
+[2]: [Understand Machine Learning Algorithms](https://machinelearningmastery.com/start-here/#algorithms)
 
-[Stop Coding Machine Learning Algorithms From Scratch](https://machinelearningmastery.com/dont-implement-machine-learning-algorithms/)
+[3]: [Stop Coding Machine Learning Algorithms From Scratch](https://machinelearningmastery.com/dont-implement-machine-learning-algorithms/)
 
-[5 Mistakes Programmers Make when Starting in Machine Learning](https://machinelearningmastery.com/mistakes-programmers-make-when-starting-in-machine-learning/)
+[4]: [5 Mistakes Programmers Make when Starting in Machine Learning](https://machinelearningmastery.com/mistakes-programmers-make-when-starting-in-machine-learning/)
 
-
-[1] P. Bourque and R. E. Fairley, Guide to the Software Engineering Body of Knowledge, v. 3, IEEE, 2014. 
-
-
+[5]: P. Bourque and R. E. Fairley, Guide to the Software Engineering Body of Knowledge, v. 3, IEEE, 2014. 
