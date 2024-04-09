@@ -242,24 +242,23 @@ The value in the “group1” column is "A", the value in column "A" is 1, etc.
 ```
 
 
-
 ## References
 
-[1] [Cleaning and Preprocessing Text Data by Building NLP Pipeline](https://towardsdatascience.com/cleaning-preprocessing-text-data-by-building-nlp-pipeline-853148add68a)
+[1]: [Cleaning and Preprocessing Text Data by Building NLP Pipeline](https://towardsdatascience.com/cleaning-preprocessing-text-data-by-building-nlp-pipeline-853148add68a)
 
-[2] [If You Work With Textual Data, Learn These Pandas Methods](https://towardsdatascience.com/if-you-work-with-textual-data-learn-these-pandas-methods-3f224122ebaf?gi=21487bb52ed1)
+[2]: [If You Work With Textual Data, Learn These Pandas Methods](https://towardsdatascience.com/if-you-work-with-textual-data-learn-these-pandas-methods-3f224122ebaf?gi=21487bb52ed1)
 
-[3] [Natural Language Processing (NLP): Don’t Reinvent the Wheel](https://towardsdatascience.com/natural-language-processing-nlp-dont-reinvent-the-wheel-8cf3204383dd)
+[3]: [Natural Language Processing (NLP): Don’t Reinvent the Wheel](https://towardsdatascience.com/natural-language-processing-nlp-dont-reinvent-the-wheel-8cf3204383dd)
 
-[4] [Text Augmentation in a few lines of Python Code](https://towardsdatascience.com/text-augmentation-in-few-lines-of-python-code-cdd10cf3cf84)
+[4]: [Text Augmentation in a few lines of Python Code](https://towardsdatascience.com/text-augmentation-in-few-lines-of-python-code-cdd10cf3cf84)
 
-[5] [Data Augmentation for Speech Recognition](https://towardsdatascience.com/data-augmentation-for-speech-recognition-e7c607482e78)
+[5]: [Data Augmentation for Speech Recognition](https://towardsdatascience.com/data-augmentation-for-speech-recognition-e7c607482e78)
 
-[6] [How To Perfectly Clean Your Text Data For NLP](https://heartbeat.comet.ml/how-to-perfectly-clean-your-text-data-for-nlp-29cfae79e243)
+[6]: [How To Perfectly Clean Your Text Data For NLP](https://heartbeat.comet.ml/how-to-perfectly-clean-your-text-data-for-nlp-29cfae79e243)
 
-[7] [Understanding Regular Expression for Natural Language Processing](https://heartbeat.comet.ml/understanding-regular-expression-for-natural-language-processing-ce9c4e272a29)
+[7]: [Understanding Regular Expression for Natural Language Processing](https://heartbeat.comet.ml/understanding-regular-expression-for-natural-language-processing-ce9c4e272a29)
 
-[8] [Two minutes NLP — Python Regular Expressions cheatsheet](https://medium.com/nlplanet/two-minutes-nlp-python-regular-expressions-cheatsheet-d880e95bb468)
+[8]: [Two minutes NLP — Python Regular Expressions cheatsheet](https://medium.com/nlplanet/two-minutes-nlp-python-regular-expressions-cheatsheet-d880e95bb468)
 
 
 [Complete Guideline to Implementation of Basic NLP Techniques with NLTK and spaCy](https://towardsdatascience.com/hands-on-implementation-of-basic-nlp-techniques-nltk-or-spacy-687099e02816)
@@ -272,4 +271,3 @@ The value in the “group1” column is "A", the value in column "A" is 1, etc.
 
 
 [Boost Performance of Text Classification tasks with Easy Data Augmentation](https://towardsdatascience.com/boost-performance-of-text-classification-tasks-with-easy-data-augmentation-1420d45b914a)
-

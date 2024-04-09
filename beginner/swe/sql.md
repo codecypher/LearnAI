@@ -16,7 +16,7 @@ Here are some tips on SQL optimization[1]:
 
 ```sql
 # correct example
-(select * from user where id=1) 
+(select * from user where id=1)
 union all
 (select * from user where id=2);
 ```
@@ -59,7 +59,7 @@ What if you have a batch of data that needs to be inserted after business proces
 We could insert data one by one in a loop.
 
 ```sql
-insert into order(id,code,user_id) 
+insert into order(id,code,user_id)
 values(123,'001',100);
 ```
 
@@ -72,7 +72,7 @@ The correct approach is to provide a method to insert data in batches.
 ```sql
 # correct example
 orderMapper.insertBatch(list);
-# insert into order(id,code,user_id) 
+# insert into order(id,code,user_id)
 # values(123,'001',100),(124,'002',100),(125,'003',101);
 ```
 
@@ -92,10 +92,10 @@ Although this approach has no problem in function, it is very inefficient. It ne
 
 ```sql
 # correct example
-select id, create_date 
- from order 
-where user_id=123 
-order by create_date asc 
+select id, create_date
+ from order
+where user_id=123
+order by create_date asc
 limit 1;
 ```
 
@@ -104,8 +104,8 @@ Use limit 1 to return only the data with the smallest order time of the user.
 When deleting or modifying data, in order to prevent misoperation, resulting in deletion or modification of irrelevant data, the limit can also be added at the end of the SQL statement.
 
 ```sql
-update order 
-set status=0,edit_time=now(3) 
+update order
+set status=0,edit_time=now(3)
 where id>=100 and id<200 limit 100;
 ```
 
@@ -113,7 +113,7 @@ Then, even if the wrong operation (such as the id is wrong) it will not affect t
 
 ### 6. Do not use too many values in the in keyword.
 
-For the batch query interface, we usually use th in keyword to filter out data. 
+For the batch query interface, we usually use th in keyword to filter out data.
 
 Suppose we want to query user information in batches through some specified ids.
 
@@ -140,12 +140,12 @@ Sometimes, we need to query data through a remote interface and synchronize it t
 We could get all the data directly then sync it. But if there is a lot of data, the query performance will be very poor.
 
 ```
-select * from user 
-where id>#{lastId} and create_time >= #{lastCreateTime} 
+select * from user
+where id>#{lastId} and create_time >= #{lastCreateTime}
 limit 100;
 ```
 
-In ascending order of id and time, only one batch of data is synchronized each time and this batch of data has only 100 records. 
+In ascending order of id and time, only one batch of data is synchronized each time and this batch of data has only 100 records.
 
 After each synchronization is completed, save the largest id and time of the 100 pieces of data for use when synchronizing the next batch of data.
 
@@ -154,12 +154,12 @@ This incremental query method can improve the efficiency of a single query.
 
 ### 8. Efficient paging.
 
-When querying data on the list page, we generally paginate the query interface to avoid returning too much data at one time and affecting the performance of the query. 
+When querying data on the list page, we generally paginate the query interface to avoid returning too much data at one time and affecting the performance of the query.
 
 The limit keyword commonly used for paging in MySQL:
 
 ```sql
-select id,name,age 
+select id,name,age
 from user limit 10,20;
 ```
 
@@ -167,7 +167,7 @@ If the amount of data in the table is small, using the limit keyword for paging 
 
 ```sql
 # better
-select id,name,age 
+select id,name,age
 from user where id > 1000000 limit 20;
 ```
 
@@ -176,7 +176,7 @@ First, we find the largest id of the last paging and use the index on the id to 
 We can also use between to optimize pagination.
 
 ```sql
-select id,name,age 
+select id,name,age
 from user where id between 1000000 and 1000020;
 ```
 
@@ -192,7 +192,7 @@ select * from order
 where user_id in (select id from user where status=1)
 ```
 
-Sub-query statements can be implemented using rhe in the keyword and the conditions of one query statement fall within the query results of another select statement. The program runs on the nested innermost statement first and then runs the outer statement. 
+Sub-query statements can be implemented using rhe in the keyword and the conditions of one query statement fall within the query results of another select statement. The program runs on the nested innermost statement first and then runs the outer statement.
 
 The advantage of a subquery statement is that it is simple and structured if the number of tables involved is small.
 
@@ -216,8 +216,8 @@ So we should try to control the number of joined tables.
 
 ```sql
 # correct example
-select a.name,b.name.c.name,a.d_name 
-from a 
+select a.name,b.name.c.name,a.d_name
+from a
 inner join b on a.id = b.a_id
 inner join c on c.b_id = b.id
 ```
@@ -237,17 +237,17 @@ The most commonly used joins are `left join` and `inner join`.
 - inner join: finds the data of the intersection of two tables.
 
 ```sql
-select o.id,o.code,u.name 
-from order o 
+select o.id,o.code,u.name
+from order o
 inner join user u on o.user_id = u.id
 where u.status=1;
 ```
 
-If two tables are related using inner join, MySQL will automatically select the small table in the two tables to drive the large table, so there will not be too many performance problems. 
+If two tables are related using inner join, MySQL will automatically select the small table in the two tables to drive the large table, so there will not be too many performance problems.
 
 ```sql
-select o.id,o.code,u.name 
-from order o 
+select o.id,o.code,u.name
+from order o
 left join user u on o.user_id = u.id
 where u.status=1;
 ```
@@ -277,14 +277,14 @@ If we can build a joint index, do not build a single index and we can delete a u
 char represents a fixed string type and the storage space of the field of this type is fixed which will waste storage space.
 
 ```sql
-alter table order 
+alter table order
 add column code char(20) NOT NULL;
 ```
 
 varchar represents a variable-length string type, and the field storage space of this type will be adjusted according to the length of the actual data, without wasting storage space.
 
 ```sql
-alter table order 
+alter table order
 add column code varchar(20) NOT NULL;
 ```
 
@@ -355,7 +355,7 @@ Sometimes MySQL chooses the wrong index, but we can use force index to force the
 
 Here are two solutions to the problem:
 
-1. Join the authors in the SQL query. 
+1. Join the authors in the SQL query.
 
 2. Get the meals and then join the drinks with your programming language
 
@@ -365,16 +365,14 @@ When to use one solution or the other?
 
 In this app, every meal includes just one drink, but what if a meal includes more than one drink?
 
-In that case, the first solution cannot help us since the SQL query is going to repeat the record for every drink in a meal. 
+In that case, the first solution cannot help us since the SQL query is going to repeat the record for every drink in a meal.
 
-Thus, we should use the second solution when we want to first query the meals and then get the drinks to join them to the corresponding meals. 
+Thus, we should use the second solution when we want to first query the meals and then get the drinks to join them to the corresponding meals.
 
 
 
 ## References
 
-[1] [15 Best Practices for SQL Optimization](https://betterprogramming.pub/15-best-practices-for-sql-optimization-956759626321)
+[1]: [15 Best Practices for SQL Optimization](https://betterprogramming.pub/15-best-practices-for-sql-optimization-956759626321)
 
-[How the N+1 Query Can Burn Your Database](https://betterprogramming.pub/how-the-n-1-query-can-burn-your-database-3841c93987e5)
-
-
+[2]: [How the N+1 Query Can Burn Your Database](https://betterprogramming.pub/how-the-n-1-query-can-burn-your-database-3841c93987e5)

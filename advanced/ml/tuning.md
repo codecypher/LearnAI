@@ -241,18 +241,18 @@ Tensorflow provides Model Optimization Toolkit for pruning and other post-traini
 
 ## References
 
-[1] [Hyperparameter Tuning Methods](https://towardsdatascience.com/bayesian-optimization-for-hyperparameter-tuning-how-and-why-655b0ee0b399)
+[1]: [Hyperparameter Tuning Methods](https://towardsdatascience.com/bayesian-optimization-for-hyperparameter-tuning-how-and-why-655b0ee0b399)
 
-[2] [A Practical Introduction to Grid Search, Random Search, and Bayes Search](https://towardsdatascience.com/a-practical-introduction-to-grid-search-random-search-and-bayes-search-d5580b1d941d)
+[2]: [A Practical Introduction to Grid Search, Random Search, and Bayes Search](https://towardsdatascience.com/a-practical-introduction-to-grid-search-random-search-and-bayes-search-d5580b1d941d)
 
 
-[3] [How to Grid Search Hyperparameters for Deep Learning Models in Python With Keras](https://machinelearningmastery.com/grid-search-hyperparameters-deep-learning-models-python-keras/)
+[3]: [How to Grid Search Hyperparameters for Deep Learning Models in Python With Keras](https://machinelearningmastery.com/grid-search-hyperparameters-deep-learning-models-python-keras/)
 
-[4] [Hyperparameter Tuning with KerasTuner and TensorFlow](https://towardsdatascience.com/hyperparameter-tuning-with-kerastuner-and-tensorflow-c4a4d690b31a)
+[4]: [Hyperparameter Tuning with KerasTuner and TensorFlow](https://towardsdatascience.com/hyperparameter-tuning-with-kerastuner-and-tensorflow-c4a4d690b31a)
 
-[5] [Introduction to the Keras Tuner](https://www.tensorflow.org/tutorials/keras/keras_tuner)
+[5]: [Introduction to the Keras Tuner](https://www.tensorflow.org/tutorials/keras/keras_tuner)
 
-[6] [How to Grid Search Deep Learning Models for Time Series Forecasting](https://machinelearningmastery.com/how-to-grid-search-deep-learning-models-for-time-series-forecasting/)
+[6]: [How to Grid Search Deep Learning Models for Time Series Forecasting](https://machinelearningmastery.com/how-to-grid-search-deep-learning-models-for-time-series-forecasting/)
 
 
 [5 Effective Ways to Improve the Accuracy of Your Machine Learning Models](https://towardsdatascience.com/5-effective-ways-to-improve-the-accuracy-of-your-machine-learning-models-f1ea1f2b5d65)
@@ -265,6 +265,6 @@ Tensorflow provides Model Optimization Toolkit for pruning and other post-traini
 
 [How to Speed Up XGBoost Model Training](https://towardsdatascience.com/how-to-speed-up-xgboost-model-training-fcf4dc5dbe5f?source=rss----7f60cf5620c9---4)
 
+-------
 
-[^sklearn_hypertuning]: https://machinelearningmastery.com/scikit-optimize-for-hyperparameter-tuning-in-machine-learning/ "Scikit-Optimize for Hyperparameter Tuning in Machine Learning"
-
+[^sklearn_hypertuning]: <https://machinelearningmastery.com/scikit-optimize-for-hyperparameter-tuning-in-machine-learning/> "Scikit-Optimize for Hyperparameter Tuning in Machine Learning"

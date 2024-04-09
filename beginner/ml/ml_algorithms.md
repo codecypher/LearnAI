@@ -521,29 +521,27 @@ The main difference between combining models and multimodal learning is that com
 - Hierarchical Clustering
 
 
-
-
 ## References
 
-[1] [Understand Machine Learning Algorithms](https://machinelearningmastery.com/start-here/#algorithms)
+[1]: [Understand Machine Learning Algorithms](https://machinelearningmastery.com/start-here/#algorithms)
 
-[2] [A Tour of Machine Learning Algorithms](https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/)
+[2]: [A Tour of Machine Learning Algorithms](https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/)
 
-[3] [Clustering with K-Means: simple yet powerful](https://medium.com/@alexandre.hsd/everything-you-need-to-know-about-clustering-with-k-means-722f743ef1c4)
+[3]: [Clustering with K-Means: simple yet powerful](https://medium.com/@alexandre.hsd/everything-you-need-to-know-about-clustering-with-k-means-722f743ef1c4)
 
-[4] [A Practical Introduction to 9 Regression Algorithms](https://towardsdatascience.com/a-practical-introduction-to-9-regression-algorithms-389057f86eb9?source=rss----7f60cf5620c9---4)
+[4]: [A Practical Introduction to 9 Regression Algorithms](https://towardsdatascience.com/a-practical-introduction-to-9-regression-algorithms-389057f86eb9?source=rss----7f60cf5620c9---4)
 
-[5] [You Should Check Out This Effective Framework for Model Selection](https://pub.towardsai.net/a-framework-for-model-selection-ea4dcda2cb3a)
+[5]: [You Should Check Out This Effective Framework for Model Selection](https://pub.towardsai.net/a-framework-for-model-selection-ea4dcda2cb3a)
 
-[6] [10 Machine Learning Techniques for AI Development](https://daffodilsw.medium.com/10-machine-learning-techniques-for-ai-development-15df0953f05f)
+[6]: [10 Machine Learning Techniques for AI Development](https://daffodilsw.medium.com/10-machine-learning-techniques-for-ai-development-15df0953f05f)
 
-[7] [63 Machine Learning Algorithms](https://medium.com/swlh/63-machine-learning-algorithms-introduction-5e8ea4129644)
+[7]: [63 Machine Learning Algorithms](https://medium.com/swlh/63-machine-learning-algorithms-introduction-5e8ea4129644)
 
-[8] [Take Control By Creating Targeted Lists of Machine Learning Algorithms](https://machinelearningmastery.com/create-lists-of-machine-learning-algorithms/)
+[8]: [Take Control By Creating Targeted Lists of Machine Learning Algorithms](https://machinelearningmastery.com/create-lists-of-machine-learning-algorithms/)
 
-[9] [Elbow Method for optimal value of k in KMeans](https://www.geeksforgeeks.org/elbow-method-for-optimal-value-of-k-in-kmeans/)
+[9]: [Elbow Method for optimal value of k in KMeans](https://www.geeksforgeeks.org/elbow-method-for-optimal-value-of-k-in-kmeans/)
 
-[10] [Multimodal Models Explained](https://www.kdnuggets.com/2023/03/multimodal-models-explained.html)
+[10]: [Multimodal Models Explained](https://www.kdnuggets.com/2023/03/multimodal-models-explained.html)
 
 
 [ML Cheatsheet - Algorithms](https://mclguide.readthedocs.io/en/latest/sklearn/guide.html#algorithms)
@@ -554,4 +552,3 @@ The main difference between combining models and multimodal learning is that com
 [Stop using the Elbow Method](https://medium.com/geekculture/stop-using-the-elbow-method-96bcfbbbe9fd)
 
 [Stop Using One-vs-One or One-vs-Rest for Multi-Class Classification Tasks](https://towardsdatascience.com/stop-using-one-vs-one-or-one-vs-rest-for-multi-class-classification-tasks-31b3fd92cb5e)
-

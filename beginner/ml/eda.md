@@ -447,49 +447,45 @@ Spot check some methods that are robust to outliers to see if there is a signifi
 
 ## References
 
-[1] [Reading and interpreting summary statistics](https://towardsdatascience.com/reading-and-interpreting-summary-statistics-df34f4e69ba6)
+[1]: [Reading and interpreting summary statistics](https://towardsdatascience.com/reading-and-interpreting-summary-statistics-df34f4e69ba6)
 
-[2] [Python Cheat Sheet for Data Science](https://chipnetics.com/tutorials/python-cheat-sheet-for-data-science/)
+[2]: [Python Cheat Sheet for Data Science](https://chipnetics.com/tutorials/python-cheat-sheet-for-data-science/)
 
-[3] [Data Cleaning for Visualization versus Machine Learning](https://medium.com/geekculture/data-cleaning-for-visualization-versus-machine-learning-e66126ebb65c)
-
-
-[4] [11 Essential Code Blocks for EDA Regression Task](https://towardsdatascience.com/11-simple-code-blocks-for-complete-exploratory-data-analysis-eda-67c2817f56cd)
-
-[5] [6 Pandas Functions for a Quick Exploratory Data Analysis](https://sonery.medium.com/6-pandas-functions-for-a-quick-exploratory-data-analysis-ff9ece0867d7)
-
-[6] [My Top 10 Pandas Functions for Preparing Data](https://betterprogramming.pub/my-top-10-pandas-functions-for-preparing-data-3ec7a1451a84)
-
-[7] [How to Identify Outliers in your Data](https://machinelearningmastery.com/how-to-identify-outliers-in-your-data/)
-
-[8] [Do Not Dismiss Unusual Data Points as Outliers](https://towardsdatascience.com/do-not-dismiss-unusual-data-points-as-outliers-5132380f2e67)
-
-[9] [A recipe to empirically answer any question quickly](https://towardsdatascience.com/a-recipe-to-empirically-answer-any-question-quickly-22e48c867dd5)
-
-[10] [Major Problems of Machine Learning Datasets: Part 2](https://heartbeat.comet.ml/major-problems-of-machine-learning-datasets-part-2-ba82e551fee2)
-
-[11] [Explore and Validate Datasets with TensorFlow Extended](https://pub.towardsai.net/explore-and-validate-datasets-with-tensorflow-extended-fc52cc5e582)
-
-[12] [Advanced EDA Made Simple Using Pandas Profiling](https://pub.towardsai.net/advanced-eda-made-simple-using-pandas-profiling-35f83027061a)
+[3]: [Data Cleaning for Visualization versus Machine Learning](https://medium.com/geekculture/data-cleaning-for-visualization-versus-machine-learning-e66126ebb65c)
 
 
-[13] [Detecting Outliers Using Python](https://towardsdatascience.com/detecting-outliers-using-python-66b25fc66e67)
+[4]: [11 Essential Code Blocks for EDA Regression Task](https://towardsdatascience.com/11-simple-code-blocks-for-complete-exploratory-data-analysis-eda-67c2817f56cd)
 
-[14] [Detecting Outliers with Simple and Advanced Techniques](https://towardsdatascience.com/detecting-outliers-with-simple-and-advanced-techniques-cb3b2db60d03)
+[5]: [6 Pandas Functions for a Quick Exploratory Data Analysis](https://sonery.medium.com/6-pandas-functions-for-a-quick-exploratory-data-analysis-ff9ece0867d7)
+
+[6]: [My Top 10 Pandas Functions for Preparing Data](https://betterprogramming.pub/my-top-10-pandas-functions-for-preparing-data-3ec7a1451a84)
+
+[7]: [How to Identify Outliers in your Data](https://machinelearningmastery.com/how-to-identify-outliers-in-your-data/)
+
+[8]: [Do Not Dismiss Unusual Data Points as Outliers](https://towardsdatascience.com/do-not-dismiss-unusual-data-points-as-outliers-5132380f2e67)
+
+[9]: [A recipe to empirically answer any question quickly](https://towardsdatascience.com/a-recipe-to-empirically-answer-any-question-quickly-22e48c867dd5)
+
+[10]: [Major Problems of Machine Learning Datasets: Part 2](https://heartbeat.comet.ml/major-problems-of-machine-learning-datasets-part-2-ba82e551fee2)
+
+[11]: [Explore and Validate Datasets with TensorFlow Extended](https://pub.towardsai.net/explore-and-validate-datasets-with-tensorflow-extended-fc52cc5e582)
+
+[12]: [Advanced EDA Made Simple Using Pandas Profiling](https://pub.towardsai.net/advanced-eda-made-simple-using-pandas-profiling-35f83027061a)
+
+
+[13]: [Detecting Outliers Using Python](https://towardsdatascience.com/detecting-outliers-using-python-66b25fc66e67)
+
+[14]: [Detecting Outliers with Simple and Advanced Techniques](https://towardsdatascience.com/detecting-outliers-with-simple-and-advanced-techniques-cb3b2db60d03)
 
 
 [Data Analytics: The Four Approaches to Analyzing Data and How To Use Them Effectively](https://www.kdnuggets.com/2023/04/data-analytics-four-approaches-analyzing-data-effectively.html)
 
-
 [How to build a Machine Learning (ML) Predictive System](https://towardsdatascience.com/machine-learning-ml-based-predictive-system-to-predict-the-satisfaction-level-of-airlines-f0780dbdbc87?source=rss----7f60cf5620c9---4)
-
 
 [Huber and Ridge Regressions in Python: Dealing with Outliers](https://towardsdatascience.com/huber-and-ridge-regressions-in-python-dealing-with-outliers-dc4fc0ac32e4?gi=c292a23ceab7)
 
 [Use k-medians clustering method if you have many outliers](https://towardsdatascience.com/use-this-clustering-method-if-you-have-many-outliers-5c99b4cd380d?gi=5c97a562ff04)
 
-
 [Sensitivity Analysis of Dataset Size vs Model Performance](https://machinelearningmastery.com/sensitivity-analysis-of-dataset-size-vs-model-performance/)
 
 [Analysing Fairness in Machine Learning (with Python)](https://towardsdatascience.com/analysing-fairness-in-machine-learning-with-python-96a9ab0d0705)
-

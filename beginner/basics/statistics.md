@@ -92,11 +92,11 @@ Statistics for Machine Learning (7-Day Mini-Course)
 
 ## References
 
-[1] [Important Statistics Data Scientists Need to Know](https://www.kdnuggets.com/2021/09/important-statistics-data-scientists.html)
+[1]: [Important Statistics Data Scientists Need to Know](https://www.kdnuggets.com/2021/09/important-statistics-data-scientists.html)
 
-[2] [Statistics in Python — Understanding Variance, Covariance, and Correlation](https://towardsdatascience.com/statistics-in-python-understanding-variance-covariance-and-correlation-4729b528db01?source=rss----7f60cf5620c9---4)
+[2]: [Statistics in Python — Understanding Variance, Covariance, and Correlation](https://towardsdatascience.com/statistics-in-python-understanding-variance-covariance-and-correlation-4729b528db01?source=rss----7f60cf5620c9---4)
 
-[3] [Statistics for Machine Learning](https://machinelearningmastery.com/start-here/#statistical_methods)
+[3]: [Statistics for Machine Learning](https://machinelearningmastery.com/start-here/#statistical_methods)
 
 
 [What does RMSE really mean?](https://towardsdatascience.com/what-does-rmse-really-mean-806b65f2e48e)

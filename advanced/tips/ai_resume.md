@@ -12,32 +12,32 @@ Some examples of resume builders are Kickresume, Rezi, and Skillroads.
 
 [Teal](https://www.tealhq.com/)
 
-Teal focuses on helping you craft your experience (and other sections) by making your accomplishments sound as impressive as they truly are. 
+Teal focuses on helping you craft your experience (and other sections) by making your accomplishments sound as impressive as they truly are.
 
 Teal also includes a job tracker so you can stay on top of each step everywhere you apply.
 
 
 [Kickresume](https://www.kickresume.com/en/)
 
-Kickresume is a widely used online resume and cover letter builder, 
+Kickresume is a widely used online resume and cover letter builder,
 
 If you are struggling to find the right words for your resume, this AI resume builder can find the rihgt words using OpenAI’s GPT-4. They have a Free Limited option where you can try.
 
 
 [ResumAI](https://www.wonsulting.ai/resumai)
 
-ResumAI utilizes machine learning and natural language processing to generate customized resume bullet points. 
+ResumAI utilizes machine learning and natural language processing to generate customized resume bullet points.
 
-This tool offers various features including the ability to input job experience, skills, and more. 
+This tool offers various features including the ability to input job experience, skills, and more.
 
 This tool also provides users with templates and resources for resumes and LinkedIn profiles.
 
 
 [Rezi](https://www.rezi.ai/)
 
-Rezi uses OpenAI’s GPT-3 API and incorporates best resume writing practices and a vast resume content database. 
+Rezi uses OpenAI’s GPT-3 API and incorporates best resume writing practices and a vast resume content database.
 
-This tool offers various AI Resume Writing Features like bullet point writing, editing, and summary generation. 
+This tool offers various AI Resume Writing Features like bullet point writing, editing, and summary generation.
 
 This tool also includes AI Document Generation Features for cover letters and resignation letters.
 
@@ -47,7 +47,7 @@ This tool also includes AI Document Generation Features for cover letters and re
 
 ## AI Job Search Tools
 
-Sorting through job listings and hunting down requirements and salary ranges can be difficult. 
+Sorting through job listings and hunting down requirements and salary ranges can be difficult.
 
 That's where AI job matching platforms can help: they use AI to match you with job listings likely to be a good fit for both sides, based on your skills, experience, and what you're looking for in a company or position. Platforms like Talentprise and—if you're looking for a remote position—Pyjama Jobs are good options here. Another platform, Fortay, even offers a quiz to help you narrow in on companies with the right culture fit for you.
 
@@ -60,7 +60,7 @@ Then Talentprise's AI matches you with relevant job listings on the site and sur
 
 Jobscan quickly scans your `#resume` for keywords that match a job description you are interested in and lets you know if you have the skills the hiring manager is looking for.
 
-Jobscan is designed to get you through the automated applicant tracking systems to at least get a human to review your application. 
+Jobscan is designed to get you through the automated applicant tracking systems to at least get a human to review your application.
 
 
 [LoopCV](https://www.loopcv.pro/)
@@ -75,7 +75,7 @@ LazyApply  can massively speed up the process and eliminate typing and retyping 
 
 ## AI Resume Optimization Tools
 
-Today, many recruiters and hiring managers rely on algorithms and automated applicant tracking systems (ATS) to scan applicant resumes for the right keywords. If those terms do not feature in your resume, you may get kicked to the "no thanks" pile well before a human ever sets eyes on your application. 
+Today, many recruiters and hiring managers rely on algorithms and automated applicant tracking systems (ATS) to scan applicant resumes for the right keywords. If those terms do not feature in your resume, you may get kicked to the "no thanks" pile well before a human ever sets eyes on your application.
 
 AI optimization tools like Jobscan and SkillSyncer ensure your resume makes it past discerning ATS algorithms and into the "interview please" pile.
 
@@ -89,9 +89,9 @@ Resume Worded provides personalized feedback on resumes and LinkedIn profiles to
 
 [ResumeCheck](https://resumecheck.net/)
 
-ResumeCheck uses GPT3 and identifies typos, grammar errors, and formatting issues while providing suggestions for corrections. 
+ResumeCheck uses GPT3 and identifies typos, grammar errors, and formatting issues while providing suggestions for corrections.
 
-The ResumeCheck platform optimizes resumes for specific job roles and industries, offering suggestions for new sections and adjustments. 
+The ResumeCheck platform optimizes resumes for specific job roles and industries, offering suggestions for new sections and adjustments.
 
 ResumeCheck also provides feedback on common mistakes, suggests rewording, and offers guidance on personal skills and resume structure. There is the “Free Check” program which is free to use.
 
@@ -107,7 +107,7 @@ Fix My Resume uses machine learning algorithms to compare resumes against job de
 
 Writing personalized cover letters for each role is time consuming when applying to jobs—but it's also necessary to make an impression. AI-powered cover letter generators like Kickresume and CoverDoc.ai make the process a whole lot faster and easier.
 
-Provide some basic details about the job you are applying for, your writing style, and your LinkedIn profile, and the tool will generate a personalized cover letter draft for you. 
+Provide some basic details about the job you are applying for, your writing style, and your LinkedIn profile, and the tool will generate a personalized cover letter draft for you.
 
 A specialized AI cover letter tool like CoverDoc can streamline the prompt process. If you are already comfortable using another tool, just about any generative AI writing tool can take care of your cover letter too.
 
@@ -123,9 +123,9 @@ By practicing with these tools, you will feel more confident and prepared for th
 
 ## AI-powered Negotiation Tools
 
-Negotiating your salary can be a fraught process—especially if you are not sure what a fair salary range looks like for your position and experience. 
+Negotiating your salary can be a fraught process—especially if you are not sure what a fair salary range looks like for your position and experience.
 
-AI-powered compensation tools like Payscale use AI to analyze data from thousands of job listings and salary surveys to provide you with an estimate of what you should earn based on details like the job title and your experience, education, and location. 
+AI-powered compensation tools like Payscale use AI to analyze data from thousands of job listings and salary surveys to provide you with an estimate of what you should earn based on details like the job title and your experience, education, and location.
 
 AI-powered compensation tools can also offer insight into the benefits and perks you should ask for—like flexible hours or remote work options. Plus, you can fill out granular information on any existing job offers you have to see how they stack up.
 
@@ -135,10 +135,10 @@ By using these tools to research salaries before you sit down at the negotiating
 
 ## References
 
-[1] [How to Create an Irresistible Professional Resume in Minutes](https://ishola.hashnode.dev/how-to-create-an-irresistible-professional-resume-in-minutes)
+[1]: [How to Create an Irresistible Professional Resume in Minutes](https://ishola.hashnode.dev/how-to-create-an-irresistible-professional-resume-in-minutes)
 
-[2] [Making Resumes Smarter: AI-Powered Tools for Your Job Search](https://pub.towardsai.net/making-resumes-smarter-ai-powered-tools-for-your-job-search-3c819ad29c0d)
+[2]: [Making Resumes Smarter: AI-Powered Tools for Your Job Search](https://pub.towardsai.net/making-resumes-smarter-ai-powered-tools-for-your-job-search-3c819ad29c0d)
 
-[3] [AI job search tips: 9 AI tools to help you land your next job](https://zapier.com/blog/ai-job-search/)
+[3]: [AI job search tips: 9 AI tools to help you land your next job](https://zapier.com/blog/ai-job-search/)
 
-[4] [7 AI tools to automate your job search](https://www.linkedin.com/pulse/7-ai-tools-automate-your-job-search-anne-hunter)
+[4]: [7 AI tools to automate your job search](https://www.linkedin.com/pulse/7-ai-tools-automate-your-job-search-anne-hunter)

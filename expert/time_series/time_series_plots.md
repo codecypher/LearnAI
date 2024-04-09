@@ -723,9 +723,8 @@ The following picture shows an example of the Ridge plot with the densities of P
 
 ## References
 
-[1] [Time Series Data Visualization in Python](https://pub.towardsai.net/time-series-data-visualization-in-python-2b1959726312)
+[1]: [Time Series Data Visualization in Python](https://pub.towardsai.net/time-series-data-visualization-in-python-2b1959726312)
 
-[2] [Time Series Data Visualization with Python](https://machinelearningmastery.com/time-series-data-visualization-with-python/)
+[2]: [Time Series Data Visualization with Python](https://machinelearningmastery.com/time-series-data-visualization-with-python/)
 
-[3] [8 Visualizations with Python to Handle Multiple Time-Series Data](https://towardsdatascience.com/8-visualizations-with-python-to-handle-multiple-time-series-data-19b5b2e66dd0)
-
+[3]: [8 Visualizations with Python to Handle Multiple Time-Series Data](https://towardsdatascience.com/8-visualizations-with-python-to-handle-multiple-time-series-data-19b5b2e66dd0)

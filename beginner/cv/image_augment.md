@@ -1,9 +1,8 @@
 # Image Augmentation
 
-
 ## Image Data Preparation
 
-When training vision models, it is common to resize images to a lower dimension ((224 x 224), (299 x 299), etc.) to allow mini-batch learning and also to keep up the compute limitations [1]. 
+When training vision models, it is common to resize images to a lower dimension ((224 x 224), (299 x 299), etc.) to allow mini-batch learning and also to keep up the compute limitations [1].
 
 We generally make use of image resizing methods like _bilinear interpolation_ for this step and the resized images do not lose much of their perceptual character to the human eyes.
 
@@ -11,21 +10,20 @@ In "Learning to Resize Images for Computer Vision Tasks," Talebi et al. show tha
 
 **For a given image resolution and a model, how to best resize the given images?**
 
-As shown in the paper, this idea helps to consistently improve the performance of the common vision models (pre-trained on ImageNet-1k) such as DenseNet-121, ResNet-50, MobileNetV2, and EfficientNets. 
+As shown in the paper, this idea helps to consistently improve the performance of the common vision models (pre-trained on ImageNet-1k) such as DenseNet-121, ResNet-50, MobileNetV2, and EfficientNets.
 
 The example implements the learnable image resizing module as proposed in the paper and demonstrates the process on the Cats and Dogs dataset using the DenseNet-121 architecture.
 
 
-
 ## Feature Engineering for Images
 
-Here are some important concepts for feature engineering when dealing with images. 
+Here are some important concepts for feature engineering when dealing with images.
 
 ### Curse of Dimensionality
 
 The _curse of dimensionality_ is used to describe the problems that arise when working with datasets that have a large number of dimensions [4].
 
-One reason is that the number of data points needed to accurately learn the underlying distribution of the data increases exponentially with the number of dimensions. 
+One reason is that the number of data points needed to accurately learn the underlying distribution of the data increases exponentially with the number of dimensions.
 
 Thus, if we have a data set with 100 features, we may need 1,000 or even 10,000 data points to train a well-performing model.
 
@@ -39,7 +37,7 @@ Wavelet decomposition is a way of breaking down a signal in both space and frequ
 
 ### Histogram of Oriented Gradient
 
-The HOG feature descriptor is a popular technique used in computer vision and image processing for detecting objects in digital images [4]. 
+The HOG feature descriptor is a popular technique used in computer vision and image processing for detecting objects in digital images [4].
 
 The HOG descriptor became popular after Dalal and Triggs showed the efficiency of this descriptor in 2005 that focused on pedestrian detection in static images.
 
@@ -47,15 +45,15 @@ The HOG descriptor is a type of feature descriptor that encodes the shape and ap
 
 The most important parameter in our case is the number of pixels per cell as it will give us a way to find the best trade-off between the number of dimensions and the number of details captured in the picture.
 
-Example of the histogram of oriented gradient with 8 by 8-pixel cells. 
+Example of the histogram of oriented gradient with 8 by 8-pixel cells.
 
-Example of the histogram of oriented gradient with 16 by 16-pixel cells. 
+Example of the histogram of oriented gradient with 16 by 16-pixel cells.
 
 For the example above, the input image has 20,000 dimensions (100 by 200 pixels) and the HOG feature has 2,400 dimensions with the 8 by 8-pixel cell and 576 for the 16 by 16-pixel cell. That’s an 88% and 97% reduction, respectively.
 
 ### Principal Component Analysis
 
-We can also use Principal Component Analysis (PCA) to reduce the dimension of our feature vector [4]. 
+We can also use Principal Component Analysis (PCA) to reduce the dimension of our feature vector [4].
 
 PCA is a statistical technique that can be used to find the directions (components) that maximize the variance and minimizes the projection error in a dataset.
 
@@ -72,12 +70,11 @@ There are a few things to keep in mind when using PCA [4]:
 
 - To reduce to N dimensions, you need at least N-1 observations
 
-
 ### Manifold Learning
 
 Manifold Learning is in some ways an extension of linear methods like PCA to reduce dimensionality but for non-linear structures in data [4].
 
-A _manifold_ is a topological space that is locally Euclidean which means that near each point it resembles the Euclidean space. 
+A _manifold_ is a topological space that is locally Euclidean which means that near each point it resembles the Euclidean space.
 
 Manifolds appear naturally in many areas of mathematics and physics and the study of manifolds is a central topic in differential geometry.
 
@@ -89,21 +86,17 @@ There are a few things to keep in mind when working with manifold learning [4]:
 
 - Manifold learning is usually a computationally intensive task, so it is important to have a good understanding of the algorithms before using them.
 
-It is rare that a real-life process uses all of its dimensions to describe its underlying structure. 
+It is rare that a real-life process uses all of its dimensions to describe its underlying structure.
 
 For example, in the pictures below only a few dimensions should be necessary to describe the cup's position and rotation.
 
 In this case, once projected with a manifold learning algorithm such as t-distributed Stochastic Neighbor Embedding (t-SNE), only two dimensions are able to encode the cup position and rotation.
 
-
 There are many ways to reduce the dimension of a picture. The approach to take will depend on the type of data and the problem being solved.
 
 Feature engineering is an iterative process, so it helps to have an overview of different possibilities and available approaches.
 
-
 ---------
-
-
 
 ## Image Augmentation using imgaug
 
@@ -138,11 +131,11 @@ for n, images in enumerate(image[0:3]):
 
 ### Blurness
 
-Blurriness is obtained by calculating and analysing the Fast Fourier Transform. 
+Blurriness is obtained by calculating and analysing the Fast Fourier Transform.
 
-The Fourier transform identifies the frequencies present in the image. 
+The Fourier transform identifies the frequencies present in the image.
 
-If there are not many high frequencies, the image will be fuzzy. 
+If there are not many high frequencies, the image will be fuzzy.
 
 It is up to you to define the terms ‘low’ and ‘high.’
 
@@ -178,7 +171,7 @@ for n, images in enumerate(image[0:3]):
 
 ### Saturation Augmentation
 
-Saturation augmentation is similar to hue augmentation in that it adjusts the image’s vibrancy. 
+Saturation augmentation is similar to hue augmentation in that it adjusts the image’s vibrancy.
 
 A grayscale image is entirely desaturated, a partially desaturated image has muted colours, and a positive saturation pushes hues closer to the primary colours.
 
@@ -219,13 +212,13 @@ for n, images in enumerate(image[0:3]):
 
 ### Multiple Augmentations
 
-We can perform multiple augmentations on a single batch of images. 
+We can perform multiple augmentations on a single batch of images.
 
 Here we do the following:
 
 - We apply the Crop augmentation to crop the single image from each side anywhere between 0 to 16px which is randomly chosen.
 
-- We apply Gaussian Noise and Motion Blur with a severity value of 5. 
+- We apply Gaussian Noise and Motion Blur with a severity value of 5.
 
 ```py
 aug = iaa.Sequential([
@@ -243,9 +236,7 @@ for n, images in enumerate(image[0:3]):
     plt.show()
 ```
 
-
 ----------
-
 
 
 ## Tutorials
@@ -279,7 +270,7 @@ for n, images in enumerate(image[0:3]):
 
 ### Image Data Pipeline
 
-We can build better and faster image pipelines using `tf.data` [5].  
+We can build better and faster image pipelines using `tf.data` [5].
 
 While training a neural network, it is quite common to use `ImageDataGenerator` class to generate batches of tensor image data with real-time data augmentation, but the `tf.data` API can be used to build a faster input data pipeline with reusable pieces.
 
@@ -299,16 +290,14 @@ We can write a method to shift the images in all four directions by the given or
 
 We will shift the images to each of the four directions by one pixel and generate four more images from a single image.
 
-
 ----------
-
 
 
 ## MNIST Image Augmentation Using Tensorflow
 
-The tutorial in [7] uses the `ImageDataGenerator` class in the `tensorflow.keras` python library. 
+The tutorial in [7] uses the `ImageDataGenerator` class in the `tensorflow.keras` python library.
 
-The article in [8] provides a better alternative using tensorflow Dataset. 
+The article in [8] provides a better alternative using tensorflow Dataset.
 
 
 ### Step 1: Import the MNIST dataset
@@ -322,19 +311,19 @@ In step 1, we will import the MNIST dataset using the tensorflow library. The im
 
 ### Step 2: Identify and Plot Baseline Digits Using Matplotlib
 
-We plot a subset of the MNIST images to help us understand the augmentation effects on the MNIST dataset. 
+We plot a subset of the MNIST images to help us understand the augmentation effects on the MNIST dataset.
 
 To plot a subset of MNIST images, use the following code:
 
 ### Step 3:  Understand Image Augmentation and Techniques Relevant To MNIST
 
-The original MNIST dataset contains centered, upright, and size normalized digits. 
+The original MNIST dataset contains centered, upright, and size normalized digits.
 
-Realistically, hand-written digits will seldom meet these criteria in real-world applications. Some digits will be larger, smaller, rotated, or skewed more than others. 
+Realistically, hand-written digits will seldom meet these criteria in real-world applications. Some digits will be larger, smaller, rotated, or skewed more than others.
 
-To create a robust digit recognition model, it is in your interest to augment the MNIST dataset and capture these types of behavior. 
+To create a robust digit recognition model, it is in your interest to augment the MNIST dataset and capture these types of behavior.
 
-We discuss the various types of augmentation techniques we can use to enhance the MNIST digit dataset using the Keras `ImageDataGenerator` class. 
+We discuss the various types of augmentation techniques we can use to enhance the MNIST digit dataset using the Keras `ImageDataGenerator` class.
 
 - Rotate
 - Shift
@@ -353,12 +342,12 @@ We discuss the various types of augmentation techniques we can use to enhance th
 - Cutout
 - Filter
 
-_Cutout_ is a simple regularization technique of randomly masking out square regions of input during training which can be used to improve the robustness and overall performance of convolutional neural networks. 
+_Cutout_ is a simple regularization technique of randomly masking out square regions of input during training which can be used to improve the robustness and overall performance of convolutional neural networks.
 
 This method can also be used in conjunction with existing forms of data augmentation and other regularizers to further improve model performance.
 
 
-_ColorJitter_ is another simple type of image data augmentation where we randomly change the brightness, contrast, and saturation of the image. 
+_ColorJitter_ is another simple type of image data augmentation where we randomly change the brightness, contrast, and saturation of the image.
 
 #### Overlay Images
 
@@ -369,25 +358,22 @@ Sometimes, we need to add a background to an existing image for formatting purpo
 Finally, we can combine all of the previously mentioned transformations to obtain unique digit representations that can now be used to improve digit recognition model performance.
 
 
-
-
 ## References
 
-[1] [Learning to Resize in Computer Vision](https://keras.io/examples/vision/learnable_resizer/)
+[1]: [Learning to Resize in Computer Vision](https://keras.io/examples/vision/learnable_resizer/)
 
-[2] [5 Image Augmentation Techniques Using imgAug](https://betterprogramming.pub/5-common-image-augmentations-for-machine-learning-c6b5a03ebf38)
+[2]: [5 Image Augmentation Techniques Using imgAug](https://betterprogramming.pub/5-common-image-augmentations-for-machine-learning-c6b5a03ebf38)
 
-[3] [How to Load Large Datasets From Directories](https://machinelearningmastery.com/how-to-load-large-datasets-from-directories-for-deep-learning-with-keras/)
+[3]: [How to Load Large Datasets From Directories](https://machinelearningmastery.com/how-to-load-large-datasets-from-directories-for-deep-learning-with-keras/)
 
-[4] [Feature Engineering for Images](https://towardsdatascience.com/feature-engineering-for-machine-learning-with-picture-data-d7ff8554920)
+[4]: [Feature Engineering for Images](https://towardsdatascience.com/feature-engineering-for-machine-learning-with-picture-data-d7ff8554920)
 
-[5] [Time to Choose TensorFlow Data over ImageDataGenerator](https://towardsdatascience.com/time-to-choose-tensorflow-data-over-imagedatagenerator-215e594f2435)
+[5]: [Time to Choose TensorFlow Data over ImageDataGenerator](https://towardsdatascience.com/time-to-choose-tensorflow-data-over-imagedatagenerator-215e594f2435)
 
-[6] [An Intuitive Guide to PCA](https://towardsdatascience.com/an-intuitive-guide-to-pca-1174055fc800)
+[6]: [An Intuitive Guide to PCA](https://towardsdatascience.com/an-intuitive-guide-to-pca-1174055fc800)
 
-[7] [How To Augment the MNIST Dataset Using Tensorflow](https://medium.com/the-data-science-publication/how-to-augment-the-mnist-dataset-using-tensorflow-4fbf113e99a0)
+[7]: [How To Augment the MNIST Dataset Using Tensorflow](https://medium.com/the-data-science-publication/how-to-augment-the-mnist-dataset-using-tensorflow-4fbf113e99a0)
 
-[8] [Time to Choose TensorFlow Data over ImageDataGenerator](https://towardsdatascience.com/time-to-choose-tensorflow-data-over-imagedatagenerator-215e594f2435)
+[8]: [Time to Choose TensorFlow Data over ImageDataGenerator](https://towardsdatascience.com/time-to-choose-tensorflow-data-over-imagedatagenerator-215e594f2435)
 
-[How to Explore a Dataset of Images with Graph Theory](https://towardsdatascience.com/how-to-explore-a-dataset-of-images-with-graph-theory-fd339c696d99)
-
+[9]:  [How to Explore a Dataset of Images with Graph Theory](https://towardsdatascience.com/how-to-explore-a-dataset-of-images-with-graph-theory-fd339c696d99)

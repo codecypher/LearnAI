@@ -308,28 +308,26 @@ All web services are also APIs because they expose the data and/or functionality
 
 ## References
 
-[1] [SOLID Coding in Python](https://towardsdatascience.com/solid-coding-in-python-1281392a6a94)
+[1]: [SOLID Coding in Python](https://towardsdatascience.com/solid-coding-in-python-1281392a6a94)
 
-[2] [The S.O.L.I.D Principles in Pictures()](https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898)
+[2]: [The S.O.L.I.D Principles in Pictures()](https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898)
+
+[3]: [The Single Responsibility Principle Explained in Python](https://betterprogramming.pub/the-single-responsibility-principle-explained-in-python-622e2d996d86)
+
+[4]: [Code Smell — When to Refactor](https://betterprogramming.pub/code-smell-when-to-refactor-e18f1dca2f01)
+
+[5]: [Design for Services; Not Microservices](https://betterprogramming.pub/design-for-services-not-microservices-e339883946d7)
+
+[6]: [The Database Is Not the Most Important Part](https://betterprogramming.pub/the-database-is-not-the-most-important-part-b87d8af01959)
+
+[7]: [The Myth of Small Incremental Improvements](https://betterprogramming.pub/the-myth-of-small-incremental-improvements-fd0bfd5e1977)
+
+[8]: [Want Cleaner Code? Use the Rule of Six](https://betterprogramming.pub/want-cleaner-code-use-the-rule-of-six-c21635ee2185)
+
+[9]: [Inversion of Control vs Dependency Injection](https://stackoverflow.com/questions/6550700/inversion-of-control-vs-dependency-injection)
+
 
 [CUPID for better coding](https://medium.com/codex/cupid-for-better-coding-4c6eb401c8f5)
-
-
-[3] [The Single Responsibility Principle Explained in Python](https://betterprogramming.pub/the-single-responsibility-principle-explained-in-python-622e2d996d86)
-
-[4] [Code Smell — When to Refactor](https://betterprogramming.pub/code-smell-when-to-refactor-e18f1dca2f01)
-
-[5] [Design for Services; Not Microservices](https://betterprogramming.pub/design-for-services-not-microservices-e339883946d7)
-
-[6] [The Database Is Not the Most Important Part](https://betterprogramming.pub/the-database-is-not-the-most-important-part-b87d8af01959)
-
-[7] [The Myth of Small Incremental Improvements](https://betterprogramming.pub/the-myth-of-small-incremental-improvements-fd0bfd5e1977)
-
-[8][Want Cleaner Code? Use the Rule of Six](https://betterprogramming.pub/want-cleaner-code-use-the-rule-of-six-c21635ee2185)
-
-[9] [Inversion of Control vs Dependency Injection](https://stackoverflow.com/questions/6550700/inversion-of-control-vs-dependency-injection)
-
-
 
 [Systems Design Crash Course for ML Engineers](https://towardsdatascience.com/systems-design-crash-course-for-ml-engineers-aafae1cf1890)
 
@@ -352,6 +350,3 @@ All web services are also APIs because they expose the data and/or functionality
 [An Introduction to Event-Driven Architecture](https://aws.plainenglish.io/event-driven-architecture-2436055f64b1?gi=62c6bfcf207)
 
 [The Comparison of the Modes of Event-Driven Architecture](https://medium.com/geekculture/the-comparison-of-the-modes-of-event-driven-architecture-1742711d79bb)
-
-
-

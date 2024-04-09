@@ -369,41 +369,40 @@ Some of the available tools in Kubeflow:
 
 ## References
 
-[1] [What Is MLOps And Why Your Team Should Implement It](https://medium.com/smb-lite/what-is-mlops-and-why-your-team-should-implement-it-b05b741cdf94)
+[1]: [What Is MLOps And Why Your Team Should Implement It](https://medium.com/smb-lite/what-is-mlops-and-why-your-team-should-implement-it-b05b741cdf94)
 
-[2] [AI Checklist](https://towardsdatascience.com/the-ai-checklist-fe2d76907673)
-
-
-[6] [Considerations for Deploying Machine Learning Models in Production](https://towardsdatascience.com/considerations-for-deploying-machine-learning-models-in-production-89d38d96cc23?source=rss----7f60cf5620c9---4)
-
-[7] [Model Drift in Machine Learning](https://towardsdatascience.com/model-drift-in-machine-learning-8023e3d08217)
+[2]: [AI Checklist](https://towardsdatascience.com/the-ai-checklist-fe2d76907673)
 
 
-[8] [Model monitoring metrics](https://medium.com/prosus-ai-tech-blog/model-monitoring-1849fb3afc1e)
+[6]: [Considerations for Deploying Machine Learning Models in Production](https://towardsdatascience.com/considerations-for-deploying-machine-learning-models-in-production-89d38d96cc23?source=rss----7f60cf5620c9---4)
 
-[9] [A Comprehensive Guide on How to Monitor Models in Production](https://medium.com/artificialis/a-comprehensive-guide-on-how-to-monitor-your-models-in-production-c069a8431723)
-
-[10] [A Beginner’s Guide to End to End Machine Learning](https://towardsdatascience.com/a-beginners-guide-to-end-to-end-machine-learning-a42949e15a47)
+[7]: [Model Drift in Machine Learning](https://towardsdatascience.com/model-drift-in-machine-learning-8023e3d08217)
 
 
-[11] [Top 3 Python Packages for Machine Learning Validation](https://towardsdatascience.com/top-3-python-packages-for-machine-learning-validation-2df17ee2e13d)
+[8]: [Model monitoring metrics](https://medium.com/prosus-ai-tech-blog/model-monitoring-1849fb3afc1e)
+
+[9]: [A Comprehensive Guide on How to Monitor Models in Production](https://medium.com/artificialis/a-comprehensive-guide-on-how-to-monitor-your-models-in-production-c069a8431723)
+
+[10]: [A Beginner’s Guide to End to End Machine Learning](https://towardsdatascience.com/a-beginners-guide-to-end-to-end-machine-learning-a42949e15a47)
 
 
-[12] [A Comprehensive Guide on How to Monitor Your Models in Production](https://neptune.ai/blog/how-to-monitor-your-models-in-production-guide)
+[11]: [Top 3 Python Packages for Machine Learning Validation](https://towardsdatascience.com/top-3-python-packages-for-machine-learning-validation-2df17ee2e13d)
 
 
-[13] [5 Types of ML Accelerators](https://pub.towardsai.net/5-types-of-ml-accelerators-767d26a643de)
+[12]: [A Comprehensive Guide on How to Monitor Your Models in Production](https://neptune.ai/blog/how-to-monitor-your-models-in-production-guide)
 
 
-[14] [The Challenges of Online Inference (Deployment Series: Guide 04)](https://mlinproduction.com/the-challenges-of-online-inference-deployment-series-04/)
-
-[15] Test-Driven Machine Learning Development (Deployment Series: Guide 07)
-
-[16] [A/B Testing Machine Learning Models (Deployment Series: Guide 08)](https://mlinproduction.com/ab-test-ml-models-deployment-series-08/)
+[13]: [5 Types of ML Accelerators](https://pub.towardsai.net/5-types-of-ml-accelerators-767d26a643de)
 
 
-[17] [Mlflow documentation](https://mlflow.org/docs/latest/index.html)
+[14]: [The Challenges of Online Inference (Deployment Series: Guide 04)](https://mlinproduction.com/the-challenges-of-online-inference-deployment-series-04/)
 
+[15]: Test-Driven Machine Learning Development (Deployment Series: Guide 07)
+
+[16]: [A/B Testing Machine Learning Models (Deployment Series: Guide 08)](https://mlinproduction.com/ab-test-ml-models-deployment-series-08/)
+
+
+[17]: [Mlflow documentation](https://mlflow.org/docs/latest/index.html)
 
 
 [Design Patterns in Machine Learning for MLOps](https://towardsdatascience.com/design-patterns-in-machine-learning-for-mlops-a3f63f745ce4)
@@ -425,12 +424,8 @@ Some of the available tools in Kubeflow:
 [The Ultimate Guide to Deploying Machine Learning Models](https://mlinproduction.com/deploying-machine-learning-models/)
 
 
-[Automating Data Drift Thresholding in Machine Learning Systems]https://towardsdatascience.com/automating-data-drift-thresholding-in-machine-learning-systems-524e6259f59)
+[Automating Data Drift Thresholding in Machine Learning Systems](https://towardsdatascience.com/automating-data-drift-thresholding-in-machine-learning-systems-524e6259f59)
 
 [Monitoring unstructured data for LLM and NLP](https://towardsdatascience.com/monitoring-unstructured-data-for-llm-and-nlp-efff42704e5b?source=rss----7f60cf5620c9---4)
 
 [SHAP for Drift Detection: Effective Data Shift Monitoring](https://towardsdatascience.com/shap-for-drift-detection-effective-data-shift-monitoring-c7fb9590adb0)
-
-
-
-

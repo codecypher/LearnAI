@@ -324,6 +324,4 @@ The entire code for this article is available here if you want to hack on it you
 
 ## References
 
-[1] [Convolutional Neural Networks (CNN)](https://towardsdatascience.com/applied-deep-learning-part-4-convolutional-neural-networks-584bc134c1e2)
-
-
+[1]: [Convolutional Neural Networks (CNN)](https://towardsdatascience.com/applied-deep-learning-part-4-convolutional-neural-networks-584bc134c1e2)

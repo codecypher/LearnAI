@@ -657,7 +657,7 @@ Here is a figure that summarizes the Retriever-Reader pipeline [4].
 
 ## NLP Libraries
 
-Here are some useful NLP libraries [12] [13]:
+Here are some useful NLP libraries [12]: [13]:
 
 - NLTK
 - GenSim
@@ -699,34 +699,34 @@ The similarity scores can also be used to reduce the dimensionality and to find 
 
 ## References
 
-[1] S. Bird, E. Klein, and E. Loper. Natural Language Processing with Python – Analyzing Text with the Natural Language Toolkit. Available online: https://www.nltk.org/book/.
+[1]: S. Bird, E. Klein, and E. Loper. Natural Language Processing with Python – Analyzing Text with the Natural Language Toolkit. Available online: https://www.nltk.org/book/.
 
-[2] [A Detailed, Novice Introduction to Natural Language Processing (NLP)](https://towardsdatascience.com/a-detailed-novice-introduction-to-natural-language-processing-nlp-90b7be1b7e54)
+[2]: [A Detailed, Novice Introduction to Natural Language Processing (NLP)](https://towardsdatascience.com/a-detailed-novice-introduction-to-natural-language-processing-nlp-90b7be1b7e54)
 
-[3] [Natural Language Processing (NLP) in Python — Simplified](https://medium.com/@bedourabed/natural-language-processing-nlp-in-python-simplified-b96b89c8be93)
+[3]: [Natural Language Processing (NLP) in Python — Simplified](https://medium.com/@bedourabed/natural-language-processing-nlp-in-python-simplified-b96b89c8be93)
 
-[4] [NLP Techniques Every Data Scientist Should Know](https://towardsdatascience.com/6-nlp-techniques-every-data-scientist-should-know-7cdea012e5c3)
+[4]: [NLP Techniques Every Data Scientist Should Know](https://towardsdatascience.com/6-nlp-techniques-every-data-scientist-should-know-7cdea012e5c3)
 
-[5] [Guide to Natural Language Processing (NLP)](https://towardsdatascience.com/your-guide-to-natural-language-processing-nlp-48ea2511f6e1)
+[5]: [Guide to Natural Language Processing (NLP)](https://towardsdatascience.com/your-guide-to-natural-language-processing-nlp-48ea2511f6e1)
 
-[6] [Natural Language Processing (NLP): Don’t Reinvent the Wheel](https://towardsdatascience.com/natural-language-processing-nlp-dont-reinvent-the-wheel-8cf3204383dd)
+[6]: [Natural Language Processing (NLP): Don’t Reinvent the Wheel](https://towardsdatascience.com/natural-language-processing-nlp-dont-reinvent-the-wheel-8cf3204383dd)
 
-[7] [Solve Complex NLP Tasks with 5 Lesser-known Python Libraries](https://towardsdatascience.com/solving-complex-nlp-tasks-with-5-simple-python-snippets-libraries-7d4dfab131e8)
-
-
-[8] [Exploring HuggingFace Transformers For NLP With Python](https://medium.com/geekculture/exploring-huggingface-transformers-for-nlp-with-python-5ae683289e67)
-
-[9] [fastText: Enriching Word Vectors with Subword Information](https://sh-tsang.medium.com/review-fasttext-enriching-word-vectors-with-subword-information-bafac50f22a8)
-
-[10] [Two minutes NLP — Quick Introduction to Haystack](https://medium.com/nlplanet/two-minutes-nlp-quick-introduction-to-haystack-da86d0402998)
+[7]: [Solve Complex NLP Tasks with 5 Lesser-known Python Libraries](https://towardsdatascience.com/solving-complex-nlp-tasks-with-5-simple-python-snippets-libraries-7d4dfab131e8)
 
 
-[11] [Get To Know Audio Feature Extraction in Python](https://towardsdatascience.com/get-to-know-audio-feature-extraction-in-python-a499fdaefe42)
+[8]: [Exploring HuggingFace Transformers For NLP With Python](https://medium.com/geekculture/exploring-huggingface-transformers-for-nlp-with-python-5ae683289e67)
+
+[9]: [fastText: Enriching Word Vectors with Subword Information](https://sh-tsang.medium.com/review-fasttext-enriching-word-vectors-with-subword-information-bafac50f22a8)
+
+[10]: [Two minutes NLP — Quick Introduction to Haystack](https://medium.com/nlplanet/two-minutes-nlp-quick-introduction-to-haystack-da86d0402998)
 
 
-[12] [7 Amazing Python Libraries For Natural Language Processing](https://towardsdatascience.com/7-amazing-python-libraries-for-natural-language-processing-50ca6f9f5f11)
+[11]: [Get To Know Audio Feature Extraction in Python](https://towardsdatascience.com/get-to-know-audio-feature-extraction-in-python-a499fdaefe42)
 
-[13] [4 More Little-Known NLP Libraries That Are Hidden Gems](https://towardsdatascience.com/4-more-little-known-nlp-libraries-that-are-hidden-gems-e77a71d1bc57)
+
+[12]: [7 Amazing Python Libraries For Natural Language Processing](https://towardsdatascience.com/7-amazing-python-libraries-for-natural-language-processing-50ca6f9f5f11)
+
+[13]: [4 More Little-Known NLP Libraries That Are Hidden Gems](https://towardsdatascience.com/4-more-little-known-nlp-libraries-that-are-hidden-gems-e77a71d1bc57)
 
 
 [Everything You Need to Know to Get Started with NLP](https://towardsdatascience.com/nlp-survey-bde8a27e8ba)

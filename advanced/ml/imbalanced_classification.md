@@ -386,24 +386,24 @@ Naive classifier strategies can be used on predictive modeling projects via the 
 
 ## References
 
-[1] [A Gentle Introduction to Imbalanced Classification](https://machinelearningmastery.com/what-is-imbalanced-classification/)
+[1]: [A Gentle Introduction to Imbalanced Classification](https://machinelearningmastery.com/what-is-imbalanced-classification/)
 
-[2] [Why we need to deal with imbalanced classes](https://towardsdatascience.com/why-we-need-to-deal-with-imbalanced-classes-ec0dc1a7b803)
+[2]: [Why we need to deal with imbalanced classes](https://towardsdatascience.com/why-we-need-to-deal-with-imbalanced-classes-ec0dc1a7b803)
 
-[3] [A Gentle Introduction to Threshold-Moving for Imbalanced Classification](https://machinelearningmastery.com/threshold-moving-for-imbalanced-classification/)
+[3]: [A Gentle Introduction to Threshold-Moving for Imbalanced Classification](https://machinelearningmastery.com/threshold-moving-for-imbalanced-classification/)
 
-[4] [Step-By-Step Framework for Imbalanced Classification Projects](https://machinelearningmastery.com/framework-for-imbalanced-classification-projects/)
+[4]: [Step-By-Step Framework for Imbalanced Classification Projects](https://machinelearningmastery.com/framework-for-imbalanced-classification-projects/)
 
-[5] [How To Stratify Data in Machine Learning Projects to Significantly Improve Model Performance](https://towardsdatascience.com/how-to-stratify-data-in-machine-learning-projects-to-significantly-improve-model-performance-4929b600340b)
+[5]: [How To Stratify Data in Machine Learning Projects to Significantly Improve Model Performance](https://towardsdatascience.com/how-to-stratify-data-in-machine-learning-projects-to-significantly-improve-model-performance-4929b600340b)
 
-[6] [Unbalanced Data? Stop Using ROC-AUC and Use AUPRC Instead](https://towardsdatascience.com/imbalanced-data-stop-using-roc-auc-and-use-auprc-instead-46af4910a494)
+[6]: [Unbalanced Data? Stop Using ROC-AUC and Use AUPRC Instead](https://towardsdatascience.com/imbalanced-data-stop-using-roc-auc-and-use-auprc-instead-46af4910a494)
 
-[7] [Investigating the effects of resampling imbalanced datasets with data validation techniques](https://medium.com/geekculture/investigating-the-effects-of-resampling-imbalanced-datasets-with-data-validation-techniques-f4ca3c8b2b94)
+[7]: [Investigating the effects of resampling imbalanced datasets with data validation techniques](https://medium.com/geekculture/investigating-the-effects-of-resampling-imbalanced-datasets-with-data-validation-techniques-f4ca3c8b2b94)
 
 
-[8] [Survey of Imbalanced Data Methodologies](https://arxiv.org/abs/2104.02240)
+[8]: [Survey of Imbalanced Data Methodologies](https://arxiv.org/abs/2104.02240)
 
-[9] [A survey on learning from imbalanced data streams](https://arxiv.org/abs/2204.03719)
+[9]: [A survey on learning from imbalanced data streams](https://arxiv.org/abs/2204.03719)
 
 
 [8 Tactics to Combat Imbalanced Classes in Your Machine Learning Dataset](https://machinelearningmastery.com/tactics-to-combat-imbalanced-classes-in-your-machine-learning-dataset/)
@@ -413,7 +413,7 @@ Naive classifier strategies can be used on predictive modeling projects via the 
 [How to handle Multiclass Imbalanced Data? Not SMOTE](https://towardsdatascience.com/how-to-handle-multiclass-imbalanced-data-say-no-to-smote-e9a7f393c310)
 
 [Stop Using SMOTE to Treat Class Imbalance](https://towardsdatascience.com/stop-using-smote-to-treat-class-imbalance-take-this-intuitive-approach-instead-9cb822b8dc45)
- 
+
 
 [SMOTE for Imbalanced Classification with Python](https://machinelearningmastery.com/smote-oversampling-for-imbalanced-classification/)
 
@@ -423,5 +423,3 @@ Naive classifier strategies can be used on predictive modeling projects via the 
 [Fitting Linear Regression Models on Counts Based Data](https://towardsdatascience.com/fitting-linear-regression-models-on-counts-based-data-ba1f6c11b6e1)
 
 [Discrete Probability Distributions for Machine Learning](https://machinelearningmastery.com/discrete-probability-distributions-for-machine-learning/)
-
-

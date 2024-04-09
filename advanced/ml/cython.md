@@ -17,9 +17,8 @@ Creating a Cython package has some enormous benefits but it also takes a bit mor
 
 ## References
 
-[1] [Why Python is so slow and how to speed it up](https://towardsdatascience.com/why-is-python-so-slow-and-how-to-speed-it-up-485b5a84154e)
+[1]: [Why Python is so slow and how to speed it up](https://towardsdatascience.com/why-is-python-so-slow-and-how-to-speed-it-up-485b5a84154e)
 
-[2] [Getting started with Cython](https://towardsdatascience.com/getting-started-with-cython-how-to-perform-1-7-billion-calculations-per-second-in-python-b83374cfcf77)
+[2]: [Getting started with Cython](https://towardsdatascience.com/getting-started-with-cython-how-to-perform-1-7-billion-calculations-per-second-in-python-b83374cfcf77)
 
-[3] [Cython for Absolute Beginners using CythonBuilder](https://towardsdatascience.com/cython-for-absolute-beginners-30x-faster-code-in-two-simple-steps-bbb6c10d06ad)
-
+[3]: [Cython for Absolute Beginners using CythonBuilder](https://towardsdatascience.com/cython-for-absolute-beginners-30x-faster-code-in-two-simple-steps-bbb6c10d06ad)

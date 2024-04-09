@@ -488,10 +488,7 @@ The **consumer** reads from a server and can be on separate processes or separat
 
 Consumers have a group-name label and each message published is sent to one consumer instance within each consumer group that is subscribed to it.
 
-
-
 ----------
-
 
 
 ## Distributed Tools
@@ -499,27 +496,22 @@ Consumers have a group-name label and each message published is sent to one cons
 - [Envoy](https://www.envoyproxy.io/)
 
 
-
-
 ## References
 
-[1] [Hadoop vs Spark: Overview and Comparison](https://towardsdatascience.com/hadoop-vs-spark-overview-and-comparison-f62c99d0ee15)
+[1]: [Hadoop vs Spark: Overview and Comparison](https://towardsdatascience.com/hadoop-vs-spark-overview-and-comparison-f62c99d0ee15)
 
-[2] [6 recommendations for optimizing a Spark job](https://towardsdatascience.com/6-recommendations-for-optimizing-a-spark-job-5899ec269b4b)
+[2]: [6 recommendations for optimizing a Spark job](https://towardsdatascience.com/6-recommendations-for-optimizing-a-spark-job-5899ec269b4b)
 
-[3] [Useful Code Snippets for PySpark](https://towardsdatascience.com/useful-code-snippets-for-pyspark-c0e0c00f0269)
+[3]: [Useful Code Snippets for PySpark](https://towardsdatascience.com/useful-code-snippets-for-pyspark-c0e0c00f0269)
 
-[4] [PySpark Example for Dealing with Larger than Memory Datasets](https://towardsdatascience.com/a-pyspark-example-for-dealing-with-larger-than-memory-datasets-70dbc82b0e98)
+[4]: [PySpark Example for Dealing with Larger than Memory Datasets](https://towardsdatascience.com/a-pyspark-example-for-dealing-with-larger-than-memory-datasets-70dbc82b0e98)
 
 
-[5] [What Is Apache Kafka?](https://medium.com/cognizantsoftvision-guildhall/what-is-apache-kafka-a52a206d14c8)
+[5]: [What Is Apache Kafka?](https://medium.com/cognizantsoftvision-guildhall/what-is-apache-kafka-a52a206d14c8)
 
-[6] [Building Python Microservices with Apache Kafka: All Gain, No Pain](https://towardsdatascience.com/building-python-microservices-with-apache-kafka-all-gain-no-pain-1435836a3054)
+[6]: [Building Python Microservices with Apache Kafka: All Gain, No Pain](https://towardsdatascience.com/building-python-microservices-with-apache-kafka-all-gain-no-pain-1435836a3054)
 
-[7] [Kafka: Learn All About Consumers](https://medium.com/@maverick11/learn-all-about-kafka-consumers-fba36b94e724)
+[7]: [Kafka: Learn All About Consumers](https://medium.com/@maverick11/learn-all-about-kafka-consumers-fba36b94e724)
 
 
 [Serverless computing vs containers](https://www.cloudflare.com/learning/serverless/serverless-vs-containers/)
-
-
-

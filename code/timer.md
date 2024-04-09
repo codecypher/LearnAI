@@ -8,15 +8,15 @@ Here is a decorator that we can easily apply to real-world problems when debuggi
 ```py
     def timer(func):
       """
-      Display time it took for our function to run. 
+      Display time it took for our function to run.
       """
       @wraps(func)
       def wrapper(*args, **kwargs):
         start = time.perf_counter()
-    
+
         # Call the actual function
         res = func(*args, **kwargs)
-    
+
         duration = time.perf_counter() - start
         print(f'[{wrapper.__name__}] took {duration * 1000} ms')
         return res
@@ -80,7 +80,7 @@ my_printer(100000000)
 
 ## Building a custom Timer class
 
-Since Python 3.7, many functions in the time module with the suffix `_ns` return integer nanoseconds while the original float (seconds) versions can be called using the functions of the same name without the suffix [2]. 
+Since Python 3.7, many functions in the time module with the suffix `_ns` return integer nanoseconds while the original float (seconds) versions can be called using the functions of the same name without the suffix [2].
 
 #### Use perf_counter for precision
 
@@ -99,7 +99,7 @@ print(timer_ns)
 
 #### Use process_time for CPU time
 
-Sometimes we want to measure the CPU time of the process, regardless of thread sleep (other processes doing other things). In such cases, we should use `time.process_time_ns`. 
+Sometimes we want to measure the CPU time of the process, regardless of thread sleep (other processes doing other things). In such cases, we should use `time.process_time_ns`.
 
 ```py
 import time
@@ -116,7 +116,7 @@ print(timer_ns)
 
 When timing longer processes, system time changes can occur such as an NTP sync service or daylight saving time.
 
-Therefore, we need a clock that does not change even when the system time is changed called `time.monotonic_ns` which is suitable for timing longer processes. 
+Therefore, we need a clock that does not change even when the system time is changed called `time.monotonic_ns` which is suitable for timing longer processes.
 
 ```py
 import time
@@ -133,9 +133,9 @@ print(timer_ns)
 
 One of the features of Python is automatic garbage collection which is basically memory deallocation for unused objects.
 
-Garbage collection can impact execution times, so it can happen during the timing of your code block and the time it consumes is not negligible. 
+Garbage collection can impact execution times, so it can happen during the timing of your code block and the time it consumes is not negligible.
 
-Therefore, it is better to disable GC while measuring time. 
+Therefore, it is better to disable GC while measuring time.
 
 #### Custom Timer class
 
@@ -230,11 +230,11 @@ print(timer.time_nanosec, timer.time_sec)
 
 #### Timing context manager
 
-The context manager is one of Python’s top syntactic sugar features such as when we read code with the keyword “with”. 
+The context manager is one of Python’s top syntactic sugar features such as when we read code with the keyword “with”.
 
 Simple context managers are not hard to create, especially when using the standard module named `contextlib`.
 
-So we can create a context manager that uses our Timer class and takes care of starting and stopping it. 
+So we can create a context manager that uses our Timer class and takes care of starting and stopping it.
 
 ```py
 from contextlib import contextmanager
@@ -252,7 +252,7 @@ def timing(
     timer.stop()
 ```
 
-Then we can use it to time a block of code. 
+Then we can use it to time a block of code.
 
 ```py
 with timing() as timer:
@@ -263,8 +263,6 @@ with timing() as timer:
 
 ## References
 
-[1] [5 real handy python decorators for analyzing/debugging your code](https://towardsdatascience.com/5-real-handy-python-decorators-for-analyzing-debugging-your-code-c22067318d47)
+[1]: [5 real handy python decorators for analyzing/debugging your code](https://towardsdatascience.com/5-real-handy-python-decorators-for-analyzing-debugging-your-code-c22067318d47)
 
-[2] [Execution Times in Python](https://towardsdatascience.com/execution-times-in-python-ed45ecc1bb4d)
-
-
+[2]: [Execution Times in Python](https://towardsdatascience.com/execution-times-in-python-ed45ecc1bb4d)

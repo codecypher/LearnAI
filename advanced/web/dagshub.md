@@ -49,11 +49,11 @@ The metadata file is a placeholder for the original data that can be easily vers
 ```bash
   # show which branch is selected
   git branch
-  
+
   # create a branch and check it out in one step
   git checkout -b metrics main
   git checkout -b new_feature_branch
-  
+
   # switch between branches
   git checkout branchname
 ```
@@ -64,7 +64,7 @@ The metadata file is a placeholder for the original data that can be easily vers
 
 ## Create a Project on DagsHub
 
-This part of the Get Started section focuses on the configuration process when creating a project on DagsHub [1]. 
+This part of the Get Started section focuses on the configuration process when creating a project on DagsHub [1].
 
 We will cover how to create a DagsHub repository, connect it to your local computer, configure DVC, and set DagsHub storage as remote storage.
 
@@ -96,7 +96,7 @@ If you still want to set up your own cloud remote storage, please refer to our [
 
 ## Version Code and Data
 
-In the previous part of the Get Started section, we created and configured a DagsHub repository. 
+In the previous part of the Get Started section, we created and configured a DagsHub repository.
 
 In this part, we will download and add a project to our local directory, track the files using DVC and Git, and push the files to the remotes.
 
@@ -130,7 +130,7 @@ In this part, we will download and add a project to our local directory, track t
 
 ### Track Files Using Git and DVC
 
-At this point, we need to decide which files will be tracked by Git and which will be tracked by DVC. 
+At this point, we need to decide which files will be tracked by Git and which will be tracked by DVC.
 
 We will start with files tracked by DVC since this action will generate new files tracked by Git.
 
@@ -190,15 +190,15 @@ We will run the `data_preprocessing.py` file from our CLI.
 In this section, we covered the basic workflow of DVC and Git:
 
 - We added the project files to the repository and tracked them using Git and DVC.
-- We generated preprocessed data files and learned how to add these changes to DVC. 
+- We generated preprocessed data files and learned how to add these changes to DVC.
 
 
 
 ## Track Experiments
 
-In the previous part of the Get Started section, we learned how to track and push files to DagsHub using Git and DVC. 
+In the previous part of the Get Started section, we learned how to track and push files to DagsHub using Git and DVC.
 
-This part covers how to track your Data Science Experiments and save their parameters and metrics. 
+This part covers how to track your Data Science Experiments and save their parameters and metrics.
 
 We assume you have a project that you want to add experiment tracking to.
 
@@ -214,11 +214,11 @@ We will be showing an example based on the result of the last section, but you c
 
 ### Add DagsHub Logger
 
-DagsHub logger is a plain Python Logger for your metrics and parameters. 
+DagsHub logger is a plain Python Logger for your metrics and parameters.
 
-- The logger saves the information as human-readable files – CSV for metrics files and YAML for parameters. 
+- The logger saves the information as human-readable files – CSV for metrics files and YAML for parameters.
 
-- Once you push these files to your DagsHub repository, they will be automatically parsed and visualized in the Experiments Tab. 
+- Once you push these files to your DagsHub repository, they will be automatically parsed and visualized in the Experiments Tab.
 
 NOTE: Since DagsHub Experiments uses generic formats, you don't have to use DagsHub Logger. Instead, you can write your metrics and parameters into `metrics.csv` and `params.yml` files however you want and push them to your DagsHub repository where they will automatically be scanned and added to the experiment tab.
 
@@ -235,12 +235,12 @@ Now import dagshub to `modeling.py` module and track the Random Forest Classifie
 
   # Track and commit the changes with Git
   git add src/modeling.py
-  git commit -m "Add DagsHub Logger to the modeling module"  
+  git commit -m "Add DagsHub Logger to the modeling module"
 ```
 
 ### Create New Experiment
 
-To create a new experiment, we need to update at least one of the two `metrics.csv` or `params.yml` files, track them using Git, and push them to the DagsHub repository. 
+To create a new experiment, we need to update at least one of the two `metrics.csv` or `params.yml` files, track them using Git, and push them to the DagsHub repository.
 
 After editing the `modeling.py` module, once we run its script it will generate those two files.
 
@@ -273,14 +273,14 @@ The two files were added to the repository and one experiment was created.
 
 The information about the experiment is displayed under the Experiment Tab.
 
-This part covers the Experiment Tracking workflow. We highly recommend reading the experiment tab documentation to explore the various features that it has to offer. 
+This part covers the Experiment Tracking workflow. We highly recommend reading the experiment tab documentation to explore the various features that it has to offer.
 
 
 ## Explore a New Hypothesis
 
-In the previous part, we learned how to track the project's files using Git and DVC, and track the experiments using DagsHub. 
+In the previous part, we learned how to track the project's files using Git and DVC, and track the experiments using DagsHub.
 
-This part covers the most common practice of Exploring a New Hypothesis. 
+This part covers the most common practice of Exploring a New Hypothesis.
 
 We will learn how to examine a new approach to process the data, compare the results, and save the project's best result.
 
@@ -293,25 +293,25 @@ We will learn how to examine a new approach to process the data, compare the res
 
 The Data Science field is research-driven and exploring different solutions to a problem is a core principle. When a project evolves or grows in complexity, we need to compare results and see what approaches are more promising than others. In this process, we need to make sure we don't lose track of the project's components or miss any information. Therefore, it is useful to have a well-defined workflow.
 
-The common workflow of exploring a new approach is to create a new branch for it. 
+The common workflow of exploring a new approach is to create a new branch for it.
 
-In the branch, we will change the code, modify the data and models, and track them using Git and DVC. We compare the new model's performances with the current model. This comparison can be a hassle when not using the proper tools to track and visualize the result. 
+In the branch, we will change the code, modify the data and models, and track them using Git and DVC. We compare the new model's performances with the current model. This comparison can be a hassle when not using the proper tools to track and visualize the result.
 
 We can use DagsHub to overcome these challenges:
 
-- We will log the models' performances to readable formats and commit them to DagsHub. 
+- We will log the models' performances to readable formats and commit them to DagsHub.
 
-- Using the Experiment Tab, we will easily compare the results and determine if the new approach was effective or not. 
+- Using the Experiment Tab, we will easily compare the results and determine if the new approach was effective or not.
 
 - We can either merge the code, data, and models to the main branch or return to the main branch and retrieve the data and models from the remote storage to continue to the next experiment.
 
 ### Create a New Branch
 
-We are using the Enron data set that contains emails. 
+We are using the Enron data set that contains emails.
 
 The emails are stored in a CSV file and labeled as 'Ham' or 'Spam'.
 
-The current data processing method for the emails is to lower-case the characters and removes the string's punctuations. 
+The current data processing method for the emails is to lower-case the characters and removes the string's punctuations.
 
 We will try to reduce the processing time by not removing punctuations and see how it will affect the model's performance.
 
@@ -366,7 +366,7 @@ We have everything set to run our second Data Science Experiment! We will train 
   git push origin data-with-punctuations
 ```
 
-With DagsHub, we can easily compare the model's performance between the two experiments. 
+With DagsHub, we can easily compare the model's performance between the two experiments.
 
 We can open the Experiment Tab in the DagsHub repository and compare the model's ROC AUC scores.
 
@@ -374,14 +374,14 @@ As we can see in the image above, the new data processing method did not provide
 
 ### Retrieve Files
 
-Our experiment resulted in worse performance and we want to retrieve the previous version. Now, we can reap the benefits of our workflow. 
+Our experiment resulted in worse performance and we want to retrieve the previous version. Now, we can reap the benefits of our workflow.
 
-The best version of the project is always stored on the main branch. 
+The best version of the project is always stored on the main branch.
 
 hen concluding an experiment with insufficient impprovements, we simply need to check out the version we want (the master branch) and pull the remote storage files based on the .dvc pointers.
 
 ```bash
-  # Checkout to branch master using Git and pull the data files 
+  # Checkout to branch master using Git and pull the data files
   # from the remote storage using DVC
   git checkout master
   dvc checkout
@@ -391,11 +391,11 @@ Congratulations - Now we are finished!
 
 In the Get Started section, we covered the fundamentals of DagsHub usage:
 
-- We started by creating a repository and configuring Git and DVC. 
+- We started by creating a repository and configuring Git and DVC.
 
-- We added project files to the repository using Git (for code and configuration files) and DVC (for data). 
+- We added project files to the repository using Git (for code and configuration files) and DVC (for data).
 
-- We created our very first data science experiment using DagsHub logger to log metrics and parameters. 
+- We created our very first data science experiment using DagsHub logger to log metrics and parameters.
 
 - We learned how to explore new approaches and retrieve another version's files.
 
@@ -403,11 +403,8 @@ In the Get Started section, we covered the fundamentals of DagsHub usage:
 
 ## References
 
-[1] [Get Started](https://dagshub.com/docs/getting_started/overview/)
+[1]: [Get Started](https://dagshub.com/docs/getting_started/overview/)
 
-[2] [Get Started: Data Versioning](https://dvc.org/doc/start/data-management)
+[2]: [Get Started: Data Versioning](https://dvc.org/doc/start/data-management)
 
-[3] [Setup Remote Storage for Data and Models](https://dagshub.com/docs/integration_guide/set_up_remote_storage_for_data_and_models/)
-
-
-
+[3]: [Setup Remote Storage for Data and Models](https://dagshub.com/docs/integration_guide/set_up_remote_storage_for_data_and_models/)

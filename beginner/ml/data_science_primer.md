@@ -67,7 +67,7 @@ Supervised learning includes tasks for _labeled_ data (you have a target variabl
 - **Classification** is the task for modeling _categorical_ (class) target variables.
 
 
-- Multinomial Logistic Regression 
+- Multinomial Logistic Regression
 
   Multinomial Logistic Regression is a classification algorithm used to do multiclass classification.
 
@@ -128,43 +128,45 @@ There are other steps as well:
 
 ## Encoding and Embedding
 
-All Machine Learning (ML) methods work with input feature vectors and almost all of them require input features to be numerical [2]. 
+All Machine Learning (ML) methods work with input feature vectors and almost all of them require input features to be numerical [2].
 
 All Machine Learning (ML) methods work with input feature vectors and almost all of them require input features to be numerical.
 
 There are four types of ML features [2]:
 
-1. Numerical (continuous or discrete): numerical data can be characterized by continuous or discrete data. 
+1. Numerical (continuous or discrete): numerical data can be characterized by continuous or discrete data.
 
-Continuous data can assume any value within a range whereas discrete data has distinct values. 
+Continuous data can assume any value within a range whereas discrete data has distinct values.
 
-- An example of continues numerical variable is `height`. 
+- An example of continues numerical variable is `height`.
 
 - An example of discrete numerical variable is `age`.
 
-2. Categorical (ordinal or nominal): categorical data represents characteristics such as eye color, and hometown. 
+2. Categorical (ordinal or nominal): categorical data represents characteristics such as eye color, and hometown.
 
-  Categorical data can be ordinal or nominal. 
+  Categorical data can be ordinal or nominal.
 
-  In ordinal variable, the data falls into ordered categories that are ranked in some particular way. 
+  In ordinal variable, the data falls into ordered categories that are ranked in some particular way.
 
-  An example is `skill level` that takes values of [`beginner`, `intermediate`, `advanced`]. Nominal variable has no order among its values. 
-  
+  An example is `skill level` that takes values of [`beginner`, `intermediate`, `advanced`].
+
+  A nominal variable has no order among its values.
+
   An example is `eye color` that takes values of [`black`, `brown’, `blue`, `green`].
 
-3. Time series: Time series is a sequence of numbers collected at regular intervals over some period of time. 
+3. Time series: Time series is a sequence of numbers collected at regular intervals over some period of time.
 
-- This data is ordered in time unlike previous variables. 
+- This data is ordered in time unlike previous variables.
 
 - An example of this is `average of home sale price over years in USA`.
 
 4. Text: Any document is a text data, that we often represent them as a ‘bag of words’.
 
-  To feed any variables to an ML model, we have to convert them into numerical. Both encoding and embedding techniques can ne used to make the conversion. 
+  To feed any variables to an ML model, we have to convert them into numerical. Both encoding and embedding techniques can ne used to make the conversion.
 
 ### Encoding
 
-Encoding is the process of converting raw data, such as text, images, or audio, into a structured numerical format that can be easily processed by computers [2]. 
+Encoding is the process of converting raw data, such as text, images, or audio, into a structured numerical format that can be easily processed by computers [2].
 
 There are two ways to encode a categorical variable [2]:
 
@@ -178,7 +180,7 @@ The conclusion is that one-hot and multi-hot encodings are not practical for fea
 
 ### Embedding
 
-To address the shortcomings mentioned, we can translate high dimensional sparse vector to short dense vectors called _embeddings_. 
+To address the shortcomings mentioned, we can translate high dimensional sparse vector to short dense vectors called _embeddings_.
 
 An embedding is a translation of a high-dimensional vector into a low-dimensional space and captures semantic similarity.
 
@@ -188,7 +190,7 @@ The simplest embedding method is perhaps Singular Value Decomposition (SVD) that
 
 #### Neural Networks as Embedder
 
-State of the art embedders are among Neural Networks (NN). 
+State of the art embedders are among Neural Networks (NN).
 
 There are many NN techniques to compute word embeddings: Word2Vec, Glove, BERT, fastText, etc.
 
@@ -355,11 +357,11 @@ Here is an example:
 As you can see:
 
   - 'composition' is the same as 'Composition'
-  
+
   - 'asphalt' should be 'Asphalt'
-  
+
   - 'shake-shingle' should be 'Shake Shingle'
-  
+
   - 'asphalt,shake-shingle' could probably just be 'Shake Shingle' as well
 
 After we replace the typos and inconsistent capitalization, the class distribution becomes much cleaner:
@@ -369,7 +371,7 @@ Finally, check for **mislabeled classes** which are separate classes that should
 Examples:
 
   - If ’N/A’ and ’Not Applicable’ appear as two separate classes, you should combine them.
-  
+
   - ’IT’ and ’information_technology’ should be a single class.
 
 ### Filter Unwanted Outliers
@@ -395,7 +397,7 @@ First, **you cannot simply ignore missing values in your dataset**. You must han
 There are two commonly used methods of dealing with missing data:
 
   1. **Dropping** observations that have missing values
-  
+
   2. **Imputing** the missing values based on other observations
 
 Dropping missing values is sub-optimal because when you drop observations, you **drop information**.
@@ -452,9 +454,9 @@ In general, you can think of data cleaning as a process of _subtraction_ and fea
 This is often one of the most valuable tasks a data scientist can do to improve model performance:
 
   1. You can isolate and highlight key information which helps your algorithms "focus" on what is important.
-  
+
   2. You can bring in your own domain expertise.
-  
+
   3. Once you understand the "vocabulary" of feature engineering, you can bring in other people’s domain expertise!
 
 In this lesson, we will introduce several _heuristics_ to help spark new ideas.
@@ -756,9 +758,9 @@ Ensembling is a general term but winhen the **base models** are decision trees, 
 
 #### Gradient Boosting
 
-**Gradient boosting** is a machine learning technique for regression and classification problems which produces a prediction model in the form of an _ensemble_ of weak prediction models, typically decision trees. 
+**Gradient boosting** is a machine learning technique for regression and classification problems which produces a prediction model in the form of an _ensemble_ of weak prediction models, typically decision trees.
 
-When a decision tree is the weak learner, the resulting algorithm is called gradient boosted trees which usually outperforms random forest. 
+When a decision tree is the weak learner, the resulting algorithm is called gradient boosted trees which usually outperforms random forest.
 
 Gradient boosting builds the model in a stage-wise fashion like other boosting methods, and it generalizes them by allowing optimization of an arbitrary differentiable loss function.
 
@@ -974,17 +976,17 @@ Finally, use these questions to help you pick the winning model:
 
 # Machine Learning Metrics
 
-Evaluating your machine learning algorithm is an essential part of any project. 
+Evaluating your machine learning algorithm is an essential part of any project.
 
 A model may give you satisfying results when evaluated using a metric say accuracy_score but may give poor results when evaluated against other metrics such as logarithmic_loss or any other such metric [3]
 
-Most of the times we use classification accuracy to measure the performance of our model, but accuRracy alone is not enough to truly judge our model. 
+Most of the times we use classification accuracy to measure the performance of our model, but accuRracy alone is not enough to truly judge our model.
 
-It is also worth mentioning that _metric_ is different from _loss function_ [3]. 
+It is also worth mentioning that _metric_ is different from _loss function_ [3].
 
-- Loss functions show a measure of the model performance and are used to train a machine learning model (using some kind of optimization) and are usually differentiable in model’s parameters. 
+- Loss functions show a measure of the model performance and are used to train a machine learning model (using some kind of optimization) and are usually differentiable in model’s parameters.
 
-- Metrics are used to monitor and measure the performance of a model (during training and test) and do not need to be differentiable. 
+- Metrics are used to monitor and measure the performance of a model (during training and test) and do not need to be differentiable.
 
 If for some tasks the performance metric is differentiable, it can be used both as a loss function (perhaps with some regularizations added to it) and a metric such as MSE [3].
 
@@ -1013,7 +1015,7 @@ The author covers the popular metrics used in the following problems [3]:
 
 ## Performance Metrics For Classification
 
-We need some way to tell how well our classification model is doing [5]. 
+We need some way to tell how well our classification model is doing [5].
 
 - Accuracy
 - Precision and Recall
@@ -1045,7 +1047,7 @@ The Confusion Matrix forms the basis for the other types of metrics.
 
 True Positive Rate corresponds to the proportion of positive data points that are correctly considered as positive, with respect to all positive data points.
 
-- True Negative Rate (Specificity) : True Negative Rate is defined as TN / (FP+TN). 
+- True Negative Rate (Specificity) : True Negative Rate is defined as TN / (FP+TN).
 
 True Negative Rate corresponds to the proportion of negative data points that are correctly considered as negative, with respect to all negative data points.
 
@@ -1059,13 +1061,13 @@ Logarithmic Loss (Log Loss) works by penalising the false classifications which 
 
 ### Area Under Curve (AUC)
 
-Area Under Curve (AUC) is used for binary classification problem. AUC of a classifier is equal to the probability that the classifier will rank a randomly chosen positive example higher than a randomly chosen negative example. 
+Area Under Curve (AUC) is used for binary classification problem. AUC of a classifier is equal to the probability that the classifier will rank a randomly chosen positive example higher than a randomly chosen negative example.
 
   AUC has a range of [0, 1]. The greater the value, the better the performance of our model.
 
 ### F1 Score
 
-F1 Score is used to measure a test’s accuracy. 
+F1 Score is used to measure a test’s accuracy.
 
 F1 Score tries to find the balance between precision and recall.
 
@@ -1077,7 +1079,7 @@ High precision but lower recall, gives you an extremely accurate, but it then mi
 
   Precision = TP / (TP + FP)
 
-- Recall: the number of correct positive results divided by the number of all relevant samples (all samples that should have been identified as positive). 
+- Recall: the number of correct positive results divided by the number of all relevant samples (all samples that should have been identified as positive).
 
   Recall will tell us how many patients were identified to be sick out of the patients who were actually sick. Thus, recall is a very important metric in the medical domain.
 
@@ -1086,7 +1088,7 @@ High precision but lower recall, gives you an extremely accurate, but it then mi
 
 ## Performance Metrics For Regression
 
-The metrics like accuracy, precision, recall and F1 score are only applicable only if the problem is classification [5]. 
+The metrics like accuracy, precision, recall and F1 score are only applicable only if the problem is classification [5].
 
 - MAE
 - MSE
@@ -1100,7 +1102,7 @@ MAE has the advantage of not penalizing the large errors which is helpful in som
 
 ### Mean Squared Error
 
-Mean Squared Error (MSE) is similar to Mean Absolute Error, but MSE takes the average of the square of the difference between the original values and the predicted values. 
+Mean Squared Error (MSE) is similar to Mean Absolute Error, but MSE takes the average of the square of the difference between the original values and the predicted values.
 
 The advantage of MSE is that it is easier to compute the gradient whereas MAE requires complicated linear programming tools to compute the gradient. Since we take the square of the error, the effect of larger errors become more pronounced than smaller error, so the model can now focus more on the larger errors.
 
@@ -1115,23 +1117,15 @@ Since the errors are squared and due to which RMSE will not be in the same scale
 
 ## References
 
-[1] [Data Science Primer](https://elitedatascience.com/primer)
+[1]: [Data Science Primer](https://elitedatascience.com/primer)
 
-[2] [From Encodings to Embeddings](https://towardsdatascience.com/from-encodings-to-embeddings-5b59bceef094)
+[2]: [From Encodings to Embeddings](https://towardsdatascience.com/from-encodings-to-embeddings-5b59bceef094)
 
-[3] [20 Popular Machine Learning Metrics](https://towardsdatascience.com/20-popular-machine-learning-metrics-part-1-classification-regression-evaluation-metrics-1ca3e282a2ce)
+[3]: [20 Popular Machine Learning Metrics](https://towardsdatascience.com/20-popular-machine-learning-metrics-part-1-classification-regression-evaluation-metrics-1ca3e282a2ce)
 
-[4] [Metrics to Evaluate your Machine Learning Algorithm](https://towardsdatascience.com/metrics-to-evaluate-your-machine-learning-algorithm-f10ba6e38234)
+[4]: [Metrics to Evaluate your Machine Learning Algorithm](https://towardsdatascience.com/metrics-to-evaluate-your-machine-learning-algorithm-f10ba6e38234)
 
-[5] [Error Metrics in Machine learning](https://medium.com/analytics-vidhya/error-metrics-in-machine-learning-f9eed7b139f)
+[5]: [Error Metrics in Machine learning](https://medium.com/analytics-vidhya/error-metrics-in-machine-learning-f9eed7b139f)
 
 
 [Datasets for Data Science and Machine Learning](https://elitedatascience.com/datasets)
-
-
-
-
-
-
-
-

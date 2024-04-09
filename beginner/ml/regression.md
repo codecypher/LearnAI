@@ -325,23 +325,21 @@ There are four main types of classification tasks that you may encounter [6]:
 [A Practical Introduction to 9 Regression Algorithms](https://towardsdatascience.com/a-practical-introduction-to-9-regression-algorithms-389057f86eb9)
 
 
-
-
 ## References
 
-[1] [A Practical Guide to Linear Regression](https://towardsdatascience.com/a-practical-guide-to-linear-regression-3b1cb9e501a6?gi=ba29357dcc8)
+[1]: [A Practical Guide to Linear Regression](https://towardsdatascience.com/a-practical-guide-to-linear-regression-3b1cb9e501a6?gi=ba29357dcc8)
 
-[2] [End-to-End Machine Learning Workflow](https://medium.com/mlearning-ai/end-to-end-machine-learning-workflow-part-1-b5aa2e3d30e2)
+[2]: [End-to-End Machine Learning Workflow](https://medium.com/mlearning-ai/end-to-end-machine-learning-workflow-part-1-b5aa2e3d30e2)
 
-[3] [Essential guide to Multi-Class and Multi-Output Algorithms in Python](https://satyam-kumar.medium.com/essential-guide-to-multi-class-and-multi-output-algorithms-in-python-3041fea55214)
+[3]: [Essential guide to Multi-Class and Multi-Output Algorithms in Python](https://satyam-kumar.medium.com/essential-guide-to-multi-class-and-multi-output-algorithms-in-python-3041fea55214)
 
-[4] [Supervised Machine Learning: Classification, Logistic Regression, and Classification Error Metrics](https://medium.com/the-quant-journey/supervised-machine-learning-classification-logistic-regression-and-classification-error-metrics-6c128263ac64?source=rss------artificial_intelligence-5)
+[4]: [Supervised Machine Learning: Classification, Logistic Regression, and Classification Error Metrics](https://medium.com/the-quant-journey/supervised-machine-learning-classification-logistic-regression-and-classification-error-metrics-6c128263ac64?source=rss------artificial_intelligence-5)
 
-[5] [Improve Your Classification Models With Threshold Tuning](https://pub.towardsai.net/improve-your-classification-models-with-threshold-tuning-bb69fca15114)
+[5]: [Improve Your Classification Models With Threshold Tuning](https://pub.towardsai.net/improve-your-classification-models-with-threshold-tuning-bb69fca15114)
 
-[6] [4 Types of Classification Tasks in Machine Learning](https://machinelearningmastery.com/types-of-classification-in-machine-learning/)
+[6]: [4 Types of Classification Tasks in Machine Learning](https://machinelearningmastery.com/types-of-classification-in-machine-learning/)
 
-[7] [Linear Discriminant Analysis for Machine Learning](https://machinelearningmastery.com/linear-discriminant-analysis-for-machine-learning/)
+[7]: [Linear Discriminant Analysis for Machine Learning](https://machinelearningmastery.com/linear-discriminant-analysis-for-machine-learning/)
 
 
 [Five Regression Python Modules That Every Data Scientist Must Know](https://towardsdatascience.com/five-regression-python-modules-that-every-data-scientist-must-know-a4e03a886853)
@@ -350,4 +348,3 @@ There are four main types of classification tasks that you may encounter [6]:
 
 
 [A Gentle Introduction to Multiple-Model Machine Learning](https://machinelearningmastery.com/multiple-model-machine-learning/)
-

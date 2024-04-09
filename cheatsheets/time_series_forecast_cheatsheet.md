@@ -300,31 +300,30 @@ Some common error metrics used for Time Series Forecasting model assessment:
 
 ## References
 
-[1] W. McKinney, Python for Data Analysis 2nd ed., Oreilly, ISBN: 978-1-491-95766-0, 2018.
+[1]: W. McKinney, Python for Data Analysis 2nd ed., Oreilly, ISBN: 978-1-491-95766-0, 2018.
 
-[2] [Multivariate Time Series Forecasting with LSTMs in Keras](https://machinelearningmastery.com/multivariate-time-series-forecasting-lstms-keras/)
+[2]: [Multivariate Time Series Forecasting with LSTMs in Keras](https://machinelearningmastery.com/multivariate-time-series-forecasting-lstms-keras/)
 
-[3] [How to Develop Multivariate Multi-Step Time Series Forecasting Models for Air Pollution](https://machinelearningmastery.com/how-to-develop-machine-learning-models-for-multivariate-multi-step-air-pollution-time-series-forecasting/)
+[3]: [How to Develop Multivariate Multi-Step Time Series Forecasting Models for Air Pollution](https://machinelearningmastery.com/how-to-develop-machine-learning-models-for-multivariate-multi-step-air-pollution-time-series-forecasting/)
 
-[4] [Time Series Data Visualization In Python](https://pub.towardsai.net/time-series-data-visualization-in-python-2b1959726312)
+[4]: [Time Series Data Visualization In Python](https://pub.towardsai.net/time-series-data-visualization-in-python-2b1959726312)
 
-[5] [4 Techniques to Handle Missing values in Time Series Data](https://satyam-kumar.medium.com/4-techniques-to-handle-missing-values-in-time-series-data-c3568589b5a8)
+[5]: [4 Techniques to Handle Missing values in Time Series Data](https://satyam-kumar.medium.com/4-techniques-to-handle-missing-values-in-time-series-data-c3568589b5a8)
 
-[6] [Don’t Use K-fold Validation for Time Series Forecasting](https://towardsdatascience.com/dont-use-k-fold-validation-for-time-series-forecasting-30b724aaea64)
+[6]: [Don’t Use K-fold Validation for Time Series Forecasting](https://towardsdatascience.com/dont-use-k-fold-validation-for-time-series-forecasting-30b724aaea64)
 
-[7] [Bias-Variance Tradeoff in Time Series](https://towardsdatascience.com/bias-variance-tradeoff-in-time-series-8434f536387a)
-
-
-[^tflow_optimize_pipeline]: https://medium.com/@virtualmartire/optimizing-a-tensorflow-input-pipeline-best-practices-in-2022-4ade92ef8736 "Optimizing a TensorFlow Input Pipeline: Best Practices in 2022"
-
-[^speedup_tflow_training]: https://blog.seeso.io/a-simple-guide-to-speed-up-your-training-in-tensorflow-2-8386e6411be4?gi=55c564475d16 "A simple guide to speed up your training in TensorFlow"
-
-[^accelerate_tflow_training]: https://towardsdatascience.com/accelerate-your-training-and-inference-running-on-tensorflow-896aa963aa70 "Accelerate your training and inference running on Tensorflow"
-
-[^speedup_sklearn_training]: https://medium.com/distributed-computing-with-ray/how-to-speed-up-scikit-learn-model-training-aaf17e2d1e1 "How to Speed up Scikit-Learn Model Training"
+[7]: [Bias-Variance Tradeoff in Time Series](https://towardsdatascience.com/bias-variance-tradeoff-in-time-series-8434f536387a)
 
 
-[^gpu_keras_wandb]: https://wandb.ai/authors/ayusht/reports/Using-GPUs-With-Keras-A-Tutorial-With-Code--VmlldzoxNjEyNjE "Using GPUs With Keras and wandb: A Tutorial With Code"
+[^tflow_optimize_pipeline]: <https://medium.com/@virtualmartire/optimizing-a-tensorflow-input-pipeline-best-practices-in-2022-4ade92ef8736> "Optimizing a TensorFlow Input Pipeline: Best Practices in 2022"
 
-[^gpu_tflow]: https://www.tensorflow.org/guide/gpu "Use a GPU with Tensorflow"
+[^speedup_tflow_training]: <https://blog.seeso.io/a-simple-guide-to-speed-up-your-training-in-tensorflow-2-8386e6411be4?gi=55c564475d16> "A simple guide to speed up your training in TensorFlow"
 
+[^accelerate_tflow_training]: <https://towardsdatascience.com/accelerate-your-training-and-inference-running-on-tensorflow-896aa963aa70> "Accelerate your training and inference running on Tensorflow"
+
+[^speedup_sklearn_training]: <https://medium.com/distributed-computing-with-ray/how-to-speed-up-scikit-learn-model-training-aaf17e2d1e1> "How to Speed up Scikit-Learn Model Training"
+
+
+[^gpu_keras_wandb]: <https://wandb.ai/authors/ayusht/reports/Using-GPUs-With-Keras-A-Tutorial-With-Code--VmlldzoxNjEyNjE> "Using GPUs With Keras and wandb: A Tutorial With Code"
+
+[^gpu_tflow]: <https://www.tensorflow.org/guide/gpu> "Use a GPU with Tensorflow"

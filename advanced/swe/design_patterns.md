@@ -112,7 +112,4 @@ Data Mesh Observability Pattern: real-time understanding of the state of a Data 
 
 [1] Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides. Design Patterns: Elements of Reusable Object-Oriented Software. ISBN: 978-0201633610. 1994.
 
-[2] [A Gentle Introduction to Decorators in Python](https://machinelearningmastery.com/a-gentle-introduction-to-decorators-in-python/)
-
-
-
+[2]: [A Gentle Introduction to Decorators in Python](https://machinelearningmastery.com/a-gentle-introduction-to-decorators-in-python/)

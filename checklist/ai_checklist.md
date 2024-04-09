@@ -563,50 +563,49 @@ NER is the process to find the important labels that are present in the text.
 - LSTM
 
 
-
 ## References
 
-[1] [4 Reasons Why You Shouldn’t Use Machine Learning](https://towardsdatascience.com/4-reasons-why-you-shouldnt-use-machine-learning-639d1d99fe11?source=rss----7f60cf5620c9---4&gi=204e8d695029)
+[1]: [4 Reasons Why You Shouldn’t Use Machine Learning](https://towardsdatascience.com/4-reasons-why-you-shouldnt-use-machine-learning-639d1d99fe11?source=rss----7f60cf5620c9---4&gi=204e8d695029)
 
-[2] [AI Checklist](https://towardsdatascience.com/the-ai-checklist-fe2d76907673)
-
-
-[3] [Machine Learning Performance Improvement Cheat Sheet](https://machinelearningmastery.com/machine-learning-performance-improvement-cheat-sheet/)
-
-[4] [Deploy Your Predictive Model To Production](https://machinelearningmastery.com/deploy-machine-learning-model-to-production/)
-
-[5] [Feature engineering A-Z](https://towardsdatascience.com/feature-engineering-a-z-aa8ce9639632)
-
-[6] [Dimensionality Reduction Explained](https://towardsdatascience.com/dimensionality-reduction-explained-5ae45ae3058e)
+[2]: [AI Checklist](https://towardsdatascience.com/the-ai-checklist-fe2d76907673)
 
 
-[7] [NLP Cheatsheet](https://medium.com/javarevisited/nlp-cheatsheet-2b19ebcc5d2e)
+[3]: [Machine Learning Performance Improvement Cheat Sheet](https://machinelearningmastery.com/machine-learning-performance-improvement-cheat-sheet/)
+
+[4]: [Deploy Your Predictive Model To Production](https://machinelearningmastery.com/deploy-machine-learning-model-to-production/)
+
+[5]: [Feature engineering A-Z](https://towardsdatascience.com/feature-engineering-a-z-aa8ce9639632)
+
+[6]: [Dimensionality Reduction Explained](https://towardsdatascience.com/dimensionality-reduction-explained-5ae45ae3058e)
 
 
-[8] [ML Checklist — Best Practices for a Successful Model Deployment](https://medium.com/analytics-vidhya/ml-checklist-best-practices-for-a-successful-model-deployment-2cff5495efed)
-
-[9] [Machine Learning Model Deployment — A Simple Checklist](https://towardsdatascience.com/machine-learning-model-deployment-a-simplistic-checklist-dc5558a88d1b)
-
-[10] [Machine Learning Project Checklist](https://github.com/sjosund/ml-project-checklist)
-
-[11] [Deploying Machine Learning Models: A Checklist](https://twolodzko.github.io/ml-checklist)
+[7]: [NLP Cheatsheet](https://medium.com/javarevisited/nlp-cheatsheet-2b19ebcc5d2e)
 
 
-[12] [8 Mistakes to avoid while using Machine Learning](https://medium.com/@monodeepets77/8-mistakes-to-avoid-while-using-machine-learning-d61af954b9c9)
+[8]: [ML Checklist — Best Practices for a Successful Model Deployment](https://medium.com/analytics-vidhya/ml-checklist-best-practices-for-a-successful-model-deployment-2cff5495efed)
 
-[13] [5 Steps to follow for Successful Machine Learning Project](https://addiai.com/successful-machine-learning-project/)
+[9]: [Machine Learning Model Deployment — A Simple Checklist](https://towardsdatascience.com/machine-learning-model-deployment-a-simplistic-checklist-dc5558a88d1b)
 
-[14] [10 Machine Learning Techniques for AI Development](https://daffodilsw.medium.com/10-machine-learning-techniques-for-ai-development-15df0953f05f)
+[10]: [Machine Learning Project Checklist](https://github.com/sjosund/ml-project-checklist)
 
-
-[15] [The Data Quality Hierarchy of Needs](https://www.kdnuggets.com/2022/08/data-quality-hierarchy-needs.html)
-
-[16] [Major Problems of Machine Learning Datasets: Part 3](https://heartbeat.comet.ml/major-problems-of-machine-learning-datasets-part-3-eae18ab40eda)
+[11]: [Deploying Machine Learning Models: A Checklist](https://twolodzko.github.io/ml-checklist)
 
 
-[17] [7 Tips for Choosing the Right Machine Learning Infrastructure](https://www.aiiottalk.com/right-machine-learning-infrastructure/)
+[12]: [8 Mistakes to avoid while using Machine Learning](https://medium.com/@monodeepets77/8-mistakes-to-avoid-while-using-machine-learning-d61af954b9c9)
+
+[13]: [5 Steps to follow for Successful Machine Learning Project](https://addiai.com/successful-machine-learning-project/)
+
+[14]: [10 Machine Learning Techniques for AI Development](https://daffodilsw.medium.com/10-machine-learning-techniques-for-ai-development-15df0953f05f)
 
 
-[^ai_hierarchy]: https://hackernoon.com/the-ai-hierarchy-of-needs-18f111fcc007
+[15]: [The Data Quality Hierarchy of Needs](https://www.kdnuggets.com/2022/08/data-quality-hierarchy-needs.html)
 
-[^kpi]: https://kpi.org/KPI-Basics
+[16]: [Major Problems of Machine Learning Datasets: Part 3](https://heartbeat.comet.ml/major-problems-of-machine-learning-datasets-part-3-eae18ab40eda)
+
+
+[17]: [7 Tips for Choosing the Right Machine Learning Infrastructure](https://www.aiiottalk.com/right-machine-learning-infrastructure/)
+
+
+[^ai_hierarchy]: <https://hackernoon.com/the-ai-hierarchy-of-needs-18f111fcc007>
+
+[^kpi]: <https://kpi.org/KPI-Basics>

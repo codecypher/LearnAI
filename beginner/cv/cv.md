@@ -639,35 +639,34 @@ However, you will need to buy their product and install it on your car and it is
 
 ## References
 
-[1] [A Gentle Introduction to Computer Vision](https://machinelearningmastery.com/what-is-computer-vision/)
+[1]: [A Gentle Introduction to Computer Vision](https://machinelearningmastery.com/what-is-computer-vision/)
 
-[2] [Guide to Deep Learning for Computer Vision](https://machinelearningmastery.com/start-here/#dlfcv)
+[2]: [Guide to Deep Learning for Computer Vision](https://machinelearningmastery.com/start-here/#dlfcv)
 
-[3] [A Gentle Introduction to Object Recognition](https://machinelearningmastery.com/object-recognition-with-deep-learning/)
+[3]: [A Gentle Introduction to Object Recognition](https://machinelearningmastery.com/object-recognition-with-deep-learning/)
 
-[4] [A Gentle Introduction to Channels-First and Channels-Last Image Formats](https://machinelearningmastery.com/a-gentle-introduction-to-channels-first-and-channels-last-image-formats-for-deep-learning/)
+[4]: [A Gentle Introduction to Channels-First and Channels-Last Image Formats](https://machinelearningmastery.com/a-gentle-introduction-to-channels-first-and-channels-last-image-formats-for-deep-learning/)
 
-[5] [Semantic Segmentation](https://www.technologyhq.org/semantic-segmentation-what-is-it-and-how-does-it-help/)
-
-
-[6] [Image-Processing Libraries to Load Image Data in Machine Learning and Deep Learning](https://medium.com/geekculture/image-processing-libraries-to-load-image-data-in-machine-learning-and-deep-learning-4c6ca538cc95)
-
-[7] [How to Load and Manipulate Images for Deep Learning in Python With PIL/Pillow](https://machinelearningmastery.com/how-to-load-and-manipulate-images-for-deep-learning-in-python-with-pil-pillow/)
-
-[8] [scikit-learn Dataset loading utilities](https://scikit-learn.org/stable/datasets.html))
-
-[9] [How to Load, Convert, and Save Images With the Keras API](https://machinelearningmastery.com/how-to-load-convert-and-save-images-with-the-keras-api/)
+[5]: [Semantic Segmentation](https://www.technologyhq.org/semantic-segmentation-what-is-it-and-how-does-it-help/)
 
 
-[10] [How to Load and Visualize Standard Computer Vision Datasets With Keras](https://machinelearningmastery.com/how-to-load-and-visualize-standard-computer-vision-datasets-with-keras/
+[6]: [Image-Processing Libraries to Load Image Data in Machine Learning and Deep Learning](https://medium.com/geekculture/image-processing-libraries-to-load-image-data-in-machine-learning-and-deep-learning-4c6ca538cc95)
 
-[11] [Computer Vision: Exploring your image datasets the RIGHT way](https://medium.com/mlearning-ai/computer-vision-exploring-your-image-datasets-the-right-way-538c5ae8ca5d)
+[7]: [How to Load and Manipulate Images for Deep Learning in Python With PIL/Pillow](https://machinelearningmastery.com/how-to-load-and-manipulate-images-for-deep-learning-in-python-with-pil-pillow/)
+
+[8]: [scikit-learn Dataset loading utilities](https://scikit-learn.org/stable/datasets.html))
+
+[9]: [How to Load, Convert, and Save Images With the Keras API](https://machinelearningmastery.com/how-to-load-convert-and-save-images-with-the-keras-api/)
 
 
-[12] [Document Parsing with Python and OCR](https://towardsdatascience.com/document-parsing-with-python-ocr-75543448e581)
+[10]: [How to Load and Visualize Standard Computer Vision Datasets With Keras](https://machinelearningmastery.com/how-to-load-and-visualize-standard-computer-vision-datasets-with-keras/
+
+[11]: [Computer Vision: Exploring your image datasets the RIGHT way](https://medium.com/mlearning-ai/computer-vision-exploring-your-image-datasets-the-right-way-538c5ae8ca5d)
+
+
+[12]: [Document Parsing with Python and OCR](https://towardsdatascience.com/document-parsing-with-python-ocr-75543448e581)
 
 
 [Build a Semantic Segmentation Model With One Line Of Code](https://pub.towardsai.net/build-a-semantic-segmentation-model-with-one-line-of-code-32b6eab0cb81)
 
 [9 Applications of Deep Learning for Computer Vision](https://machinelearningmastery.com/applications-of-deep-learning-for-computer-vision/)
-

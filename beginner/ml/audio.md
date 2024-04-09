@@ -65,12 +65,10 @@ There is a lot that can be done with this package.
 [How to Perform Speech-To-Text and Remove PII with AssemblyAI](https://www.instapaper.com/read/1480619727)
 
 
-
 ## References
 
-[1] [Top 3 Python Packages to learn Audio Data Science Project](https://towardsdatascience.com/top-3-python-packages-to-learn-audio-data-science-project-cbd11c100fe7)
+[1]: [Top 3 Python Packages to learn Audio Data Science Project](https://towardsdatascience.com/top-3-python-packages-to-learn-audio-data-science-project-cbd11c100fe7)
 
-[2] [Get To Know Audio Feature Extraction in Python](https://towardsdatascience.com/get-to-know-audio-feature-extraction-in-python-a499fdaefe42)
+[2]: [Get To Know Audio Feature Extraction in Python](https://towardsdatascience.com/get-to-know-audio-feature-extraction-in-python-a499fdaefe42)
 
-[3] [Audio Augmentations in TensorFlow](https://towardsdatascience.com/audio-augmentations-in-tensorflow-48483260b169)
-
+[3]: [Audio Augmentations in TensorFlow](https://towardsdatascience.com/audio-augmentations-in-tensorflow-48483260b169)

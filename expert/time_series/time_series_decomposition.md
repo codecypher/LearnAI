@@ -39,13 +39,13 @@ It is also helpful to think of the components as combining either additive or mu
 
 #### Classical Decomposition
 
-The **classical decomposition** (CD) method originated in the 1920s. 
+The **classical decomposition** (CD) method originated in the 1920s.
 
-CD is a relatively simple procedure that is the starting point for most other methods of time series decomposition. 
+CD is a relatively simple procedure that is the starting point for most other methods of time series decomposition.
 
-There are two forms of classical decomposition: an additive decomposition and a multiplicative decomposition. 
+There are two forms of classical decomposition: an additive decomposition and a multiplicative decomposition.
 
-The classical method of time series decomposition forms the basis of many time series decomposition methods, so it is important to understand how it works. 
+The classical method of time series decomposition forms the basis of many time series decomposition methods, so it is important to understand how it works.
 
 The first step in a classical decomposition is to use a **moving average** method to estimate the trend-cycle.
 
@@ -84,7 +84,7 @@ Decomposition is primarily used for time series analysis which can be used to in
 
 Decomposition provides a structured way of thinking about a time series forecasting problem, both generally in terms of modeling complexity and specifically in terms of how to best capture each of these components in a given model.
 
-Each of these components are something we may need to think about and address during data preparation, model selection, and model tuning. 
+Each of these components are something we may need to think about and address during data preparation, model selection, and model tuning.
 
 We may address decomposition explicitly in terms of modeling the trend and subtracting it from your data or implicitly by providing enough history for an algorithm to model a trend if it exists.
 
@@ -92,9 +92,9 @@ We may or may not be able to cleanly or perfectly break down the time series as 
 
 - Real-world problems are messy and noisy.
 
-- There may be additive and multiplicative components. 
+- There may be additive and multiplicative components.
 
-- There may be an increasing trend followed by a decreasing trend. 
+- There may be an increasing trend followed by a decreasing trend.
 
 - There may be non-repeating cycles mixed in with the repeating seasonality components.
 
@@ -105,11 +105,11 @@ However, these abstract models provide a simple framework that we can use to ana
 
 There are methods to automatically decompose a time series.
 
-The `statsmodels` library provides an implementation of the naive or classical decomposition method in a function called `seasonal_decompose()`. 
+The `statsmodels` library provides an implementation of the naive or classical decomposition method in a function called `seasonal_decompose()`.
 
 The statsmodels linrary requires that we specify whether the model is additive or multiplicative.
 
-Both techniques will produce a result and we must be careful to be critical when interpreting the result. 
+Both techniques will produce a result and we must be careful to be critical when interpreting the result.
 
 A review of a plot of the time series and some summary statistics can often be a good start to get an idea of whether the time series problem appears additive or multiplicative.
 
@@ -152,7 +152,7 @@ Although classical methods are common, they are not recommended for the followin
 
 - There are better methods that can be used for decomposition such as X11 decomposition, SEAT decomposition, or STL decomposition.
 
-STL has many advantages over classical, X11, and SEAT decomposition techniques. 
+STL has many advantages over classical, X11, and SEAT decomposition techniques.
 
 
 #### Additive Decomposition
@@ -162,7 +162,7 @@ STL has many advantages over classical, X11, and SEAT decomposition techniques.
     from pandas import Series
     from matplotlib import pyplot
     from statsmodels.tsa.seasonal import seasonal_decompose
-    
+
     series = [i+randrange(10) for i in range(1,100)]
     result = seasonal_decompose(series, model='additive', period=1)
     result.plot()
@@ -187,14 +187,14 @@ Running the example, we can see that, as in the additive case, the trend is easi
     from pandas import Series
     from matplotlib import pyplot
     from statsmodels.tsa.seasonal import seasonal_decompose
-    
+
     series = [i**2.0 for i in range(1,100)]
     result = seasonal_decompose(series, model='multiplicative', period=1)
     result.plot()
     pyplot.show()
 ```
 
-Exponential changes can be made linear by data transforms. Here, a quadratic trend can be made linear by applying the square root. 
+Exponential changes can be made linear by data transforms. Here, a quadratic trend can be made linear by applying the square root.
 
 An exponential growth in seasonality can be made linear by taking the natural logarithm.
 
@@ -205,7 +205,7 @@ Again, it is important to treat decomposition as a potentially useful analysis t
 
 The airline passengers dataset describes the total number of airline passengers over a period of time.
 
-The units are a count of the number of airline passengers in thousands. 
+The units are a count of the number of airline passengers in thousands.
 
 There are 144 monthly observations from 1949 to 1960.
 
@@ -214,13 +214,13 @@ First, we graph the raw observations.
 ```py
     from pandas import read_csv
     from matplotlib import pyplot
-    
+
     series = read_csv('airline-passengers.csv', header=0, index_col=0)
     series.plot()
     pyplot.show()
 ```
 
-Reviewing the line plot, it suggests that there may be a linear trend but it is hard to be sure just by eye-balling. 
+Reviewing the line plot, it suggests that there may be a linear trend but it is hard to be sure just by eye-balling.
 
 There is also seasonality, but the amplitude (height) of the cycles appears to be increasing, suggesting that it is multiplicative.
 
@@ -233,7 +233,7 @@ The example below decomposes the airline passenger dataset as a multiplicative m
     from pandas import read_csv
     from matplotlib import pyplot
     from statsmodels.tsa.seasonal import seasonal_decompose
-    
+
     series = read_csv('airline-passengers.csv', header=0, index_col=0)
     result = seasonal_decompose(series, model='multiplicative')
     result.plot()
@@ -246,7 +246,7 @@ Running the example plots the observed, trend, seasonal, and residual time serie
 ![Mulitplicative Decomposition|600xauto {Figure 1: Multiplicative decomposition of airline passenger dataset.}](https://machinelearningmastery.com/wp-content/uploads/2017/01/Multiplicative-Decomposition-of-Airline-Passenger-Dataset.png)
 
 
-We can see that the trend and seasonality information extracted from the series does seem reasonable. 
+We can see that the trend and seasonality information extracted from the series does seem reasonable.
 
 The residuals also show periods of high variability in the early and later years of the series.
 
@@ -259,7 +259,7 @@ The residuals also show periods of high variability in the early and later years
 
 ### STL Decomposition
 
-STL stands for seasonal and trend decomposition using Loess. 
+STL stands for seasonal and trend decomposition using Loess.
 
 STL is robust to outliers and can handle any kind of seasonality which also makes it a versatile method for decomposition.
 
@@ -273,9 +273,9 @@ There are a few things we can control when using STL:
 
 SLT has some disadvantages:
 
-- STL cannot handle calendar variations automatically. 
+- STL cannot handle calendar variations automatically.
 
-- STL only provides a decomposition for additive models. 
+- STL only provides a decomposition for additive models.
 
   We can obtain the multiplicative decomposition by taking the logarithm of the data and then  transforming the components.
 
@@ -284,7 +284,7 @@ SLT has some disadvantages:
     import seaborn as sns
     import matplotlib.pyplot as plt
     from statsmodels.tsa.seasonal import STL
-     
+
     elec_equip = read_csv(r"C:/Users/datas/python/data/elecequip.csv")
     stl = STL(elec_equip, period=12, robust=True)
     res_robust = stl.fit()
@@ -293,7 +293,7 @@ SLT has some disadvantages:
 
 ### Basic Time Series Forecasting Methods
 
-Although there are many statistical techniques for forecasting time series data, here we only consider the most straight-forward and simple methods that can be used for effective time series forecasting. 
+Although there are many statistical techniques for forecasting time series data, here we only consider the most straight-forward and simple methods that can be used for effective time series forecasting.
 
 These methods also serve as the foundation for some of the other methods:
 
@@ -323,9 +323,9 @@ The time series of retail eCommerce sales shown below demonstrates a possibly qu
 
 ### The Cyclical component
 
-The cyclical component represents phenomena that happen across seasonal periods. 
+The cyclical component represents phenomena that happen across seasonal periods.
 
-Cyclical patterns do not have a fixed period like seasonal patterns. 
+Cyclical patterns do not have a fixed period like seasonal patterns.
 
 An example of a cyclical pattern is the cycles of boom and bust that stock markets experience in response to world events.
 
@@ -333,9 +333,9 @@ The cyclical component is hard to isolate, so it is often left alone by combinin
 
 ### The Noise component
 
-The noise or random component is what remains after we separate the seasonality and trend from the time series. 
+The noise or random component is what remains after we separate the seasonality and trend from the time series.
 
-Noise is the effect of factors that you do not know or we cannot measure. 
+Noise is the effect of factors that you do not know or we cannot measure.
 
 Noise is the effect of the known unknowns or the unknown unknowns.
 
@@ -362,16 +362,13 @@ Now that we know how decomposition works, we can use the `seasonal_decompose()` 
 
 ```py
     from statsmodels.tsa.seasonal import seasonal_decompose
-     
+
     components = seasonal_decompose(df['Retail_Sales'], model='multiplicative')
     # components = seasonal_decompose(np.array(elecequip), model='multiplicative', freq=4)
     components.plot()
 ```
 
-
 ----------
-
-
 
 ## Avoid Common Mistakes
 
@@ -382,15 +379,12 @@ Here are some common mistakes to avoid with time series forecasting [8]:
 - How to check if a time series has any statistically significant signal?
 
 
-
 ## References
 
-[1] [How to Decompose Time Series Data into Trend and Seasonality](https://machinelearningmastery.com/decompose-time-series-data-trend-seasonality/)
+[1]: [How to Decompose Time Series Data into Trend and Seasonality](https://machinelearningmastery.com/decompose-time-series-data-trend-seasonality/)
 
-[2] [Time Series Forecast and Decomposition 101 Guide Python](https://datasciencebeginners.com/2020/11/25/time-series-forecast-and-decomposition-101-guide-python/)
+[2]: [Time Series Forecast and Decomposition 101 Guide Python](https://datasciencebeginners.com/2020/11/25/time-series-forecast-and-decomposition-101-guide-python/)
 
-[3] [How To Isolate Trend, Seasonality, and Noise From A Time Series](https://timeseriesreasoning.com/contents/time-series-decomposition/)
+[3]: [How To Isolate Trend, Seasonality, and Noise From A Time Series](https://timeseriesreasoning.com/contents/time-series-decomposition/)
 
-[4] [Avoid These Mistakes with Time Series Forecasting](https://www.kdnuggets.com/2021/12/avoid-mistakes-time-series-forecasting.html)
-
-
+[4]: [Avoid These Mistakes with Time Series Forecasting](https://www.kdnuggets.com/2021/12/avoid-mistakes-time-series-forecasting.html)

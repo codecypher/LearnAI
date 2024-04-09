@@ -144,15 +144,15 @@ Here are [few alternatives][^three_paas_alternatives] for PaaS:
 
 ## References
 
-[1] [Considerations for Deploying Machine Learning Models in Production](https://towardsdatascience.com/considerations-for-deploying-machine-learning-models-in-production-89d38d96cc23?source=rss----7f60cf5620c9---4)
+[1]: [Considerations for Deploying Machine Learning Models in Production](https://towardsdatascience.com/considerations-for-deploying-machine-learning-models-in-production-89d38d96cc23?source=rss----7f60cf5620c9---4)
 
-[2] [Machine Learning in Production: Why Is It So Hard and So Many Fail?](https://towardsdatascience.com/machine-learning-in-production-why-is-it-so-difficult-28ce74bfc732)
+[2]: [Machine Learning in Production: Why Is It So Hard and So Many Fail?](https://towardsdatascience.com/machine-learning-in-production-why-is-it-so-difficult-28ce74bfc732)
 
-[3] [ML Troubleshooting Is Too Hard Today (But It Doesn’t Have to Be That Way)](https://towardsdatascience.com/ml-troubleshooting-is-too-hard-today-but-it-doesnt-have-to-be-that-way-fbf9a10cac05)
+[3]: [ML Troubleshooting Is Too Hard Today (But It Doesn’t Have to Be That Way)](https://towardsdatascience.com/ml-troubleshooting-is-too-hard-today-but-it-doesnt-have-to-be-that-way-fbf9a10cac05)
 
-[4] [How to Deploy ML Models to Production](https://medium.com/mlearning-ai/how-to-deploy-ml-models-to-production-ab7ce1c353de)
+[4]: [How to Deploy ML Models to Production](https://medium.com/mlearning-ai/how-to-deploy-ml-models-to-production-ab7ce1c353de)
 
-[5] [Best practices in the deployment of AI models](https://nagahemachandchinta.medium.com/best-practices-in-the-deployment-of-ai-models-c929c3146416)
+[5]: [Best practices in the deployment of AI models](https://nagahemachandchinta.medium.com/best-practices-in-the-deployment-of-ai-models-c929c3146416)
 
 
 [The Easiest Way to Deploy Your ML/DL Models: Streamlit + BentoML + DagsHub](https://towardsdatascience.com/the-easiest-way-to-deploy-your-ml-dl-models-in-2022-streamlit-bentoml-dagshub-ccf29c901dac)
@@ -161,9 +161,8 @@ Here are [few alternatives][^three_paas_alternatives] for PaaS:
 
 [Serving Python Machine Learning Models With Ease using MLServer](https://pub.towardsai.net/serving-python-machine-learning-models-with-ease-29e1ba9e2155)
 
+-------
 
+[^three_paas_alternatives]: <https://medium.com/codex/3-paas-alternatives-to-heroku-db8fc750cc6f?source=rss----29038077e4c6---4> "3 PaaS Alternatives to Heroku"
 
-[^three_paas_alternatives]: https://medium.com/codex/3-paas-alternatives-to-heroku-db8fc750cc6f?source=rss----29038077e4c6---4 "3 PaaS Alternatives to Heroku"
-
-[^heroku_incident]: https://www.theregister.com/2022/05/04/heroku_security_communication_dubbed_complete/ "Communication around Heroku security incident dubbed 'train wreck'"
-
+[^heroku_incident]: <https://www.theregister.com/2022/05/04/heroku_security_communication_dubbed_complete/> "Communication around Heroku security incident dubbed 'train wreck'"

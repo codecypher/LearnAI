@@ -172,22 +172,19 @@ Starting from TensorFlow v1.9, Anaconda has and will continue to build TensorFlo
 ```
 
 
-
 ## References
 
-[1] [Introduction to Intel oneAPI AI Analytics Toolkit](https://pub.towardsai.net/introduction-to-intels-oneapi-ai-analytics-toolkit-8dd873925b96?gi=25547ad4241c)
+[1]: [Introduction to Intel oneAPI AI Analytics Toolkit](https://pub.towardsai.net/introduction-to-intels-oneapi-ai-analytics-toolkit-8dd873925b96?gi=25547ad4241c)
 
-[2] [Install Intel® AI Analytics Toolkit via Conda](https://www.intel.com/content/www/us/en/docs/oneapi/installation-guide-linux/2023-0/install-intel-ai-analytics-toolkit-via-conda.html)
+[2]: [Install Intel® AI Analytics Toolkit via Conda](https://www.intel.com/content/www/us/en/docs/oneapi/installation-guide-linux/2023-0/install-intel-ai-analytics-toolkit-via-conda.html)
 
-[3] [Intel Neural Compressor](https://www.intel.com/content/www/us/en/developer/tools/oneapi/neural-compressor.html) 
+[3]: [Intel Neural Compressor](https://www.intel.com/content/www/us/en/developer/tools/oneapi/neural-compressor.html)
 
-[4] [Optimize your CPU for Deep Learning](https://towardsdatascience.com/optimize-your-cpu-for-deep-learning-424a199d7a87)
+[4]: [Optimize your CPU for Deep Learning](https://towardsdatascience.com/optimize-your-cpu-for-deep-learning-424a199d7a87)
 
 
 [How to Speed up Scikit-Learn Model Training](https://medium.com/distributed-computing-with-ray/how-to-speed-up-scikit-learn-model-training-aaf17e2d1e1)
 
-
 [Installing Intel Distribution for Python and Intel Performance Libraries with Anaconda](https://www.intel.com/content/www/us/en/developer/articles/technical/using-intel-distribution-for-python-with-anaconda.html)
 
 [Intel Optimization for TensorFlow Installation Guide](https://www.intel.com/content/www/us/en/developer/articles/guide/optimization-for-tensorflow-installation-guide.html)
-

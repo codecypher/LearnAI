@@ -138,7 +138,7 @@ Here is the complete example using the three decorators in Python: `@staticmetho
 ```
 
 
-## Decorators
+## Utility Decorators
 
 The beauty of decorators is that they are easy to apply but provide a lot of extra functionalities for your code. 
 
@@ -764,7 +764,7 @@ Since `log(show)` returns a function that executes `show()` surrounded by the lo
 
 
 
-## New Type Annotation Features in Python 3.11
+## New Type Annotation Features
 
 The improvement of type annotations in Python 3.11 can help to write bug-free code [5].
 
@@ -1215,24 +1215,40 @@ def train_model(data, epochs=10):
 ```
 
 
+## Software Design
+
+There are eight built-in Python decorators discussed in [8] that can help you write more elegant and maintainable code.
+
+```pre
+@atexit.register
+@dataclasses
+@enum.unique
+@partial
+@singledispatch
+@classmethod
+@staticmethod
+@property
+```
+
 ## References
 
-[1] [A Gentle Introduction to Decorators in Python](https://machinelearningmastery.com/a-gentle-introduction-to-decorators-in-python/)
+[1]: [A Gentle Introduction to Decorators in Python](https://machinelearningmastery.com/a-gentle-introduction-to-decorators-in-python/)
 
-[2] [How to Use the Magical @staticmethod, @classmethod, and @property Decorators in Python](https://betterprogramming.pub/how-to-use-the-magical-staticmethod-classmethod-and-property-decorators-in-python-e42dd74e51e7?gi=8734ec8451fb)
+[2]: [How to Use the Magical @staticmethod, @classmethod, and @property Decorators in Python](https://betterprogramming.pub/how-to-use-the-magical-staticmethod-classmethod-and-property-decorators-in-python-e42dd74e51e7?gi=8734ec8451fb)
 
-[3] [5 real handy python decorators for analyzing/debugging your code](https://towardsdatascience.com/5-real-handy-python-decorators-for-analyzing-debugging-your-code-c22067318d47)
+[3]: [5 real handy python decorators for analyzing/debugging your code](https://towardsdatascience.com/5-real-handy-python-decorators-for-analyzing-debugging-your-code-c22067318d47)
  
-[4] [12 Ways to Use Function Decorators to Improve Your Python Code](https://medium.com/geekculture/12-ways-to-use-function-decorators-to-improve-your-python-code-f35515a45e3b)
+[4]: [12 Ways to Use Function Decorators to Improve Your Python Code](https://medium.com/geekculture/12-ways-to-use-function-decorators-to-improve-your-python-code-f35515a45e3b)
 
-[5] [4 New Type Annotation Features in Python 3.11](https://betterprogramming.pub/4-new-type-annotation-features-in-python-3-11-84e7ec277c29)
+[5]: [4 New Type Annotation Features in Python 3.11](https://betterprogramming.pub/4-new-type-annotation-features-in-python-3-11-84e7ec277c29)
 
-[6] [Function Wrappers in Python: Model Runtime and Debugging](https://builtin.com/data-science/python-wrapper)
+[6]: [Function Wrappers in Python: Model Runtime and Debugging](https://builtin.com/data-science/python-wrapper)
 
-[6] [Python decorators: 5 + 1 useful decorators to adopt immediately](https://itnext.io/python-decorators-5-1-useful-decorators-to-adopt-immediately-1594e8d438e4)
+[6]: [Python decorators: 5 + 1 useful decorators to adopt immediately](https://itnext.io/python-decorators-5-1-useful-decorators-to-adopt-immediately-1594e8d438e4)
 
-[7] [Enhancing Efficiency: 10 Decorators I Use Daily as a Tech MLE](https://mindfulmodeler.hashnode.dev/enhancing-efficiency-10-decorators-i-use-daily-as-a-tech-mle)
+[7]: [Enhancing Efficiency: 10 Decorators I Use Daily as a Tech MLE](https://mindfulmodeler.hashnode.dev/enhancing-efficiency-10-decorators-i-use-daily-as-a-tech-mle)
+
+[8]: [8 Built-in Python Decorators to Write Elegant Code](https://www.kdnuggets.com/8-built-in-python-decorators-to-write-elegant-code)
 
 
 [The Python Decorator Handbook](https://www.freecodecamp.org/news/the-python-decorator-handbook/)
-

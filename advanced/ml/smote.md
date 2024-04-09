@@ -30,7 +30,7 @@ Perhaps the most widely used approach to synthesizing new examples is called the
 
 SMOTE works by selecting examples that are close in the feature space, drawing a line between the examples in the feature space, and drawing a new sample at a point along that line.
 
-This procedure can be used to create as many synthetic examples for the minority class as are required. 
+This procedure can be used to create as many synthetic examples for the minority class as are required.
 
 The paper suggests first using random undersampling to trim the number of examples in the majority class then use SMOTE to oversample the minority class to balance the class distribution.
 
@@ -70,19 +70,17 @@ This, we generate more synthetic examples in regions of the feature space where 
 
 We can implement this procedure using the ADASYN class in the imbalanced-learn library.
 
-Unlike Borderline-SMOTE, we can see that the examples that have the most class overlap have the most focus. 
+Unlike Borderline-SMOTE, we can see that the examples that have the most class overlap have the most focus.
 
 On problems where these low density examples might be outliers, the ADASYN approach may put too much attention on these areas of the feature space which may result in worse model performance.
 
-It may help to remove outliers prior to applying the oversampling procedure which might be a helpful heuristic to use in general. 
+It may help to remove outliers prior to applying the oversampling procedure which might be a helpful heuristic to use in general.
 
 
 ## Refrences
 
-[1] [SMOTE for Imbalanced Classification with Python](https://machinelearningmastery.com/smote-oversampling-for-imbalanced-classification/)
+[1]: [SMOTE for Imbalanced Classification with Python](https://machinelearningmastery.com/smote-oversampling-for-imbalanced-classification/)
 
-[2] [5 SMOTE Techniques for Oversampling your Imbalance Data](https://towardsdatascience.com/5-smote-techniques-for-oversampling-your-imbalance-data-b8155bdbe2b5?gi=29e5140d8e06)
+[2]: [5 SMOTE Techniques for Oversampling your Imbalance Data](https://towardsdatascience.com/5-smote-techniques-for-oversampling-your-imbalance-data-b8155bdbe2b5?gi=29e5140d8e06)
 
-[3] [How to handle Multiclass Imbalanced Data? Not SMOTE](https://towardsdatascience.com/how-to-handle-multiclass-imbalanced-data-say-no-to-smote-e9a7f393c310)
-
-
+[3]: [How to handle Multiclass Imbalanced Data? Not SMOTE](https://towardsdatascience.com/how-to-handle-multiclass-imbalanced-data-say-no-to-smote-e9a7f393c310)

@@ -420,32 +420,31 @@ When we have doubts about our evaluation metric, we can quickly check the covera
 
 ## References
 
-[1] [Recommender Systems — A Complete Guide to Machine Learning Models](https://towardsdatascience.com/recommender-systems-a-complete-guide-to-machine-learning-models-96d3f94ea748)
+[1]: [Recommender Systems — A Complete Guide to Machine Learning Models](https://towardsdatascience.com/recommender-systems-a-complete-guide-to-machine-learning-models-96d3f94ea748)
 
-[2] [Inside recommendations: how a recommender system recommends](https://www.kdnuggets.com/2021/11/recommendations-recommender-system.html)
-
-
-[3] [Recommend using Scikit-Learn and Tensorflow Recommender](https://towardsdatascience.com/recommend-using-scikit-learn-and-tensorflow-recommender-bc659d91301a)
-
-[4] [Building (and Evaluating) a Recommender System for Implicit Feedback](https://medium.com/@judaikawa/building-and-evaluating-a-recommender-system-for-implicit-feedback-59495d2077d4)
+[2]: [Inside recommendations: how a recommender system recommends](https://www.kdnuggets.com/2021/11/recommendations-recommender-system.html)
 
 
-[5] [Recommender System using Collaborative Filtering in Pyspark](https://angeleastbengal.medium.com/recommender-system-using-collaborative-filtering-in-pyspark-b98eab2aea75)
+[3]: [Recommend using Scikit-Learn and Tensorflow Recommender](https://towardsdatascience.com/recommend-using-scikit-learn-and-tensorflow-recommender-bc659d91301a)
 
-[5] [Turning Web Browsing Activity into Product Ratings with Survival Analysis](https://towardsdatascience.com/turning-web-browsing-activity-into-product-ratings-with-survival-analysis-5d5842af2a6d)
+[4]: [Building (and Evaluating) a Recommender System for Implicit Feedback](https://medium.com/@judaikawa/building-and-evaluating-a-recommender-system-for-implicit-feedback-59495d2077d4)
 
-[6] [Recommender Systems: Item-Customer Collaborative Filtering](https://towardsdatascience.com/recommender-systems-item-customer-collaborative-filtering-ff0c8f41ae8a)
 
-[7] [Inside recommendations: how a recommender system recommends](https://www.kdnuggets.com/inside-recommendations-how-a-recommender-system-recommends.html/)
+[5]: [Recommender System using Collaborative Filtering in Pyspark](https://angeleastbengal.medium.com/recommender-system-using-collaborative-filtering-in-pyspark-b98eab2aea75)
 
-[8] [Learning to rank: A primer](https://towardsdatascience.com/learning-to-rank-a-primer-40d2ff9960af)
+[5]: [Turning Web Browsing Activity into Product Ratings with Survival Analysis](https://towardsdatascience.com/turning-web-browsing-activity-into-product-ratings-with-survival-analysis-5d5842af2a6d)
 
-[9] [Learning to Rank: A Complete Guide to Ranking using Machine Learning](https://towardsdatascience.com/learning-to-rank-a-complete-guide-to-ranking-using-machine-learning-4c9688d370d4)
+[6]: [Recommender Systems: Item-Customer Collaborative Filtering](https://towardsdatascience.com/recommender-systems-item-customer-collaborative-filtering-ff0c8f41ae8a)
 
-[10] [Learning to Rank for Product Recommendations with XGBRanker](https://towardsdatascience.com/learning-to-rank-for-product-recommendations-a113221ad8a7)
+[7]: [Inside recommendations: how a recommender system recommends](https://www.kdnuggets.com/inside-recommendations-how-a-recommender-system-recommends.html/)
+
+[8]: [Learning to rank: A primer](https://towardsdatascience.com/learning-to-rank-a-primer-40d2ff9960af)
+
+[9]: [Learning to Rank: A Complete Guide to Ranking using Machine Learning](https://towardsdatascience.com/learning-to-rank-a-complete-guide-to-ranking-using-machine-learning-4c9688d370d4)
+
+[10]: [Learning to Rank for Product Recommendations with XGBRanker](https://towardsdatascience.com/learning-to-rank-for-product-recommendations-a113221ad8a7)
 
 
 [An Intuitive Explanation of Collaborative Filtering](https://www.kdnuggets.com/2022/09/intuitive-explanation-collaborative-filtering.html?utm_source=rss&utm_medium=rss&utm_campaign=an-intuitive-explanation-of-collaborative-filtering)
 
 [Session-Based Recommender Systems with Word2Vec](https://towardsdatascience.com/session-based-recommender-systems-with-word2vec-666afb775509)
-

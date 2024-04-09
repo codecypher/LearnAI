@@ -63,7 +63,7 @@ Here we try to discover any remaining domain knowledge and to determine if a mac
 
 ### 2. Prepare The Data
 
-You should spend most of your time trying to understand your data [2] [3]. 
+You should spend most of your time trying to understand your data [2]: [3]. 
 
 #### 2.1 Data Description
 
@@ -226,25 +226,23 @@ Pick a problem that you can complete in 1-to-2 hours and use the checklist to co
 
 ## References
 
-[1] [How to Define Your Machine Learning Problem](https://machinelearningmastery.com/how-to-define-your-machine-learning-problem/)
+[1]: [How to Define Your Machine Learning Problem](https://machinelearningmastery.com/how-to-define-your-machine-learning-problem/)
 
-[2] [How to Prepare Data For Machine Learnin](https://machinelearningmastery.com/how-to-prepare-data-for-machine-learning/)
+[2]: [How to Prepare Data For Machine Learnin](https://machinelearningmastery.com/how-to-prepare-data-for-machine-learning/)
 
-[3] [Quick and Dirty Data Analysis for your Machine Learning Problem](https://machinelearningmastery.com/quick-and-dirty-data-analysis-for-your-machine-learning-problem/)
+[3]: [Quick and Dirty Data Analysis for your Machine Learning Problem](https://machinelearningmastery.com/quick-and-dirty-data-analysis-for-your-machine-learning-problem/)
 
-[4] [How to Evaluate Machine Learning Algorithms](https://machinelearningmastery.com/how-to-evaluate-machine-learning-algorithms/)
+[4]: [How to Evaluate Machine Learning Algorithms](https://machinelearningmastery.com/how-to-evaluate-machine-learning-algorithms/)
 
-[5] [Why you should be Spot-Checking Algorithms on your Machine Learning Problems](https://machinelearningmastery.com/why-you-should-be-spot-checking-algorithms-on-your-machine-learning-problems/)
+[5]: [Why you should be Spot-Checking Algorithms on your Machine Learning Problems](https://machinelearningmastery.com/why-you-should-be-spot-checking-algorithms-on-your-machine-learning-problems/)
 
-[6] [Tour of Machine Learning Algorithms](https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/)
+[6]: [Tour of Machine Learning Algorithms](https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/)
 
-[7] [How to Improve Machine Learning Results](https://machinelearningmastery.com/how-to-improve-machine-learning-results/)
+[7]: [How to Improve Machine Learning Results](https://machinelearningmastery.com/how-to-improve-machine-learning-results/)
 
-[8] [How to Use Machine Learning Results](https://machinelearningmastery.com/how-to-use-machine-learning-results/)
+[8]: [How to Use Machine Learning Results](https://machinelearningmastery.com/how-to-use-machine-learning-results/)
 
-[9] [Save And Finalize Your Machine Learning Model in R](https://machinelearningmastery.com/finalize-machine-learning-models-in-r/)
+[9]: [Save And Finalize Your Machine Learning Model in R](https://machinelearningmastery.com/finalize-machine-learning-models-in-r/)
 
 
-
-[^ml_checklist_howto]: https://machinelearningmastery.com/machine-learning-checklist/ "How to Use a Machine Learning Checklist to Get Accurate Predictions, Reliably"
-
+[^ml_checklist_howto]: <https://machinelearningmastery.com/machine-learning-checklist/> "How to Use a Machine Learning Checklist to Get Accurate Predictions, Reliably"

@@ -10,8 +10,6 @@ In AI, scoring functions such as MSE are used for three main purposes:
 
 - Statistical decision-making: Does the model pass the hypothesis testing criteria?
 
-
-
 ## Performance Metrics For Classification
 
 Here are the common performance measures for the  classification problems:
@@ -27,10 +25,9 @@ Here are the common performance measures for the  classification problems:
 - Receiver operating curve (ROC)
 - Area under ROC (AUC)
 
+For a classification problem, it is common to compute the following metrics and graphs: Accuracy, classification report, confusion matrix, and AUC.
 
-For a classification problem, it is common to compute the following metrics and graphs: Accuracy, classification report, confusion matrix, and AUC. 
-
-We can also compute the classification error (error rate) on the training and test datasets. 
+We can also compute the classification error (error rate) on the training and test datasets.
 
 Accuracy = (TP + TN) / N = 1 - percent error
 
@@ -39,9 +36,7 @@ Error Rate = Percent Error = (FP + FN) / N = 1 - Accuracy
 FPR = FP / (FP + TN)
 FNR = FN / (FN + TP)
 
-
 <img width="405" alt="image" src="https://user-images.githubusercontent.com/2695661/138717691-255e8946-b87f-46fc-9e32-3562a95ec7ae.png">
-
 
 ## Performance Metrics For Regression
 
@@ -49,7 +44,7 @@ Here are the common performance measures for the  in regression problems:
 
 - Accuracy
 - Mean absolute error (MAE)
-- Mean square error (MSE) 
+- Mean square error (MSE)
 - Root mean squared error (RMSE)
 - Mean absolute percentage error (MAPE)
 - Mean percentage error (MPE)
@@ -61,26 +56,23 @@ Thus, we can compute the training error and test error using MAE, MSE, etc.
 
 MAPE = relative error
 
-
 <img width="337" alt="image" src="https://user-images.githubusercontent.com/2695661/138717800-7b11ef6d-a9e2-403a-bc91-79c5f9bcfd18.png">
 
 If you are going to use a relative measure of error (MPE/MAPE) rather than an absolute measure of error (MAE/MSE), you must be wary of data that will work against the calculation (zeroes).
 
 In mathematics, accuracy is a kind of _relative error_ which is undefined when the denominator (true value) is zero. Thus, you cannot compute accuracy when the true values can be zero. [CRC Mathematical Tables 33 ed, p. 646]
 
-Therefore, you should use MAE and MSE to evaluate your model when the true value can be zero. 
+Therefore, you should use MAE and MSE to evaluate your model when the true value can be zero.
 
 In a sense, MAE is similar to mean, MSE is similar to variance, and RMSE is similar to standard deviation.
 
 When values can be zero, accuracy (MPE/MAPE) does not make sense. If you exclude the zero values then the calculation is meaningless (the error metric must be computed on all the samples).
 
-
-
 ## Compute Average Metrics
 
-In general, ML models are _stochastic_ which means that you will get different results for each run or trial. Therefore, you must run several trials (say 10 or 100) and compute the average of several performance metrics. 
+In general, ML models are _stochastic_ which means that you will get different results for each run or trial. Therefore, you must run several trials (say 10 or 100) and compute the average of several performance metrics.
 
-```
+```txt
 Average metrics on 10 trials:
 
      train_acc  train_mae  train_rmse  train_mape  test_acc    test_mae   test_rmse  test_mape
@@ -97,10 +89,7 @@ Average metrics on 10 trials:
 avg   0.980207  31.252462   38.847102    0.019793  0.972692   80.694724  101.905494   0.027308
 ```
 
-
-
 ----------
-
 
 ## Confidence Intervals
 
@@ -110,7 +99,7 @@ avg   0.980207  31.252462   38.847102    0.019793  0.972692   80.694724  101.905
 
 It is important to present the expected skill of a machine learning model as well as confidence intervals for the model.
 
-Confidence intervals are a way of quantifying the uncertainty of an estimate which can be used to add a bounds or likelihood on a population parameter such as mean or standard deviation that is estimated from a sample of independent observations from the population. 
+Confidence intervals are a way of quantifying the uncertainty of an estimate which can be used to add a bounds or likelihood on a population parameter such as mean or standard deviation that is estimated from a sample of independent observations from the population.
 
 Confidence intervals provide a range of model skills and a likelihood that the model will fall between the ranges when making predictions on new data.
 
@@ -122,7 +111,7 @@ OR
 
 The accuracy of the model was x +/- y at the 95% confidence level.
 
-A confidence interval can also be used in the presentation of the error of a regression predictive model. 
+A confidence interval can also be used in the presentation of the error of a regression predictive model.
 
 There is a 95% likelihood that the range x to y covers the true error of the model.
 
@@ -146,7 +135,7 @@ A confidence interval is comprised of two things:
 
 In general, the confidence interval for classification error can be calculated as follows:
 
-```
+```txt
   error +/- const * sqrt( (error * (1 - error)) / n)
 ```
 
@@ -154,7 +143,7 @@ where error is the classification error, const is a constant value that defines 
 
 The values for const are provided from statistics, and common values used are:
 
-```
+```txt
   1.64 (90%)
   1.96 (95%)
   2.33 (98%)
@@ -185,7 +174,7 @@ Consider a model with an error of 0.02 (error = 0.02) on a validation dataset wi
 
 We can calculate the 95% confidence interval (const = 1.96) as follows:
 
-```
+```mathml
   error +/- const * sqrt( (error * (1 - error)) / n)
 
   0.02 +/- 1.96 * sqrt( (0.02 * (1 - 0.02)) / 50)
@@ -216,52 +205,46 @@ Bootstrapping estimates the properties of a population parameter or estimator (b
   alpha = 5.0
 ```
 
+```txt
 50th percentile (median) = 0.750
 2.5th percentile = 0.741
 97.5th percentile = 0.757
+```
 
 There is a 95% likelihood that the range 0.741 to 0.757 covers the true statistic mean.
 
+## References
 
+[1]: [Performance analysis of models](https://mclguide.readthedocs.io/en/latest/sklearn/performance.html)
 
+[2]: [Evaluation Metrics for Machine Learning](https://towardsdatascience.com/evaluation-metrics-for-machine-learning-2167fca1a291?gi=2512e2b9b1c0)
 
-## Confidence Intervals
+[3]: [Error Metrics in Machine learning](https://medium.com/analytics-vidhya/error-metrics-in-machine-learning-f9eed7b139f)
+
+[4]: [An Overview of Performance Evaluation Metrics of Machine Learning (Classification) Algorithms](https://towardsdatascience.com/an-overview-of-performance-evaluation-metrics-of-machine-learning-classification-algorithms-7a95783a762f?gi=884943f12b27)
+
+[5]: [Tutorial: Understanding Regression Error Metrics in Python](https://www.dataquest.io/blog/understanding-regression-error-metrics/)
+
+[6]: [The Complete Guide to Keras Loss Functions](https://python.plainenglish.io/the-complete-guide-to-keras-loss-functions-776d319e729d)
+
+[7]: [Keras Loss Functions: Everything You Need to Know](https://neptune.ai/blog/keras-loss-functions)
+
+### Confidence Interval References
 
 [Understand Time Series Forecast Uncertainty Using Prediction Intervals with Python](https://machinelearningmastery.com/time-series-forecast-uncertainty-using-confidence-intervals-python/)
 
 [Confidence Intervals for Machine Learning](https://machinelearningmastery.com/confidence-intervals-for-machine-learning/)
 
-
 [PSI and CSI: Top 2 model monitoring metrics](https://towardsdatascience.com/psi-and-csi-top-2-model-monitoring-metrics-924a2540bed8?gi=7d4c901abece)
 
-
-
-
-## References
-
-[1] [Performance analysis of models](https://mclguide.readthedocs.io/en/latest/sklearn/performance.html)
-
-[2] [Evaluation Metrics for Machine Learning](https://towardsdatascience.com/evaluation-metrics-for-machine-learning-2167fca1a291?gi=2512e2b9b1c0)
-
-[3] [Error Metrics in Machine learning](https://medium.com/analytics-vidhya/error-metrics-in-machine-learning-f9eed7b139f)
-
-[4] [An Overview of Performance Evaluation Metrics of Machine Learning (Classification) Algorithms](https://towardsdatascience.com/an-overview-of-performance-evaluation-metrics-of-machine-learning-classification-algorithms-7a95783a762f?gi=884943f12b27)
-
-[5] [Tutorial: Understanding Regression Error Metrics in Python](https://www.dataquest.io/blog/understanding-regression-error-metrics/)
-
+----------
 
 [Approximation Error](https://en.wikipedia.org/wiki/Approximation_error?wprov=sfti1)
-
 
 [Assessing the Performance (Types and Sources of Error) in Machine Learning](https://medium.com/analytics-vidhya/assessing-the-performance-types-and-sources-of-error-in-machine-learning-e5d28b71da6b)
 
 [Accuracy and Error Rate from Confusion Matrix](https://medium.com/analytics-vidhya/why-do-we-need-a-confusion-matrix-73bf8a2acf09)
 
-
 [What does RMSE really mean?](https://towardsdatascience.com/what-does-rmse-really-mean-806b65f2e48e)
 
 [Stop Using Accuracy to Evaluate Your Classification Models](https://towardsdatascience.com/evaluating-ml-models-with-a-confusion-matrix-3fd9c3ab07dd)
-
-
-
-

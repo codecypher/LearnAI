@@ -1,17 +1,17 @@
 # Concurrency and Parallelism
 
-**Concurrency** is about dealing with lots of things at once. 
+**Concurrency** is about dealing with lots of things at once.
 
-**Parallelism** is about _doing_ lots of things at once. 
+**Parallelism** is about _doing_ lots of things at once.
 
-Concurrency is about structure whereas parallelism is about execution.  
+Concurrency is about structure whereas parallelism is about execution.
 
 Concurrency provides a way to structure a solution to solve a problem that may (but not necessarily) be parallelizable.
 
 
 ## Concurrency vs Parallelism
 
-The goal of concurrency is to prevent tasks from blocking each other by switching among them whenever one is forced to wait on an external resource. 
+The goal of concurrency is to prevent tasks from blocking each other by switching among them whenever one is forced to wait on an external resource.
 
 Example: handling multiple network requests.
 
@@ -30,20 +30,20 @@ For parallelization, we would split the work among all the workers, so that the 
 
 There are two kinds of concurrency:
 
-1. **Threading:** the CPU switches between different threads really fast, giving the appearance of concurrency. 
+1. **Threading:** the CPU switches between different threads really fast, giving the appearance of concurrency.
 
-Keypoint: only one thread is running at any given time. When one thread is running, others are blocked. 
+Keypoint: only one thread is running at any given time. When one thread is running, others are blocked.
 
-You can think of it as a priority queue. Threads can be scheduled. The CPU scheduler can give each thread a certain amount of time to run, pause them, pass data to other threads, then give them different priorities to run at a later time. 
+You can think of it as a priority queue. Threads can be scheduled. The CPU scheduler can give each thread a certain amount of time to run, pause them, pass data to other threads, then give them different priorities to run at a later time.
 
-Threading is used extensively in servers: thousands of clients can request something at the same time, then getting what they requested at a later time. 
+Threading is used extensively in servers: thousands of clients can request something at the same time, then getting what they requested at a later time.
 
-Philosophy: Do different things together, but it does not reduce the total time. 
+Philosophy: Do different things together, but it does not reduce the total time.
 
-2. Parallelism: threads are running parallel, usually in different CPU core, true concurrency. 
+2. Parallelism: threads are running parallel, usually in different CPU core, true concurrency.
 
 Keypoint: mlutiple threads are running at any given time which is useful for heavy computations
-and super long running processes. We can split data into sections for each machine to compute and pool them together at the end, but different machines/cores are hard to interact with each other. 
+and super long running processes. We can split data into sections for each machine to compute and pool them together at the end, but different machines/cores are hard to interact with each other.
 
 Philosophy: do one thing in less time.
 
@@ -53,9 +53,9 @@ Philosophy: do one thing in less time.
 
 Python provides us with mechanisms to implement concurrency and parallelism
 
-For concurrency, we have _multithreading_ and _async_. 
+For concurrency, we have _multithreading_ and _async_.
 
-For parallelism, we have _multiprocessing_. 
+For parallelism, we have _multiprocessing_.
 
 
 
@@ -80,9 +80,9 @@ Suppose we have 1000 images saved in a folder and for each image we need to perf
 - Resize the grayscale image to a given size
 - Save the modified image in a folder
 
-Doing this process on each image is independent of each other -- processing one image would not affect any other image in the folder. 
+Doing this process on each image is independent of each other -- processing one image would not affect any other image in the folder.
 
-Therefore, multiprocessing can help us reduce the total time. 
+Therefore, multiprocessing can help us reduce the total time.
 
 The total time will be reduced by a factor equal to the number of processors we use in parallel. This is one of many examples where you can use parallelization to save time.
 
@@ -93,11 +93,11 @@ The total time will be reduced by a factor equal to the number of processors we 
 
 ## Guide to Asyncio, Threading, and Multiprocessing
 
-The article [3] discusses what it means for a task to run async vs in a separate thread vs in a separate process. 
+The article [3] discusses what it means for a task to run async vs in a separate thread vs in a separate process.
 
 ### Synchronous execution
 
-There is nothing special in synchronous execution.We run the code as usual: one thing happens and then another thing happens. 
+There is nothing special in synchronous execution.We run the code as usual: one thing happens and then another thing happens.
 
 Only one function can run at a time and only when it is finished, something else is allowed to happen.
 
@@ -120,7 +120,7 @@ if __name__ == "__main__":
 
 ### Asynchronous execution (async)
 
-In async we run one block of code at a time but we cycle which block of code is running. 
+In async we run one block of code at a time but we cycle which block of code is running.
 
 The program needs to be built around async but we can call normal (synchronous) functions from an async program.
 
@@ -132,7 +132,7 @@ Here is a list of what you need in order to make your program async:
 
 - Create tasks from the async functions you wish to start asynchronously. Also wait for their finish.
 
-- Call asyncio.run to start the asynchronous section of your program. 
+- Call asyncio.run to start the asynchronous section of your program.
 
 Here is an example of a simple async program that runs two functions asynchronously:
 
@@ -152,7 +152,7 @@ async def do_first():
 async def do_second():
     print("Running do_second block 1")
     ...
-    
+
     # Release execution
     await asyncio.sleep(0)
 
@@ -183,7 +183,7 @@ We ran the the blocks concurrently giving an impression of parallel execution.
 
 ### Concurrent execution (threading)
 
-In threading, we execute one line of code at a time but we constantly change which line is run. 
+In threading, we execute one line of code at a time but we constantly change which line is run.
 
 We use the threading library: we first create some threads, start them and then wait them to finish (such as using join).
 
@@ -234,7 +234,7 @@ However, the lines of code were not run at the same time which is not yet true p
 
 ### Parallel execution (multiprocessing)
 
-In multiprocessing we actually run multiple lines of Python code at one time. We use multiple processes to achieve this. 
+In multiprocessing we actually run multiple lines of Python code at one time. We use multiple processes to achieve this.
 
 To use multiprocessing, we need to: create processes, set them running and wait for them to finish (such aa using join).
 
@@ -267,7 +267,7 @@ if __name__ == "__main__":
     main()
 ```
 
-This may ran the first function and then the second function but this is due to the fact that launching a process is expensive and the first one finished when starting the second one. 
+This may ran the first function and then the second function but this is due to the fact that launching a process is expensive and the first one finished when starting the second one.
 
 If these were longer running functions we would see that the functions were executed in parallel and really at the same time if we had free cores.
 
@@ -295,9 +295,9 @@ Perhaps the simplest way to compare these approaches are IO bound vs CPU bound p
 
 In addition, if the code has a chance to get stuck (infinite loop, for example), multiprocessing is the only one that can be reliably terminated. We cannot actually terminate threaded tasks and with async, if the code gets stuck and never calls await, async cannot terminate it either. However, if the stuck task does await, it can be terminated.
 
-It is usually best to use async when possible as race conditions are harder to manage with multiprocessing and threading often causing hard-to-debug problems. 
+It is usually best to use async when possible as race conditions are harder to manage with multiprocessing and threading often causing hard-to-debug problems.
 
-Race conditions are cases where the order of execution depends on timing of the operating system. For example, sometimes one of your threads might run faster than the other threads by pure chance which might change the behaviour of your program. 
+Race conditions are cases where the order of execution depends on timing of the operating system. For example, sometimes one of your threads might run faster than the other threads by pure chance which might change the behaviour of your program.
 
 Race conditions can lead to bugs that are hard to reproduce and occur only rarely.
 
@@ -312,11 +312,11 @@ Here is a summary of the choices:
 
 ### Pitfalls
 
-There are some problems with each option that can cause unexpected difficulties or even make it impossible for you to use the option. 
+There are some problems with each option that can cause unexpected difficulties or even make it impossible for you to use the option.
 
 #### Async
 
-Async has the problem that your code needs to be built with it and also that project libraries to support it. 
+Async has the problem that your code needs to be built with it and also that project libraries to support it.
 
 For example, if you have a database query but your database client does not support async, it means you cannot run multiple queries at the same time losing the benefit over synchronous code.
 
@@ -324,9 +324,9 @@ Avoid combining async with threading since async is not thread safe.
 
 #### Threading
 
-Threading has the problem that if multiple threads operate on the same data, there is a risk of corruption or even crashing. 
+Threading has the problem that if multiple threads operate on the same data, there is a risk of corruption or even crashing.
 
-For example, if one thread closes the connection that another one is currently using, there will be a problem. 
+For example, if one thread closes the connection that another one is currently using, there will be a problem.
 
 These sorts of problems are less common with async aince each block of code should return the execution only when it is safe.
 
@@ -361,10 +361,10 @@ class MyClass:
         # Copy object's data
         data = self.__dict__.copy()
 
-        # Remove attributes that cannot 
+        # Remove attributes that cannot
         # be pickled here
         data.pop('problematic_attr')
-        
+
         return data
 
 def do_things(arg):
@@ -378,11 +378,9 @@ if __name__ == "__main__":
 
 In the code block above, we override `__getstate__` that handles the pickling of the instance in order to remove an attribute that we cannot pickle (file buffers cannot be pickled).
 
-Note that child processes run the imports again so we should always use the `if __name__ == “__main__”:` block to start the program. 
+Note that child processes run the imports again so we should always use the `if __name__ == “__main__”:` block to start the program.
 
 Also avoid doing heavy processing when importing and declaring globals, functions, and classes.
-
-
 
 
 ## References
@@ -390,11 +388,10 @@ Also avoid doing heavy processing when importing and declaring globals, function
 R. H. Arpaci-Dusseau and A. C. Arpaci-Dusseau, Operating Systems: Three Easy Pieces, 2018, v. 1.01, Available online: https://pages.cs.wisc.edu/~remzi/OSTEP/
 
 
-[1] [Concurrency and Parallelism: What is the difference?](https://towardsdatascience.com/concurrency-and-parallelism-what-is-the-difference-bdf01069b081)
+[1]: [Concurrency and Parallelism: What is the difference?](https://towardsdatascience.com/concurrency-and-parallelism-what-is-the-difference-bdf01069b081)
 
-[2] [Parallelize your python code to save time on data processing](https://towardsdatascience.com/parallelize-your-python-code-to-save-time-on-data-processing-805934b826e2)
+[2]: [Parallelize your python code to save time on data processing](https://towardsdatascience.com/parallelize-your-python-code-to-save-time-on-data-processing-805934b826e2)
 
-[3] [Practical Guide to Asyncio, Threading, and Multiprocessing in Python](https://itnext.io/practical-guide-to-async-threading-multiprocessing-958e57d7bbb8)
+[3]: [Practical Guide to Asyncio, Threading, and Multiprocessing in Python](https://itnext.io/practical-guide-to-async-threading-multiprocessing-958e57d7bbb8)
 
-[4] [Applying Python multiprocessing in 2 lines of code](https://medium.com/geekculture/applying-python-multiprocessing-in-2-lines-of-code-3ced521bac8f)
-
+[4]: [Applying Python multiprocessing in 2 lines of code](https://medium.com/geekculture/applying-python-multiprocessing-in-2-lines-of-code-3ced521bac8f)

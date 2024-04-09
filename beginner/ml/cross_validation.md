@@ -4,7 +4,7 @@
 
 **Model validation** is the process by which we ensure that our models can perform acceptably in "the real world". In more technical terms, model validation allows you to predict how your model will perform on datasets not used in the training.
 
-Model validation is important because we do not actually care how well the model predicts data we trained it on. 
+Model validation is important because we do not actually care how well the model predicts data we trained it on.
 
 We already know the target values for the data we used to train a model, so it is more important to consider how robust and capable a model is when tasked to model new datasets of the same distribution and characteristics, but with different individual values from our training set.
 
@@ -12,15 +12,15 @@ We already know the target values for the data we used to train a model, so it i
 
 The first form of model validation introduced is usually what is known as _holdout validation_ which is often considered to be the simplest form of cross validation, so it is the easiest to implement.
 
-In holdout validation, we split the data into a training and testing set. 
+In holdout validation, we split the data into a training and testing set.
 
-- The training set will be what the model is created on and the testing data will be used to validate the generated model. 
+- The training set will be what the model is created on and the testing data will be used to validate the generated model.
 
 - Although there are (fairly easy) ways to do this using pandas methods, we can make use of scikit-learns `train_test_split` method to accomplish this.
 
-We use `train_test_split` with three parameters: the input (X) data, the target (y) data, and the percentage of data we would like to put into the test dataset. 
+We use `train_test_split` with three parameters: the input (X) data, the target (y) data, and the percentage of data we would like to put into the test dataset.
 
-In this case 25% (common split is usually 70–30, depending on a multitude of factors about your data). 
+In this case 25% (common split is usually 70–30, depending on a multitude of factors about your data).
 
 Then we assign the split X and y data to a set of new variables to work with later.
 
@@ -56,7 +56,7 @@ Then we assign the split X and y data to a set of new variables to work with lat
 
 ```
 
-Now that we have created our test/train split,  we can create a model and generate some predictions based on the train data. 
+Now that we have created our test/train split,  we can create a model and generate some predictions based on the train data.
 
 ```py
     # time function using .time methods for later comparison
@@ -119,38 +119,38 @@ When creating a model, we account for a few types of error: validation error, te
 
 As mentioned earlier, we want to know how the model will perform on new unseen data including _validation error_ which is comprised of error due to bias and error due to variance (training error does not provide information on how the model will perform on future datasets).
 
-**Minimizing validation error** requires finding the point of model complexity where the combination of bias and variance error is minimized, as shown in the linked visual. 
+**Minimizing validation error** requires finding the point of model complexity where the combination of bias and variance error is minimized, as shown in the linked visual.
 
 As model complexity increases, error due to bias decreases while error due to variance increases, creating the bias-variance trade-off which we will seek to address later with various methods of cross validation.
 
 ### Bias
 
-Bias is the error resulting from the difference between the expected value of a model and the actual (or correct) value for which we want to predict over multiple iterations. 
+Bias is the error resulting from the difference between the expected value of a model and the actual (or correct) value for which we want to predict over multiple iterations.
 
 In the scientific concepts of accuracy and precision, bias is very similar to _accuracy_.
 
 ### Variance
 
-Variance is defined as the error resulting from the variability between different data predictions in a model. 
+Variance is defined as the error resulting from the variability between different data predictions in a model.
 
-In variance, the correct value does not matter as much as the range of differences in value between the predictions. 
+In variance, the correct value does not matter as much as the range of differences in value between the predictions.
 
 Variance also comes into play more when we run multiple model creation trials.
 
 [Bias/Variance Visual](http://scott.fortmann-roe.com/docs/BiasVariance.html)
 
-In machine learning, bias and variance are often discussed together as a **bias-variance tradeoff** which means that minimizing one error effectively makes the other more likely to be present when creating and assessing a model. 
+In machine learning, bias and variance are often discussed together as a **bias-variance tradeoff** which means that minimizing one error effectively makes the other more likely to be present when creating and assessing a model.
 
-Ideally, we would seek a model whose tradeoff results in both low bias and low variance and we would look to achieve this by using _cross validation_. 
+Ideally, we would seek a model whose tradeoff results in both low bias and low variance and we would look to achieve this by using _cross validation_.
 
 Depending on characteristics of the dataset, one method of cross validation is likely to be more ideal to achieving the bias-variance tradeoff when creating and assessing a model.
 
 
 ## What is cross validation?
 
-What if the split we made just happened to be very conducive to this model? 
+What if the split we made just happened to be very conducive to this model?
 
-What if the split we made introduced a large skew into the data? 
+What if the split we made introduced a large skew into the data?
 
 Did we significantly reduce the size of our training dataset by splitting it like that?
 
@@ -160,9 +160,9 @@ Remember those questions we asked about hold out validation? Cross validation is
 
 ### K-Fold Cross Validation
 
-**K-fold validation** is a popular method of cross validation which shuffles the data and splits it into _k_ number of folds (groups). 
+**K-fold validation** is a popular method of cross validation which shuffles the data and splits it into _k_ number of folds (groups).
 
-In general, K-fold validation is performed by taking one group as the test data set and the other k-1 groups as the training data, fitting and evaluating a model, and recording the chosen score. 
+In general, K-fold validation is performed by taking one group as the test data set and the other k-1 groups as the training data, fitting and evaluating a model, and recording the chosen score.
 
 This process is repeated with each fold (group) as the test data and all the scores averaged to obtain a more comprehensive model validation score.
 
@@ -224,7 +224,7 @@ Notice that the score is a little farther from zero than the holdout method (not
 
 ### Leave One Out Cross Validation
 
-Leave One Out Cross Validation (LOOCV) can be considered a type of K-Fold validation where `k=n` is the number of rows in the dataset. 
+Leave One Out Cross Validation (LOOCV) can be considered a type of K-Fold validation where `k=n` is the number of rows in the dataset.
 
 The methods are quire similar but you will notice that running the following code will take much longer than previous methods.
 
@@ -310,7 +310,7 @@ We will examine this phenomenon by performing a normal holdout validation and a 
 
 Cross-validation (CV) is a resampling technique in machine learning which ensures the performance and efficiency of the machine learning model by evaluating it over a subset of the dataset.
 
-CV validates the model performance by training it on a subset of the input data and then testing it on the subset of the input data on which it has not been trained earlier. 
+CV validates the model performance by training it on a subset of the input data and then testing it on the subset of the input data on which it has not been trained earlier.
 
 CV evaluates how a model will perform on an independent/new test dataset by resampling the same training data you already have.
 
@@ -336,13 +336,13 @@ If we have n samples in our dataset, then p samples are used for validation of t
 
 What makes leave p out differ from k-fold validation is that it creates overlapping test sets as it tries all possible combinations to divide the dataset into training and validation sets which it requires high computation for a large p-value.
 
-The main drawback of this technique is that this method is an exhaustive method which learns and tests all the possible ways to divide the original dataset into training and validation sets. Due to this the number of iterations grows higher and is not computationally feasible. Therefore, it should not be used with large datasets. 
+The main drawback of this technique is that this method is an exhaustive method which learns and tests all the possible ways to divide the original dataset into training and validation sets. Due to this the number of iterations grows higher and is not computationally feasible. Therefore, it should not be used with large datasets.
 
 This technique can also quickly become unusable for even smaller datasets.
 
 ### K-fold cross-validation
 
-In this cross-validation technique, we divide the dataset into k subsets of equal size which is known as a fold. 
+In this cross-validation technique, we divide the dataset into k subsets of equal size which is known as a fold.
 
 In each iteration, out of k subsets, 1 subset is used for the model validation and the remaining k-1 subsets are used for the training of our machine learning model.
 
@@ -356,7 +356,7 @@ The main disadvantage of this technique is the high computational cost as the mo
 
 Stratified k-fold cross-validation is an extension of k-fold cross-validation, which uses stratified sampling instead of just random sampling (in the case of k-fold). Like k-fold cross-validation, it also splits the data into k subsets.
 
-The k-fold cross-validation technique does not perform very well when there is an imbalance in our dataset and due to the random splitting of our data, so there is a possibility that data might be imbalanced. 
+The k-fold cross-validation technique does not perform very well when there is an imbalance in our dataset and due to the random splitting of our data, so there is a possibility that data might be imbalanced.
 
 In stratified k-fold, data is split in a stratified manner.
 
@@ -374,11 +374,10 @@ The article [3] discusses five different ways to split your data for validation 
 5. TimeSeriesSplit
 
 
-
 ## References
 
-[1] [Cross Validation: A Beginner’s Guide](https://towardsdatascience.com/cross-validation-a-beginners-guide-5b8ca04962cd)
+[1]: [Cross Validation: A Beginner’s Guide](https://towardsdatascience.com/cross-validation-a-beginners-guide-5b8ca04962cd)
 
-[2] [Guide to Cross-Validation Techniques and Its Types in Machine Learning](https://heartbeat.comet.ml/guide-to-cross-validation-techniques-and-its-types-in-machine-learning-10c1dc0f7a09)
+[2]: [Guide to Cross-Validation Techniques and Its Types in Machine Learning](https://heartbeat.comet.ml/guide-to-cross-validation-techniques-and-its-types-in-machine-learning-10c1dc0f7a09)
 
-[3] [5 different ways to cross-validate your data](https://medium.com/the-techlife/5-different-ways-to-cross-validate-your-data-376a79b7f205)
+[3]: [5 different ways to cross-validate your data](https://medium.com/the-techlife/5-different-ways-to-cross-validate-your-data-376a79b7f205)

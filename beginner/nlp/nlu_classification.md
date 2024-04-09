@@ -380,12 +380,10 @@ Here are some examples of Text Classification/Sentiment Analysis:
 [How to use SHAP with PyCaret](https://astrobenhart.medium.com/how-to-use-shap-with-pycaret-dc9a31278621)
 
 
-
 ## References
 
-[1] [Discovering and Classifying In-app Message Intent at Airbnb](https://medium.com/airbnb-engineering/discovering-and-classifying-in-app-message-intent-at-airbnb-6a55f5400a0c)
+[1]: [Discovering and Classifying In-app Message Intent at Airbnb](https://medium.com/airbnb-engineering/discovering-and-classifying-in-app-message-intent-at-airbnb-6a55f5400a0c)
 
-[2] [Using the DIET classifier for intent classification in dialogue](https://medium.com/the-research-nest/using-the-diet-classifier-for-intent-classification-in-dialogue-489c76e62804)
+[2]: [Using the DIET classifier for intent classification in dialogue](https://medium.com/the-research-nest/using-the-diet-classifier-for-intent-classification-in-dialogue-489c76e62804)
 
-[3] [How intent classification works in NLU?](https://botfront.io/blog/how-intent-classification-works-in-nlu/)
-
+[3]: [How intent classification works in NLU?](https://botfront.io/blog/how-intent-classification-works-in-nlu/)

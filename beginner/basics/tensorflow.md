@@ -331,11 +331,10 @@ Fusing ops together provides several performance advantages:
 
 ## References
 
-[1] [A simple guide to speed up your training in TensorFlow](https://blog.seeso.io/a-simple-guide-to-speed-up-your-training-in-tensorflow-2-8386e6411be4?gi=55c564475d16)
+[1]: [A simple guide to speed up your training in TensorFlow](https://blog.seeso.io/a-simple-guide-to-speed-up-your-training-in-tensorflow-2-8386e6411be4?gi=55c564475d16)
 
-[2] [Accelerate your training and inference running on Tensorflow](https://towardsdatascience.com/accelerate-your-training-and-inference-running-on-tensorflow-896aa963aa70)
+[2]: [Accelerate your training and inference running on Tensorflow](https://towardsdatascience.com/accelerate-your-training-and-inference-running-on-tensorflow-896aa963aa70)
 
-[3] [Speed up your TensorFlow Training with Mixed Precision on GPUs and TPUs](https://towardsdatascience.com/speed-up-your-tensorflow-training-with-mixed-precision-on-gpu-tpu-acf4c8c0931c)
+[3]: [Speed up your TensorFlow Training with Mixed Precision on GPUs and TPUs](https://towardsdatascience.com/speed-up-your-tensorflow-training-with-mixed-precision-on-gpu-tpu-acf4c8c0931c)
 
-[4] [Better performance with tf.function](https://www.tensorflow.org/guide/function)
-
+[4]: [Better performance with tf.function](https://www.tensorflow.org/guide/function)

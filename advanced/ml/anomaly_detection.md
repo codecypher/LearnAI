@@ -75,20 +75,18 @@ For the performance comparison we created a system that aimed to provide an obje
 
 ## References
 
-[1] [Anomaly Detection — How to Tell Good Performance from Bad](https://towardsdatascience.com/anomaly-detection-how-to-tell-good-performance-from-bad-b57116d71a10)
+[1]: [Anomaly Detection — How to Tell Good Performance from Bad](https://towardsdatascience.com/anomaly-detection-how-to-tell-good-performance-from-bad-b57116d71a10)
 
-[2] [Anomaly Detection in Machine Learning](https://medium.com/geekculture/anomaly-detection-in-machine-learning-1c894c4cb43d)
+[2]: [Anomaly Detection in Machine Learning](https://medium.com/geekculture/anomaly-detection-in-machine-learning-1c894c4cb43d)
 
-[3] [5 Anomaly Detection Algorithms every Data Scientist should know](https://towardsdatascience.com/5-anomaly-detection-algorithms-every-data-scientist-should-know-b36c3605ea16)
+[3]: [5 Anomaly Detection Algorithms every Data Scientist should know](https://towardsdatascience.com/5-anomaly-detection-algorithms-every-data-scientist-should-know-b36c3605ea16)
 
 
-[4] [Build an Anomaly Detection Pipeline with Isolation Forest and Kedro](https://towardsdatascience.com/build-an-anomaly-detection-pipeline-with-isolation-forest-and-kedro-db5f4437bfab)
+[4]: [Build an Anomaly Detection Pipeline with Isolation Forest and Kedro](https://towardsdatascience.com/build-an-anomaly-detection-pipeline-with-isolation-forest-and-kedro-db5f4437bfab)
 
-[5] [Anomaly Detection with Isolation Forest and Kernel Density Estimation](https://machinelearningmastery.com/anomaly-detection-with-isolation-forest-and-kernel-density-estimation/)
+[5]: [Anomaly Detection with Isolation Forest and Kernel Density Estimation](https://machinelearningmastery.com/anomaly-detection-with-isolation-forest-and-kernel-density-estimation/)
 
-[6] [How to perform anomaly detection with the Isolation Forest algorithm](https://towardsdatascience.com/how-to-perform-anomaly-detection-with-the-isolation-forest-algorithm-e8c8372520bc?gi=9b318130c70a)
+[6]: [How to perform anomaly detection with the Isolation Forest algorithm](https://towardsdatascience.com/how-to-perform-anomaly-detection-with-the-isolation-forest-algorithm-e8c8372520bc?gi=9b318130c70a)
 
 
 [Simple Anomaly Detection algorithms for Streaming Data](https://medium.com/wearesinch/simple-anomaly-detection-algorithms-for-streaming-data-machine-learning-92cfaeb6f43b)
-
-

@@ -1311,53 +1311,53 @@ DSPlot is a Python package that draws and renders images of data structures.
 
 ## References
 
-[1] [4 simple tips for plotting multiple graphs in Python](https://towardsdatascience.com/4-simple-tips-for-plotting-multiple-graphs-in-python-38df2112965c)
+[1]: [4 simple tips for plotting multiple graphs in Python](https://towardsdatascience.com/4-simple-tips-for-plotting-multiple-graphs-in-python-38df2112965c)
 
-[2] [Customizing Plots with Python Matplotlib](https://towardsdatascience.com/customizing-plots-with-python-matplotlib-bcf02691931f)
+[2]: [Customizing Plots with Python Matplotlib](https://towardsdatascience.com/customizing-plots-with-python-matplotlib-bcf02691931f)
 
-[3] [Matplotlib Styles for Scientific Plotting](https://towardsdatascience.com/matplotlib-styles-for-scientific-plotting-d023f74515b4)
+[3]: [Matplotlib Styles for Scientific Plotting](https://towardsdatascience.com/matplotlib-styles-for-scientific-plotting-d023f74515b4)
 
-[4] [How To Label The Values of Data Points With Matplotlib](https://towardsdatascience.com/how-to-label-the-values-plots-with-matplotlib-c9b7db0fd2e1?source=rss----7f60cf5620c9---4)
+[4]: [How To Label The Values of Data Points With Matplotlib](https://towardsdatascience.com/how-to-label-the-values-plots-with-matplotlib-c9b7db0fd2e1?source=rss----7f60cf5620c9---4)
 
-[5] [Seaborn Data Visualization: A Complete Overview](https://medium.com/@alains/seaborn-data-visusalisation-a-complete-overview-that-will-blow-your-mind-2a6256cd065)
+[5]: [Seaborn Data Visualization: A Complete Overview](https://medium.com/@alains/seaborn-data-visusalisation-a-complete-overview-that-will-blow-your-mind-2a6256cd065)
 
-[6] [1 Line of Seaborn is What Need for Data Visualization](https://sonery.medium.com/1-line-of-seaborn-is-what-need-for-data-visualization-e66e0b0f2add)
+[6]: [1 Line of Seaborn is What Need for Data Visualization](https://sonery.medium.com/1-line-of-seaborn-is-what-need-for-data-visualization-e66e0b0f2add)
 
-[7] [7 Examples to Master Line Plots With Python Seaborn](https://towardsdatascience.com/7-examples-to-master-line-plots-with-python-seaborn-42d8aaa383a9?gi=9da22d442565)
+[7]: [7 Examples to Master Line Plots With Python Seaborn](https://towardsdatascience.com/7-examples-to-master-line-plots-with-python-seaborn-42d8aaa383a9?gi=9da22d442565)
 
-[8] [3 Seaborn Functions That Cover All Your Visualization Tasks](https://towardsdatascience.com/3-seaborn-functions-that-cover-almost-all-your-visualization-tasks-793f76510ac3)
+[8]: [3 Seaborn Functions That Cover All Your Visualization Tasks](https://towardsdatascience.com/3-seaborn-functions-that-cover-almost-all-your-visualization-tasks-793f76510ac3)
 
-[9] [4 Different Methods for Changing the Font Size in Python Seaborn](https://sonery.medium.com/4-different-methods-for-changing-the-font-size-in-python-seaborn-fd5600592242)
+[9]: [4 Different Methods for Changing the Font Size in Python Seaborn](https://sonery.medium.com/4-different-methods-for-changing-the-font-size-in-python-seaborn-fd5600592242)
 
-[10] [Get Interactive Plots Directly With Pandas](https://www.kdnuggets.com/get-interactive-plots-directly-with-pandas.html/)
+[10]: [Get Interactive Plots Directly With Pandas](https://www.kdnuggets.com/get-interactive-plots-directly-with-pandas.html/)
 
-[11] [The Easiest Way to Make Beautiful Interactive Visualizations With Pandas using Cufflinks](https://towardsdatascience.com/the-easiest-way-to-make-beautiful-interactive-visualizations-with-pandas-cdf6d5e91757)
+[11]: [The Easiest Way to Make Beautiful Interactive Visualizations With Pandas using Cufflinks](https://towardsdatascience.com/the-easiest-way-to-make-beautiful-interactive-visualizations-with-pandas-cdf6d5e91757)
 
-[12] [Top 3 Visualization Python Packages to Help Your Data Science Activities](https://towardsdatascience.com/top-3-visualization-python-packages-to-help-your-data-science-activities-168e22178e53)
+[12]: [Top 3 Visualization Python Packages to Help Your Data Science Activities](https://towardsdatascience.com/top-3-visualization-python-packages-to-help-your-data-science-activities-168e22178e53)
 
-[13] [How to Use Colormaps with Matplotlib to Create Colorful Plots in Python](https://betterprogramming.pub/how-to-use-colormaps-with-matplotlib-to-create-colorful-plots-in-python-969b5a892f0c)
+[13]: [How to Use Colormaps with Matplotlib to Create Colorful Plots in Python](https://betterprogramming.pub/how-to-use-colormaps-with-matplotlib-to-create-colorful-plots-in-python-969b5a892f0c)
 
-[14] [10 Must-know Seaborn Visualization Plots for Multivariate Data Analysis in Python](https://towardsdatascience.com/10-must-know-seaborn-functions-for-multivariate-data-analysis-in-python-7ba94847b117)
+[14]: [10 Must-know Seaborn Visualization Plots for Multivariate Data Analysis in Python](https://towardsdatascience.com/10-must-know-seaborn-functions-for-multivariate-data-analysis-in-python-7ba94847b117)
 
-[15] [Visualizing Multidimensional Categorical Data using Plotly](https://towardsdatascience.com/visualizing-multidimensional-categorical-data-using-plotly-bfb521bc806f)
+[15]: [Visualizing Multidimensional Categorical Data using Plotly](https://towardsdatascience.com/visualizing-multidimensional-categorical-data-using-plotly-bfb521bc806f)
 
-[16] [Five Advanced Data Visualizations All Data Scientists Should Know](https://towardsdatascience.com/five-advanced-data-visualizations-all-data-scientists-should-know-e042d5e1f532)
+[16]: [Five Advanced Data Visualizations All Data Scientists Should Know](https://towardsdatascience.com/five-advanced-data-visualizations-all-data-scientists-should-know-e042d5e1f532)
 
-[17] [3 Matplotlib Tips You Need to Know](https://towardsdatascience.com/3-matplotlib-tips-you-need-to-know-1b24e41552d5)
+[17]: [3 Matplotlib Tips You Need to Know](https://towardsdatascience.com/3-matplotlib-tips-you-need-to-know-1b24e41552d5)
 
-[18] [Super Flexible Matplotlib Structure for Subplots](https://pub.towardsai.net/super-flexible-matplotlib-structure-for-subplots-d26b005252f1)
+[18]: [Super Flexible Matplotlib Structure for Subplots](https://pub.towardsai.net/super-flexible-matplotlib-structure-for-subplots-d26b005252f1)
 
-[19] [Creating Beautiful Histograms with Seaborn](https://www.kdnuggets.com/2023/01/creating-beautiful-histograms-seaborn.html)
+[19]: [Creating Beautiful Histograms with Seaborn](https://www.kdnuggets.com/2023/01/creating-beautiful-histograms-seaborn.html)
 
-[20] [4 Easy Ways to Instantly Improve Your Data Visualisations](https://towardsdatascience.com/4-easy-ways-to-instantly-improve-your-data-visualisations-2a5fc3a22182)
+[20]: [4 Easy Ways to Instantly Improve Your Data Visualisations](https://towardsdatascience.com/4-easy-ways-to-instantly-improve-your-data-visualisations-2a5fc3a22182)
 
-[21] [Upgrade Your Data Visualisations: 4 Python Libraries to Enhance Your Matplotlib Charts]
+[21]: [Upgrade Your Data Visualisations: 4 Python Libraries to Enhance Your Matplotlib Charts]
 
 
 [Holoviz Is Simplifying Data Visualization in Python](https://towardsdatascience.com/holoviz-is-simplifying-data-visualization-in-python-d51ca89739cf)
 
 [Four Useful Seaborn Visualization Templates](https://towardsdatascience.com/grab-and-use-4-useful-seaborn-visualization-templates-6e5f11a210c9#45f6)
 
-
+----------
 
 [^binned_scatterplot]: https://towardsdatascience.com/goodbye-scatterplot-welcome-binned-scatterplot-a928f67413e4 "The Binned Scatterplot"

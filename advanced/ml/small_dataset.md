@@ -206,15 +206,13 @@ In such scenarios, semi-supervised learning can be a good technique to solve the
 - GAN: Generative adversarial networks are a type of generative models which can generate new data that looks very close to real data.
 
 
-
-
 ## References
 
-[1] [7 Tips for Dealing With Small Data](https://towardsdatascience.com/7-tips-for-dealing-with-small-data-7ffbd3d399a3)
+[1]: [7 Tips for Dealing With Small Data](https://towardsdatascience.com/7-tips-for-dealing-with-small-data-7ffbd3d399a3)
 
-[2] [Breaking the curse of small data sets in Machine Learning: Part 1/2](https://towardsdatascience.com/breaking-the-curse-of-small-data-sets-in-machine-learning-part-2-894aa45277f4)
+[2]: [Breaking the curse of small data sets in Machine Learning: Part 1/2](https://towardsdatascience.com/breaking-the-curse-of-small-data-sets-in-machine-learning-part-2-894aa45277f4)
 
-[3] [Is a Small Dataset Risky?](https://towardsdatascience.com/is-a-small-dataset-risky-b664b8569a21)
+[3]: [Is a Small Dataset Risky?](https://towardsdatascience.com/is-a-small-dataset-risky-b664b8569a21)
 
 
 [OpenAI Glow and the Art of Learning from Small Datasets](https://jrodthoughts.medium.com/openai-glow-and-the-art-of-learning-from-small-datasets-e6b0a0cd6fe4)
@@ -223,5 +221,3 @@ In such scenarios, semi-supervised learning can be a good technique to solve the
 
 
 [Explainability Is a Poor Band-Aid for Biased AI in Medicine](https://fperrywilson.medium.com/explainability-is-a-poor-band-aid-for-biased-ai-in-medicine-3db62a338857)
-
-

@@ -856,38 +856,36 @@ We can then use these observations to make a claim about the sample distribution
 > There is a 95% likelihood that the range 0.741 to 0.757 covers the true statistic mean.
 
 
-
-
 # References
 
 [1] W. McKinney, Python for Data Analysis, 2nd ed., Oreilly, ISBN: 978-1-491-95766-0, 2018.
 
-[2] [Multivariate Time Series Forecasting with LSTMs in Keras](https://machinelearningmastery.com/multivariate-time-series-forecasting-lstms-keras/)
+[2]: [Multivariate Time Series Forecasting with LSTMs in Keras](https://machinelearningmastery.com/multivariate-time-series-forecasting-lstms-keras/)
 
-[3] [How to Develop Multivariate Multi-Step Time Series Forecasting Models for Air Pollution](https://machinelearningmastery.com/how-to-develop-machine-learning-models-for-multivariate-multi-step-air-pollution-time-series-forecasting/)
+[3]: [How to Develop Multivariate Multi-Step Time Series Forecasting Models for Air Pollution](https://machinelearningmastery.com/how-to-develop-machine-learning-models-for-multivariate-multi-step-air-pollution-time-series-forecasting/)
 
-[4] [Time Series Data Visualization In Python](https://pub.towardsai.net/time-series-data-visualization-in-python-2b1959726312)
+[4]: [Time Series Data Visualization In Python](https://pub.towardsai.net/time-series-data-visualization-in-python-2b1959726312)
 
-[5] [4 Techniques to Handle Missing values in Time Series Data](https://satyam-kumar.medium.com/4-techniques-to-handle-missing-values-in-time-series-data-c3568589b5a8)
+[5]: [4 Techniques to Handle Missing values in Time Series Data](https://satyam-kumar.medium.com/4-techniques-to-handle-missing-values-in-time-series-data-c3568589b5a8)
 
-[6] [Don’t Use K-fold Validation for Time Series Forecasting](https://towardsdatascience.com/dont-use-k-fold-validation-for-time-series-forecasting-30b724aaea64)
+[6]: [Don’t Use K-fold Validation for Time Series Forecasting](https://towardsdatascience.com/dont-use-k-fold-validation-for-time-series-forecasting-30b724aaea64)
 
-[7] [Bias-Variance Tradeoff in Time Series](https://towardsdatascience.com/bias-variance-tradeoff-in-time-series-8434f536387a)
+[7]: [Bias-Variance Tradeoff in Time Series](https://towardsdatascience.com/bias-variance-tradeoff-in-time-series-8434f536387a)
 
-[8] [The 5 Step Life-Cycle for Long Short-Term Memory Models in Keras](https://machinelearningmastery.com/5-step-life-cycle-long-short-term-memory-models-keras/)
+[8]: [The 5 Step Life-Cycle for Long Short-Term Memory Models in Keras](https://machinelearningmastery.com/5-step-life-cycle-long-short-term-memory-models-keras/)
 
 
-[9] [Confidence Intervals for Machine Learning](https://machinelearningmastery.com/confidence-intervals-for-machine-learning/)
+[9]: [Confidence Intervals for Machine Learning](https://machinelearningmastery.com/confidence-intervals-for-machine-learning/)
 
-[10] [How to Report Classifier Performance with Confidence Intervals](https://machinelearningmastery.com/report-classifier-performance-confidence-intervals/)
+[10]: [How to Report Classifier Performance with Confidence Intervals](https://machinelearningmastery.com/report-classifier-performance-confidence-intervals/)
 
-[11] [How to Calculate Bootstrap Confidence Intervals For Machine Learning Results in Python](https://machinelearningmastery.com/calculate-bootstrap-confidence-intervals-machine-learning-results-python/)
+[11]: [How to Calculate Bootstrap Confidence Intervals For Machine Learning Results in Python](https://machinelearningmastery.com/calculate-bootstrap-confidence-intervals-machine-learning-results-python/)
 
-[12] [A Gentle Introduction to the Bootstrap Method](https://machinelearningmastery.com/a-gentle-introduction-to-the-bootstrap-method/)
+[12]: [A Gentle Introduction to the Bootstrap Method](https://machinelearningmastery.com/a-gentle-introduction-to-the-bootstrap-method/)
 
-[13] [How To Backtest Machine Learning Models for Time Series Forecasting](https://machinelearningmastery.com/backtest-machine-learning-models-time-series-forecasting/)
+[13]: [How To Backtest Machine Learning Models for Time Series Forecasting](https://machinelearningmastery.com/backtest-machine-learning-models-time-series-forecasting/)
 
-[14] [A Curated List of Important Time Series Forecasting Concepts](https://pub.towardsai.net/a-curated-list-of-important-time-series-forecasting-concepts-eb2306b55c19)
+[14]: [A Curated List of Important Time Series Forecasting Concepts](https://pub.towardsai.net/a-curated-list-of-important-time-series-forecasting-concepts-eb2306b55c19)
 
 
 [A Gentle Introduction to Statistical Tolerance Intervals in Machine Learning](https://machinelearningmastery.com/statistical-tolerance-intervals-in-machine-learning/)
@@ -901,18 +899,12 @@ We can then use these observations to make a claim about the sample distribution
 
 [Local vs Global Forecasting: What You Need to Know](https://towardsdatascience.com/local-vs-global-forecasting-what-you-need-to-know-1cc29e66cae0)
 
+----------
 
-[^what_is_tsf]: https://machinelearningmastery.com/time-series-forecasting/ "What Is Time Series Forecasting?"
+[^what_is_tsf]: <https://machinelearningmastery.com/time-series-forecasting/> "What Is Time Series Forecasting?"
 
-[^classical_tsf_cheatsheet]: https://machinelearningmastery.com/time-series-forecasting-methods-in-python-cheat-sheet/ "Classical Time Series Forecasting Methods in Python (Cheat Sheet)"
+[^tsf_taxonomoy]: <https://machinelearningmastery.com/taxonomy-of-time-series-forecasting-problems/> "Taxonomy of Time Series Forecasting Problems"
 
-[^tsf_taxonomoy]: https://machinelearningmastery.com/taxonomy-of-time-series-forecasting-problems/ "Taxonomy of Time Series Forecasting Problems"
+[^tsf_error_metrics]: <https://medium.com/analytics-vidhya/error-metrics-used-in-time-series-forecasting-modeling-9f068bdd31ca> "Error Metrics used in Time Series Forecasting"
 
-
-[^tsf_lstm_howto]: https://machinelearningmastery.com/how-to-develop-lstm-models-for-time-series-forecasting/ "How to Develop LSTM Models for Time Series Forecasting"
-
-[^tsf_error_metrics]: https://medium.com/analytics-vidhya/error-metrics-used-in-time-series-forecasting-modeling-9f068bdd31ca "Error Metrics used in Time Series Forecasting"
-
-
-[^tsf_cnn]: https://machinelearningmastery.com/how-to-develop-convolutional-neural-network-models-for-time-series-forecasting/ "How to Develop CNN Models for Time Series Forecasting"
-
+[^tsf_cnn]: <https://machinelearningmastery.com/how-to-develop-convolutional-neural-network-models-for-time-series-forecasting/> "How to Develop CNN Models for Time Series Forecasting"

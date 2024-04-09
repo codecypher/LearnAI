@@ -195,28 +195,24 @@ Authorization is the process of granting someone access to a resource such as a 
 
 ## References
 
-[1] [Some handy CSS tricks](https://medium.com/codex/some-handy-css-tricks-8e5a0d3ac25c)
+[1]: [Some handy CSS tricks](https://medium.com/codex/some-handy-css-tricks-8e5a0d3ac25c)
 
-[2] [7 Tips to Design Responsive Website](https://medium.com/@monocosmo77/7-tips-to-design-responsive-website-6adf4f38a487)
+[2]: [7 Tips to Design Responsive Website](https://medium.com/@monocosmo77/7-tips-to-design-responsive-website-6adf4f38a487)
 
-[3] [FastAPI Tutorial](https://fastapi.tiangolo.com/tutorial/)
+[3]: [FastAPI Tutorial](https://fastapi.tiangolo.com/tutorial/)
 
-[4] [Understanding Flask vs FastAPI Web Framework](https://towardsdatascience.com/understanding-flask-vs-fastapi-web-framework-fe12bb58ee75)
+[4]: [Understanding Flask vs FastAPI Web Framework](https://towardsdatascience.com/understanding-flask-vs-fastapi-web-framework-fe12bb58ee75)
 
-[5] [Speed Up Your Python Code With 100% Thread Utilization using FastAPI](https://betterprogramming.pub/speed-up-your-python-code-with-100-thread-utilization-using-this-library-31378a45f0ec)
+[5]: [Speed Up Your Python Code With 100% Thread Utilization using FastAPI](https://betterprogramming.pub/speed-up-your-python-code-with-100-thread-utilization-using-this-library-31378a45f0ec)
 
 
-[6] [Deploying Your First Machine Learning API](https://www.kdnuggets.com/2021/10/deploying-first-machine-learning-api.html)
+[6]: [Deploying Your First Machine Learning API](https://www.kdnuggets.com/2021/10/deploying-first-machine-learning-api.html)
 
-[7] [How to Dockerize Machine Learning Applications Built with H2O, MLflow, FastAPI, and Streamlit](https://towardsdatascience.com/how-to-dockerize-machine-learning-applications-built-with-h2o-mlflow-fastapi-and-streamlit-a56221035eb5)
+[7]: [How to Dockerize Machine Learning Applications Built with H2O, MLflow, FastAPI, and Streamlit](https://towardsdatascience.com/how-to-dockerize-machine-learning-applications-built-with-h2o-mlflow-fastapi-and-streamlit-a56221035eb5)
 
-[8] [6 Concepts Every Backend Engineer Should Know](https://techwithmaddy.com/concepts-every-backend-engineer-should-know#heading-6-state-preservation)
+[8]: [6 Concepts Every Backend Engineer Should Know](https://techwithmaddy.com/concepts-every-backend-engineer-should-know#heading-6-state-preservation)
 
 
 [10 Google Fonts Every Web Designer Needs To Know](https://uxplanet.org/10-google-fonts-every-web-designer-needs-to-know-de7dc3352d2c)
 
 [3 Best Websites to find Pro and Free Templates for your Portfolio](https://medium.com/geekculture/3-best-websites-to-find-pro-free-templates-for-your-portfolio-c7745792e60)
-
-
-
-

@@ -161,6 +161,6 @@ Their exposed sliding mechanisms make them less suited for dusty/dirty environme
 
 ## References
 
-[1] [Robotics Technology](https://builtin.com/robotics)
+[1]: [Robotics Technology](https://builtin.com/robotics)
 
-[2] [4 Types of Robots Every Manufacturer Should Know](https://www.nist.gov/blogs/manufacturing-innovation-blog/4-types-robots-every-manufacturer-should-know)
+[2]: [4 Types of Robots Every Manufacturer Should Know](https://www.nist.gov/blogs/manufacturing-innovation-blog/4-types-robots-every-manufacturer-should-know)

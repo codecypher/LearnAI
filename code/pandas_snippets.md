@@ -7,8 +7,8 @@ Here are some useful python code snippets for data science and analysis projects
 
 ```py
     import pandas pd
-    
-    # Combine multiple excel sheets of the same file 
+
+    # Combine multiple excel sheets of the same file
     # into single dataframe and save as .csv
     excel_file = pd.read_excel(‘file.xlsx’, sheet_name=None)
     dataset_combined = pd.concat(excel_file.values())
@@ -23,12 +23,12 @@ Here are some useful python code snippets for data science and analysis projects
 
 ```py
     def find_boundaries(df, variable, distance=1.5):
-    
+
         IQR = df[variable].quantile(0.75) - df[variable].quantile(0.25)
-    
+
         lower_boundary = df[variable].quantile(0.25) - (IQR * distance)
         upper_boundary = df[variable].quantile(0.75) + (IQR * distance)
-    
+
         return upper_boundary, lower_boundary
 ```
 
@@ -40,9 +40,9 @@ Here are some useful python code snippets for data science and analysis projects
     plt.ylabel('Number of unique categories')
     plt.xlabel('Variables')
     plt.title('Cardinality')
-    
+
     ## Version with 5% threshold
-    
+
     fig = label_freq.sort_values(ascending=False).plot.bar()
     fig.axhline(y=0.05, color='red')
     fig.set_ylabel('percentage of cars within each category')
@@ -63,15 +63,15 @@ Here are some useful python code snippets for data science and analysis projects
 ### Add categorical/text labels
 
 ```py
-    # Add column that gives a unique number to each of these labels 
+    # Add column that gives a unique number to each of these labels
     df['label_num'] = df['label'].map({
-        'Household' : 0, 
-        'Books': 1, 
-        'Electronics': 2, 
+        'Household' : 0,
+        'Books': 1,
+        'Electronics': 2,
         'Clothing & Accessories': 3
     })
-    
-    # check the results 
+
+    # check the results
     df.head(5)
 ```
 
@@ -79,10 +79,10 @@ Here are some useful python code snippets for data science and analysis projects
 
 ```py
     import spacy
-    
+
     # load english language model and create nlp object from it
-    nlp = spacy.load("en_core_web_sm") 
-    
+    nlp = spacy.load("en_core_web_sm")
+
     def preprocess(text):
         """
         utlity function for pre-processing text
@@ -94,9 +94,9 @@ Here are some useful python code snippets for data science and analysis projects
             if token.is_stop or token.is_punct:
                 continue
             filtered_tokens.append(token.lemma_)
-        
-        return " ".join(filtered_tokens) 
-    
+
+        return " ".join(filtered_tokens)
+
         df['preprocessed_txt'] = df['Text'].apply(preprocess)
 ```
 
@@ -104,11 +104,11 @@ Here are some useful python code snippets for data science and analysis projects
 
 ## Pandas one-liners
 
-Here are some helpful Pandas one-liners [2] [3] [4].  
+Here are some helpful Pandas one-liners [2]: [3]: [4].
 
 ```py
   # n-largest values in a series
-  # find the top-n paid roles 
+  # find the top-n paid roles
   data.nlargest(n, "Employee Salary", keep = "all")
 ```
 
@@ -118,38 +118,38 @@ Here are some helpful Pandas one-liners [2] [3] [4].
 ```
 
 Crosstab computes a cross-tabulation of two (or more) columns/series and returns a frequency of each combination
-  
+
 
 ```py
   # compute the number of employees working from each location within every company
   pd.crosstab(data["Company Name"], data["Employee Work Location"])
-  
+
   result_crosstab = pd.crosstab(data["Company Name"], data["Employee Work Location"])
   sns.heatmap(result_crosstab, annot=True)
-  
+
   # compute aggregation on average salary
-  result_crosstab = pd.crosstab(index = data["Company Name"], 
-                columns=data["Employment Status"], 
-                values = data["Employee Salary"], 
+  result_crosstab = pd.crosstab(index = data["Company Name"],
+                columns=data["Employment Status"],
+                values = data["Employee Salary"],
                 aggfunc=np.mean)
   sns.heatmap(result_crosstab, annot=True, fmt='g')
 ```
-  
+
 Similar to crosstabs, pivot tables in Pandas provide a way to cross-tabulate your data.
 
 ```py
-  pd.pivot_table(data, 
-               index=["Company Name"], 
-               columns=["Employee Work Location"], 
-               aggfunc='size', 
+  pd.pivot_table(data,
+               index=["Company Name"],
+               columns=["Employee Work Location"],
+               aggfunc='size',
                fill_value=0)
 
-  result_pivot = pd.pivot_table(data, 
-            index=["Company Name"], 
-            columns=["Employee Work Location"], 
-            aggfunc='size', 
+  result_pivot = pd.pivot_table(data,
+            index=["Company Name"],
+            columns=["Employee Work Location"],
+            aggfunc='size',
             fill_value=0)
-               
+
   sns.heatmap(result_pivot, annot=True, fmt='g')
 ```
 
@@ -158,17 +158,17 @@ Mark duplicate rows
 ```py
   # Marks all duplicates as True except for the first occurrence.
   new_data.duplicated(keep="first")
-  
+
   # create filtered Dataframe with no duplicates
   # Marks all duplicates as True
   new_data[~new_data.duplicated(keep=False)]
-  
+
   # check duplicates on a subset of columns
   new_data.duplicated(subset=["Company Name", "Employee Work Location"], keep=False)
-  
+
   # Remove duplicates
   new_data.drop_duplicates(keep="first")
-  
+
   # drop duplicates on a subset of columns
   new_data.drop_duplicates(subset=["Company Name", "Employee Work Location"], keep = False)
   view raw
@@ -194,10 +194,10 @@ Aggregate operations
 ```py
   # group and calculate the mean of columns
   df.groupby('group_col').mean()
-  
+
   # filter rows based on a specific value
   df.loc[df['col'] == 'value']
-  
+
   # sort the dataframe by a specific column
   df.sort_values(by='col_name', ascending=False)
 ```
@@ -206,18 +206,18 @@ Aggregate operations
 Create a dictionary from a list
 
 ```py
-grades = ["A", "A", "B", "B", "A", "C", "A", "B", "C", "A"]
+  grades = ["A", "A", "B", "B", "A", "C", "A", "B", "C", "A"]
 
-pd.Series(grades).value_counts().to_dict()
+  pd.Series(grades).value_counts().to_dict()
 ```
 
 Create a DataFrame from a JSON file
 
 ```py
-with open("data.json") as f:
-    data = json.load(f)
+  with open("data.json") as f:
+      data = json.load(f)
 
-df = pd.json_normalize(data, "data")
+  df = pd.json_normalize(data, "data")
 ```
 
 Reformat using the explode function
@@ -225,7 +225,7 @@ Reformat using the explode function
 Consider a case where you have a list of items that match a particular record. You need to reformat it in a way that there is a separate row for each item in that list.
 
 ```py
-df_new = df.explode(column="data").reset_index(drop=True)
+  df_new = df.explode(column="data").reset_index(drop=True)
 ```
 
 The reset_index assigns a new integer index to the resulting DataFrame. Otherwise, the index before exploding would be preserved (i.e. all the rows with a key value of A would have an index of 0).
@@ -237,27 +237,24 @@ The combine_first function serves for a specific purpose but simplifies that spe
 If there is a row in column A with a missing value (i.e. NaN), we want it to be filled with the value of the same row in column B.
 
 ```py
-df["A"].combine_first(df["B"])
+  df["A"].combine_first(df["B"])
 ```
 
-If there are 3 columns that we want to use, we can chain combine_first functions. 
+If there are 3 columns that we want to use, we can chain combine_first functions.
 
 The following line of code first checks column A. If there is a missing value, it takes it from column B. If the corresponding row in column B is also NaN, then it takes the value from column C.
 
 ```py
-df["A"].combine_first(df["B"]).combine_first(df["C"])
+  df["A"].combine_first(df["B"]).combine_first(df["C"])
 ```
 
 
 ## References
 
-[1] [8 useful python code snippets for data science and analysis projects](https://medium.com/mlearning-ai/8-useful-python-code-snippets-for-data-science-and-analysis-projects-e76b0f391fb)
+[1]: [8 useful python code snippets for data science and analysis projects](https://medium.com/mlearning-ai/8-useful-python-code-snippets-for-data-science-and-analysis-projects-e76b0f391fb)
 
-[2] [Powerful One-liners in Pandas Every Data Scientist Should Know](https://towardsdatascience.com/powerful-one-liners-in-pandas-every-data-scientist-should-know-737e721b81b6)
+[2]: [Powerful One-liners in Pandas Every Data Scientist Should Know](https://towardsdatascience.com/powerful-one-liners-in-pandas-every-data-scientist-should-know-737e721b81b6)
 
-[3] [10 Pandas One Liners for Data Access, Manipulation, and Management](https://www.kdnuggets.com/2023/01/pandas-one-liners-data-access-manipulation-management.html)
+[3]: [10 Pandas One Liners for Data Access, Manipulation, and Management](https://www.kdnuggets.com/2023/01/pandas-one-liners-data-access-manipulation-management.html)
 
-[4] [4 Pandas One-Liners That Solve Particular Tasks Efficiently](https://towardsdatascience.com/4-pandas-one-liners-that-surprised-me-in-a-good-way-b67955211f81)
-
-
-
+[4]: [4 Pandas One-Liners That Solve Particular Tasks Efficiently](https://towardsdatascience.com/4-pandas-one-liners-that-surprised-me-in-a-good-way-b67955211f81)

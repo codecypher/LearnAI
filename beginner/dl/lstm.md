@@ -226,12 +226,11 @@ A problem with the architecture is that performance is poor on long input or out
 _Attention_ is an extension to the architecture that addresses this limitation by providing a richer context from the encoder to the decoder and a learning mechanism where the decoder can learn where to pay attention in the richer encoding when predicting each time step in the output sequence.
 
 
-
 ## References
 
-[1] [Long Short-Term Memory Networks (LSTMs)](https://machinelearningmastery.com/start-here/#lstm)
+[1]: [Long Short-Term Memory Networks (LSTMs)](https://machinelearningmastery.com/start-here/#lstm)
 
-[2] [The 5 Step Life-Cycle for Long Short-Term Memory Models in Keras](https://machinelearningmastery.com/5-step-life-cycle-long-short-term-memory-models-keras/)
+[2]: [The 5 Step Life-Cycle for Long Short-Term Memory Models in Keras](https://machinelearningmastery.com/5-step-life-cycle-long-short-term-memory-models-keras/)
 
 
 [Introduction to Long Short Term Memory](https://www.geeksforgeeks.org/deep-learning-introduction-to-long-short-term-memory/)
@@ -256,4 +255,3 @@ _Attention_ is an extension to the architecture that addresses this limitation b
 
 
 [PyTorch for Deep Learning — LSTM for Sequence Data](https://medium.com/analytics-vidhya/pytorch-for-deep-learning-lstm-for-sequence-data-d0708fdf5717)
-

@@ -1,6 +1,6 @@
 # Web Development Tools
 
-Here are some tools and resources for web developers. 
+Here are some tools and resources for web developers.
 
 
 ## Dev Tools
@@ -83,13 +83,13 @@ Accessibility
 
 ### Animista
 
-CSS Animation can get tedious to work with. 
+CSS Animation can get tedious to work with.
 
 We can work interactively with animations using Animista [1].
 
 ### Clip Path Generator
 
-The tool on [2] is a clip path generator. 
+The tool on [2] is a clip path generator.
 
 ```css
   clip-path: polygon(25% 0%, 75% 0%, 100% 53%, 25% 100%, 0% 50%);
@@ -97,7 +97,7 @@ The tool on [2] is a clip path generator.
 
 ### Responsive Font Calculator
 
-We can easily create a fluid Typography experience which has wider support and can be implemented with a few CSS lines. This experience is just created by using the viewport width, and or height to smoothly scale the root font size. 
+We can easily create a fluid Typography experience which has wider support and can be implemented with a few CSS lines. This experience is just created by using the viewport width, and or height to smoothly scale the root font size.
 
 We can avoid the jumps that are created by just using media queries.
 
@@ -114,19 +114,19 @@ All we have to do is configure the options to get CSS output that we can copy/pa
 
 ### Type Scale
 
-The fonts are a key aspect of any website, so we have another useful web app to help with fonts. 
+The fonts are a key aspect of any website, so we have another useful web app to help with fonts.
 
-When designing a website is it important to see how the different font sizes play together which is simple to create a consistent font scale using the web app in [4]. 
+When designing a website is it important to see how the different font sizes play together which is simple to create a consistent font scale using the web app in [4].
 
-We can choose between eight different predetermined scales or build our custom one. 
+We can choose between eight different predetermined scales or build our custom one.
 
 We just have to define a growth factor and the tool takes care of the rest.
 
-This will generate fonts using the rem unit it is also handy to see how different base size fonts will look. 
+This will generate fonts using the rem unit it is also handy to see how different base size fonts will look.
 
 The default is 16px which matches any browser's default root font.
 
-Once we have everything looking good, we can copy the generated CSS or view the results in a codepen instance. 
+Once we have everything looking good, we can copy the generated CSS or view the results in a codepen instance.
 
 
 
@@ -210,10 +210,10 @@ Once we have everything looking good, we can copy the generated CSS or view the 
 
 ## References
 
-[1] [Animista](https://animista.net/)
- 
-[2] [Clip Path Generator](https://bennettfeely.com/clippy/)
- 
-[3] [Responsive Font Calculator](https://websemantics.uk/tools/responsive-font-calculator/)
+[1]: [Animista](https://animista.net/)
 
-[4] [Type Scale](https://type-scale.com/)
+[2]: [Clip Path Generator](https://bennettfeely.com/clippy/)
+
+[3]: [Responsive Font Calculator](https://websemantics.uk/tools/responsive-font-calculator/)
+
+[4]: [Type Scale](https://type-scale.com/)
