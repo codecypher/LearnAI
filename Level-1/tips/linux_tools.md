@@ -7,6 +7,7 @@
 - fzf
 - hstr
 - httpie
+- js
 - mktemp
 - od (view binary file)
 - rich
@@ -15,6 +16,9 @@
 - Shellcheck
 - tmux
 - vnstat
+
+
+Bash is a command interpreter for Linux and MacOS systems. Here are some tools and tips that will help in the daily battle against bugs and deadlines [1].
 
 
 ## awk
@@ -50,6 +54,20 @@ HTTPie is a command-line HTTP client to make CLI interaction with web services a
 HTTPie is designed for testing, debugging, and generally interacting with APIs and HTTP servers. 
 
 The http and https commands allow for creating and sending arbitrary HTTP requests using a simple and natural syntax and provide formatted and colorized output.
+
+## jq
+
+[jq](https://jqlang.github.io/jq/)
+
+`jq` is a lightweight and flexible command-line JSON processor.
+
+jq is like sed for JSON data - you can use it to slice and filter and map and transform structured data with the same ease that sed, awk, grep and friends let you play with text.
+
+jq is written in portable C, and it has zero runtime dependencies. 
+
+You can download a single binary, scp it to a far away machine of the same type, and expect it to work.
+
+jq can mangle the data format that you have into the one that you want with very little effort, and the program to do so is often shorter and simpler than you'd expect.
 
 ## Lucidchart
 
@@ -246,19 +264,16 @@ The advantage of `xxd` is that you can both dump and restore hex using this util
 
 
 
-## Linux Command Tutorials
-
-[20 Linux Tricks for the Pro Developers](https://medium.com/codex/linux-tricks-for-the-pro-developers-48edadc7017e)
-
-[10 Practical Uses of AWK Command for Text Processing](https://betterprogramming.pub/10-practical-use-of-awk-command-in-linux-unix-26fbd92f1112)
-
-[Display Rich Text In The Console Using rich](https://towardsdatascience.com/get-rich-using-python-af66176ece8f?source=linkShare-d5796c2c39d5-1641842633)
-
-
 
 ## References
 
-[6 More Unique Linux Utilities You Forgot About](https://betterprogramming.pub/6-more-unique-linux-utilities-you-forgot-about-1215ac0c58da)
+[1]: [20 Linux Tricks for the Pro Developers](https://medium.com/codex/linux-tricks-for-the-pro-developers-48edadc7017e)
+
+[2]: [10 Practical Uses of AWK Command for Text Processing](https://betterprogramming.pub/10-practical-use-of-awk-command-in-linux-unix-26fbd92f1112)
+
+[3]: [Display Rich Text In The Console Using rich](https://towardsdatascience.com/get-rich-using-python-af66176ece8f?source=linkShare-d5796c2c39d5-1641842633)
+
+[4]: [6 More Unique Linux Utilities You Forgot About](https://betterprogramming.pub/6-more-unique-linux-utilities-you-forgot-about-1215ac0c58da)
 
 
 
