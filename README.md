@@ -9,30 +9,46 @@ If you are like me and try to follow the principles of DRY, KISS, Design Pattern
 [Raindrop](https://raindrop.io/codecypher)
 
 
-## Learning Path
+## Learning Paths
 
-- Beginner
-- Advanced
-- Expert
+- Level-0 (Beginner)
+- Level-1 (Advanced)
+- Level-2 (Expert)
 
 
-## Noteworthy
+## Noteworthy Facts
 
-> Don't reinvent the wheel (DRTW)
+- 85% or more of AI projects fail.
 
-> **Occam’s Razor:** The simplest algorithm that fits the data is usually the best. Therefore, avoid focusing on SOTA algorithms.
+- Less than 1% of AI practitioners and researchers have an advanced degree in AI.
 
-> Complex theories do not work, simple algorithms do — Vladimir Vapnik
+- 34% or more of of journal article authors admit to manipulating results.
 
-> No Free Lunch Theorem (NFLT): There is no such thing as “best”.
+- In general, the results of journal articles are irreproducible.
+
+
+## Noteworthy Quotes
+
+> Software Half-Life: The frameworks that help us build software in half the time become outdated in half the time.
+
+> I'm not in this world to live up to your expectations and you're not in this world to live up to mine - Bruce Lee
+
+
+## Guiding Principles for AI
+
+**Occam’s Razor:** The simplest algorithm that fits the data is usually the best. Therefore, avoid focusing on SOTA algorithms.
 
 **No Free Lunch Theorem:** When the performance of all optimization methods is averaged across all conceivable problems, they all perform equally well. Thus, no single optimal algorithm exists.
 
+> Occam's razor: the simplest algorithm that fits the data ia usually the best. 
+
+> No Free Lunch Theorem (NFLT): There is no such thing as “best”.
+
 > If you torture the data long enough, it will confess to anything - Ronald Coase.
 
-> Since 85% or more of artificial intelligence  projects fail, AI is not a field where _the Star Trek approach_ is appropriate which includes the use of SOTA algoritnns and techniques for solving real-world problems and/or commercial applications. In a nutshell, KISS.
+> Complex theories do not work, simple algorithms do — Vladimir Vapnik
 
-> Software Half-Life: The frameworks that help us build software in half the time become outdated in half the time.
+> Don't reinvent the wheel (DRTW)
 
 
 ## Background
@@ -69,7 +85,7 @@ This is a work in progress, so there is probably some content missing and the co
 
 [4]: S. Russell and P. Norvig, Artificial Intelligence: A Modern Approach, 4th ed. Upper Saddle River, NJ: Prentice Hall, ISBN: 0-13-461099-7, 2021.
 
-[5]: Nedgu BM, “ Why 85% of AI projects fail,” Towards Data Science Nov. 11, 2020.
+[5]: Nedgu BM, “Why 85% of AI projects fail,” Towards Data Science Nov. 11, 2020.
 
 [6]: S. Reisner, “Why most AI implementations fail and what enterprises can do to beat the odds,” Venture Beat, June 28, 2021.
 
