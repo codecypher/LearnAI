@@ -60,13 +60,22 @@ https://github.com/codecypher
 
 ## Can I learn AI from research papers
 
-Research papers are not a good resource for learning a topic. The reader is assumed to already know the core theory and concepts covered in textbooks. Thus, the best approach to learning AI is a good textbook.
+Research papers are not a good resource for learning a topic. The reader is assumed to already know the core theory and concepts covered in textbooks. Thus, the best approach to learning AI is a good _textbook_.
+
+
+A textbook is a summary of the core knowledge for a topic and meant to be a reputable source of information. A research paper is attempting to add the that body of knowledge so I is meant to be read critically and the results should not be accepted as true. 
+
 
 AI is considered a graduate level topic in computer science, so there a lot of Math and CS prerequisites that are needed first to properly learn the core theory and concepts. Otherwise, it will be problematic at some point when you try to actually use AI to solve a real-world problem.
 
-In general, the results of AI research articles are irreproducible. In fact, there is a major problem with integrity in AI research right now. The further away you get from reputable publications such as IEEE, the worse it gets.  I have seen numerous articles that I have no idea how they were ever published (major mistakes and errors). When learning AI, you need a healthy dose of skepticism in what you read, especially research articles. This is all discussed in the Russell and Norivg and other graduate textbooks.
 
-[Is My Model Really Better?](https://towardsdatascience.com/is-my-model-really-better-560e729f81d2)
+In a recent IEEE survey, 34% of authors admitted to manipulating their results and that’s only the ones that would admit it. I think it is a common practice, so I believe the actual number is 70% or higher. 
+
+In general, the results of AI research articles are irreproducible. In fact, there is a major problem with integrity in AI research right now. 
+
+The further away you get from reputable publications such as IEEE, the worse it gets.  I have seen numerous articles that I have no idea how they were ever published (major mistakes and errors). 
+
+When learning AI, you need a healthy dose of skepticism in what you read, especially research articles. This is all discussed in the Russell and Norivg and other graduate textbooks.
 
 
 ## How to ask an AI/ML question
