@@ -427,9 +427,10 @@ Nominal features do not imply any order.
 
 For example, T-shirt color is a nominal feature since it typically does not make sense to say that red is larger than blue.
 
+
 There are several ways to encode categorical variables:
 
-  1. Integer (Ordinal) Encoding: each unique label/category is mapped to an integer.
+  1. Integer (Ordinal) Encoding: each unique label or category is mapped to an integer.
 
   2. One Hot Encoding: each label is mapped to a binary vector.
 
@@ -437,6 +438,7 @@ There are several ways to encode categorical variables:
 
   4. Learned Embedding: a distributed representation of the categories is learned.
 
+  
 ### Integer (Ordinal) Encoding
 
 To make sure that the ML algorithm interprets the ordinal features correctly, we need to convert the categorical string values into integers.

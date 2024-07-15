@@ -1,4 +1,7 @@
-# AI Notes
+# AI Essentials
+
+When learning AI, you need a healthy dose of _skepticism_ in what you read, especially research articles which is discussed in the Russell and Norivg and other graduate textbooks.
+
 
 ## Terminology
 
@@ -347,8 +350,7 @@ After being exposed to a certain portion of the dataset, the model is not allowe
 
 [6]: J. F. DeFranco and J. Voas, "Reproducibility, Fabrication, and Falsification", IEEE Computer, vol. 54 no. 12, 2021.
 
-[7]: T. Shin, [4 Reasons Why You Shouldn't Use Machine Learning](https://towardsdatascience.com/4-reasons-why-you-shouldnt-use-machine-learning-639d1d99fe11), Towards Data Science, Oct
-5, 2021.
+[7]: T. Shin, [4 Reasons Why You Shouldn't Use Machine Learning](https://towardsdatascience.com/4-reasons-why-you-shouldnt-use-machine-learning-639d1d99fe11), Towards Data Science, Oct 5, 2021.
 
 
 [8]: [Do you know how to choose the right machine learning algorithm among 7 different types?](<https://towardsdatascience.com/do-you-know-how-to-choose-the-right-machine-learning-algorithm-among-7-different-types-295d0b0c7f60>
@@ -361,8 +363,5 @@ After being exposed to a certain portion of the dataset, the model is not allowe
 
 [12]: [The Gap Between Deep Learning and Human Cognitive Abilities](https://www.kdnuggets.com/2022/10/gap-deep-learning-human-cognitive-abilities.html)
 
-----------
+[13]: [Is My Model Really Better?](https://towardsdatascience.com/is-my-model-really-better-560e729f81d2)
 
-[OpenAI Is Disbanding Its Robotics Research Team](https://lastfuturist.com/openai-is-disbanding-its-robotics-research-team/)
-
-[Microsoft invests $1 billion in OpenAI to pursue holy grail of artificial intelligence](https://www.theverge.com/2019/7/22/20703578/microsoft-openai-investment-partnership-1-billion-azure-artificial-general-intelligence-agi)
