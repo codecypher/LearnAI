@@ -269,7 +269,213 @@ The np.dot implements Vectorized matrix multiplication in the backend which is m
 TODO: Add code sample
 
 
-----------
+
+## Iterables
+
+An _iterable_ is any Python object that is capable of returning its members one at a time, permitting it to be iterated over in a loop.
+
+There are _sequential_ iterables that arrange items in a specific order, such as lists, tuples, string and dictionaries.
+
+There are _non-sequential_ collections that are iterable. For example, a set is an iterable, despite lacking any specific order.
+
+Iterables are fundamental to Python and manuy other programming language, so knowing how to efficiently use them will have an impact on the quality of your code.
+
+In general, iterables can be processed using a for-loop that allows for successively handling each item that is part of the iterable.
+
+You may find that you often create programming loops that are similar to one another. Therefore, there are plenty of great built-in Python functions that can help to process iterables without reinventing the wheel.
+
+Python iterables are fast, memory-efficient, and when used properly make your code more concise and readable.
+
+> Python’s built-in functions are written in C, so they are very fast and efficient. 
+
+
+The functions included in the article [4] are:
+
+- Function 1: all
+- Function 2: any
+- Funciton 3: enumerate
+- Function 4: filter
+- Function 5: map
+- Function 6: min
+- Function 7: max
+- Function 8: reversed
+- Function 9: sum
+- Function 10: zip
+- collections.Counter
+
+
+
+## Pythonic Loops
+
+### Iterate in Parallel Over Multiple Iterables with zip
+
+The `zip()` function is used to iterate over multiple iterables in parallel by pairing corresponding elements of different iterables together [12]. 
+
+Suppose we need to loop through both names and scores list:
+
+```py
+names = ["Alice", "Bob", "Charlie"]
+scores = [95, 89, 78]
+
+for i in range(len(names)):
+    print(f"{names[i]} scored {scores[i]} points.")
+```
+
+Here is a more readable loop with the zip() function:
+
+```py
+names = ["Alice", "Bob", "Charlie"]
+scores = [95, 89, 78]
+
+for name, score in zip(names, scores):
+    print(f"{name} scored {score} points.")
+```
+
+The Pythonic version using zip() is more elegant and avoids the need for manual indexing—making the code cleaner and more readable.
+    
+
+## List and Dictionary Comprehension
+
+In Python, list comprehensions and dictionary comprehensions are concise one-liners to create lists and dictionaries which can also include conditional statements to filter items based on certain conditions [12].
+
+```py
+numbers = [1, 2, 3, 4, 5]
+squared_numbers = [num ** 2 for num in numbers]
+
+print(squared_numbers)
+```
+
+Here, the list comprehension creates a new list containing the squares of each number in the numbers list.
+
+### List Comprehension with Conditional Filtering
+
+We can add filtering conditions within the list comprehension expression [12]:
+
+```py
+numbers = [1, 2, 3, 4, 5]
+odd_numbers = [num for num in numbers if num % 2 != 0]
+
+print(odd_numbers)
+```
+
+Suppose we have a fruits list and we want create a dictionary with `fruit:len(fruit)` key-value pairs.
+
+We can do this with a for loop:
+
+```py
+fruits = ["apple", "banana", "cherry", "date"]
+fruit_lengths = {}
+
+for fruit in fruits:
+    fruit_lengths[fruit] = len(fruit)
+
+print(fruit_lengths)
+```
+
+We can also write the dictionary comprehension equivalent:
+
+```py
+fruits = ["apple", "banana", "cherry", "date"]
+fruit_lengths = {fruit: len(fruit) for fruit in fruits}
+
+print(fruit_lengths)
+```
+
+The dictionary comprehension creates a dictionary where keys are the fruits and values are the lengths of the fruit names.
+
+### Dictionary Comprehension with Conditional Filtering
+
+Let us modify our dictionary comprehension expression to include a condition [12]:
+
+```py
+fruits = ["apple", "banana", "cherry", "date"]
+long_fruit_names = {fruit: len(fruit) for fruit in fruits if len(fruit) > 5}
+```
+
+The dictionary comprehension creates a dictionary with fruit names as keys and their lengths as values, but only for fruits with names longer than 5 characters.
+
+
+## Use Context Managers for Effective Resource Handling
+
+Context managers in Python help you manage resources efficiently [12]. 
+
+The simplest and the most common example of context managers is in file handling.
+
+Now consider the following version using the `with` statement that supports `open` function which is a context manager:
+
+```py
+filename = 'somefile.txt'
+with open(filename, 'w') as file:
+    file.write('Something')
+
+print(file.closed)
+```
+
+We use the `with` statement to create a context in which the file is opened whicv ensures that the file is properly closed when the execution exits the with block - even if an exception is raised during the operation.
+
+Now it is not necessary to implement exception handling. 
+
+Here are a few more examples using context managers [13]:
+
+- Handling Database Connections 
+- Managing Python Subprocesses
+- High-Precision Floating-Point Arithmetic
+
+
+## Use Generators for Memory-Efficient Processing
+
+Generators provide an elegant way to work with large datasets or infinite sequences to improve code efficiency and reducing memory consumption [12]. 
+
+### What Are Generators?
+
+Generators are functions that use the `yield` keyword to return values one at a time, preserving their internal state between invocations [12]. 
+
+Unlike regular functions that compute all values at once and return a complete list, generators compute and yield values on-the-fly as they are requested which makes them suitable for processing large sequences.
+
+Avoid Returning Lists From Functions
+
+It is common to write functions that generate sequences such as a list of values. But we can rewrite them as generator functions. 
+
+Generators use lazy evaluation which means they yield elements of the sequence on demand rather than computing all the values ahead of time.
+
+- Using generators can be more efficient for large input sizes. 
+
+- We can chain generators together to create efficient data processing pipelines.
+
+
+## Leverage Collection Classes
+
+We’ll wrap up the tutorial by learning about two useful collection classes [12]:
+
+### More Readable Tuples with NamedTuple
+
+In Python, a namedtuple in the collections module is a subclass of the built-in tuple class. But it provides named fields. Which makes it more readable and self-documenting than regular tuples.
+
+### Use Counter to Simplify Counting
+
+The `Counter` is a class in the collections module that is designed for counting the frequency of elements in an iterable such as a list or a string). It returns a Counter object with {element:count} key-value pairs.
+
+Suppose we are counting character frequencies in a long string.
+
+We can achieve the same task using the Counter  class using the syntax Counter(iterable):
+
+```py
+from collections import Counter
+
+word = "incomprehensibilities"
+
+# Count character frequencies using Counter
+char_counts = Counter(word)
+
+print(char_counts)
+
+# Find the most common character
+most_common = char_counts.most_common(1)
+
+print(f"Most Common Character: '{most_common[0][0]}' (appears {most_common[0][1]} times)")
+```
+
+Thus, Counter provides a much simpler way to count character frequencies without the need for manual iteration and dictionary management.
 
 
 
@@ -358,7 +564,6 @@ print(max(words, key=len))
 
 
 
-
 ## Utility Classes
 
 ### Enumeration
@@ -417,41 +622,6 @@ We can a class to hold data using the dataclass decorator [3].
     print(student)  # __str__
     Student(name='John', gender='M')
 ```
-
-
-## Iterables
-
-An _iterable_ is any Python object that is capable of returning its members one at a time, permitting it to be iterated over in a loop.
-
-There are _sequential_ iterables that arrange items in a specific order, such as lists, tuples, string and dictionaries.
-
-There are _non-sequential_ collections that are iterable. For example, a set is an iterable, despite lacking any specific order.
-
-Iterables are fundamental to Python and manuy other programming language, so knowing how to efficiently use them will have an impact on the quality of your code.
-
-In general, iterables can be processed using a for-loop that allows for successively handling each item that is part of the iterable.
-
-You may find that you often create programming loops that are similar to one another. Therefore, there are plenty of great built-in Python functions that can help to process iterables without reinventing the wheel.
-
-Python iterables are fast, memory-efficient, and when used properly make your code more concise and readable.
-
-> Python’s built-in functions are written in C, so they are very fast and efficient. 
-
-
-The functions included in the article [4] are:
-
-- Function 1: all
-- Function 2: any
-- Funciton 3: enumerate
-- Function 4: filter
-- Function 5: map
-- Function 6: min
-- Function 7: max
-- Function 8: reversed
-- Function 9: sum
-- Function 10: zip
-- collections.Counter
-
 
 
 ## Write Shorter Conditionals using Dictionaries
@@ -658,7 +828,11 @@ log_error(str(ce))
 ```
 
 
-## Best Practices
+## Best Practices for ML Code
+
+Unlike traditional software engineering projects, ML codebases tend to lag behind in code quality due to their complex and evolving nature, leading to increased technical debt and difficulties in collaboration [10].
+
+The following section will show common examples from ML codebases and explain how to handle those properly.
 
 ### Handling Multiple Return Values
 
@@ -738,6 +912,72 @@ result = final_score([attendance, exam])
 print("Final Score:", result)
 ```
 
+### Annotations
+
+Code annotations are more than mere comments: they are a standardized way to highlight areas of code that require attention or improvement [11].
+
+Here are the typical code annotations:
+
+TODO: Indicates tasks, improvements, or features that need to be implemented. It’s one of the most common annotations, probably the most frequently used.
+
+- NOTE: Used to highlight an important piece of information about a module, class, method or function (if located in a docstring) or about the code fragment before which it’s placed (if used as an inline comment). It can be something related to the implementation, usage, or context that developers should be aware of.
+
+- BUG: Marks a bug within the code. It should be accompanied by a description of the bug and other significant information. This can be a specific bug that you know of, or an indication of a code fragment that has an unknown bug.
+
+- FIXME: Marks an issue in the code that needs to be fixed. It’s different from BUG, however. BUG indicates an actual mistake in the code while FIXME rather indicates problems that aren’t mere bugs but could be related to, e.g., lousy or inefficient implementation, incorrect implementation of the business logic, unclear code.
+
+- REVIEW: Signals that a reviewer should pay attention to a particular piece of code. Therefore, the context should be clearly explained.
+
+In addition to these, from time to time we can use two custom code annotations:
+
+- THINK ABOUT THIS: Marks a code fragment or an idea (if located in a docstring) that requires in-depth thinking, for whatever reasons. Most often, this won’t have anything to do with the technical side of the code but with the business logic.
+
+- RECONSIDER: Signals a code fragment to be reconsidered. You must provide reasons and/or ideas, since without explanation, this annotation could be more confusing than helpful.
+
+
+```py
+"""This is an example annotation module.
+
+TODO: Install the extension.
+RECONSIDER: Should the different annotations be formatted
+    the same way?
+"""
+def foo(x, y, z):
+    """Create a tuple of three elements.
+    
+    Examples:
+    >>> foo(1, 2, 3)
+    (1, 2, 3)
+    >>> foo('1', '2', 3)
+    ('1', '2', 3)
+
+    TODO: Use *args to allow for more arguments.
+    RECONSIDER: Is this function really important?
+    """
+    return x, y, z
+
+def bar(x: int) -> tuple[int, float, str]:
+    """Create a three-type int tuple.
+    
+    TODO: Explain what "a three-type int tuple" is.
+    TODO: Add doctests.
+    """
+    # FIXME: Remove the direct call to tuple:
+    return tuple(x, float(x), str(x))
+
+def baz(x: float) -> tuple[int, float, str]:
+    """Create a three-type int tuple from float.
+    
+    TODO: Explain what "a three-type int tuple" is.
+    TODO: Add doctests.
+    """
+    # BUG: x is float, so it should be converted to
+    #    a float (see the first position of the tuple)
+    # FIXME: Remove the direct call to tuple:
+    return tuple(x, x, str(x))
+```
+
+
 
 ## References
 
@@ -761,6 +1001,12 @@ print("Final Score:", result)
 [9]: [Why and how custom exceptions lead to cleaner, better code](https://towardsdatascience.com/why-and-how-custom-exceptions-lead-to-cleaner-better-code-2382216829fd)
 
 [10]: [Software Engineering Best Practices for Writing Maintainable ML Code](https://towardsdatascience.com/software-engineering-best-practices-for-writing-maintainable-ml-code-717934bd5590)
+
+[11]: [Enhancing Readability of Python Code via Annotations](https://towardsdatascience.com/enhancing-readability-of-python-code-via-annotations-09ce4c9b3729)
+
+[12]: [How To Write Efficient Python Code: A Tutorial for Beginners](https://www.kdnuggets.com/how-to-write-efficient-python-code-a-tutorial-for-beginners)
+
+[13]: [3 Interesting Uses of Python’s Context Managers](https://www.kdnuggets.com/3-interesting-uses-of-python-context-managers)
 
 
 [Python: Pretty Print a Dict (Dictionary) – 4 Ways](https://datagy.io/python-pretty-print-dictionary/)
