@@ -1,9 +1,9 @@
 # Python Code Snippets
 
 
-## What is Vectorization
+## Vectorization
 
-Vectorization is the technique of implementing (NumPy) array operations on a dataset.
+**Vectorization** is the technique of implementing (NumPy) array operations on a dataset.
 
 Vectorization is a very fast alternative to loops in Python. 
 
@@ -135,7 +135,7 @@ Using Vectorization
     # 0.28007707595825195 sec
 ```
 
-### Solving Machine Learning/Deep Learning Networks
+### Solving Deep Learning Networks
 
 Create  the Data
 
@@ -188,85 +188,6 @@ Figure: Dot Product of 2 matrices
 
 The np.dot implements Vectorized matrix multiplication in the backend which is much faster compared to loops in python.
 
-
-
-## Display multiple images in one figure
-
-```py
-    # import libraries
-    import cv2
-    from matplotlib import pyplot as plt
-      
-    # create figure
-    fig = plt.figure(figsize=(10, 7))
-      
-    # setting values to rows and column variables
-    num_rows = 2
-    num_cols = 2
-    
-    # Read the images into list
-    images = []
-    img = cv2.imread('Image1.jpg')
-    images.append(img)
-    
-    img = cv2.imread('Image2.jpg')
-    images.append(img)
-    
-    img = cv2.imread('Image3.jpg')
-    images.append(img)
-    
-    img = cv2.imread('Image4.jpg')
-    images.append(img)
-    
-      
-    # Adds a subplot at the 1st position
-    fig.add_subplot(num_rows, num_cols, 1)
-      
-    # showing image
-    plt.imshow(Image1)
-    plt.axis('off')
-    plt.title("First")
-      
-    # Adds a subplot at the 2nd position
-    fig.add_subplot(num_rows, num_cols, 2)
-      
-    # showing image
-    plt.imshow(Image2)
-    plt.axis('off')
-    plt.title("Second")
-      
-    # Adds a subplot at the 3rd position
-    fig.add_subplot(num_rows, num_cols, 3)
-      
-    # showing image
-    plt.imshow(Image3)
-    plt.axis('off')
-    plt.title("Third")
-      
-    # Adds a subplot at the 4th position
-    fig.add_subplot(num_rows, num_cols, 4)
-      
-    # showing image
-    plt.imshow(Image4)
-    plt.axis('off')
-    plt.title("Fourth")
-```
-
-
-## Plot images side by side
-
-```py
-    _, axs = plt.subplots(num_rows, num_cols, figsize=(12, 12))
-    axs = axs.flatten()
-    for img, ax in zip(imgs, axs):
-        ax.imshow(img)
-    plt.show()
-```
-
-
-## Visualize a batch of image data
-
-TODO: Add code sample
 
 
 
@@ -395,7 +316,10 @@ long_fruit_names = {fruit: len(fruit) for fruit in fruits if len(fruit) > 5}
 The dictionary comprehension creates a dictionary with fruit names as keys and their lengths as values, but only for fruits with names longer than 5 characters.
 
 
-## Use Context Managers for Effective Resource Handling
+
+## Python Tips
+
+### Use Context Managers for Effective Resource Handling
 
 Context managers in Python help you manage resources efficiently [12]. 
 
@@ -422,13 +346,11 @@ Here are a few more examples using context managers [13]:
 - High-Precision Floating-Point Arithmetic
 
 
-## Use Generators for Memory-Efficient Processing
+### Use Generators for Memory-Efficient Processing
 
 Generators provide an elegant way to work with large datasets or infinite sequences to improve code efficiency and reducing memory consumption [12]. 
 
-### What Are Generators?
-
-Generators are functions that use the `yield` keyword to return values one at a time, preserving their internal state between invocations [12]. 
+_Generators_ are functions that use the `yield` keyword to return values one at a time, preserving their internal state between invocations [12]. 
 
 Unlike regular functions that compute all values at once and return a complete list, generators compute and yield values on-the-fly as they are requested which makes them suitable for processing large sequences.
 
@@ -443,15 +365,66 @@ Generators use lazy evaluation which means they yield elements of the sequence o
 - We can chain generators together to create efficient data processing pipelines.
 
 
-## Leverage Collection Classes
+### Cache Expensive Function Calls
 
-We’ll wrap up the tutorial by learning about two useful collection classes [12]:
+Caching can improve performance by storing the results of expensive function calls and reusing them when the function is called again with the same inputs [16]. 
 
-### More Readable Tuples with NamedTuple
+Suppose we are coding k-means clustering algorithm from scratch and want to cache the Euclidean distances computed. 
+
+We can cache function calls with the `@cache` decorator:
+
+```py
+from functools import cache
+from typing import Tuple
+import numpy as np
+
+@cache
+def euclidean_distance(pt1: Tuple[float, float], pt2: Tuple[float, float]) -> float:
+    return np.sqrt((pt1[0] - pt2[0]) ** 2 + (pt1[1] - pt2[1]) ** 2)
+
+def assign_clusters(data: np.ndarray, centroids: np.ndarray) -> np.ndarray:
+    clusters = np.zeros(data.shape[0])
+    for i, point in enumerate(data):
+        distances = [euclidean_distance(tuple(point), tuple(centroid)) for centroid in centroids]
+        clusters[i] = np.argmin(distances)
+    return clusters
+```
+
+Here is a sample function call:
+
+```py
+data = np.array([[1.0, 2.0], [2.0, 3.0], [3.0, 4.0], [8.0, 9.0], [9.0, 10.0]])
+centroids = np.array([[2.0, 3.0], [8.0, 9.0]])
+
+print(assign_clusters(data, centroids))
+
+# Output >>> [0. 0. 0. 1. 1.]
+```
+
+Python provides built-in support for caching through the functools module: the  decorators `@cache` and `@lru_cache` [17]. 
+
+Here are some reasons why caching function calls can improve performance [17]:
+
+- Performance improvement: When a function is called with the same arguments multiple times, caching the result can eliminate redundant computations. Instead of recalculating the result every time, the cached value can be returned, leading to faster execution.
+
+- Reduction of resource usage: Some function calls may be computationally intensive or require significant resources (such as database queries or network requests). Caching the results reduces the need to repeat these operations.
+
+- Improved responsiveness: In applications where responsiveness is crucial, such as web servers or GUI applications, caching can help reduce latency by avoiding repeated calculations or I/O operations.
+
+The `@lru_cache` decorator is similar to `@cache` but allows you to specify the maximum size of the cache. Once the cache reaches this size, the least recently used items are discarded which can used to limit memory usage [17]. 
+
+We can use the `timeit` function from the `timeit` module to compare the execution times. 
+
+
+### Leverage Collection Classes
+
+There are two less know but useful collection classes [12]:
+
+#### More Readable Tuples with NamedTuple
 
 In Python, a namedtuple in the collections module is a subclass of the built-in tuple class. But it provides named fields. Which makes it more readable and self-documenting than regular tuples.
 
-### Use Counter to Simplify Counting
+#### Use Counter to Simplify Counting
 
 The `Counter` is a class in the collections module that is designed for counting the frequency of elements in an iterable such as a list or a string). It returns a Counter object with {element:count} key-value pairs.
 
@@ -478,153 +451,7 @@ print(f"Most Common Character: '{most_common[0][0]}' (appears {most_common[0][1]
 Thus, Counter provides a much simpler way to count character frequencies without the need for manual iteration and dictionary management.
 
 
-
-## Python one-liners
-
-Here are some helpful python one-liners that can save time [3]:
-
-```py
-    # Palindrome Python One-Liner
-    phrase.find(phrase[::-1])
-
-    # Swap Two Variables Python One-Liner
-    a, b = b, a
-
-    # Sum Over Every Other Value Python One-Liner
-    sum(stock_prices[::2])
-
-    # Read File Python One-Liner
-    [line.strip() for line in open(filename)]
-
-    # Factorial Python One-Liner
-    reduce(lambda x, y: x * y, range(1, n+1))
-
-    # Performance Profiling Python One-Liner
-    python -m cProfile foo.py
-
-    # Superset Python One-Liner
-    lambda l: reduce(lambda z, x: z + [y + [x] for y in z], l, [[]])
-
-    # Fibonacci Python One-Liner
-    lambda x: x if x<=1 else fib(x-1) + fib(x-2)
-
-    # Quicksort Python One-liner
-    lambda L: [] if L==[] else qsort([x for x in L[1:] if x< L[0]]) + L[0:1] + qsort([x for x in L[1:] if x>=L[0]])
-
-    # Sieve of Eratosthenes Python One-liner
-    reduce( (lambda r,x: r-set(range(x**2,n,x)) if (x in r) else r), range(2,int(n**0.5)), set(range(2,n)))
-```
-
-
-```py
-# swap two variables
-a,b = b,a
-
-# reverse list 
-lst = [2,3,22,4,1]
-lst[::-1]
-
-# find square of even numbers with list comprehension
-result2 = [i**2 for i in range(10) if i%2==0]
-print(result2)
-
-# Dictionary comprehension
-myDict = {x: x**2 for x in [1,2,3,4,5]}
-print(myDict)
-
-# lambda function to square a number
-sqr = lambda x: x * x 
-sqr(10)
-
-file]
-
-
-# Read file contents into a list: one-liner
-file_lines = [line.strip() for line in open(filename)]
-
-# convert binary number to int 
-n = '100' ##binary 100
-dec_num = int(n,base = 2)
-print(dec_num)
-
-from itertools import combinations
-print(list(combinations([1, 2, 3, 4], 2)))
-
-from itertools import permutations
-print(list(permutations([1, 2, 3, 4], 2)))
-
-
-# Find longest string
-words = ['This', 'is', 'a', 'list', 'of', 'keyword']
-print(max(words, key=len))
-```
-
-
----------
-
-
-
-## Utility Classes
-
-### Enumeration
-
-We can create an Enumeration class to hold related members of the same concept such as compass directions (north, south, east, and west) or seasons [3]. 
-
-In the standard library of Python, the `enum` module provides the essential functionalities for creating an enumeration class.
-
-
-```py
-    from enum import Enum
-    
-    class Season(Enum):
-        SPRING = 1
-        SUMMER = 2
-        FALL = 3
-        WINTER = 4
-```
-
-```py
-    spring = Season.SPRING
-    spring.name
-    spring.value
-    
-    fetched_season_value = 2
-    matched_season = Season(fetched_season_value)
-    matched_season
-    # <Season.SUMMER: 2>
-    
-    list(Season)
-    
-    [x.name for x in Season]
-```
-
-### Data Classes
-
-We can a class to hold data using the dataclass decorator [3]. 
-
-```py
-    from dataclasses import dataclass
-    
-    @dataclass
-    class Student:
-        name: str
-        gender: str
-```
-
-```py
-    student = Student("John", "M")
-    student.name
-    student.gender
-    
-    repr(student)   # __repr__
-    # "Student(name='John', gender='M')"
-    
-    print(student)  # __str__
-    Student(name='John', gender='M')
-```
-
-
-## Write Shorter Conditionals using Dictionaries
+### Write Shorter Conditionals using Dictionaries
 
 Dictionaries are a concise alternative to the classic If-Else statement and the new Match-Case statement [5]. 
 
@@ -694,8 +521,7 @@ If we define the dictionary _outside_ the function and rerun the experiment, we 
 ```
 
 
-
-## Display Pandas DataFrame in table style
+### Display Pandas DataFrame in table style
 
 ```py
     # importing the modules
@@ -713,8 +539,7 @@ If we define the dictionary _outside_ the function and rerun the experiment, we 
 ```
 
 
-
-## RE Library Functions
+## RE Library
 
 Here are some common re libraries functions [6]:
 
@@ -731,6 +556,147 @@ NOTE: Search will loop through the string to find the first appearance of the pa
 - re.sub(): This function is used to replace any character(s) that match the RegEx pattern with another character(s).
 
 
+
+## Python one-liners
+
+Here are some helpful python one-liners that can save time [3]:
+
+```py
+    # Palindrome Python One-Liner
+    phrase.find(phrase[::-1])
+
+    # Swap Two Variables Python One-Liner
+    a, b = b, a
+
+    # Sum Over Every Other Value Python One-Liner
+    sum(stock_prices[::2])
+
+    # Read File Python One-Liner
+    [line.strip() for line in open(filename)]
+
+    # Factorial Python One-Liner
+    reduce(lambda x, y: x * y, range(1, n+1))
+
+    # Performance Profiling Python One-Liner
+    python -m cProfile foo.py
+
+    # Superset Python One-Liner
+    lambda l: reduce(lambda z, x: z + [y + [x] for y in z], l, [[]])
+
+    # Fibonacci Python One-Liner
+    lambda x: x if x<=1 else fib(x-1) + fib(x-2)
+
+    # Quicksort Python One-liner
+    lambda L: [] if L==[] else qsort([x for x in L[1:] if x< L[0]]) + L[0:1] + qsort([x for x in L[1:] if x>=L[0]])
+
+    # Sieve of Eratosthenes Python One-liner
+    reduce( (lambda r,x: r-set(range(x**2,n,x)) if (x in r) else r), range(2,int(n**0.5)), set(range(2,n)))
+```
+
+
+```py
+# swap two variables
+a,b = b,a
+
+# reverse list 
+lst = [2,3,22,4,1]
+lst[::-1]
+
+# find square of even numbers with list comprehension
+result2 = [i**2 for i in range(10) if i%2==0]
+print(result2)
+
+# Dictionary comprehension
+myDict = {x: x**2 for x in [1,2,3,4,5]}
+print(myDict)
+
+# lambda function to square a number
+sqr = lambda x: x * x 
+sqr(10)
+
+
+# Read file contents into a list: one-liner
+file_lines = [line.strip() for line in open(filename)]
+
+# convert binary number to int 
+n = '100' ##binary 100
+dec_num = int(n,base = 2)
+print(dec_num)
+
+from itertools import combinations
+print(list(combinations([1, 2, 3, 4], 2)))
+
+from itertools import permutations
+print(list(permutations([1, 2, 3, 4], 2)))
+
+
+# Find longest string
+words = ['This', 'is', 'a', 'list', 'of', 'keyword']
+print(max(words, key=len))
+```
+
+
+
+## Utility Classes
+
+Here are some examples for starting a library of reusable utility classes. 
+
+### Enumeration
+
+We can create an `Enumeration` class to hold related members of the same concept such as compass directions (north, south, east, and west) or seasons [3]. 
+
+In the Python standard library, the `enum` module provides the core features needed to create an enumeration class.
+
+
+```py
+    from enum import Enum
+    
+    class Season(Enum):
+        SPRING = 1
+        SUMMER = 2
+        FALL = 3
+        WINTER = 4
+```
+
+```py
+    spring = Season.SPRING
+    spring.name
+    spring.value
+    
+    fetched_season_value = 2
+    matched_season = Season(fetched_season_value)
+    matched_season
+    # <Season.SUMMER: 2>
+    
+    list(Season)
+    
+    [x.name for x in Season]
+```
+
+### Data Classes
+
+We can create a class to hold data using the `dataclass` decorator [3]. 
+
+```py
+    from dataclasses import dataclass
+    
+    @dataclass
+    class Student:
+        name: str
+        gender: str
+```
+
+```py
+    student = Student("John", "M")
+    student.name
+    student.gender
+    
+    repr(student)   # __repr__
+    # "Student(name='John', gender='M')"
+    
+    print(student)  # __str__
+    Student(name='John', gender='M')
+```
 
 
 ## Better Error Handling
@@ -792,7 +758,7 @@ except Exception as e:
 
 ### Be Specific
 
-Try to be specific, and only catch generic exceptions for debugging. In some cases it can be useful to add a `finally` block [10]. 
+Try to be specific and only catch generic exceptions for debugging. In some cases, it can be useful to add a `finally` block [10]. 
 
 ```py
 try:
@@ -828,6 +794,20 @@ log_error(str(ce))
 ```
 
 
+## Python Hacks
+
+Here are some practical Python hacks that can simplify your daily life [14], [15]. 
+
+- Automate File Organization
+- Schedule Tasks with Python
+- Backing Up a Directory
+- Manage and Monitor System Resources
+- Renaming Multiple Files
+- Converting DOCX to PDF
+- Backing Up a Directory
+
+
+
 ## Best Practices for ML Code
 
 Unlike traditional software engineering projects, ML codebases tend to lag behind in code quality due to their complex and evolving nature, leading to increased technical debt and difficulties in collaboration [10].
@@ -858,7 +838,6 @@ print("Sum:", result.sum)         # output: Sum: 49
 print("Mean:", result.mean)       # output: Mean: 9.8
 print("Maximum:", result.maximum) # output: Maximum: 14
 ```
-
 
 ### Large Conditional Logic Trees
 
@@ -1007,6 +986,14 @@ def baz(x: float) -> tuple[int, float, str]:
 [12]: [How To Write Efficient Python Code: A Tutorial for Beginners](https://www.kdnuggets.com/how-to-write-efficient-python-code-a-tutorial-for-beginners)
 
 [13]: [3 Interesting Uses of Python’s Context Managers](https://www.kdnuggets.com/3-interesting-uses-of-python-context-managers)
+
+[14]: [Python Hacks for Everyday Life: Streamline Your Tasks with Simple Scripts](https://medium.com/codex/python-hacks-for-everyday-life-streamline-your-tasks-with-simple-scripts-1b54751180dc)
+
+[15]: [Automate the Boring Stuff: Practical Python Solutions for Daily Tasks](https://medium.com/codex/automate-the-boring-stuff-practical-python-solutions-for-daily-tasks-07d81c65ab27)
+
+[16]: [5 Python Tips for Data Efficiency and Speed](https://www.kdnuggets.com/5-python-tips-for-data-efficiency-and-speed)
+
+[17]: [How To Speed Up Python Code with Caching](https://www.kdnuggets.com/how-to-speed-up-python-code-with-caching)
 
 
 [Python: Pretty Print a Dict (Dictionary) – 4 Ways](https://datagy.io/python-pretty-print-dictionary/)

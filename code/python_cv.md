@@ -1,4 +1,4 @@
-# Python Computer Vision Snippets
+# Python Computer Vision Code Snippets
 
 
 ## Show samples from each class
@@ -35,6 +35,83 @@
     show_images(num_classes)
 ```
 
+## Display multiple images in one figure
+
+```py
+    # import libraries
+    import cv2
+    from matplotlib import pyplot as plt
+      
+    # create figure
+    fig = plt.figure(figsize=(10, 7))
+      
+    # setting values to rows and column variables
+    num_rows = 2
+    num_cols = 2
+    
+    # Read the images into list
+    images = []
+    img = cv2.imread('Image1.jpg')
+    images.append(img)
+    
+    img = cv2.imread('Image2.jpg')
+    images.append(img)
+    
+    img = cv2.imread('Image3.jpg')
+    images.append(img)
+    
+    img = cv2.imread('Image4.jpg')
+    images.append(img)
+    
+      
+    # Adds a subplot at the 1st position
+    fig.add_subplot(num_rows, num_cols, 1)
+      
+    # showing image
+    plt.imshow(Image1)
+    plt.axis('off')
+    plt.title("First")
+      
+    # Adds a subplot at the 2nd position
+    fig.add_subplot(num_rows, num_cols, 2)
+      
+    # showing image
+    plt.imshow(Image2)
+    plt.axis('off')
+    plt.title("Second")
+      
+    # Adds a subplot at the 3rd position
+    fig.add_subplot(num_rows, num_cols, 3)
+      
+    # showing image
+    plt.imshow(Image3)
+    plt.axis('off')
+    plt.title("Third")
+      
+    # Adds a subplot at the 4th position
+    fig.add_subplot(num_rows, num_cols, 4)
+      
+    # showing image
+    plt.imshow(Image4)
+    plt.axis('off')
+    plt.title("Fourth")
+```
+
+
+## Plot images side by side
+
+```py
+    _, axs = plt.subplots(num_rows, num_cols, figsize=(12, 12))
+    axs = axs.flatten()
+    for img, ax in zip(imgs, axs):
+        ax.imshow(img)
+    plt.show()
+```
+
+
+## Visualize a batch of image data
+
+TODO: Add code sample
 
 
 ## Know your dataset instances
@@ -100,3 +177,4 @@ Many programmers use inbuilt ratios and reference object schemes, but here we tr
 ## References
 
 [1]: [Working on a Computer Vision Project? These Code Chunks Will Help You](https://pub.towardsai.net/working-on-a-computer-vision-project-these-code-chunks-will-help-you-45756bbe7e65)
+
