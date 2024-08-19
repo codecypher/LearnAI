@@ -3,16 +3,35 @@
 
 ## SQL Tips
 
-Here are some tips on SQL optimization[1]:
+Here are some tips on SQL optimization [1]:
 
-### 1. Avoid using `select *`.
+### Avoid using SELECT *
 
 ```sql
   # correct example
   select name, age from user where id = 1;
 ```
 
-### 2. Replace “union" with "union all".
+### Avoid Using SELECT DISTINCT; Use GROUP BY
+
+SELECT DISTINCT can be costly because it requires sorting and filtering the results to remove duplicates [3]. 
+
+It is better to ensure that the data being queried is unique by design—using primary keys or unique constraints.
+
+```sql
+  SELECT DISTINCT department FROM employees;
+```
+
+The following query with the GROUP BY clause is much more helpful:
+
+```sql
+  SELECT department FROM employees GROUP BY department;
+```
+
+GROUP BY can be more efficient, especially with proper indexing.
+
+
+### Replace UNION with UNION ALL
 
 ```sql
 # correct example
@@ -21,7 +40,7 @@ union all
 (select * from user where id=2);
 ```
 
-### 3. Small table drives big table.
+### Small table drives big table
 
 If we want to check the list of orders placed by all valid users.
 
@@ -52,7 +71,7 @@ Here, the order table has 10,000 pieces of data and the user table has 100 piece
 - exists applies to the small table on the left and the large table on the right.
 
 
-### 4. Bulk operations.
+### Bulk operations
 
 What if you have a batch of data that needs to be inserted after business processing?
 
@@ -82,7 +101,7 @@ However, it is not recommended to operate too much data in batches at one time. 
 
 Batch operations need to grasp a degree, and it is recommended that each batch of data be controlled within 500 as much as possible. If the data is more than 500, it will be processed in multiple batches.
 
-### 5. Use limit.
+### Limit Query Results
 
 Sometimes, we need to query the first item of some data: query the first order placed by a user and we want to see the time of his first order.
 
@@ -111,7 +130,7 @@ where id>=100 and id<200 limit 100;
 
 Then, even if the wrong operation (such as the id is wrong) it will not affect too much data.
 
-### 6. Do not use too many values in the in keyword.
+### Do not use too many values with IN
 
 For the batch query interface, we usually use th in keyword to filter out data.
 
@@ -132,7 +151,7 @@ If there are more than 500 records in ids, we can use multiple threads to query 
 However, this is only a temporary solution and is not suitable for scenes with too many ids. Because there are too many ids, even if the data can be quickly detected, if the amount of data returned is too large, the network transmission is very performance-intensive and the interface performance is not much better.
 
 
-### 7. Incremental query.
+### Incremental query
 
 Sometimes, we need to query data through a remote interface and synchronize it to another database.
 
@@ -152,7 +171,7 @@ After each synchronization is completed, save the largest id and time of the 100
 This incremental query method can improve the efficiency of a single query.
 
 
-### 8. Efficient paging.
+### Efficient paging
 
 When querying data on the list page, we generally paginate the query interface to avoid returning too much data at one time and affecting the performance of the query.
 
@@ -183,7 +202,7 @@ from user where id between 1000000 and 1000020;
 The between should be paginated on the unique index or there will be an inconsistent size of each page.
 
 
-### 9. Replacing subqueries with join queries.
+### Replacing subqueries with join queries
 
 If we need to query data from more than two tables in MySQL, there are generally two implementation methods: subquery and join query.
 
@@ -206,7 +225,7 @@ inner join user u on o.user_id = u.id
 where u.status=1
 ```
 
-### 10. Join tables should not be too many.
+### Join tables should not be too many
 
 If there are too many join, MySQL will be very complicated when selecting indexes and it is easy to choose the wrong index.
 
@@ -226,7 +245,7 @@ If we need to query the data in other tables in the implementation of the busine
 
 However, the number of joined tables should be determined according to the actual situation of the system. It cannot be generalized. In general, the less the better.
 
-### 11. Inner join note.
+### Inner join note
 
 We generally use the join keyword to query  multiple tables.
 
@@ -256,7 +275,15 @@ If two tables are associated using left join, MySQL will use the left join keywo
 
 When using left jointo query, use a small table on the left and a large table on the right. In general, try to use left join as little as possible.
 
-### 12. Limit the number of indexes.
+
+### Use Indexes for Faster Retrieval
+
+Indexes can improve query performance by allowing the database to quickly find rows rather than scanning the entire table. 
+
+Indexes are useful for columns frequently used in WHERE, JOIN, and ORDER BY clauses.
+
+
+### Limit the number of indexes
 
 We all know that indexes can significantly improve the performance of query SQL but more number  indexes is not the better.
 
@@ -272,7 +299,7 @@ How can a high concurrency system optimize the number of indexes?
 
 If we can build a joint index, do not build a single index and we can delete a useless single index.
 
-### 13. Choose the appropriate field type.
+### Choose the appropriate field type
 
 char represents a fixed string type and the storage space of the field of this type is fixed which will waste storage space.
 
@@ -305,7 +332,7 @@ Use small types as much as possible such as  bit to store boolean values, tinyin
 - decimal is used for the amount field to avoid the problem of loss of precision.
 
 
-### 14. Improve the efficiency of group by
+### Improve the efficiency of GROUP BY
 
 We have many business scenarios that need to use the group by keyword which is used to group and avoid duplicates.
 
@@ -331,7 +358,7 @@ group by user_id
 
 Before our SQL statements do some time-consuming operations, we should reduce the data range as much as possible which can improve the overall performance of SQL.
 
-### 15. Index optimization.
+### Index optimization
 
 In SQL optimization, there is a very important content: index optimization.
 
@@ -370,9 +397,188 @@ In that case, the first solution cannot help us since the SQL query is going to 
 Thus, we should use the second solution when we want to first query the meals and then get the drinks to join them to the corresponding meals.
 
 
+## Advanced SQL
+
+Here are some tips on advanced SQL techniques [4]:
+
+### Window Functions
+
+A window function in SQL is a function that uses values from one or multiple rows to return a value for each row. 
+
+In contrast, an aggregate function returns a single value for multiple rows.
+
+Window functions have an OVER clause. Otherwise, it is an aggregate or single-row (scalar) function.
+
+Window functions can perform calculations such as running totals, averages, counts, ranking, and more. 
+
+```sql
+SELECT 
+    Sale_Person_ID, 
+    Department, 
+    Sales_Amount,
+    SUM(Sales_Amount) OVER (PARTITION BY Department) AS dept_total
+FROM 
+    promo_sales;
+```
+
+Common types of window functions include ranking functions, aggregate functions, offset functions, and distribution functions [4].
+
+1. Ranking Functions: Ranking functions assign a rank or row number to each row within a partition of a result set.
+
+2. Aggregate Functions: Aggregate functions are used to perform calculation or run statistics across a set of rows related to the current row.
+
+3. Offset Functions: Offset functions allow access to data from other rows in relation to the current row. They are used when you need to compare values between rows or when you run time-series analysis or trend detection.
+
+4. Distribution Functions: Distribution functions calculate the relative position of a value within a group of values and also help you understand the distribution of values.
+
+
+### Subqueries
+
+A subquery is a query within another SQL query; often called a nested query or inner query [4]. 
+
+
+A subquery can be used to generate a new column, new table, or some conditions to further restrict the data to be retrieved in the main query.
+
+But it is important to use subqueries sparingly since overuse can lead to performance issues, especially with large datasets.
+
+#### Subquery for new column generation
+
+This time we’d like to add a new column to show the difference between each sales person’s sales amount and the department average.
+SELECT 
+    Sale_Person_ID, 
+    Department, 
+    Sales_Amount,
+    Sales_Amount - (SELECT AVG(Sales_Amount) OVER (PARTITION BY Department) FROM promo_sales) AS sales_diff
+FROM 
+    promo_sales;
+
+#### Subquery to create a new table
+
+To determine which department is the most cost-efficient, we need to calculate the return on advertising spend for each department. 
+
+We can use a subquery to create a new table that includes the total sales amounts and marketing costs for these departments [4].
+
+```sql
+SELECT 
+    Department, 
+    dept_ttl,
+    Mkt_Cost,
+    dept_ttl/Mkt_Cost AS ROAS
+FROM 
+    (SELECT
+        s.Department,
+        SUM(s.Sales_Amount) AS dept_ttl,
+        c.Mkt_Cost
+     FROM 
+        promo_sales s
+     GROUP BY s.Department
+     LEFT JOIN 
+        mkt_cost c
+     ON s.Department=c.Department
+     ) 
+```
+
+#### Subquery to create restrictive conditions
+
+A subquery can also be used to select sales persons whose sales amount exceeded the average amount of all sales persons. 
+
+```sql
+SELECT 
+    Sale_Person_ID, 
+    Department, 
+    Sales_Amount
+FROM 
+    promo_sales
+WHERE 
+    Sales_Amount > (SELECT AVG(salary) FROM promo_sales);
+```
+
+#### Correlated Subquery
+
+A correlated subquery (CSQ) depends on the outer query for its values and is executed once for each row in the outer query.
+
+CSQ can be used to find the sales persons whose sales performance were above the average of their department during the promotion.
+
+```sql
+SELECT 
+    ps_1.Sale_Person_ID, 
+    ps_1.Department, 
+    ps_1.Sales_Amount
+FROM 
+    promo_sales ps_1
+WHERE 
+    ps_1.Sales_Amount > (
+          SELECT AVG(ps_2.Sales_Amount) 
+          FROM promo_sales ps_2 
+          WHERE ps_2.Department = ps_1.Department
+);
+```
+
+### Common Table Expressions
+
+A Common Table Expression (CTE) is a named temporary result set that exists within the scope of a single SQL statement [4]. 
+
+CTEs are defined using a WITH clause and can be referenced one or more times in a subsequent SELECT, INSERT, UPDATE, DELETE, or MERGE statement [4].
+
+There are primarily two types of CTEs in SQL:
+
+Non-recursive CTEs: used to simplify complex queries by breaking them down the query into more manageable parts.
+
+Recursive CTEs: reference themselves within their definitions which allows for hierarchical or tree-structure data.
+
+Here is a non-recursive CTEs to calculate the average sales amount from each department and compare it with the store average during the promotion.
+
+```sql
+WITH dept_avg AS (
+    SELECT 
+        Department,
+        AVG(Sales_Amount) AS dept_avg
+    FROM 
+        promo_sales
+    GROUP BY 
+        Department
+),
+
+store_avg AS (
+    SELECT AVG(Sales_Amount) AS store_avg
+    FROM promo_sales
+)
+
+SELECT 
+    d.Department,
+    d.dept_avg,
+    s.store_avg,
+    d.dept_avg - s.store_avg AS diff
+FROM 
+    dept_avg d
+CROSS JOIN 
+    store_avg s;
+```
+
+Since a recursive CTE can deal with hierarchical data, we can generate a sequence of numbers from 1 to 10.
+
+```sql
+WITH RECURSIVE sequence_by_10(n) AS (
+    SELECT 1
+    UNION ALL
+    SELECT n + 1
+    FROM sequence_by_10
+    WHERE n < 10
+)
+SELECT n FROM sequence_by_10;
+```
+
+CTE improves the readability and maintainability of complex queries by simplifying them.
+
+
 
 ## References
 
 [1]: [15 Best Practices for SQL Optimization](https://betterprogramming.pub/15-best-practices-for-sql-optimization-956759626321)
 
 [2]: [How the N+1 Query Can Burn Your Database](https://betterprogramming.pub/how-the-n-1-query-can-burn-your-database-3841c93987e5)
+
+[3]: [5 Tips for Improving SQL Query Performance](https://www.kdnuggets.com/5-tips-for-improving-sql-query-performance)
+
+[4]: [The Most Useful Advanced SQL Techniques to Succeed in the Tech Industry](https://towardsdatascience.com/the-most-useful-advanced-sql-techniques-to-succeed-in-the-tech-industry-0f0690e8386c)
+
