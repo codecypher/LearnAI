@@ -298,13 +298,28 @@ In practical terms, you cannot unboil a frog: you have to make a new one.
 With software systems, it is less work to rebuild a new system than it is to perform CPR on the legacy system.  
 
 
-
-
 ## API vs Web Service
 
 All web services are also APIs because they expose the data and/or functionality of an application, however not all APIs are web services. 
 
 
+## Tech Interviews Are Broken
+
+Since 85% or more of AI projects fail [8], it seems that the emphasis should be on academic credentials rather than previous experience and whiteboard hazing problems. To me, the interview process just seems broken [10].
+
+Here are some good comments from [11]:
+
+A good software engineer often does not know the answer to a specific question off the top of their head, but will know where to look for the answer. Connsider asking the best place to find such information.
+
+In modern software engineering, it is unlkely you will have a task that is not already available in a library or whose implementation is not widely available in algorithmic form.
+
+Consider discussing the coding paradigms used in modern software engineering, whether a particular language would be a good choice for a specific implementation, or whether a particular software engineering methodology is relevant.
+
+Lead the discussion to highlight general areas, see what insight the candidate has into new problems and perhaps alternative novel methods to tackle older ones. 
+
+Consider asking how they see things evolving, how they would start to address a problem. Keep the discussion open-ended and stay away from specifics and minutiae.
+
+Being interviewed by someone with a list of precise technical questions is pretty much a red flag. It often shows that the interviewer may not fully understand what they are asking and any answer that does not precisely match what is written on their script will be considered incorrect.
 
 
 ## References
@@ -326,6 +341,10 @@ All web services are also APIs because they expose the data and/or functionality
 [8]: [Want Cleaner Code? Use the Rule of Six](https://betterprogramming.pub/want-cleaner-code-use-the-rule-of-six-c21635ee2185)
 
 [9]: [Inversion of Control vs Dependency Injection](https://stackoverflow.com/questions/6550700/inversion-of-control-vs-dependency-injection)
+
+[10]: J. Holmes, "Tech Interviews Really Are Broken," Towards AI, August 16, 2024. 
+
+[11]: A. Wooley, “Why You Should Never Consent to a Coding Test in an Interview”, The Startup, Dec. 28, 2020.
 
 
 [CUPID for better coding](https://medium.com/codex/cupid-for-better-coding-4c6eb401c8f5)
