@@ -413,19 +413,214 @@ We can drop or fill the `NaN` values.
 ```
 
 
+## Python Functions for Data Cleaning
+
+Here are 5 functions to provide examples for creating up your own data cleaning toolset [18].
+
+1. Remove Multiple Spaces
+
+We can create a function  to remove excessive whitespace from text. 
+
+If we want to remove multiple spaces within a string or excessive leading or trailing spaces, this single line function will work. 
+
+We make use of regular expressions for internal spaces and `strip()` for leading/trailing whitespace.
+
+```py
+def clean_spaces(text: str) -> str:
+    """
+    Remove multiple spaces from a string and trim leading/trailing spaces.
+ 
+    :param text: The input string to clean
+    :returns: A string with multiple spaces removed and trimmed
+    """
+    return re.sub(' +', ' ', str(text).strip())
+```
+
+```py
+messy_text = "This   has   too    many    spaces"
+clean_text = clean_spaces(messy_text)
+print(clean_text)
+# This has too many spaces
+```
+
+2. Standardize Date Formats
+
+This function will standardize dates to the specified format (YYYY-MM-DD).
+
+```py
+def standardize_date(date_string: str) -> Optional[str]:
+    """
+    Convert various date formats to YYYY-MM-DD.
+ 
+    :param date_string: The input date string to standardize
+    :returns: A standardized date string in YYYY-MM-DD format, or None if parsing fails
+    """
+    date_formats = ["%Y-%m-%d", "%d-%m-%Y", "%m/%d/%Y", "%d/%m/%Y", "%B %d, %Y"]
+    for fmt in date_formats:
+        try:
+            return datetime.strptime(date_string, fmt).strftime("%Y-%m-%d")
+        except ValueError:
+            pass
+    # Return None if no format matches
+    return None
+``
+
+```py
+dates = ["2023-04-01", "01-04-2023", "04/01/2023", "April 1, 2023"]
+standardized_dates = [standardize_date(date) for date in dates]
+print(standardized_dates)
+# ['2023-04-01', '2023-04-01', '2023-04-01', '2023-04-01']
+```
+
+3. Handle Missing Values
+
+To deal with missing values, we can specify the numeric data strategy to use (‘mean’, ‘median’, or ‘mode’) or categorical data strategy (‘mode’ or ‘dummy’).
+
+```py
+def handle_missing(df: pd.DataFrame, numeric_strategy: str = 'mean', categorical_strategy: str = 'mode') -> pd.DataFrame:
+    """
+    Fill missing values in a DataFrame.
+ 
+    :param df: The input DataFrame
+    :param numeric_strategy: Strategy for handling missing numeric values ('mean', 'median', or 'mode')
+    :param categorical_strategy: Strategy for handling missing categorical values ('mode' or 'dummy')
+    :returns: A DataFrame with missing values filled
+    """
+    for column in df.columns:
+        if df[column].dtype in ['int64', 'float64']:
+            if numeric_strategy == 'mean':
+                df[column].fillna(df[column].mean(), inplace=True)
+            elif numeric_strategy == 'median':
+                df[column].fillna(df[column].median(), inplace=True)
+            elif numeric_strategy == 'mode':
+                df[column].fillna(df[column].mode()[0], inplace=True)
+        else:
+            if categorical_strategy == 'mode':
+                df[column].fillna(df[column].mode()[0], inplace=True)
+            elif categorical_strategy == 'dummy':
+                df[column].fillna('Unknown', inplace=True)
+    return df
+```
+
+```py
+df = pd.DataFrame({'A': [1, 2, np.nan, 4], 'B': ['x', 'y', np.nan, 'z']})
+cleaned_df = handle_missing(df)
+print(cleaned_df)
+```
+
+```
+  df[column].fillna(df[column].mode()[0], inplace=True)
+          A  B
+0  1.000000  x
+1  2.000000  y
+2  2.333333  x
+```
+
+4. Remove Outliers
+
+We can use the IQR method to remove outliers from our data. 
+
+We pass in the data and specify the columns to check for outliers and return an outlier-free dataframe.
+
+```py
+import pandas as pd
+import numpy as np
+from typing import List
+ 
+def remove_outliers_iqr(df: pd.DataFrame, columns: List[str], factor: float = 1.5) -> pd.DataFrame:
+    """
+    Remove outliers from specified columns using the Interquartile Range (IQR) method.
+ 
+    :param df: The input DataFrame
+    :param columns: List of column names to check for outliers
+    :param factor: The IQR factor to use (default is 1.5)
+    :returns: A DataFrame with outliers removed
+    """
+    mask = pd.Series(True, index=df.index)
+    for col in columns:
+        Q1 = df[col].quantile(0.25)
+        Q3 = df[col].quantile(0.75)
+        IQR = Q3 - Q1
+        lower_bound = Q1 - factor * IQR
+        upper_bound = Q3 + factor * IQR
+        mask &= (df[col] >= lower_bound) & (df[col] <= upper_bound)
+    
+    cleaned_df = df[mask]
+    
+    return cleaned_df
+```
+
+```py
+df = pd.DataFrame({'A': [1, 2, 3, 100, 4, 5], 'B': [10, 20, 30, 40, 50, 1000]})
+print("Original DataFrame:")
+print(df)
+print("\nCleaned DataFrame:")
+cleaned_df = remove_outliers_iqr(df, ['A', 'B'])
+print(cleaned_df)
+```
+
+```
+Original DataFrame:
+     A     B
+0    1    10
+1    2    20
+2    3    30
+3  100    40
+4    4    50
+5    5  1000
+ 
+Cleaned DataFrame:
+   A   B
+0  1  10
+1  2  20
+```
+
+
+5. Normalize Text Data
+
+We can create a function to convert all text to lowercase, strip out whitespace, and remove special characters.
+
+```py
+def normalize_text(text: str) -> str:
+    """
+    Normalize text data by converting to lowercase, removing special characters, and extra spaces.
+ 
+    :param text: The input text to normalize
+    :returns: Normalized text
+    """
+    # Convert to lowercase
+    text = str(text).lower()
+ 
+    # Remove special characters
+    text = re.sub(r'[^\w\s]', '', text)
+ 
+    # Remove extra spaces
+    text = re.sub(r'\s+', ' ', text).strip()
+ 
+    return text
+```
+
+```py
+messy_text = "This is MESSY!!! Text   with $pecial ch@racters."
+clean_text = normalize_text(messy_text)
+print(clean_text)
+# this is messy text wit
+```
+
+
 ## Encoding Categorical Features
 
 Most machine learning algorithms and deep learning neural networks require that input and output variables are numbers [11] which means that categorical data must be encoded to numbers before we can use it to fit and evaluate a model.
 
 For categorical data, we need to distinguish between _nominal_ and _ordinal_ features.
 
-Ordinal features can be understood as categorical values that can be sorted or ordered.
+- Ordinal features can be understood as categorical values that can be sorted or ordered.
 
-For example, T-shirt size would be an ordinal feature because we can define an order M < L < XL.
+  Example: T-shirt size would be an ordinal feature because we can define an order M < L < XL.
 
-Nominal features do not imply any order.
+- Nominal features do not imply any order.
 
-For example, T-shirt color is a nominal feature since it typically does not make sense to say that red is larger than blue.
+  Example: T-shirt color is a nominal feature since it typically does not make sense to say that red is larger than blue.
 
 
 There are several ways to encode categorical variables:
@@ -441,11 +636,11 @@ There are several ways to encode categorical variables:
   
 ### Integer (Ordinal) Encoding
 
-To make sure that the ML algorithm interprets the ordinal features correctly, we need to convert the categorical string values into integers.
+To make sure that the ML algorithm interprets the ordinal features correctly, we need to convert the categorical string values to integers.
 
 Unfortunately, there is no convenient function that can automatically derive the correct order of the labels of our size feature.
 
-Thus, we have to define the mapping manually.
+Therefore, we need to define the mapping manually.
 
 ```py
     size_mapping = { 'XL': 3, 'L': 2, 'M': 1}
@@ -454,7 +649,7 @@ Thus, we have to define the mapping manually.
 
 ### Encoding Class Labels
 
-Many machine learning libraries require that class labels are encoded as integer values.
+Many machine learning libraries require that class labels are encoded as _integer_ values.
 
 It is considered good practice to provide class labels as integer arrays to avoid technical glitches.
 
@@ -492,7 +687,7 @@ In contrast to binary encoding schemes where each bit can represent 2 values (0 
 
 In the previous section, we used a simple dictionary-mapping approach to convert the ordinal size feature into integers.
 
-Since scikit-learn's estimators treat class labels without any order, we can use the convenient `LabelEncoder` class to encode the string labels into integers.
+Since scikit-learn's estimators treat class labels without any order, we can use the convenient `LabelEncoder` class to encode the string labels to integers.
 
 ```py
     X = df[['color', 'size', 'price']].values
@@ -502,7 +697,9 @@ Since scikit-learn's estimators treat class labels without any order, we can use
 
 After executing the code above, the first column of the NumPy array X now holds the new color values which are encoded as follows: blue = 0, green = 1, red = 2 n
 
-However, we will make one of the most common mistakes in dealing with categorical data. Although the color values are not ordered, a ML algorithm will now assume that green is larger than blue, and red is larger than green. Thus, the results would not be optimal.
+However, we will make one of the most common mistakes in dealing with categorical data:
+
+Although the color values are not ordered, a ML algorithm will assume that green is larger than blue, and red is larger than green. Therefore, the results would not be optimal.
 
 A common workaround is to use a technique called _one-hot encoding_ to create a new dummy feature for each unique value in the nominal feature column.
 
@@ -510,13 +707,9 @@ Here, we would convert the color feature into three new features: blue, green, a
 
 Binary values can then be used to indicate the particular color of a sample; for example, a blue sample can be encodedas blue=1, green=0, red=0.
 
-We can use the `OneHotEncoder` that is implemented in the scikit-learn.preprocessing module.
+We can use the `OneHotEncoder` that is implemented in the `scikit-learn.preprocessing` module.
 
-An even more convenient way to create those dummy features via one-hot encoding is to use the get_dummies method implemented in pandas. Applied on a DataFrame, the get_dummies method will only convert string columns and leave all other columns unchanged:
-
-```py
-    pd.get_dummies(df[['price', 'color', 'size']])
-```
+An even more convenient way to create the dummy features via one-hot encoding is to use the `get_dummies` method in pandas. 
 
 ### Dummy Variable Encoding
 
@@ -532,7 +725,13 @@ In contrast, a dummy variable encoding represents N categories with N-1 binary v
     pd.get_dummies(df, columns=['Color'], prefix=['Color'])
 ```
 
-In addition to being slightly less redundant, a dummy variable representation is required for some models such as linear regression model (and other regression models that have a bias term) since a one hot encoding will cause the matrix of input data to become singular which means it cannot be inverted, so the linear regression coefficients cannot be calculated using linear algebra. Therefore, a dummy variable encoding must be used.
+Applied to a DataFrame, the `get_dummies` method will only convert string columns and leave all other columns unchanged:
+
+```py
+    pd.get_dummies(df[['price', 'color', 'size']])
+```
+
+A dummy variable representation is required for some models such as linear regression model (and other regression models that have a bias term) since a one hot encoding will cause the matrix of input data to become singular which means it cannot be inverted, so the linear regression coefficients cannot be calculated using linear algebra. Therefore, a dummy variable encoding must be used.
 
 However, we rarely encounter this problem in practice when evaluating machine learning algorithms other than linear regression.
 
@@ -599,6 +798,7 @@ By default the `OneHotEncoder` class will output data with a sparse representati
     accuracy = accuracy_score(y_test, yhat)
     print('Accuracy: %.2f' % (accuracy * 100))
 ```
+
 
 ## Parsing dates
 
@@ -768,7 +968,7 @@ The bootstrap sampling distribution then allows us to draw statistical inference
 [How to Configure k-Fold Cross-Validation](https://machinelearningmastery.com/how-to-configure-k-fold-cross-validation/)
 
 
-## Data Sampling
+### Data Sampling
 
 [Data Sampling Methods in Python](https://towardsdatascience.com/data-sampling-methods-in-python-a4400628ea1b)
 
@@ -816,6 +1016,8 @@ W. McKinney, Python for Data Analysis, 2nd ed., Oreilly, ISBN: 978-1-491-95766-0
 [16]: [How to Make Your Data Models Modular](https://towardsdatascience.com/how-to-make-your-data-models-modular-71b21cdf5208)
 
 [17]: [Mastering the Art of Data Cleaning in Python](https://www.kdnuggets.com/mastering-the-art-of-data-cleaning-in-python)
+
+[18]: [5 DIY Python Functions for Data Cleaning](https://machinelearningmastery.com/5-diy-python-functions-for-data-cleaning/)
 
 
 [Build an Anomaly Detection Pipeline with Isolation Forest and Kedro](https://towardsdatascience.com/build-an-anomaly-detection-pipeline-with-isolation-forest-and-kedro-db5f4437bfab)
