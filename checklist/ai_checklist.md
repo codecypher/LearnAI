@@ -372,7 +372,7 @@ Offline Training: The model is re-trained from scratch, so we have full control 
 
 4. When deploying a new model, what metrics would be needed to decide between switching between the models?
 
-5. How to monitor input drift and model degradation?
+5. How to monitor input drift and model drift / degradation?
 
 6. Are there any potential feedback loops that need to be addressed?
 

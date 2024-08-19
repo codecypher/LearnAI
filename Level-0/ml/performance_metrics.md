@@ -111,7 +111,7 @@ OR
 
 The accuracy of the model was x +/- y at the 95% confidence level.
 
-A confidence interval can also be used in the presentation of the error of a regression predictive model.
+A confidence interval can be used in the presentation of the error of a regression predictive model.
 
 There is a 95% likelihood that the range x to y covers the true error of the model.
 

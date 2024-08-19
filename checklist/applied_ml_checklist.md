@@ -160,9 +160,9 @@ Try to evaluate a good mix of algorithms that model the problem quite differentl
 
 - Instance-based like k-Nearest Neighbors and Learning Vector Quantization
 
-- Simpler methods like Naive Bayes, Logistic Regression and Linear Discriminant Analysis
+- Simpler methods such as Naive Bayes, Logistic Regression and Linear Discriminant Analysis
 
-- Decision Trees like CART and C4.5/C5.0
+- Decision Trees such as CART and C4.5/C5.0
 
 - Complex non-linear approaches like Backpropagation and Support Vector Machines
 

@@ -4,11 +4,11 @@
 
 There are multiple stages to running machine learning algorithms since it involves a sequence of tasks including pre-processing, feature extraction, model fitting, performance, and validation.
 
-**Pipeline** is a technique used to create a linear sequence of data preparation and modeling steps to automate machine learning workflows [5].
+**Pipeline** is a technique used to create a linear sequence of data preparation and modeling steps to automate machine learning workflows [1], [6].
 
 Pipelines help in parallelization which means different jobs can be run in parallel as well as help to inspect and debug the data flow in the model.
 
-A data pipeline has six basic elements [7]:
+A data pipeline has six basic elements [3]:
 
 1. Data Retrieval
 2. Data Preparation
@@ -18,7 +18,7 @@ A data pipeline has six basic elements [7]:
 6. Monitoring
 
 
-Here we are using the `Pipeline` class from scikit-learn [5].
+Here we are using the `Pipeline` class from scikit-learn [1].
 
 
 ## Import Libraries
@@ -194,25 +194,26 @@ Convert pipeline to DataFrame and show the best model:
     print(b_model)
 ```
 
+
 ## Pipeline with PCA
 
-Pipeline example with Principal Component Analysis (PCA) [5].
+Pipeline example with Principal Component Analysis (PCA) [1].
 
 
 ## Joblib
 
-**Joblib** is an open-source Python library that helps to save pipelines to a file that can be used later [10].
+**Joblib** is an open-source Python library that helps to save pipelines to a file that can be used later [5].
 
 
 ## Pandas pipe
 
-The pandas `pipe` function offers a structured and organized way for combining several functions into a single operation [10].
+The pandas `pipe` function offers a more structured and organized way for combining several functions into a single operation [2], [9], [10]. 
 
 As the number of steps increase, the syntax becomes cleaner with the pipe function compared to executing functions.
 
-We can also apply Python design pattern to create scalable data-wrangling pipelines [10].
+We can also apply Python design patterns to create scalable data-wrangling pipelines [6].
 
-The tutorial [13] shows how to create a pandas pipe and add multiple chainable functions to perform data processing and visualization.
+The tutorial [9] shows how to create a pandas pipe and add multiple chainable functions to perform data processing and visualization.
 
 
 ## Kedro
@@ -229,7 +230,7 @@ The tutorial [13] shows how to create a pandas pipe and add multiple chainable f
 
 A scikit-learn pipeline is a component provided by scikit-learn package that allow us to merge different components within the scikit-learn API and run them sequentially.
 
-Thus, pipelines are very helpful because the component can perform all the data preprocessing and model fitting and also help to minimize human error during the data transformation and fitting process [7] [8].
+Thus, pipelines are very helpful because the component can perform all the data preprocessing and model fitting and also help to minimize human error during the data transformation and fitting process [3] [4].
 
 ## Data Prep
 
@@ -311,7 +312,7 @@ The scikit-learn pipelines are estimators, so we can save them with all the prep
 
 ## Modeling Pipeline
 
-A _pipeline_ is a linear sequence of data preparation options, modeling operations, and prediction transform operations [10].
+A _pipeline_ is a linear sequence of data preparation options, modeling operations, and prediction transform operations [6].
 
 A pipeline allows the sequence of steps to be specified, evaluated, and used as an atomic unit.
 
@@ -353,24 +354,27 @@ It is a shift in thinking that may take some time to get used to.
 
 ## References
 
-[5]: [Build Machine Learning Pipelines](https://medium.datadriveninvestor.com/build-machine-learning-pipelines-with-code-part-1-bd3ed7152124?gi=c419327a3c8c)
+[1]: [Build Machine Learning Pipelines](https://medium.datadriveninvestor.com/build-machine-learning-pipelines-with-code-part-1-bd3ed7152124?gi=c419327a3c8c)
 
-[6]: [A Better Way for Data Preprocessing: Pandas Pipe](https://towardsdatascience.com/a-better-way-for-data-preprocessing-pandas-pipe-a08336a012bc)
+[2]: [A Better Way for Data Preprocessing: Pandas Pipe](https://towardsdatascience.com/a-better-way-for-data-preprocessing-pandas-pipe-a08336a012bc)
 
-[7]: [Introduction to Scikit-learn’s Pipelines](https://towardsdatascience.com/introduction-to-scikit-learns-pipelines-565cc549754a)
+[3]: [Introduction to Scikit-learn’s Pipelines](https://towardsdatascience.com/introduction-to-scikit-learns-pipelines-565cc549754a)
 
-[8]: [Unleash the Power of Scikit-learn’s Pipelines](https://towardsdatascience.com/unleash-the-power-of-scikit-learns-pipelines-b5f03f9196de)
+[4]: [Unleash the Power of Scikit-learn’s Pipelines](https://towardsdatascience.com/unleash-the-power-of-scikit-learns-pipelines-b5f03f9196de)
 
-[9]: [Lightweight Pipelining In Python using Joblib](https://towardsdatascience.com/lightweight-pipelining-in-python-1c7a874794f4)
+[5]: [Lightweight Pipelining In Python using Joblib](https://towardsdatascience.com/lightweight-pipelining-in-python-1c7a874794f4)
 
 
-[10]: [A Gentle Introduction to Machine Learning Modeling Pipelines](https://machinelearningmastery.com/machine-learning-modeling-pipelines/)
+[6]: [A Gentle Introduction to Machine Learning Modeling Pipelines](https://machinelearningmastery.com/machine-learning-modeling-pipelines/)
 
-[11]: [Automate Machine Learning Workflows with Pipelines in Python and scikit-learn](https://machinelearningmastery.com/automate-machine-learning-workflows-pipelines-python-scikit-learn/)
+[7]: [Automate Machine Learning Workflows with Pipelines in Python and scikit-learn](https://machinelearningmastery.com/automate-machine-learning-workflows-pipelines-python-scikit-learn/)
 
-[12]: [How To Use Scikit-Learn Pipelines To Simplify Machine Learning Workflow](https://medium.com/geekculture/how-to-use-sklearn-pipelines-to-simplify-machine-learning-workflow-bde1cebb9fa2)
+[8]: [How To Use Scikit-Learn Pipelines To Simplify Machine Learning Workflow](https://medium.com/geekculture/how-to-use-sklearn-pipelines-to-simplify-machine-learning-workflow-bde1cebb9fa2)
 
-[13]: [Simplify Data Processing with Pandas Pipeline](https://www.kdnuggets.com/2022/08/simplify-data-processing-pandas-pipeline.html)
+
+[9]: [Simplify Data Processing with Pandas Pipeline](https://www.kdnuggets.com/2022/08/simplify-data-processing-pandas-pipeline.html)
+
+[10]: [Building Data Science Pipelines Using Pandas](https://www.kdnuggets.com/building-data-science-pipelines-using-pandas)
 
 
 [Recursive Feature Elimination (RFE) for Feature Selection in Python](https://machinelearningmastery.com/rfe-feature-selection-in-python/)

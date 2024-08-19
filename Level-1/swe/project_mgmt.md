@@ -1,6 +1,6 @@
-# Project Management
+# SWE Project Management
 
-Here are some notes on project management.
+Here are some notes on swe project management.
 
 Every software engineer and manager needs to read the following:
 
@@ -10,6 +10,8 @@ F. Brooks, _The Mythical Man-Month_, Anniversary Edition, Addison-Wesley Profess
 
 T. Demarco, _Peopleware: Productive Projects and Teams_, 2nd ed., Dorset House, 1999. 
 
+
+Clayton Christiansen in his study of outsourcing (Innovator’s Dilemma) concluded "Most critical of all, figure out what capabilities you will need to succeed in the future; these must stay in house —otherwise you are handing over the future of your business" which means a capability outsourced is a capability lost [8].
 
 
 ## Project Quickstart
@@ -268,3 +270,5 @@ What you need to look for in a startup is a team who can work together professio
 [6]: [The Toxic Effects of Branding Your Workplace a “Family”](https://hbr.org/2021/10/the-toxic-effects-of-branding-your-workplace-a-family#:~:text=According%20to%20research%2C%20when%20an,attach%20themselves%20to%20the%20organization.)
 
 [7]: [3 Questions Experienced Developers Ask to Reveal a Bad Workplace](https://medium.com/codex/3-questions-experienced-developers-ask-to-reveal-a-bad-workplace-34a8d344615a)
+
+[8]: [Auto-Update Considered Harmful](https://ieeexplore.ieee.org/document/9384478)

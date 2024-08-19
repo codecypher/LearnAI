@@ -24,9 +24,11 @@ The term **bootstrap** means to randomly draw (with replacement) rows from the t
 
 There is no such thing as the _best_ learning algorithm. For any learning algorithm, there is a dataset where it is very accurate and another dataset where it is very poor.
 
+> No Free Lunch (NFL) theorem: there is no such thing as best, only good enough.
+
 When we say that a learning algorithm is _good_, we only quantify how well its inductive bias matches the properties of the data.
 
-Thus, a general-purpose universal optimization strategy is theoretically impossible and the only way one strategy can outperform another is if it is specialized to the specific problem under consideration.
+Thus, a general-purpose universal optimization strategy is theoretically impossible and the only way one strategy can outperform another is if it is specialized to the specific problem under consideration (expert system). 
 
 
 ### The Curse of Dimensionality
@@ -327,7 +329,7 @@ Gradient descent takes more computational resources to optimize, so SGD can be u
 Mini-batch gradient descent is the perfect balance between the above-spoken methods which takes fewer iterations than SGD to converge and less computation power than Gradient descent.
 
 
-## What is online learning?
+## What is online learning
 
 We define online learning as a training scenario in which the full dataset is never available to the model at the same time.
 

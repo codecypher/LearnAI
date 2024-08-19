@@ -33,7 +33,9 @@ The software development lifecycle (SDLC) of an AI project can be divided into s
 
 **Serving:** Model serving refers to the use of a platform to deploy ML models at massive scale. Examples: Seldon, KFServing, and Ray Serve.
 
-**Monitoring:** This is the post-deployment phase involving observability of the model and ML pipelines, refresh of the model with new data, and tracking success metrics in the context of the original problem. Key items to monitor are:  model drift, data drift, model failure, and system performance. Examples: Evidently.ai, Arize.ai, Arthur.ai, Fiddler.ai, Valohai.com, or whylabs.ai.
+**Monitoring:** This is the post-deployment phase involving observability of the model and ML pipelines, refresh of the model with new data, and tracking success metrics in the context of the original problem. 
+
+Key items to monitor are:  model drift, data drift, model failure, and system performance. Examples: Evidently.ai, Arize.ai, Arthur.ai, Fiddler.ai, Valohai.com, or whylabs.ai.
 
 
 The two most common architectures for ML model serving are:
@@ -96,7 +98,7 @@ What kind of problems Machine Learning applications might encounter over time.
 
 - Changes in data distribution (data drifts): sudden changes in the features values.
 
-- Model/concept drifts: how, why and when the performance of your model dropped.
+- Model/concept drift: how, why and when the performance of your model dropped.
 
 - System performance: training pipelines failing, or taking long to run; very high latency...
 
@@ -126,7 +128,7 @@ A pipeline allows the sequence of steps to be specified, evaluated, and used as 
 
 Once a model has been deployed its behavior must be monitored. 
 
-The predictive performance of a model is expected to degrade over time as the environment changes callef concept drift which occurs when the distributions of the input features or output target shift away from the distribution upon which the model was originally trained.
+The predictive performance of a model is expected to degrade over time as the environment changes called _concept drift_ which occurs when the distributions of the input features or output target shift away from the distribution upon which the model was originally trained.
 
 When concept drift has been detected, we need to retrain the ML model but detecting drift can difficult.
 
@@ -410,15 +412,18 @@ Some of the available tools in Kubeflow:
 
 ----------
 
-
 [Design Patterns in Machine Learning for MLOps](https://towardsdatascience.com/design-patterns-in-machine-learning-for-mlops-a3f63f745ce4)
 
 
 [Machine Learning Operations](https://ml-ops.org)
 
+J. B. Michael and M. Orescanin, "[Developing and Deploying Artificial Intelligence Systems](https://ieeexplore.ieee.org/document/9789299)," Computer, vol. 55, no. 6, pp. 15-17, June 2022, doi: 10.1109/MC.2022.3166488.
+
 [The Secret of Delivering Machine Learning to Production](https://towardsdatascience.com/the-secret-of-delivering-machine-learning-to-production-1f6681f5e30c)
 
 [How to Evaluate Different Machine Learning Deployment Solutions](https://wallarooai.medium.com/how-to-evaluate-different-machine-learning-deployment-solutions-adf51fe76a4b)
+
+[Operationalizing Machine Learning: An Interview Study](https://arxiv.org/abs/2209.09125)
 
 
 [Essential guide to Machine Learning Model Monitoring in Production](https://towardsdatascience.com/essential-guide-to-machine-learning-model-monitoring-in-production-2fbb36985108?gi=d5a42b3b9e9)
