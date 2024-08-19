@@ -26,6 +26,28 @@ Here is a list of the topics covered in [1]:
 - Regression
 
 
+In statistics, there are four things that are helpful to know about a distribution:
+
+SOCS is a useful acronym that we can use to remember these four things.
+
+1. Shape
+
+Is the distribution symmetrical or skewed to one side?
+
+Is the distribution unimodal (one peak) or bimodal (two peaks)?
+
+2. Outliers
+
+Are there any outliers present in the distribution?
+
+3. Center
+
+What is the mean, median, and mode of the distribution?
+4. Spread
+
+What is the range, interquartile range, standard deviation, and variance of the distribution?
+
+
 
 ## Correlation
 
@@ -97,6 +119,8 @@ Statistics for Machine Learning (7-Day Mini-Course)
 [2]: [Statistics in Python — Understanding Variance, Covariance, and Correlation](https://towardsdatascience.com/statistics-in-python-understanding-variance-covariance-and-correlation-4729b528db01?source=rss----7f60cf5620c9---4)
 
 [3]: [Statistics for Machine Learning](https://machinelearningmastery.com/start-here/#statistical_methods)
+
+[4]: [SOCS: A Helpful Acronym for Describing Distributions](https://www.statology.org/statistics-socs/)
 
 
 [What does RMSE really mean?](https://towardsdatascience.com/what-does-rmse-really-mean-806b65f2e48e)
