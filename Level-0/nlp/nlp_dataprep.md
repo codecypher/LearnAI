@@ -261,6 +261,11 @@ The value in the “group1” column is "A", the value in column "A" is 1, etc.
 [8]: [Two minutes NLP — Python Regular Expressions cheatsheet](https://medium.com/nlplanet/two-minutes-nlp-python-regular-expressions-cheatsheet-d880e95bb468)
 
 
+[Cleaning and Preprocessing Text Data in Pandas for NLP Tasks](https://www.kdnuggets.com/cleaning-and-preprocessing-text-data-in-pandas-for-nlp-tasks)
+
+[Boost Performance of Text Classification tasks with Easy Data Augmentation](https://towardsdatascience.com/boost-performance-of-text-classification-tasks-with-easy-data-augmentation-1420d45b914a)
+
+
 [Complete Guideline to Implementation of Basic NLP Techniques with NLTK and spaCy](https://towardsdatascience.com/hands-on-implementation-of-basic-nlp-techniques-nltk-or-spacy-687099e02816)
 
 [The Ultimate Guide To Different Word Embedding Techniques In NLP](https://www.kdnuggets.com/2021/11/guide-word-embedding-techniques-nlp.html)
@@ -268,6 +273,3 @@ The value in the “group1” column is "A", the value in column "A" is 1, etc.
 [Implementing Various NLP Text Representation in Python](https://towardsdatascience.com/implementing-various-nlp-text-representation-in-python-84781da0ec2d)
 
 [Difference between Bag of Words (BOW) and TF-IDF in NLP with Python](https://pub.towardsai.net/difference-between-bag-of-words-bow-and-tf-idf-in-nlp-with-python-97d3e75a9fd)
-
-
-[Boost Performance of Text Classification tasks with Easy Data Augmentation](https://towardsdatascience.com/boost-performance-of-text-classification-tasks-with-easy-data-augmentation-1420d45b914a)

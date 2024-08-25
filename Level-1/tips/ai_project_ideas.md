@@ -33,6 +33,8 @@
 
 ## AI Project Ideas
 
+[7 Machine Learning Projects That Can Add Value to Any Resume]($https://machinelearningmastery.com/7-machine-learning-projects-that-can-add-value-to-any-resume/)
+
 [Python Projects for 2021](https://data-flair.training/blogs/python-project-ideas/)
 
 [Learn Deep Learning by Building 15 Neural Network Projects in 2022](https://medium.com/@param005raval/156c9b1aefc6?source=rss------artificial_intelligence-5)
@@ -56,4 +58,5 @@
 
 
 [5 Advance Projects for Data Science Portfolio](https://www.kdnuggets.com/2023/03/5-advance-projects-data-science-portfolio.html)
+
 
