@@ -30,7 +30,7 @@ NOTE: It is estimated that 80% of AI project development time is spent on prepar
 
 ## ETL vs ELT
 
-ETL and ELT (extract, transform, load, or extract, load, and transform).
+ETL and ELT (extract, transform, load or extract, load, and transform).
 
 ETL transforms the data before loading it into a data warehouse while ELT loads the data and allows the transformation to be handled within the data warehouse [13].
 
@@ -44,7 +44,7 @@ ETL transforms the data before loading it into a data warehouse while ELT loads 
 
 - **Load:** This refers to the process of inserting the information into a data storage system.
 
-  In ELT scenarios, raw/unstructured data is loaded, then transformed within the target system.
+  In ELT scenarios, the raw unstructured data is loaded then transformed within the target system.
 
   In ETL, the raw data is transformed into structured data prior to reaching the target.
 
