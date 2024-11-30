@@ -467,7 +467,7 @@ Unsupervised ML
 
 ## NLP Checklist
 
-There is an NLP checklist given in [7]. 
+There is an NLP checklist given in [7] and project guide in [18]. 
 
 ### NLP Python Libraries
 
@@ -604,6 +604,8 @@ NER is the process to find the important labels that are present in the text.
 
 
 [17]: [7 Tips for Choosing the Right Machine Learning Infrastructure](https://www.aiiottalk.com/right-machine-learning-infrastructure/)
+
+[18]: [LLMs Project Guide: Key Considerations](https://learn.microsoft.com/en-us/ai/playbook/technology-guidance/generative-ai/getting-started/llmops-checklist)
 
 
 [^ai_hierarchy]: <https://hackernoon.com/the-ai-hierarchy-of-needs-18f111fcc007>
