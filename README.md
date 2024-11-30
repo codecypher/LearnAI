@@ -8,7 +8,6 @@ If you are like me and try to follow the principles of DRY, KISS, Design Pattern
 
 [Raindrop](https://raindrop.io/codecypher)
 
-
 ## Learning Paths
 
 - [Into to AI](./ai_intro.md)
@@ -16,13 +15,11 @@ If you are like me and try to follow the principles of DRY, KISS, Design Pattern
 - Level-1 (Advanced)
 - Level-2 (Expert)
 
-
 ## Noteworthy Quotes
 
 > Software Half-Life: The frameworks that help us build software in half the time become outdated in half the time.
 
 > I'm not in this world to live up to your expectations and you're not in this world to live up to mine - Bruce Lee
-
 
 ## Guiding Principles for AI
 
@@ -34,7 +31,6 @@ If you are like me and try to follow the principles of DRY, KISS, Design Pattern
 The field of AI requires:
 
 1. A healthy dose of skepticism. 
-
 2. A change in mindset from "best" to "good enough". 
 
 
@@ -53,7 +49,6 @@ In a data-centric approach, the data should drive the model selection process. T
 
 Software developers and even companies seem obsessed with using a model-centric, brute-force approach to apply the latest complex SOTA algorithms with no regard to accuracy or the scientific method, espcially when simpler algorithms often perform better with much less effort.
 
-
 ## Background
 
 This repo contains notes from various articles and other resources on a variety of topics in Artificial Intelligence (AI) and Machine Learning (ML).
@@ -64,15 +59,13 @@ Whether or not you find this repo useful will depend on your style of learning a
 
 This is a work in progress, so there is probably some content missing and the content will be changing.
 
-
-
 ## References
 
-[1]: I. Sommerville, Software Engineering 10th ed., Pearson, ISBN: 978-0133943030, 2015.
+[1]: I. Sommerville, _Software Engineering_ 10th ed., Pearson, ISBN: 978-0133943030, 2015.
 
-[2]: P. Bourque and R. E. Fairley, [Guide to the Software Engineering Body of Knowledge (SWEBOK)](https://www.computer.org/education/bodies-of-knowledge/software-engineering), v. 3, IEEE, 2014.
+[2]: P. Bourque and R. E. Fairley, [_Guide to the Software Engineering Body of Knowledge (SWEBOK)_](https://www.computer.org/education/bodies-of-knowledge/software-engineering), v. 3, IEEE, 2014.
 
-[3]: E. Alpaydin, Introduction to Machine Learning, 4th ed., MIT Press, ISBN: 9780262358064, 2020.
+[3]: E. Alpaydin, _Introduction to Machine Learning, 4th ed., MIT Press, ISBN: 9780262358064, 2020.
 
-[4]: S. Russell and P. Norvig, Artificial Intelligence: A Modern Approach, 4th ed. Upper Saddle River, NJ: Prentice Hall, ISBN: 0-13-461099-7, 2021.
+[4]: S. Russell and P. Norvig, _Artificial Intelligence: A Modern Approach_, 4th ed. Upper Saddle River, NJ: Prentice Hall, ISBN: 0-13-461099-7, 2021.
 
