@@ -4,35 +4,41 @@
 
 [Dimensionality Reduction](./dimensionality_reduction.md)
 
+## Background
 
-## Overview
-
-> Data quality is important to creating a successful machine learning model
-
-[Feature Engineering](./feature_engineering.md)
+> Data quality is important to creating a successful machine learning model.
 
 > If you torture the data, it will confess to anything - Ronald Coase
 
-There is often more than one way to sample and interogate data which means that deciding the best approach is subjective and open to bias. Thus, _data torture_ is the practice of repeatedly interpreting source data until it reveals a desired result.
+There is usually more than one way to sample and interogate data which means that deciding the best approach is subjective and open to bias.
 
+Thus, _data torture_ is the practice of repeatedly interpreting source data until it reveals a desired result.
 
-The approaches to data preparation will depend on the dataset as well as the data types, so there is no perfect list of steps.
+----------
 
-[Concatenating CSV files using Pandas module](https://www.geeksforgeeks.org)
+## Definitions
 
-You try to handle the "worst" cases and not necessarily every case.
+The key terms for discussing the machine learning workflow:
 
-Exploratory Data Analysis (EDA) is crucial: summary stats and making plots of the data.
+- Model: a set of patterns learned from data.
 
-NOTE: It is estimated that 80% of AI project development time is spent on preparing the data [6].
+- Algorithm: a specific ML process used to train a model.
 
+- Training data: the dataset from which the algorithm learns the model.
 
+- Test data: a new dataset for reliably evaluating model performance.
+
+- Features: Variables (columns) in the dataset used to train the model.
+
+- Target variable: A specific variable you’re trying to predict.
+
+- Observations: Data points (rows) in the dataset.
 
 ## ETL vs ELT
 
 ETL and ELT (extract, transform, load or extract, load, and transform).
 
-ETL transforms the data before loading it into a data warehouse while ELT loads the data and allows the transformation to be handled within the data warehouse [13].
+ETL transforms the data before loading it into a data warehouse while ELT loads the data and allows the transformation to be handled within the data warehouse [21].
 
 - **Extract:** This refers to pulling the source data from the original database or data source.
 
@@ -48,41 +54,282 @@ ETL transforms the data before loading it into a data warehouse while ELT loads 
 
   In ETL, the raw data is transformed into structured data prior to reaching the target.
 
-### Kestra
+## Overview
 
-**Kestra** is an infinitely scalable orchestration and scheduling platform, creating, running, scheduling, and monitoring millions of complex pipelines.
+The process of applied machine learning consists of a sequence of steps [6], [32]:
 
-Kestra can manage ETL and ELT in the same solution, handling even the most complex workflows.
+1. Define Problem
+2. Prepare Data
+3. Evaluate Models
+4. Finalize Model
 
-ETL processes can be used to scrub sensitive data, ensuring compliance, loading the transformed data within a temporary table.
+Here we are concerned with the data preparation step (step 2), and the common tasks used during the data preparation step in a machine learning project.
 
-With Kestra’s capacity for parallel flows, the rest of the data can be handled by ELT.
+On a predictive modeling project, there are four main reasons the raw data usually cannot be used directly [2]:
 
-Kestra is able to perform ELT workloads on its own or with integrations to many popular solutions.
+- Data Types: Implementations of machine learning algorithms require data to be numeric.
 
-Kestra can handle loading data from BigQuery, CopyIn, Postgres, and more.
+- Data Requirements: Some machine learning algorithms impose requirements on the data.
 
-A simple query can be performed to move the data, for example, SQL INSERT INTO SELECT statements.
+- Data Errors: Statistical noise and errors in the data may need to be corrected.
 
-Dependencies between flows can be handled with Kestra’s trigger mechanisms to transform the data within the database (cloud or physical).
+- Data Complexity: Complex nonlinear relationships may be extracted from the data.
 
-ETL is just as easily managed by Kestra’s flexible workflows.
+Therefore, the raw data must be pre-processed before being used to fit and evaluate a machine learning model which is referred to as _data preparation_.
 
-FileTransform plugins are one possible method, but you can write a simple Python/Javascript/Groovy script to transform an extracted dataset data row per row.
+Here are some things to keep in mind about data preparation:
 
-For example, you can remove columns with personal data, clean columns by removing dates, and more. Integrating a custom docker image into your workflow is another method that can be used to transform the data.
+- The approaches to data preparation depend on the dataset as well as the data types.
 
-Not only can you transform data row per row, you can potentially handle conversion of data between formats, for example, transforming AVRO data to JSON or CSV, or vice versa.
+- We try to handle the worst cases and not necessarily every case.
 
-This is not usually possible with most solutions. Most ELT tools often prevent ETL processes by design because they cannot handle heavy transform operations.
+- Exploratory Data Analysis (EDA) is crucial: summary stats and making plots of the data.
 
-Kestra is able to handle both because all transformations are considered to be row per row, and therefore do not use any memory to perform the function, only CPU.
+- It is estimated that 80% of AI project development time is spent on preparing the data [4].
 
+## Data Preparation Stage
 
+The types of data preparation performed usually involve the following tasks [6], depending on the data:
 
-## Data Preparation
+- Exploratory Data Analysis (EDA): Get to know the data. Check if data is normally distributed or heavy-tailed; check for outliers; check if clustering of the data will help; check for imbalanced data.
 
-The [Data Science Primer](https://elitedatascience.com/primer) covers exploratory analysis, data cleaning, feature engineering, algorithm selection, and model training.
+- Data Preprocessing: Organize the selected data by formatting, cleaning, and sampling from it.
+
+- Feature Selection: Identify the input variables that are most relevant to the task.
+
+- Feature Engineering: Derive new variables from the available data.
+
+- Data Transforms: Change the scale or distribution of variables.
+
+- Dimensionality Reduction: Create compact projections of the data.
+
+This provides a basic framework for exploring different data preparation algorithms that we may consider on a given project with structured or tabular data.
+
+Depending on the project, there may be other steps as well [4]:
+
+- Project Scoping: Sometimes we need to roadmap the project and anticipate data needs.
+
+- Data Wrangling: We may need to restructure the dataset into a format that can be used by algorithms.
+
+----------
+
+The data preparation stage usually involves three steps that may overlap [5]:
+
+1. Data Selection: Consider what data is available, what data is missing, and what data can be removed.
+
+2. Data Preprocessing: Organize the selected data by formatting, cleaning, and sampling from it.
+
+3. Data Transformation: Transform preprocessed data ready for machine learning by engineering features using scaling, attribute decomposition, and attribute aggregation.
+
+  Split first and normalize later which means that we should perform the train-test split first then normalize the datasets.
+
+Data preparation is a large topic that can involve a lot of iterations, exploration, and analysis.
+
+----------
+
+## 6 Steps for Data Preparation
+
+Data preparation in machine learning is a complex, multi-step process [8].
+
+The final performance of an ML model depends on the dataset used for training.
+
+Not having proper data is probably a top reason why an ML model is hard to build.
+
+The possible consequences of skipping on data preparation include:
+
+- Reduced model accuracy
+- Overfitting or underfitting
+- Increased computation costs
+- Model bias
+- Scalability issues
+- Misleading insights
+
+Here are the 6 basic steps for data preparation [8]:
+
+1. Data Collection
+2. Data Cleaning
+3. Data Transformation
+4. Data Reduction
+5. Data Splitting
+6. Feature Engineering
+
+### 1. Data Collection
+
+_Data Collection_ implies gathering relevant data from various sources such as databases, APIs, files, and online repositories [8].
+
+The first step in data preparation for machine learning encompasses matters of the type, volume, and quality of data.
+
+Here are some common sources of data [8]:
+
+- Internal sources: Enterprise data warehouses, sales transactions, customer interactions.
+
+- External sources: Public data sources like Kaggle, UCI Machine Learning Repository, and Google Dataset Search.
+
+- Web scraping: Automated tools for extracting data from websites.
+
+- Surveys: Collecting specific data points from target audiences.
+
+Strategies to compensate for lack of data [8]:
+
+- Data augmentation: Generating more data from existing samples.
+
+- Active learning: Selecting informative data samples for labeling.
+
+- Transfer learning: Using pre-trained models for related tasks.
+
+- Collaborative data sharing: Working with other entities to share data.
+
+### 2. Data Cleaning
+
+The data obtained is usually not suitable for ML which ia why data cleaning or simply preparing raw data is required [8], [9]:
+
+- Handling missing data: Imputation, interpolation, deletion.
+
+- Handling outliers: Remove, transform, winsorize, or treat them as a separate class.
+
+- Removing duplicates: Use exact matching, fuzzy matching, and other techniques.
+
+- Handling irrelevant data: Identify and remove irrelevant data points.
+
+- Handling incorrect data: Transform or remove erroneous data points.
+
+- Handling imbalanced data: Resampling, synthetic data generation, cost-sensitive learning, ensemble learning.
+
+### 3. Data Transformation
+
+Converting raw data into a suitable format for machine learning algorithms which enhances algorithmic performance and accuracy [8], [9].
+
+- Scaling: Transform features to a specified range (such as 0 to 1) to balance feature importance.
+
+- Normalization: Adjust data distribution for a more balanced feature comparison.
+
+- Encoding: Convert categorical data into numerical format using techniques such as one-hot encoding, ordinal encoding, and label encoding.
+
+- Discretization: Transform continuous variables into discrete categories.
+
+- Dimensionality reduction: Limit the number of features to reduce complexity using techniques such as Principal Component Analysis (PCA) or  Linear Discriminant Analysis (LDA).
+
+- Log transformation: Apply a logarithmic function to skewed data for a more symmetric distribution.
+
+### 4. Data Reduction
+
+Sometimes the number of parameters in the data gathered is higher than necessary.
+
+For example, a survey may include responses that are not valid for training the intended model.
+
+Data reduction helps preserve essential information while reducing complexity:
+
+- Dimensionality reduction: Techniques such as Principal Component Analysis (PCA) and Linear Discriminant Analysis (LDA) reduce the number of features while retaining significant information.
+
+- Feature selection: Methods such as recursive feature elimination, mutual information, and chi-square tests select the most relevant features.
+
+- Sampling: Reduce the dataset size by selecting a representative subset of data points.
+
+### 5. Data Splitting
+
+Three types of datasets are necessary for training every single ML model:
+
+- Training dataset: Used to train the model to learn patterns and relationships between input features and target variables.
+
+- Validation dataset: Used to tune model hyperparameters and evaluate performance during training to prevent overfitting.
+
+- Testing dataset: Used to assess the performance of the final model on unseen data to make sure it generalizes well to new data.
+
+Dividing data into subsets is another necessary step.
+
+For training datasets, engineers use data of varying difficulty from least to most complex.
+
+Validation datasets include specific cases, suitable for model fine tuning.
+
+Testing dataset is a suite of real-life numbers / images / documents, helping to actually measure the model’s accuracy.
+
+Recommended approaches:
+
+- Random sampling: Randomly splitting data, useful for large datasets.
+
+- Stratified sampling: Ensuring subsets maintain the same distribution of class labels or characteristics, ideal for imbalanced datasets.
+
+- Time-based sampling: Using historical data for training and future data for testing which applies to time-series data.
+
+- Cross-validation: Dividing data into multiple folds for training and testing to get a more accurate performance estimate (e.g. k-fold cross-validation).
+
+### 6. Feature Engineering
+
+After training of a model, there is usually a need to scale it and reinforce it with additional functionalities.
+
+Creating new features or modifying existing ones to enhance model performance is known as feature engineering.
+
+Recommended techniques:
+
+- Interaction terms: Creating new features by combining existing ones.
+
+- Polynomial features: Adding polynomial terms to capture nonlinear relationships.
+
+- Domain knowledge: Leveraging expertise to create meaningful features.
+
+## Data Preprocessing Steps
+
+The three mosy common data preprocessing steps are: formatting, cleaning, and sampling [5].
+
+1. Formatting: The data you have selected may not be in the format that is needed which includes: format adjustments, correct inconsistencies, and handle errors in variables.
+
+2. Cleaning: Identify and correct mistakes or errors in the data which includes: check data types; handle missing or invalid values; handle outliers; handle categorical values; encode class labels; parse dates; character encodings; handle imbalanced data.
+  
+  Check for extreme values:
+
+- High Cardinality: the number of different labels in categorical data is very high which causes problems for the model to learn.
+  
+- Outliers: the extreme cases that may be due to error but not in every case.
+
+  There may be data instances that are incomplete and do not contain the data needed to address the problem; these instances may need to be removed.
+
+  There may be sensitive information in some of the attributes and these attributes may need to be anonymized or removed from the data entirely.
+
+3. Sampling: There may be far more selected data available than we need.
+
+  More data can result in much longer running times for algorithms and larger computational and memory requirements.
+
+  We can use a smaller representative sample of the selected data that may be faster for exploring and prototyping solutions before considering the whole dataset.
+
+----------
+
+Data preparation: This step includes the following tasks: data preprocessing, data cleaning, and exploratory data analysis (EDA).
+
+For image data, we would resize images to a lower dimension, such as (299 x 299), to allow mini-batch learning and also to keep up the computing limitations.
+
+For text data, we would Remove newlines and tabs; Strip HTML Tags; Remove Links; Remove Whitespaces, and other possible steps listed in NLP Text Preprocessing on my GitHub repo.
+
+Feature engineering: This step includes the following tasks: quantization or binning; mathematical transforms; scaling and normalization; modifying and/or creating new features.
+
+For image data, we would perform image augmentation, which is described in Image Augmentation on my GitHub repo.
+
+For text data, we would convert text data features into vectors and perform Tokenization, Stemming, and Lemmatization, as well as other possible steps described in Natural Language Processing on my GitHub repo.
+
+----------
+
+Design: This step includes the following tasks: data preparation, decomposing the problem, and building and evaluating models.
+
+We can use AutoML or create a custom test harness to build and evaluate many models to determine what algorithms and views of the data should be chosen for further study.
+
+## Avoid Data Leakage
+
+In general, we must answer two key questions to prevent data leakage [27]:
+
+1. Am I exposing information from the test set to the training process?
+
+2. Am I using future data that won’t be available when making predictions?
+
+These two questions will help avoid overly optimistic performance metrics and build models that generalize well to new data.
+
+We should also apply the same principles to the cross-validation process to ensure each fold is free from leakage.
+
+## Notes on Data Preparation
+
+The articles in [21] cover exploratory analysis, data cleaning, feature engineering, algorithm selection, and model training.
+
+How to Make Your Data Models Modular to Avoid highly coupled systems and unexpected production bugs [24].
+
+Here are some relevant topics disucssed in [1]:
 
 7.1 Handling Missing Data
 7.2 Data Transformation
@@ -93,21 +340,17 @@ The [Data Science Primer](https://elitedatascience.com/primer) covers explorator
 
 10. Data Aggregation and Group Operations
 
-
-How to Make Your Data Models Modular to Avoid highly coupled systems and unexpected production bugs [16].
-
-
 ### Import data
 
-For ML projects, it can be confusing to determine which library to choose to read and manipulate datasets, especially image and text [1] [2].
+For ML projects, it can be confusing to determine which library to choose to read and manipulate datasets, especially image and text [1], [2].
 
 - Split data along delimiters (CSV)
 
 - Extract parts from data entries (Do you only need part of a certain attribute?)
 
-- Remove leading and trailing spaces
-
 ### Format adjustments
+
+- Remove leading and trailing spaces
 
 - Standardize types (decimal separators, date formats, or measurement units)
 
@@ -123,21 +366,37 @@ For ML projects, it can be confusing to determine which library to choose to rea
 
 - Check for wrong categories in categorical data (similar products should not be put into different categories)
 
-### Handle errors in variables
-
-- Missing Data: can happen due to forgotten to store, inappropriate data handling, inefficient data entry at the ground level, etc.
+### Check for extreme values
 
 - High Cardinality: the number of different labels in categorical data is very high which causes problems to model to learn.
 
 - Outliers: the extreme cases that may be due to error, but not in every case.
 
-
------
-
+----------
 
 ## Data Cleaning
 
-Data cleaning refers to identifying and correcting errors in the dataset that may negatively impact a predictive model.
+Data cleaning includes the following tasks [8], [9], [25]:
+
+- Delete Unnecessary Columns
+- Remove irrelevant data
+- Check data types
+- Fix structural errors
+- Remove duplicates
+- Handle incorrect data
+- Handle missing data
+- Handle outliers
+- Handle categorical data
+- Handle imbalanced data
+
+- Encode class labels
+- Parsing dates
+- Character encodings
+- Inconsistent data entry
+
+Structural Errors are typos or inconsistent capitalization which is mostly a concern for categorical features.
+
+Data cleaning refers to identifying and correcting errors in the dataset that may negatively impact a predictive model [7]:
 
 - Identify Columns That Contain a Single Value
 - Delete Columns That Contain a Single Value
@@ -146,32 +405,17 @@ Data cleaning refers to identifying and correcting errors in the dataset that ma
 - Identify Rows that Contain Duplicate Data
 - Delete Rows that Contain Duplicate Data
 
-Data cleaning also includes the following [7]:
-
-- Delete Unnecessary Columns
-- Check data types
-- Handle missing values
-- Handle duplicate values
-- Handle outliers
-- Handle categorical data
-- Encoding class labels
-- Parsing dates
-- Character encodings
-- Inconsistent data entry
-- Scaling and normalization
-
-
-The article [9] provides some Tips and Tricks to Deal with a Messy Date String Column in Pandas Dataframe.
+The article [17] provides some Tips and Tricks to Deal with a Messy Date String Column in Pandas Dataframe.
 
 ### Delete Unnecessary Columns
 
-There can be columns in the dataset that we do not need in our data analysis, so we can remove them using the `drop()` method with the specified column name [17].
+There can be columns in the dataset that we do not need in our data analysis, so we can remove them using the `drop()` method with the specified column name [25].
 
 ```py
   df.drop('last_name', axis = 1, inplace = True)
 ```
 
-We set the axis to 1 to specify that we want to delete a column and the inplace argument is set to True so that we modify the existing DataFrame to avoid creating a new DataFrame without the removed column.
+We set the axis to 1 to specify that we want wasto delete a column and the inplace argument is set to True so that we modify the existing DataFrame to avoid creating a new DataFrame without the removed column.
 
 ### Check Data Types
 
@@ -196,7 +440,7 @@ We set the axis to 1 to specify that we want to delete a column and the inplace 
 
 ### Data Type Conversion
 
-Sometimes, data types might not be correct. For example, a date column might be interpreted as strings [17].
+Sometimes, data types might not be correct. For example, a date column might be interpreted as strings [25].
 
 We need to convert these columns to the appropriate types.
 
@@ -221,13 +465,33 @@ df[['advertisement_date', 'sale_date']] = df[['advertisement_date', 'sale_date']
 
 Both approaches give you the same result.
 
+### Inconsistent Data Entry
+
+TODO: This will most likely vary
+
+### Inconsistent Formatting
+
+The data you have selected may not be in the format that is needed which includes: format adjustments, correct inconsistencies, and handle errors in variables.
+
 ### Handle Missing Values
 
-There are various ways of dealing with missing values and it is likely that we will need to determine which method is right for a task at hand on a case-by-case basis [10] [14].
+There are various ways of dealing with missing values and it is likely that we will need to determine which method is right for a task at hand on a case-by-case basis [9], [10], [22], [29].
+
+Missing data can happen due to forgotten to store, inappropriate data handling, inefficient data entry at the ground level, etc.
 
 The removal of samples or dropping of feature columns may not feasible because we might lose too much valuable data.
 
 We can use interpolation techniques to estimate the missing values from the other training samples in the dataset.
+
+There are various methods [29]:
+
+1. Fill with constant values ​​(0, 1, 2, etc.)
+
+2. Use statistical methods such as mean / median.
+
+3. Using values ​​from other data (such as values ​​from previous or subsequent data)
+
+4. Creating a predictive model to estimate the missing values.
 
 One of the most common interpolation techniques is _mean imputation_ where we simply replace the missing value by the mean value of the entire feature column.
 
@@ -354,7 +618,6 @@ We can drop or fill the `NaN` values.
 
 - Discretize: Converting continuous variables into discrete values.
 
-
 ```py
     # making boolean series for a team name
     filter1 = data["Team"] == "Atlanta Hawks"
@@ -412,16 +675,15 @@ We can drop or fill the `NaN` values.
     df = df[((np.abs(stats.zscore(df[out_list])) < 3)).all(axis=1)]
 ```
 
+## Data Cleaning (Python)
 
-## Python Functions for Data Cleaning
-
-Here are 5 functions to provide examples for creating up your own data cleaning toolset [18].
+Here are 5 functions to provide examples for creating a custom data cleaning toolset [26].
 
 1. Remove Multiple Spaces
 
-We can create a function  to remove excessive whitespace from text. 
+We can create a function  to remove excessive whitespace from text.
 
-If we want to remove multiple spaces within a string or excessive leading or trailing spaces, this single line function will work. 
+If we want to remove multiple spaces within a string or excessive leading or trailing spaces, this single line function will work.
 
 We make use of regular expressions for internal spaces and `strip()` for leading/trailing whitespace.
 
@@ -518,7 +780,7 @@ print(cleaned_df)
 
 4. Remove Outliers
 
-We can use the IQR method to remove outliers from our data. 
+We can use the IQR method to remove outliers from our data.
 
 We pass in the data and specify the columns to check for outliers and return an outlier-free dataframe.
 
@@ -575,7 +837,6 @@ Cleaned DataFrame:
 1  2  20
 ```
 
-
 5. Normalize Text Data
 
 We can create a function to convert all text to lowercase, strip out whitespace, and remove special characters.
@@ -607,10 +868,287 @@ print(clean_text)
 # this is messy text wit
 ```
 
+## Python One-Liners for Data Cleaning
 
-## Encoding Categorical Features
+Some useful Python one-liners for common data cleaning tasks [30].
 
-Most machine learning algorithms and deep learning neural networks require that input and output variables are numbers [11] which means that categorical data must be encoded to numbers before we can use it to fit and evaluate a model.
+### Capitalize Strings
+
+```py
+# Capitalizing the names for consistency
+data = [{**d, "name": d["name"].title()} for d in data]
+```
+
+### Convert Data Types
+
+Ensuring that data types are consistent and correct across the dataset is necessary for accurate analysis.
+
+```py
+# Converting age to an integer type, defaulting to 25 if conversion fails
+data = [{**d, "age": int(d["age"]) if isinstance(d["age"], (int, float)) else 25} for d in data]
+```
+
+### Validate Numeric Ranges
+
+It is important to check that numeric values fall within acceptable ranges.
+
+```py
+# Ensuring age is an integer within the range of 18 to 60; otherwise, set to 25
+data = [{**d, "age": d["age"] if isinstance(d["age"], int) and 18 <= d["age"] <= 60 else 25} for d in data]
+```
+
+### Validate Email
+
+Formatting inconsistencies are common with text fields.
+
+Here we check that email addresses are valid and replacing invalid ones with a default address:
+
+```py
+# Verifying that the email contains both an "@" and a "."; 
+#assigning 'invalid@example.com' if the format is incorrect
+data = [{**d, "email": d["email"] if "@" in d["email"] and "." in d["email"] else "invalid@example.com"} for d in data]
+```
+
+### Handle Missing Values
+
+Missing values are another common problem in most datasets.
+
+Here we check for missing salary values and replace with a default value:
+
+```py
+# Assigning a default salary of 30,000 if the salary is missing
+data = [{**d, "salary": d["salary"] if d["salary"] is not None else 30000.00} for d in data]
+```
+
+We can fill the numerical missing data with the median and the categorical missing data with the mode [31].
+
+```py
+df.fillna({col: df[col].median() for col in df.select_dtypes(include='number').columns} |
+          {col: df[col].mode()[0] for col in df.select_dtypes(include='object').columns}, inplace=True)
+```
+
+### Standardize Date Formats
+
+It is important to have all dates and times in the same format.
+
+Here we convert various date formats to a single default format with a placeholder for invalid entries:
+
+```py
+from datetime import datetime
+
+# Attempting to convert the date to a standardized format and defaulting to '2023-01-01' if invalid
+data = [{**d, "join_date": (lambda x: (datetime.strptime(x, '%Y-%m-%d').date() if '-' in x and len(x) == 10 else datetime.strptime(x, '%d-%m-%Y').date()) if x and 'invalid-date' not in x else '2023-01-01')(d['join_date'])} for d in data]
+```
+
+It might be better to break this down into multiple steps instead.
+
+Read "Why You Should Not Overuse List Comprehensions in Python" to learn why you should not use comprehensions at the cost of readability and maintainability.
+
+### Remove Negative Values
+
+Sometimes we need to check that certain numerical fields have only non-negative values such as age, salary, and more.
+
+Here we replace any negative salary values with zero:
+
+```py
+# Replacing negative salary values with zero to ensure all values are non-negative
+data = [{**d, "salary": max(d["salary"], 0)} for d in data]
+```
+
+### Check for Duplicates
+
+Removing duplicate records is important before we can analyze the dataset.
+
+Here we checj that only unique records remain by checking for duplicate names:
+
+```py
+# Keeping only unique entries based on the name field
+data = {tuple(d.items()) for d in data}  # Using a set to remove duplicates
+data = [dict(t) for t in data]  # Converting back to list of dictionaries
+```
+
+### Scale Numeric Values
+
+Scaling numeric values can usuallt help with consistent analysis.
+
+We can a list comprehension to scale salaries to a percentage of the maximum salary in the dataset:
+
+```py
+# Normalizing salary values to a percentage of the maximum salary
+max_salary = max(d["salary"] for d in data)
+data = [{**d, "salary": (d["salary"] / max_salary * 100) if max_salary > 0 else 0} for d in data]
+```
+
+### Trim Whitespaces
+
+Sometimes we need to remove unnecessary whitespaces from strings.
+
+Here is a one-liner to trim leading and trailing spaces from the name strings:
+
+```py
+# Trimming whitespace from names for cleaner data
+data = [{**d, "name": d["name"].strip()} for d in data]
+```
+
+### Remove Highly Correlated Features
+
+Multicollinearity occurs when our dataset contains many independent variables that are highly correlated with each other instead of with the target which negatively impacts the model performance, so we want to keep less correlated features [31].
+
+We can combine the Pandas correlation feature with the conditional selection to quickly select the less correlated features. For example, here is how we can choose the features that have the maximum Pearson correlation with the others below 0.95.
+
+```py
+  df = df.loc[:, df.corr().abs().max() < 0.95]
+```
+
+We can try using the correlation features and the threshold to evaluate the prediction model.
+
+### Conditional Column Apply
+
+Creating a new column with multiple conditions can sometimes be complicated, and the line to perform them can be long [31].
+
+We can use the `apply` method from Pandas to use specific conditions to create the new feature.
+
+Here are examples of creating a new column where the values are based on the condition of the other column values.
+
+```py
+  df['new_col'] = df.apply(lambda x: x['A'] * x['B'] if x['C'] > 0 else x['A'] + x['B'], axis=1)
+```
+
+### Finding Common and Different Element
+
+The `Set` data type is unique data that represents an unordered list of data but only with unique elements which can be used to find the common or different elements between two sets [31].
+
+```py
+  set1.intersection(set2)
+  set1.difference(set2)
+```
+
+### Boolean Masks for Filtering
+
+When working with the NumPy array and its derivate object, we often want to filter the data according to our requirements [31].
+
+We can create a boolean mask to filter the data based on the boolean condition we set.
+
+```py
+import numpy as np
+
+data = np.array([10, 15, 20, 25, 30, 35, 40, 45, 50])
+```
+
+We can use the boolean mask to filter the data to show only even numbers.
+
+```py
+  data[(data % 2 == 0)]
+```
+
+This is also the basis of the Pandas filtering, but a Boolean mask can be more versatile since it also works with NumPy arrays.
+
+### List Count Occurrence
+
+When working with a list or any other data with multiple values, there are times when we want to know the frequency for each value [31].
+
+We can use the `counter` function to count values automatically.
+
+```py
+  data = [10, 10, 20, 20, 30, 35, 40, 40, 40, 50]
+
+  
+  from collections import Counter
+
+  Counter(data)
+
+  # Counter({10: 2, 20: 2, 30: 1, 35: 1, 40: 3, 50: 1})
+```
+
+The result is a dictionary for the count occurrence.
+
+### Numerical Extraction from Text
+
+Regular expressions (Regex) are character lists that match a pattern in text.
+
+Regex are usually used when we want to perform specific text manipulation [31].
+
+We can use a combination of Regex and map to extract numbers from the text.
+
+```py
+import re
+
+list(map(int, re.findall(r'\d+', "Sample123Text456")))
+
+# [123, 456]
+```
+
+### Flatten Nested List
+
+In data preparation, we often encounter nested list data that contains a list within a list [31].
+
+We usually want to flatten the nested list for further data processing.
+
+```py
+nested_list = [
+
+    [1, 2, 3],
+
+    [4, 5],
+
+    [6, 7, 8, 9]
+
+]
+```
+
+We can then flatten the list with the following code.
+
+```py
+sum(nested_list, [])
+
+# [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+Now we can use this one-dimensional list to further analyze the data in a more straightforward manner.
+
+### List to Dictionary
+
+Sometimes we have several lists that we want to combine into dictionary format [31].
+
+We can convert the list we have into a dictionary using the zip function.
+
+```py
+fruit = ['apple', 'banana', 'cherry']
+
+values = [100, 200, 300]
+```
+
+We can use zip and dict to combine both of the lists into one structure that can then be used for further data preprocessing.
+
+```py
+dict(zip(fruit, values))
+
+# {'apple': 100, 'banana': 200, 'cherry': 300}
+```
+
+### Dictionary Merging
+
+When we have a dictionary that contains the information we require for data preprocessing, we usually want to combine them.
+
+```py
+  fruit_mapping = {'apple': 100, 'banana': 200, 'cherry': 300}
+
+  furniture_mapping = {'table': 100, 'chair': 200, 'sofa': 300}
+```
+
+We can combine dictionaries using the following one-liner.
+
+```py
+  {**fruit_mapping, **furniture_mapping }
+```
+
+Now both dictionaries have been merged into one dictionary which is very useful in many cases that require us to aggregate data.
+
+## Encoding Categorical Features (Python)
+
+Most machine learning algorithms and deep learning neural networks require that input and output variables are numbers [27] which means that categorical data must be encoded to numbers before we can use it to fit and evaluate a model.
+
+_Binning_ is a technique for transforming variables whose values ​​are numeric into categorical ones [29].
 
 For categorical data, we need to distinguish between _nominal_ and _ordinal_ features.
 
@@ -622,8 +1160,7 @@ For categorical data, we need to distinguish between _nominal_ and _ordinal_ fea
 
   Example: T-shirt color is a nominal feature since it typically does not make sense to say that red is larger than blue.
 
-
-There are several ways to encode categorical variables:
+There are several ways to encode categorical variables [9], [27]:
 
   1. Integer (Ordinal) Encoding: each unique label or category is mapped to an integer.
 
@@ -633,7 +1170,6 @@ There are several ways to encode categorical variables:
 
   4. Learned Embedding: a distributed representation of the categories is learned.
 
-  
 ### Integer (Ordinal) Encoding
 
 To make sure that the ML algorithm interprets the ordinal features correctly, we need to convert the categorical string values to integers.
@@ -709,7 +1245,7 @@ Binary values can then be used to indicate the particular color of a sample; for
 
 We can use the `OneHotEncoder` that is implemented in the `scikit-learn.preprocessing` module.
 
-An even more convenient way to create the dummy features via one-hot encoding is to use the `get_dummies` method in pandas. 
+An even more convenient way to create the dummy features via one-hot encoding is to use the `get_dummies` method in pandas.
 
 ### Dummy Variable Encoding
 
@@ -734,7 +1270,6 @@ Applied to a DataFrame, the `get_dummies` method will only convert string column
 A dummy variable representation is required for some models such as linear regression model (and other regression models that have a bias term) since a one hot encoding will cause the matrix of input data to become singular which means it cannot be inverted, so the linear regression coefficients cannot be calculated using linear algebra. Therefore, a dummy variable encoding must be used.
 
 However, we rarely encounter this problem in practice when evaluating machine learning algorithms other than linear regression.
-
 
 ### One-Hot Encoding Example
 
@@ -799,8 +1334,7 @@ By default the `OneHotEncoder` class will output data with a sparse representati
     print('Accuracy: %.2f' % (accuracy * 100))
 ```
 
-
-## Parsing dates
+## Parsing dates (Python)
 
 Method 1: Parse date columns using `read_csv`
 
@@ -832,12 +1366,6 @@ Method 2: Parse dates using `to_datetime`
         return df_data
 ```
 
-
-## Inconsistent Data Entry
-
-TODO: This will most likely vary
-
-
 ## Imbalanced Datasets
 
 Imbalanced data occurs when there is an uneven distribution of classes or labels [10].
@@ -846,19 +1374,13 @@ Models trained with imbalanced data usually have high precision and recall score
 
 In a credit card detection task, the number of non-fraudulent transactions will likely be much greater than the number of fraudulent credit card transactions.
 
-
 Need to upsample but categories with only 1 entry when oversampled will give a 100% accuracy and artificially inflate the total accuracy/precision.
 
 - We can use `UpSample` in Keras/PyTorch and `pd.resample()` in Pandas
 
+## Data Splitting
 
-----------
-
-
-
-## Train-Test Split
-
-Also see [Train-Test Split](./ml/train_teat_split.md)
+[Train-Test Split](./ml/train_test_split.md)
 
 A key step in ML is the choice of model.
 
@@ -866,26 +1388,21 @@ A key step in ML is the choice of model.
 
 A train-test split conists of the following:
 
-1. Split the dataset into training, validation and test set
+1. Split the dataset into training, validation, and test sets.
 
 2. We normalize the training set only (fit_transform).
 
 3. We normalize the validation and test sets using the normalization factors from train set (transform).
 
-
 > Instead of discarding the allocated test data after model training and evaluation, it is a good idea to retrain a classifier on the entire dataset for optimal performance.
 
-
 ----------
-
 
 ## Data Pipelines
 
 [Data Pipelines](./pipelines.md)
 
 There are multiple stages to running machine learning algorithms since it involves a sequence of tasks including pre-processing, feature extraction, model fitting, performance, and validation.
-
-
 
 ## Bootstrapping
 
@@ -897,23 +1414,19 @@ Each simulated bootstrap sample is used to calculate an estimate of the paramete
 
 The bootstrap sampling distribution then allows us to draw statistical inferences such as estimating the standard error of the parameter.
 
-
 ----------
-
-
 
 ## Code Examples and References
 
 ### Data Preparation
 
-[Data Science Primer](https://elitedatascience.com/primer)
-
 [Data Preparation for Machine Learning (Python)](https://machinelearningmastery.com/start-here/#dataprep)
 
 [Tour of Data Preparation Techniques for Machine Learning](https://machinelearningmastery.com/data-preparation-techniques-for-machine-learning/)
 
-[How to Perform Data Cleaning for Machine Learning with Python?](https://machinelearningmastery.com/basic-data-cleaning-for-machine-learning/)
+[How to Perform Data Cleaning for Machine Learning with Python](https://machinelearningmastery.com/basic-data-cleaning-for-machine-learning/)
 
+----------
 
 [Preprocessing of the data using Pandas and SciKit](https://mclguide.readthedocs.io/en/latest/sklearn/preprocessing.html)
 
@@ -923,9 +1436,9 @@ The bootstrap sampling distribution then allows us to draw statistical inference
 
 [The Lazy Data Scientist’s Guide to AI/ML Troubleshooting](https://medium.com/@ODSC/the-lazy-data-scientists-guide-to-ai-ml-troubleshooting-abaf20479317?source=linkShare-d5796c2c39d5-1638394993&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXz8nMy9bLTU3JLM3VS87P1Xcxy8xID4gMc8lJAgCSs4wwIwAAAA%3D%3D&_branch_match_id=994707642716437243)
 
+----------
 
 [How to Select a Data Splitting Method](https://towardsdatascience.com/how-to-select-a-data-splitting-method-4cf6bc6991da)
-
 
 ### Categorical Data
 
@@ -933,6 +1446,7 @@ The bootstrap sampling distribution then allows us to draw statistical inference
 
 [3 Ways to Encode Categorical Variables for Deep Learning](https://machinelearningmastery.com/how-to-prepare-categorical-data-for-deep-learning-in-python/)
 
+----------
 
 [4 Categorical Encoding Concepts to Know for Data Scientists](https://towardsdatascience.com/4-categorical-encoding-concepts-to-know-for-data-scientists-e144851c6383)
 
@@ -940,17 +1454,23 @@ The bootstrap sampling distribution then allows us to draw statistical inference
 
 [Stop One-Hot Encoding Your Categorical Variables](https://towardsdatascience.com/stop-one-hot-encoding-your-categorical-variables-bbb0fba89809)
 
-
 ### Scaling
+
+[Scaling vs Normalizing Data](https://towardsai.net/p/data-science/scaling-vs-normalizing-data-5c3514887a84)
+
+[The Mystery of Feature Scaling is Finally Solved](https://towardsdatascience.com/the-mystery-of-feature-scaling-is-finally-solved-29a7bb58efc2)
+
+[Scaling and Normalization: Standardizing Numerical Data](https://letsdatascience.com/scaling-and-normalization/)
+
+-----
 
 [How to Selectively Scale Numerical Input Variables for Machine Learning](https://machinelearningmastery.com/selectively-scale-numerical-input-variables-for-machine-learning/)
 
-[How to use Data Scaling Improve Deep Learning Model Stability and Performance](https://machinelearningmastery.com/how-to-improve-neural-network-stability-and-modeling-performance-with-data-scaling/)
+[How to use Data Scaling to Improve Deep Learning Model Stability and Performance](https://machinelearningmastery.com/how-to-improve-neural-network-stability-and-modeling-performance-with-data-scaling/)
 
 [How to Transform Target Variables for Regression in Python](https://machinelearningmastery.com/how-to-transform-target-variables-for-regression-with-scikit-learn/)
 
 [The Mystery of Feature Scaling is Finally Solved](https://towardsdatascience.com/the-mystery-of-feature-scaling-is-finally-solved-29a7bb58efc2?source=rss----7f60cf5620c9---4)
-
 
 ### Normalization
 
@@ -958,8 +1478,7 @@ The bootstrap sampling distribution then allows us to draw statistical inference
 
 [How to Use Power Transforms for Machine Learning](https://machinelearningmastery.com/power-transforms-with-scikit-learn/)
 
-
-### Train-Test Split
+### Data Splitting
 
 [Training-validation-test split and cross-validation done right](https://machinelearningmastery.com/training-validation-test-split-and-cross-validation-done-right/)
 
@@ -967,58 +1486,113 @@ The bootstrap sampling distribution then allows us to draw statistical inference
 
 [How to Configure k-Fold Cross-Validation](https://machinelearningmastery.com/how-to-configure-k-fold-cross-validation/)
 
-
 ### Data Sampling
 
 [Data Sampling Methods in Python](https://towardsdatascience.com/data-sampling-methods-in-python-a4400628ea1b)
 
 [Common Data Problems (and Solutions)](https://www.kdnuggets.com/2022/02/common-data-problems-solutions.html)
 
+## Tools
 
+### Kestra
+
+**Kestra** is an infinitely scalable orchestration and scheduling platform, creating, running, scheduling, and monitoring millions of complex pipelines.
+
+Kestra can manage ETL and ELT in the same solution, handling even the most complex workflows.
+
+ETL processes can be used to scrub sensitive data, ensuring compliance, loading the transformed data within a temporary table.
+
+With Kestra’s capacity for parallel flows, the rest of the data can be handled by ELT.
+
+Kestra is able to perform ELT workloads on its own or with integrations to many popular solutions.
+
+Kestra can handle loading data from BigQuery, CopyIn, Postgres, and more.
+
+A simple query can be performed to move the data, for example, SQL INSERT INTO SELECT statements.
+
+Dependencies between flows can be handled with Kestra’s trigger mechanisms to transform the data within the database (cloud or physical).
+
+ETL is just as easily managed by Kestra’s flexible workflows.
+
+FileTransform plugins are one possible method, but you can write a simple Python/Javascript/Groovy script to transform an extracted dataset data row per row.
+
+For example, you can remove columns with personal data, clean columns by removing dates, and more. Integrating a custom docker image into your workflow is another method that can be used to transform the data.
+
+Not only can you transform data row per row, you can potentially handle conversion of data between formats, for example, transforming AVRO data to JSON or CSV, or vice versa.
+
+This is not usually possible with most solutions. Most ELT tools often prevent ETL processes by design because they cannot handle heavy transform operations.
+
+Kestra is able to handle both because all transformations are considered to be row per row, and therefore do not use any memory to perform the function, only CPU.
 
 ## References
 
-W. McKinney, Python for Data Analysis, 2nd ed., Oreilly, ISBN: 978-1-491-95766-0, 2018.
+[1]: W. McKinney, Python for Data Analysis, 2nd ed., Oreilly, ISBN: 978-1-491-95766-0, 2018
 
-[1]: [Read datasets with URL](https://towardsdatascience.com/dont-download-read-datasets-with-url-in-python-8245a5eaa919)
+[2]: J. Brownlee, Data Preparation for Machine Learning, Machine Learning Mastery, v1.1, 2020.
 
-[2]: [13 ways to access data in Python](https://towardsdatascience.com/13-ways-to-access-data-in-python-bac5683e0063)
+[3]: [Data Cleaning and Preprocessing for data science beginners](https://datasciencehorizons.com/data-cleaning-preprocessing-data-science-beginners-ebook/)
 
+[4]:[Data Science Primer](https://elitedatascience.com/primer)
 
-[3]: [INFOGRAPHIC: Data prep and Labeling](https://www.cognilytica.com/2019/04/19/infographic-data-prep-and-labeling/)
+[5]: [How to Prepare Data For Machine Learning](https://machinelearningmastery.com/how-to-prepare-data-for-machine-learning/)
 
-[4]: [Kaggle Data Cleaning Challenge: Missing values](https://www.kaggle.com/rtatman/data-cleaning-challenge-handling-missing-values)
+[6]: [Tour of Data Preparation Techniques for Machine Learning](https://machinelearningmastery.com/data-preparation-techniques-for-machine-learning/)
 
+[7]: [How to Perform Data Cleaning for Machine Learning with Python](https://machinelearningmastery.com/basic-data-cleaning-for-machine-learning/)
 
-[6]: [A Better Way for Data Preprocessing: Pandas Pipe](https://towardsdatascience.com/a-better-way-for-data-preprocessing-pandas-pipe-a08336a012bc)
+[8]: [Preparing Data for ML Development in 6 Steps](https://intelliarts.com/blog/data-preparation-in-machine-learning/)
 
-[7]: [Introduction to Scikit-learn’s Pipelines](https://towardsdatascience.com/introduction-to-scikit-learns-pipelines-565cc549754a)
+[9]: [5 Essential Machine Learning Techniques to Master Your Data Preprocessing](https://pub.towardsai.net/5-machine-learning-data-preprocessing-techniques-e888f6d220e1)
 
+----------
 
-[8]: [Refactoring for Scalable Python Code With Pandas](https://betterprogramming.pub/refactoring-for-scalable-python-code-with-pandas-727d15f14852)
+[10]: [Read datasets with URL](https://towardsdatascience.com/dont-download-read-datasets-with-url-in-python-8245a5eaa919)
 
-[9]: [Clean a Messy Date Column with Mixed Formats in Pandas](https://towardsdatascience.com/clean-a-messy-date-column-with-mixed-formats-in-pandas-1a88808edbf7)
+[11]: [13 ways to access data in Python](https://towardsdatascience.com/13-ways-to-access-data-in-python-bac5683e0063)
 
+[12]: [INFOGRAPHIC: Data prep and Labeling](https://www.cognilytica.com/2019/04/19/infographic-data-prep-and-labeling/)
 
-[10]: [Major Problems of Machine Learning Datasets: Part 1](https://heartbeat.comet.ml/major-problems-of-machine-learning-datasets-part-1-5d5a06221c90)
+[13]: [Kaggle Data Cleaning Challenge: Missing values](https://www.kaggle.com/rtatman/data-cleaning-challenge-handling-missing-values)
 
-[11]: [Major Problems of Machine Learning Datasets: Part 2](https://heartbeat.comet.ml/major-problems-of-machine-learning-datasets-part-2-ba82e551fee2)
+[14]: [A Better Way for Data Preprocessing: Pandas Pipe](https://towardsdatascience.com/a-better-way-for-data-preprocessing-pandas-pipe-a08336a012bc)
 
-[12]: [Major Problems of Machine Learning Datasets: Part 3](https://heartbeat.comet.ml/major-problems-of-machine-learning-datasets-part-3-eae18ab40eda)
+[15]: [Introduction to Scikit-learn’s Pipelines](https://towardsdatascience.com/introduction-to-scikit-learns-pipelines-565cc549754a)
 
-[13]: [ELT vs ETL: Why not both?](https://medium.com/geekculture/elt-vs-etl-why-not-both-d0c4a0d30fc0)
+[16]: [Refactoring for Scalable Python Code With Pandas](https://betterprogramming.pub/refactoring-for-scalable-python-code-with-pandas-727d15f14852)
 
+[17]: [Clean a Messy Date Column with Mixed Formats in Pandas](https://towardsdatascience.com/clean-a-messy-date-column-with-mixed-formats-in-pandas-1a88808edbf7)
 
-[14]: [How to Detect Missing Values and Dealing with Them: Explained](https://medium.com/geekculture/ow-to-detect-missing-values-and-dealing-with-them-explained-13232230cb64)
+[18]: [Major Problems of Machine Learning Datasets: Part 1](https://heartbeat.comet.ml/major-problems-of-machine-learning-datasets-part-1-5d5a06221c90)
 
-[15]: [Deduplicate and clean up millions of location records](https://towardsdatascience.com/deduplicate-and-clean-up-millions-of-location-records-abcffb308ebf)
+[19]: [Major Problems of Machine Learning Datasets: Part 2](https://heartbeat.comet.ml/major-problems-of-machine-learning-datasets-part-2-ba82e551fee2)
 
-[16]: [How to Make Your Data Models Modular](https://towardsdatascience.com/how-to-make-your-data-models-modular-71b21cdf5208)
+[20]: [Major Problems of Machine Learning Datasets: Part 3](https://heartbeat.comet.ml/major-problems-of-machine-learning-datasets-part-3-eae18ab40eda)
 
-[17]: [Mastering the Art of Data Cleaning in Python](https://www.kdnuggets.com/mastering-the-art-of-data-cleaning-in-python)
+[21]: [ELT vs ETL: Why not both?](https://medium.com/geekculture/elt-vs-etl-why-not-both-d0c4a0d30fc0)
 
-[18]: [5 DIY Python Functions for Data Cleaning](https://machinelearningmastery.com/5-diy-python-functions-for-data-cleaning/)
+[22]: [How to Detect Missing Values and Dealing with Them: Explained](https://medium.com/geekculture/ow-to-detect-missing-values-and-dealing-with-them-explained-13232230cb64)
 
+[23]: [Deduplicate and clean up millions of location records](https://towardsdatascience.com/deduplicate-and-clean-up-millions-of-location-records-abcffb308ebf)
+
+[24]: [How to Make Your Data Models Modular](https://towardsdatascience.com/how-to-make-your-data-models-modular-71b21cdf5208)
+
+[25]: [Mastering the Art of Data Cleaning in Python](https://www.kdnuggets.com/mastering-the-art-of-data-cleaning-in-python)
+
+[26]: [5 DIY Python Functions for Data Cleaning](https://machinelearningmastery.com/5-diy-python-functions-for-data-cleaning/)
+
+[27]: [Seven Common Causes of Data Leakage in Machine Learning](https://towardsdatascience.com/seven-common-causes-of-data-leakage-in-machine-learning-75f8a6243ea5)
+
+[28]: [Concatenating CSV files using Pandas module](https://www.geeksforgeeks.org)
+
+[29]: [10 Basic Feature Engineering Techniques to Prepare Your Data](https://pub.towardsai.net/10-basic-feature-engineering-techniques-to-prepare-your-data-a43e99a0bf00)
+
+[30]: [10 Useful Python One-Liners for Data Cleaning](https://www.kdnuggets.com/10-useful-python-one-liners-for-data-cleaning)
+
+[31]: [10 Python One-Liners That Will Boost Your Data Science Workflow](https://machinelearningmastery.com/10-python-one-liners-that-will-boost-your-data-science-workflow/)
+
+[32]: [Data4ML Preparation Guidelines (Beyond The Basics)](https://pub.towardsai.net/data4ml-preparation-guidelines-beyond-the-basics-7613ff4282ff)
+
+----------
 
 [Build an Anomaly Detection Pipeline with Isolation Forest and Kedro](https://towardsdatascience.com/build-an-anomaly-detection-pipeline-with-isolation-forest-and-kedro-db5f4437bfab)
 
