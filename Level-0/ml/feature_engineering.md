@@ -106,15 +106,11 @@ _Feature engineering_ is manually generating new features from existing features
 
 
 
-## Feature Importance
-
-How to determine which features are the most important?
-
-### Dataset loading and preparation
+## Feature Importance Techniques
 
 The article [2] has some code samples of data loading and preparation.
 
-### Feature Importance Techniques
+How to determine which features are the most important:
 
 1. Obtain importances from correlation coefficients
 
@@ -142,15 +138,17 @@ The range of correlation values is -1 to 1 where 1 represents completely, positi
 Having two or more highly correlated features in our training data will lead to the problem of **multicollinearity** which affects model performance.
 
 
-
-----------
-
-
 ## Feature Engineering Techniques
+
+Feature engineering involves modifying existing features or creating new ones to improve modeling results [15].
+
+Here are some common feature engineering methods [15]: 
 
 1. Convert text data features into vectors
 
-Since ML is based on linear algebra, it is therefore necessary to convert textual data features into vectors. Techniques used to convert text data to features are Bag of Words(BOW), TF-IDF(Term Frequency-Inverse Document Frequency), Avg Word2Vec, and TF-IDF Word2Vec.
+Since ML is based on linear algebra, it is necessary to convert textual data features into vectors. 
+
+Techniques used to convert text data to features are Bag of Words(BOW), TF-IDF(Term Frequency-Inverse Document Frequency), Avg Word2Vec, and TF-IDF Word2Vec.
 
 2. Modify features
 
@@ -160,38 +158,45 @@ Some features need to be modified using feature binning, mathematical transform,
 
 New features can also be created using existing features such as the featurization of categorical data using one-hot encoding.
 
+There are more essential feature engineering techniques such as creating polynomial features, generating interaction terms, using log transformations for skewed data, and binning continuous variables [14].
+
 
 ----------
 
 
 ## Scaling vs Normalization
 
-The process of scaling and normalization are very similar. In both cases, you are transforming the values of numeric variables so that the transformed data points have specific helpful properties.
+Scaling and normalization are very similar, but they have different effects on the data [17]. 
 
-- In scaling, we are changing the _range_ of your data.
-- In normalization, we are changing the _shape_ of the distribution of your data.
+In both scaling and normalization, we transform the values of numeric variables so that the transformed data points have specific properties that can be exploited to create better features and models [17].
+
+- In scaling, we are changing the _range_ of the data.
+
+- In normalization, we are changing the _shape_ of the distribution of the data.
+
+Many machine learning algorithms perform better when numerical input variables are scaled to a standard range [18]. 
+
+This includes algorithms that use a weighted sum of the input such Z linear regression, and algorithms that use distance measures, like k-nearest neighbors. [18].
+
+The two most popular techniques for scaling numerical data are normalization and standardization [18]. 
 
 ### Scaling
 
-Some machine learning algorithms perform much better if all of the variables are scaled to the same range such as scaling all variables to values between 0 and 1 which is called normalization.
+In scaling, we transform the data so that it fits within a specific scale such as 0-100 or 0-1.
 
-This effects algorithms that use a weighted sum of the input (such as linear models and neural networks) as well as models that use distance measures (such as support vector machines and k-nearest neighbors).
+It is common to have data where the scale of values differs from variable to variable. 
 
-Therefore, it is a best practice to scale input data.
-
-In scaling, you are transforming your data so that it fits within a specific scale such as 0-100 or 0-1.
-
-It is common to have data where the scale of values differs from variable to variable. For example, one variable may be in feet and another in meters (pounds vs inches, kilograms vs meters).
+Example: one variable may be in feet and another in meters (pounds vs inches, kilograms vs meters).
 
 By scaling your variables, you can help compare different variables on equal footing.
 
-You especially want to scale data when you are using methods based on **measures of the distance between data points** such as support vector machines (SVM) or k-nearest neighbors (KNN). With these algorithms, a change of "1" in any numeric feature is given the same importance.
+It is important to scale data when we are using methods based on **measures of the distance between data points** such as support vector machines (SVM) or k-nearest neighbors (KNN). With these algorithms, a change of "1" in any numeric feature is given the same importance.
 
 ### Normalization
 
-Scaling just changes the range of your data.
+Normalization is a rescaling of the data from the original range so that all values are within the new range of 0 and 1.
 
-The point of normalization is to change your observations so that they can be described as a _normal distribution_.
+The goa of normalization is to change your observations so that they can be described as a _normal distribution_.
 
 **Normal distribution:** This is a specific statistical distribution (bell curve) where a roughly equal number of observations fall above and below the mean, the mean and the median are the same, and there are more observations closer to the mean. The normal distribution is also known as the _Gaussian distribution_.
 
@@ -209,9 +214,9 @@ Notice that the shape of our data has changed.
 
 ### Normalization vs Standardization
 
-_Feature scaling_ is a crucial step in a preprocessing pipeline that can easily be forgotten.
+_Feature scaling_ is a crucial step in a preprocessing pipeline that can easily be forgotten [B1]. 
 
-Decision trees and random forests are one of the few machine learning algorithms where we do not need to worry about feature scaling.
+Decision trees and random forests are one of the few machine learning algorithms where we do not need to worry about feature scaling [B1].
 
 The majority of machine learning and optimization algorithms behave much better if features are on the same scale.
 
@@ -223,20 +228,24 @@ The majority of machine learning and optimization algorithms behave much better 
 
   To arrive at a distribution with a 0 mean and 1 variance, all the data points are subtracted by their mean and the result divided by the distribution’s variance.
 
-> Note that we fit the `StandardScaler` on the training data then use those parameters to transform the test set or any new data point.
+NOTE: We fit the `StandardScaler` on the training data then use those parameters to transform the test set or any new data point.
 
-> Regularization is another reason to use feature scaling such as standardization. For regularization to work properly, all features must be on comparable scales.
+Regularization is another reason to use feature scaling such as standardization. For regularization to work properly, all features must be on comparable scales.
 
 
 ### Choose between Standardization vs Normalization
 
-Data-centric heuristics include the following:
+If the distribution of the quantity is normal, the data should be standardized. Otherwise, the data should be normalized [18].
+
+Data-centric heuristics include the following [20]:
 
 1. If your data has outliers, use standardization or robust scaling.
+
 2. If your data has a gaussian distribution, use standardization.
+
 3. If your data has a non-normal distribution, use normalization.
 
-Model-centric rules include these:
+Model-centric rules include the following [20]:
 
 1. If your modeling algorithm assumes (but does not require) a normal distribution of the residuals (such as regularized linear regression, regularized logistic regression, or linear discriminant analysis), use standardization.
 
@@ -244,13 +253,13 @@ Model-centric rules include these:
 
 In each use case, the rule proposes a mathematical fit with either the data or the learning model.
 
+-----
 
 Normalization does not affect the feature distribution, but it does exacerbate the effects of outliers due to lower standard deviations. Thus, outliers should be dealt with prior to normalization.
 
 Standardization can be more practical for many machine learning algorithms since many linear models such as logistic regression and SVM initialize the weights to 0 or small random values close to 0. Using standardization, we center the feature columns at mean 0 with standard deviation 1 so that the feature columns take the form of a normal distribution which makes it easier to learn the weights.
 
 In addition, standardization maintains useful information about outliers and makes the algorithm less sensitive to them whereas min-max only scales the data to a limited range of values.
-
 
 
 ## Non-Normal Distribution of Data
@@ -265,11 +274,11 @@ There are many transformation methods that are used to convert non-normal distri
 
 ### Log Transform
 
-Log Transform is the most used technique among data scientists to turn a skewed distribution into a normal or less-skewed distribution.
+Log Transformation is a technique to change the value of a feature from x to log(x) which can be used to overcome the problem of data distribution that is too skewed or has too many outliers [16]. 
 
-We take the log of the values in a column and utilize those values as the column in this transform.
+The log transform can be useful in models such as linear regression or logistic regression, but many algorithms themselves are not affected by a skewed dataset [16]. 
 
-Log transform is used to handle confusing data so that the data becomes more approximative to normal applications.
+Log Transform is the most common technique used to turn a skewed distribution into a normal or less-skewed distribution [11]. 
 
 
 ----------
@@ -282,7 +291,6 @@ Data Normalization is a typical practice in machine learning which consists of t
 Some feature values may differ from others multiple times. Therefore, the features with higher values will dominate the learning process [9].
 
 One way to overcome this quirk is to use tree-based models like Random Forest, but if your problem requires the use of regularized linear models or neural networks then you should scale the feature ranges (say 0 to 1).
-
 
 ### Using maximum absolute scaling
 
@@ -302,6 +310,10 @@ We can apply the maximum absolute scaling in Pandas using the `.max()` and `.abs
 ### Using min-max scaling
 
 The _min-max_ scaling (normalization) rescales the feature to the range of [0, 1] by subtracting the minimum value of the feature then dividing by the range.
+
+```
+  y = (x – min) / (max – min)
+```
 
 We can use `MinMaxScaler` class from sklearn.
 
@@ -331,7 +343,15 @@ We can also use `RobustScaler` when we want to reduce the effects of outliers co
 
 ### Using z-score scaling
 
-The _z-score_ scaling (standardization) transforms the data into a **normal (Gaussian) distribution** with a mean of 0 and a typical deviation of 1. Each standardized value is computed by subtracting the mean of the corresponding feature then dividing by the quality deviation.
+The _z-score_ scaling (standardization) transforms the data into a **normal (Gaussian) distribution** with a mean of 0 and a typical deviation of 1. 
+
+Each standardized value is computed by subtracting the mean of the corresponding feature then dividing by the quality deviation.
+
+```
+  y = (x – mean) / standard_deviation
+```
+
+Standardization assumes that your observations fit a Gaussian distribution (bell curve) with a well-behaved mean and standard deviation. You can still standardize your data if this expectation is not met, but you may not get reliable results.
 
 We can apply standardization using `StandardScaler` class from sklearn.
 
@@ -528,6 +548,24 @@ By default, the `PowerTransformer` also performs a standardization of each varia
 ```
 
 
+## Feature Engineering Examples
+
+Feature Engineering is the process of modifying raw data into more informative features [16]. 
+
+The article [16] discusses ten basic feature engineering techniques with code examples.
+
+1. Imputation
+2. Binning
+3. Log Transform
+4. Scaling
+5. One-Hot Encoding
+6. Target Encoding
+7. PCA
+8. Feature Aggregation
+9. TF-IDF
+10. Text Embeddings
+
+
 ## Feature Selection in Scikit-learn
 
 Simple ways to filter features for simpler and faster model [5].
@@ -635,9 +673,14 @@ It is common to:
 The order that the transform operations are applied is important.
 
 
+## Books
+
+[B1]: S. Raschka and V. Mirjalili, Python Machine Learning, 3rd ed., Birmingham, U.K.: Packt Pub. Ltd., 2019.
+
+
 ## References
 
-[1]: [What is Feature Engineering?](https://towardsdatascience.com/what-is-feature-engineering-importance-tools-and-techniques-for-machine-learning-2080b0269f10?source=rss----7f60cf5620c9---4)
+[1]: [What is Feature Engineering?](https://towardsdatascience.com/what-is-feature-engineering-importance-tools-and-techniques-for-machine-learning-2080b0269f10)
 
 [2]: [3 Essential Ways to Calculate Feature Importance in Python](https://towardsdatascience.com/3-essential-ways-to-calculate-feature-importance-in-python-2f9149592155)
 
@@ -664,6 +707,20 @@ The order that the transform operations are applied is important.
 [12]: [How to Use Power Transforms for Machine Learning](https://machinelearningmastery.com/power-transforms-with-scikit-learn/)
 
 [13]: [3 Fundamental Processes in Feature Engineering](https://towardsdatascience.com/3-fundamental-processes-in-feature-engineering-d6b84983754)
+
+[14]: [5 Essential Machine Learning Techniques to Master Your Data Preprocessing](https://pub.towardsai.net/5-machine-learning-data-preprocessing-techniques-e888f6d220e1)
+
+[15]: [The Lazy Data Scientist’s Guide to AI/ML Troubleshooting](https://opendatascience.com/the-lazy-data-scientists-guide-to-ai-ml-troubleshooting/)
+
+[16]: [10 Basic Feature Engineering Techniques to Prepare Your Data](https://pub.towardsai.net/10-basic-feature-engineering-techniques-to-prepare-your-data-a43e99a0bf00)
+
+[17]: [Scaling vs Normalizing Data](https://towardsai.net/p/data-science/scaling-vs-normalizing-data-5c3514887a84)
+
+[18]: [How to Use StandardScaler and MinMaxScaler Transforms in Python](https://machinelearningmastery.com/standardscaler-and-minmaxscaler-transforms-in-python/)
+
+[19]: [Scaling and Normalization: Standardizing Numerical Data](https://letsdatascience.com/scaling-and-normalization/)
+
+[20]: [The Mystery of Feature Scaling is Finally Solved](https://towardsdatascience.com/the-mystery-of-feature-scaling-is-finally-solved-29a7bb58efc2)
 
 
 [Best Practice to Calculate and Interpret Model Feature Importance](https://towardsdatascience.com/best-practice-to-calculate-and-interpret-model-feature-importance-14f0e11ee660)
