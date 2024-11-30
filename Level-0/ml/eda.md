@@ -70,7 +70,6 @@ Places with unexpected minimum values (0 or negative) or absolutely unacceptible
 These are obvious indications that there are issues in the data and need further investigation.
 
 
-
 ## Exploratory Data Analysis
 
 Exploratory Data Analysis (EDA) is one of the first steps of the data science process which involves learning as much as possible about the data without spending too much time.
@@ -86,8 +85,7 @@ The basic steps are the following (see [Data Preparation](./data_prep.md)):
 
 We can get an instinctive as well as a high-level practical understanding of the data including a general idea of the structure of the data set, some cleaning ideas, the target variable and possible modeling techniques.
 
-We can the summary statistics and create histograms for the numeric variables of the dataset as shown below.
-
+We can display the summary statistics and create histograms for the numeric variables of the dataset.
 
 ```py
     # check the shape of the dataframe
@@ -221,6 +219,110 @@ Pair Plots is to a correlation matrix, but gives a scatterplot for each of the X
 ```
 
 
+## Guide to EDA and Data Preparation
+
+Here is a guide to the fundamental pre-processing techniques and how to address some common problems [15]. 
+
+```py
+# Load the dataset
+df = pd.read_csv("file.csv")
+
+# Check the data type of the dataset
+type(df)
+
+# Check the shape of the dataset
+df.shape
+
+# Display column names
+df.columns
+
+# Display the first few rows of dataset
+df.head()
+
+# Display random sample of 10 rows from dataset
+df.sample(10)
+
+# Display dataset information
+df.info()
+
+# Describe non-numeric data
+df.describe(include=object)
+
+# Describing numeric data
+df.describe()
+
+# Extract numeric columns using list comprehension
+selected_columns = [list(df.columns.values)[i] for i in [0, 1, 4]]
+
+# Age Distribution
+plt.figure(figsize=(8, 6))
+sns.histplot(df['Age'], kde=True)
+plt.title('Age Distribution')
+plt.xlabel('Age')
+plt.ylabel('Count')
+plt.show()
+
+# Salary Distribution
+plt.figure(figsize=(8, 6))
+sns.histplot(df['Salary'], kde=True)
+plt.title('Salary Distribution')
+plt.xlabel('Salary')
+plt.ylabel('Count')
+plt.show()
+
+# Gender Distribution (categorical)
+plt.figure(figsize=(8, 6))
+sns.countplot(data=df, x='Gender')
+plt.title('Gender Distribution')
+plt.xlabel('Gender')
+plt.ylabel('Count')
+plt.show()
+
+# Compute correlation matrix
+correlation_matrix = df[['Age', 'Salary', 'Exam_Score']].corr()
+
+# Visualize the correlation matrix with heatmap
+plt.figure(figsize=(8, 8))
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', vmin=-1, vmax=1)
+plt.title('Correlation between Quantitative Variables')
+plt.show()
+
+# Compute contingency table
+contingency_table = pd.crosstab(df['Gender'], df['Education_Level'])
+
+# Duplicate Values
+duplicates = df.duplicated()
+
+# Display the duplicate rows
+df[duplicates]
+
+# Check for negative values in Salary
+df[df['Salary'] < 0]
+
+# Replace negative values with NaN (missing values)
+df['Salary'] = df['Salary'].apply(lambda x: x if x >= 0 else None)
+
+
+# Using isna() method to check for missing values in each column
+missing_values = df.isna().sum()
+print(missing_values)
+
+# Calculate the percentage of missing values in each column
+missing_percentage = (df.isna().mean() * 100).round(2)
+
+# Display the percentage of missing values
+print(missing_percentage)
+```
+
+- For quantitative variables, we use correlation or Pearson correlation.
+
+- For qualitative variables, we study association.
+
+We can use methods such as ANOVA (Analysis of Variance) To study the relationship between a quantitative and a qualitative variable. 
+
+Association Between Qualitative Variables — Chi-Squared Test, Cramer’s V Test
+
+
 
 ## Essential Code Blocks
 
@@ -233,8 +335,11 @@ We may observe that our dataset has a combination of categorical (object) and nu
 What to look for:
 
 - Can you understand the column names? Do they make sense? (Check the variable definitions if needed)
+
 - Do the values in the columns make sense? Numeric features that should be categorical and vice versa.
+
 - Are there significant missing values (NaN)?
+
 - What types of classes do the categorical features have?
 
 ### Distribution
@@ -294,7 +399,9 @@ What to look for:
 What to look for:
 
 - Possible outliers that cannot be explained or might be measurement errors.
+
 - Numeric features that should be categorical such as Gender represented by 1 and 0.
+
 - Boundaries that do not make sense such as percentage values > 100.
 
 ### Plot of categorical features
@@ -306,7 +413,7 @@ What to look for:
     plt.show()
 ```
 
-What to look out for:
+What to look for:
 
 - Sparse classes which have the potential to affect a model’s performance.
 - Mistakes in labeling of the classes, for example 2 exact classes with minor spelling differences.
@@ -477,6 +584,7 @@ Spot check some methods that are robust to outliers to see if there is a signifi
 
 [14]: [Detecting Outliers with Simple and Advanced Techniques](https://towardsdatascience.com/detecting-outliers-with-simple-and-advanced-techniques-cb3b2db60d03)
 
+[15]: [Practical Guide to Data Analysis and Preprocessing](https://towardsdatascience.com/practical-guide-to-data-analysis-and-preprocessing-080815548173)
 
 [Data Analytics: The Four Approaches to Analyzing Data and How To Use Them Effectively](https://www.kdnuggets.com/2023/04/data-analytics-four-approaches-analyzing-data-effectively.html)
 
