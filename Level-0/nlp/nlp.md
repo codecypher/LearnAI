@@ -12,31 +12,6 @@ A **document** is a list of sentences and a **corpus** is a list of documents.
 
 Figure: Venn diagram for NLP [6]. 
 
-
-### Common Tasks
-
-Some NLP use cases and tasks are [3]:
-
-- **Sentiment Analysis:** to understand the sentiment (negative, positive, neutral) a certain document/text holds.
-
-Example: social media posts about Climate Change.
-
-
-- **Topic Modeling:** to draw clusters or organize the data based on the topics it contains (the goal is to learn the topics).
-
-Example: an insurance company wants to identify fraudulent claims by classifying causes into main labels and then further analyze the ones containing suspicious content/topics.
-
-
-- **Text Generation:** to create new data (textual mainly) based on previous examples from the same domain.
-
-Example: chatbots, quotes, email replies, etc.
-
-
-- **Machine Translation:** to automatically convert from one language to another.
-
-Example: English to German.
-
-
 ### Python Libraries
 
 Natural language toolkit (NLTK) is the defacto standard for building NLP  projects.
@@ -57,15 +32,13 @@ Unlike NLTK and SpaCy, GenSim specifically tackles the problem of information re
 
 Developed with an emphasis on memory management, GenSim contains many models for document similarity, including Latent Semantic Indexing, Word2Vec, and FastText.
 
-
 ### Applications
 
 Now that we have discussed pre-processing methods and Python libraries, we can put it all together with a few examples. 
 
-For each example, we cover a couple of NLP algorithms, pick one based on our rapid development goals, and create a simple implementation using one of the libraries [6]:
+For each example, we discuss a couple of NLP algorithms, pick one based on our rapid development goals, and create a simple implementation using one of the libraries [6]:
 
 - Pre-Processing
-- Document Clustering
 - Sentiment Analysis
 
 - Document Clustering
@@ -84,13 +57,77 @@ The general idea with document clustering is to assign each document a vector re
 
 
 
-## NLP Cheatsheet
+## NLP Cheatsheets
 
-This article is a checklist for the exploration needed to develop an NLP model that performs well. 
+The article [14] is a checklist for the exploration needed to develop an NLP model that performs well.
 
-[NLP Cheatsheet](https://medium.com/javarevisited/nlp-cheatsheet-2b19ebcc5d2e)
+The Natural Language Toolkit (NLTK) is a suite of open-source Python modules, datasets, and tutorials supporting research and development in Natural Language Processing (NLP).
 
-[NLTK cheatsheet](https://medium.com/nlplanet/two-minutes-nlp-nltk-cheatsheet-d09c57267a0b)
+NLTK provides easy-to-use interfaces to over 50 corpora and lexical resources such as WordNet along with a suite of text processing libraries for classification, tokenization, stemming, tagging, parsing, and semantic reasoning [15].
+
+The article [15] provides a tutorial on using NLTk for common NLP tasks such as Tokenization, Lemmatization, POS tagging, synonyms, and antonyms.
+
+
+## Common Tasks
+
+Some NLP use cases and tasks are [3]:
+
+- **Sentiment Analysis:** understand the sentiment (negative, positive, neutral) a certain document/text holds.
+
+Example: social media posts about Climate Change.
+
+- **Topic Modeling:** draw clusters or organize the data based on the topics it contains (the goal is to learn the topics).
+
+Example: an insurance company wants to identify fraudulent claims by classifying causes into main labels and then further analyze the ones containing suspicious content/topics.
+
+- **Text Generation:** create new data (textual mainly) based on previous examples from the same domain.
+
+Example: chatbots, quotes, email replies, etc.
+
+- **Machine Translation:** automatically convert from one language to another.
+
+Example: English to German.
+
+
+## NLP Workflow
+
+In Data Science (and NLP) there is a workflow or pipeline that can be described as follows [3]:
+
+1. **Define the question** that you want to answer out of your data.
+
+Usually this question is given to you as the problem but sometimes it is your job to articulate it. 
+
+2. Get and collect the data. 
+
+If your problem is in the domain of movie reviews your data would be viewers posted reviews along with the ratings. ￼
+
+It is critical that your data is in the same domain as your question/problem and comprehensive, most of times the data is provided or at least the resources that you should be looking at to obtain it.
+
+3. Clean the data. ￼
+
+Almost 90% of the time the data you have is raw, unclean, contains missing fields/outliers/misspellings and so on. 
+
+4. Perform Exploratory Analysis of the Data (EDA). 
+
+EDA is one of the most important steps in any Data Science or NLP task. 
+
+After you have brought your data into a clean ready-to-use state, you want to explore it such that you understand more of its nature and content. 
+
+Your analysis should keep the problem’s question in mind and your job is to try to connect the dots as this step might yield in finding useful correlations/outliers and trends in your data. 
+
+5. Run the NLP technique which best suits the problem. 
+
+This means deciding whether your problem requires sentiment analysis, topic modeling, or other advanced technique that deals with textual data. 
+
+With some practice and experience, we should be able to quickly identify the best NLP approach to solve a certain problem. 
+
+Keep in mind that we can also perform multiple techniques on a single problem so we can draw conclusions and obtain insights that will answer the main question in step 1. ￼
+
+Deciding on an approach or technique usually means choosing the suitable model or library/package to perform the task. 
+
+6. Obtain knowledge and insights. 
+
+In this step, we need to make use of ourp communication and representation skills as a data scientist. 
 
 
 
@@ -141,16 +178,27 @@ Natural Language Generation (NLG)
 
 There are a total of five execution steps when building a Natural Language Processor [2]:
 
-1. **Lexical Analysis:** Processing of Natural Languages by the NLP algorithm starts with identifying and analyzing the input words’ structure. This part is called Lexical Analysis and Lexicon stands for an anthology of the various words and phrases used in a language. It is dividing a large chunk of words into structural paragraphs and sentences.
+1. **Lexical Analysis:** Processing of Natural Languages by the NLP algorithm starts with identifying and analyzing the structure of the input words. 
 
-2. **Syntactic Analysis/Parsing:** Once the sentence structure is formed, syntactic analysis works on checking the grammar of the formed sentences and phrases. It also forms a relationship among words and eliminates logically incorrect sentences. For instance, the English Language analyzer rejects the sentence, ‘An umbrella opens a man’.
+Lexicon stands for an anthology of the various words and phrases used in a language. It is dividing a large chunk of words into structural paragraphs and sentences.
 
-3. **Semantic Analysis:** In the semantic analysis process, the input text is now checked for meaning such as it draws the exact dictionary of all the words present in the sentence and subsequently checks every word and phrase for meaningfulness. This is done by understanding the task at hand and correlating it with the semantic analyzer. For example, a phrase like ‘hot ice’ is rejected.
+2. **Syntactic Analysis/Parsing:** Once the sentence structure is formed, syntactic analysis works on checking the grammar of the formed sentences and phrases. 
 
-4. **Discourse Integration:** The discourse integration step forms the story of the sentence. Every sentence should have a relationship with its preceding and succeeding sentences. These relationships are checked by Discourse Integration.
+This step also forms a relationship among words and eliminates logically incorrect sentences. 
 
-5. **Pragmatic Analysis:** Once all grammatical and syntactic checks are complete, the sentences are now checked for their relevance in the real world. During Pragmatic Analysis, every sentence is revisited and evaluated once again, this time checking them for their applicability in the real world using general knowledge.
+For example, the English Language analyzer rejects the sentence ‘An umbrella opens a man’.
 
+3. **Semantic Analysis:** The input text is checked for meaning such as it draws the exact dictionary of all the words present in the sentence and subsequently checks every word and phrase for meaningfulness. 
+
+This is done by understanding the task at hand and correlating it with the semantic analyzer. For example, a phrase like ‘hot ice’ is rejected.
+
+4. **Discourse Integration:** The discourse integration step forms the story of the sentence. 
+
+Every sentence should have a relationship with its preceding and succeeding sentences. These relationships are checked by Discourse Integration.
+
+5. **Pragmatic Analysis:** Once all grammatical and syntactic checks are complete, the sentences are now checked for their relevance in the real world. 
+
+During Pragmatic Analysis, each sentence is revisited and evaluated again to check for its applicability to the real world using general knowledge.
 
 
 ## Tokenization, Stemming, and Lemmatization
@@ -285,10 +333,9 @@ Here are some challenges that are often encountered with NLP [2]:
 
 
 
-# Conmon NLP Techniques
+# Common NLP Techniques
 
-The article [4] discusses six fundamental techniques of NLP:
-
+The article [4] discusses six fundamental techniques of NLP.
 
 Here are some common NLP projects:
 
@@ -298,8 +345,7 @@ Here are some common NLP projects:
 
 - NLP project to create an embedding from one of the texts in the Gutenberg corpus and compute some statistics related to the embedding using the Gensim library.
 
-
-## Lemmatization and Stemming
+### Lemmatization and Stemming
 
 Stemming and lemmatization are probably the first two steps to build an NLP project — we often use one of the two. 
 
@@ -318,7 +364,7 @@ In these types of algorithms, some linguistic and grammar knowledge needs to be 
 For lemmatization algorithms to perform accurately, they need to extract the correct lemma of each word. Thus, they often require a _dictionary_ of the language to be able to categorize each word correctly.
 
 
-## Keyword extraction
+### Keyword extraction
 
 Keyword extraction (keyword detection or keyword analysis) is an NLP technique used for text analysis. 
 
@@ -327,7 +373,7 @@ The main purpose of keyword extraction (KE) is to automatically extract the most
 KE is often used as a first step to summarize the main ideas of a text and to deliver the key ideas presented in the text.
 
 
-## Named Entity Recognition (NER)
+### Named Entity Recognition (NER)
 
 Similar to stemming and lemmatization, named entity recognition (NER) is a technique used to extract entities from a body of text to identify basic concepts within the text such as names, places, dates, etc.
 
@@ -339,14 +385,14 @@ The NER algorithm mainly has two steps.
 The performance of NER depends heavily on the training data used to develop the model. The more relevant the training data to the actual data, the more accurate the results will be.
 
 
-## Topic Modeling
+### Topic Modeling
 
 We can use keyword extraction techniques to narrow down a large body of text to a handful of main keywords and ideas. Then, we can extract the main topic of the text.
 
 Another, more advanced technique to identify the topic of text is topic modeling which is built upon unsupervised machine learning that does not require labeled data for training.
 
 
-## Sentiment Analysis
+### Sentiment Analysis
 
 The most famous and most commonly used NLP technique is sentiment analysis (SA). 
 
@@ -359,7 +405,7 @@ The SA algorithm can be more complex and advanced; however, the results will be 
 If the result is a negative number, the sentiment behind the text has a negative tone to it, and if it is positive then some positivity is present in the text.
 
 
-## Summarization
+### Summarization
 
 One of the useful and promising applications of NLP is text summarization which is reducing a large body of text into a smaller chunk containing the main message of the text. 
 
@@ -370,9 +416,24 @@ Text summarization is an advanced technique that uses other techniques that we j
 Summarization is accomplished in two steps: extract and abstract.
 
 
+### Sentiment Analysis
+
+Perhaps the most common NLP technique is sentiment analysis. 
+
+This core function of Sentiment Analysis is to extract the sentiment behind a body of text by analyzing the containing words.
+
+The most simple results lay on a scale with 3 areas, negative, positive, and neutral; the algorithm can be more complex and advanced in which the results will be numeric. 
+
+If the result is a negative number, the sentiment behind the text has a negative tone. 
+
+If the result is positive, the sentiment behind the text has a poaitive tone.
+
+Sentiment analysis is one of the broad applications of machine learning techniques which can be implemented using either supervised or unsupervised techniques. 
+
+Perhaps the most common supervised technique used to perform sentiment analysis is the Naive Bayes algorithm, but other supervised ML algorithms that can be used are Gradient Boosting and Random Forest.
+
 
 ----------
-
 
 
 ## Guide to NLP
@@ -527,69 +588,7 @@ Pattern recognition is also typically controlled by an algorithm which means tha
 - **Referential Ambiguity:** References made using pronouns constitute referential ambiguity. For instance, two girls are running on the track. Suddenly, she says, ‘I am exhausted’. It is not possible for the program to interpret, who out of the two girls is tired.
 
 
-## Common Tasks
-
-Some NLP use cases and tasks are:
-
-- **Sentiment Analysis:** to understand the sentiment (negative, positive, neutral) a certain document/text holds.
-
-Example: social media posts about Climate Change.
-
-- **Topic Modeling:** to draw clusters or organize the data based on the topics (goal is to learn these topics) it contains.
-
-Example: an insurance company wants to identify fraudulent claims by classifying causes into main labels and then further analyze the ones containing suspicious content/topics.
-
-- **Text Generation:** to create new data (textual mainly) based on previous examples from the same domain. 
-
-Example: chatbots, quotes, weather reports, email replies, …, etc.
-
-- **Machine Translation:** to automatically convert from one language to another.
-
-Example: English to German.
-
-
-
-## NLP Workflow
-
-In Data Science (and NLP) there is a workflow or pipeline that can be described as follows [3]:
-
-1. **Define the question** that you want to answer out of your data.
-
-Usually this question is given to you as the problem but sometimes it is your job to articulate it. 
-
-2. Get and collect the data. 
-
-If your problem is in the domain of movie reviews your data would be viewers posted reviews along with the ratings. ￼
-
-It is critical that your data is in the same domain as your question/problem and comprehensive, most of times the data is provided or at least the resources that you should be looking at to obtain it.
-
-3. Clean the data. ￼
-
-Almost 90% of the time the data you have is raw, unclean, contains missing fields/outliers/misspellings and so on. 
-
-4. Perform Exploratory Analysis of the Data (EDA). 
-
-EDA is one of the most important steps in any Data Science or NLP task. 
-
-After you have brought your data into a clean ready-to-use state, you want to explore it such that you understand more of its nature and content. 
-
-Your analysis should keep the problem’s question in mind and your job is to try to connect the dots as this step might yield in finding useful correlations/outliers and trends in your data. 
-
-5. Run the NLP technique which best suits the problem. 
-
-This means deciding whether your problem requires sentiment analysis or topic modelling or any other advanced technique which deals with textual data. 
-
-With some practice and experience you would be able to quickly identify the best NLP approach to solve a certain problem. Keep in mind that you can also perform multiple techniques on a single problem in order to be able to draw conclusions and to obtain insights that will answer the main question in step 1. ￼
-
-Deciding on an approach/technique usually means choosing the suitable model or library/package to perform the task. 
-
-6. Obtain knowledge and insights. 
-
-In this step, you need to make use of your communication and representation skills as a data scientist. 
-
-
 ----------
-
 
 
 ## Tutorials
@@ -647,6 +646,7 @@ Retriever achieves this by scanning through all documents in the database, ident
 
 Here is a figure that summarizes the Retriever-Reader pipeline [4].
 
+
 ----------
 
 
@@ -657,7 +657,7 @@ Here is a figure that summarizes the Retriever-Reader pipeline [4].
 
 ## NLP Libraries
 
-Here are some useful NLP libraries [12]: [13]:
+Here are some useful NLP libraries discussed in [12] and [13]:
 
 - NLTK
 - GenSim
@@ -681,7 +681,8 @@ The article [7] covers 5 useful Python recipes for your next NLP projects:
 - Create an effective Word Cloud
 - Semantic similarity analysis
 
-Semantic similarity analysis
+
+## Semantic similarity analysis
 
 _semantic similarity_ measures the likeness of documents/sentences/phrases based on their meaning whereas 
 
@@ -689,7 +690,7 @@ _Lexical similarity_ is a measure of the degree to which the word sets or vocabu
 
 _Semantic similarity_ is a metric defined over a set of documents or terms where the idea of distance between items is based on the likeness of their meaning or semantic content. 
 
-The most effective methodology is to use a powerful transformer to encode sentences, get their embeddings and then use cosine similarity to calculate their distance/similarity score.
+The most effective methodology is to use a powerful transformer to encode sentences, get their embeddings, and then use cosine similarity to calculate their distance/similarity score.
 
 Calculating the cosine distance between two embeddings gives us the similarity score which is widely used in information retrieval and text summarization such as extract top N most similar sentences from multiple documents. 
 
@@ -705,7 +706,7 @@ The similarity scores can also be used to reduce the dimensionality and to find 
 
 [3]: [Natural Language Processing (NLP) in Python — Simplified](https://medium.com/@bedourabed/natural-language-processing-nlp-in-python-simplified-b96b89c8be93)
 
-[4]: [NLP Techniques Every Data Scientist Should Know](https://towardsdatascience.com/6-nlp-techniques-every-data-scientist-should-know-7cdea012e5c3)
+[4]: [6 NLP Techniques Every Data Scientist Should Know](https://towardsdatascience.com/6-nlp-techniques-every-data-scientist-should-know-7cdea012e5c3)
 
 [5]: [Guide to Natural Language Processing (NLP)](https://towardsdatascience.com/your-guide-to-natural-language-processing-nlp-48ea2511f6e1)
 
@@ -729,13 +730,16 @@ The similarity scores can also be used to reduce the dimensionality and to find 
 [13]: [4 More Little-Known NLP Libraries That Are Hidden Gems](https://towardsdatascience.com/4-more-little-known-nlp-libraries-that-are-hidden-gems-e77a71d1bc57)
 
 
-[Everything You Need to Know to Get Started with NLP](https://towardsdatascience.com/nlp-survey-bde8a27e8ba)
+[14]: [NLP Cheatsheet](https://medium.com/javarevisited/nlp-cheatsheet-2b19ebcc5d2e)
 
-[NLP Cheatsheet](https://medium.com/javarevisited/nlp-cheatsheet-2b19ebcc5d2e)
+[15]: [Two minutes NLP — NLTK cheatsheet](https://medium.com/nlplanet/two-minutes-nlp-nltk-cheatsheet-d09c57267a0b)
+
+
+[Everything You Need to Know to Get Started with NLP](https://towardsdatascience.com/nlp-survey-bde8a27e8ba)
 
 [Two minutes NLP — Python Regex Cheatsheet](https://medium.com/nlplanet/two-minutes-nlp-python-regular-expressions-cheatsheet-d880e95bb468)
 
-[Two minutes NLP — NLTK cheatsheet](https://medium.com/nlplanet/two-minutes-nlp-nltk-cheatsheet-d09c57267a0b)
+
 
 [How to tokenize text and pad sequences in Tensorflow](https://towardsdatascience.com/how-to-tokenize-and-pad-sequences-in-tensorflow-fcbbf2e8b3b5)
 

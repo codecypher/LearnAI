@@ -11,14 +11,26 @@
 - Indent Rainbow
 - markdownlint
 - Markdown Preview Enhanced
-
 - PolaCode
 - Prettier
-
 - Todo Tree
 - Trailing Spaces
-
 - YAML
+
+- Icons
+- Rainbow CSV
+
+- Code Runner
+- Console Ninja
+- Regex Snippets
+- Postman VS Code Extension
+
+
+## Code Snapsbots
+
+- CodeSnap
+- Pola Code
+
 
 ## Python
 
@@ -40,24 +52,21 @@
 
 ## Development
 
-- CodeLLDB
-- Gitlens
-- JavaScript Booster
-- Markdownlint
-- Partial Diff
-- Regex previewer
-- Remote development
-
 - Better Align
 - Better Comments
 - Docker
-
-- CodeSnap
-- Folder Templates
+- Gitlens
 - Image Preview
+- Markdownlint
+- Regex previewer
+- Remote development
 
 - Remove Comments
 - Remove empty lines
+
+- CodeLLDB
+- Partial Diff
+- Folder Templates
 
 - Live server
 - Notion
@@ -65,6 +74,9 @@
 
 
 ## Themes
+
+- Atom One Dark Theme
+- JetBrains mono font
 
 - One Dark Pro
 - Material Icon Theme
@@ -81,6 +93,7 @@
 - ES7+ React/Redux/React-Native snippets
 - ESLint
 - Import Cost
+- JavaScript Booster
 - Turbo Console Log
 - VS Code React Refactor
 
@@ -121,4 +134,9 @@ Advanced
 - fluttercandies/flutter_photo_manager
 - letsar/flutter_staggered_grid_view
 - adar2378/pin_code_fields
+
+
+## References
+
+[1]: [5 Amazing Plugins for an Eye-Catching Visual Studio Code UI](https://towardsdatascience.com/5-amazing-plugins-for-an-eye-catching-visual-studio-code-ui-ebce393a5e8c)
 

@@ -61,7 +61,17 @@ The rule of thumb is that a computer is a sum of its parts or weakest link. In a
 
 Thus, there is no silver bullet hardware or software technology that will magically improve computer performance.
 
-Hardware upgrades (vertical scaling) usually provide only marginal improvement in performance. However, we can achieve as much as 30-100x performance improvement using software libraries and code refactoring to improve parallelization (horizontal scaling) [2] [3].
+### Scalability 
+
+_Scalability_ is the property of a system to handle a growing amount of work [5].
+
+- Horizontal scaling adds more machines to increase capacity without disruptions for applications that need load distribution. 
+
+- Vertical scaling upgrades the hardware of existing machines when more processing power is required but cannot be easily distributed.
+
+Hardware upgrades (vertical scaling) usually provide only marginal improvement in performance. 
+
+We can achieve as much as 30-100x performance improvement using software libraries and code refactoring to improve parallelization (horizontal scaling) [2] [3].
 
 > There is no silver bullet to improve performance.
 
@@ -96,6 +106,8 @@ Here are some tips to improve Python loop/iteration performance [2].
 
 ### Itertools
 
+For more complex looping patterns, the Python `itertools` library provides highly efficient looping constructs [6]. 
+
 ```py
     import itertools as its
 
@@ -107,6 +119,21 @@ Here are some tips to improve Python loop/iteration performance [2].
 
         for i in its.islice(result, 100):
             print(i)
+```
+
+`itertools` provides efficient tools for handling complex looping scenarios which makes code faster and more readable [6]. 
+
+```py
+
+import itertools
+
+temperatures = [15, 22, 30]
+precipitation = [0, 5, 10]
+
+# Generate all combinations of temperatures and precipitation
+combinations = list(itertools.product(temperatures, precipitation))
+
+print("Combinations of temperatures and precipitation:", combinations)
 ```
 
 
@@ -158,6 +185,12 @@ The built-in Python `filter()` method can be used to eliminate portions of an it
 ## Optimize Python Code
 
 Tips to improve performance of Python code [3].
+
+### Leverage NumPy for numerical operations
+
+When handling large datasets with numerical data, the built-in Python loops and arithmetic operations can become slow [6]. 
+
+NumPy provides optimized arrays and functions for numerical operations and high-performance data processing.
 
 ### Use built-in functions rather than coding them from scratch
 
@@ -264,9 +297,11 @@ If for some reason you really need a loop index, you should use the enumerate fu
 New versions of Python are released quite frequently (at the time of writing Python 3.9 has been updated 8 times in the last year). It is worth keeping up to date as new versions often have bug fixes and security fixes, but they sometimes have performance improvements too.
 
 
+Here are three techniques and recommended approaches for creating memory-efficient Python classes: slots, lazy initialization, and generators [9]. 
+
 ### Use slots
 
-Using the Python `__slots__` magic method, we can explicitly define the attributes that a class can contain which can help optimize the memory usage of classes [7].
+Using the Python `__slots__` magic method, we can explicitly define the attributes that a class can contain which can help optimize the memory usage of classes [9].
 
 By default, each instance of a Python classe stores its attributes in a private dictionary `__dict__` which allows for a lot of flexibility, but this comes at the cost of memory overhead.
 
@@ -274,7 +309,7 @@ When using `__slots__`, Python uses only a fixed amount of storage space for the
 
 ### Use Lazy Initialization
 
-Lazy initialization is the technique in which we delay initialization of an attribute until it is actually needed [7].
+Lazy initialization is the technique in which we delay initialization of an attribute until it is actually needed [9].
 
 By implementing lazy initialization, we can reduce the memory footprint of Python objects since only the necessary attributes will be initialized at runtime.
 
@@ -282,31 +317,174 @@ In Python, we can implement lazy initialization by using the `@cached_property` 
 
 ### Use Generators
 
-Python generators are a type of iterable which generate values on the fly as needed rather than all at once (lists and tuples) [7].
+Python generators are a type of iterable which generate values on the fly as needed rather than all at once (lists and tuples) [9].
 
-Generators are very memory-efficient when dealing with large amounts of data.
+Generators are very memory-efficient when dealing with large datasets.
+
+Generators allow us to lazily evaluate data and generats elements only when needed which can significantly improve performance [6].
+
+```py
+# Generator for generating large climate data on-the-fly
+def generate_climate_data():
+    for i in range(1000000):
+        yield {"temperature": i % 100, "humidity": i % 70}
+
+# Processing climate data without loading it all into memory
+for data in generate_climate_data():
+    if data["temperature"] > 90:
+        print(f"High temperature: {data['temperature']}°C")
+        break
+```
+
+Using a generator prevents the entire dataset from being loaded into memory at once which improves speed and memory usage.
 
 
+## Scikit-learn Performance
 
-## Optimize Memory Usage
+Sometimes scikit-learn models can take a long time to train. How can we create the best scikit-learn model in the least amount of time? [4]
 
-Here are some tips to optimize memory usage in python [4].
+There are a few approaches to solving this problem:
+
+- Changing your optimization function (solver).
+
+- Using different hyperparameter optimization techniques (grid search, random search, early stopping).
+
+- Parallelize or distribute your training with joblib and Ray.
+
+
+----------
+
+
+## Optimizing Memory Usage
+
+Find out why Python apps are using too much memory and reduce RAM usage with these simple tricks and efficient data structures [7], [10]. 
+
+### Find Bottlenecks
+
+First we need to find the bottlenecks in the code that are hogging memory [10].
+
+The `memory_profiler` tool measures memory usage of specific function on line-by-line basis.
+
+We also install the `psutil` package which significantly improves the profiler performance.
+
+The `memory_profiler` shows memory usage/allocation on line-by-line basis for the decorated function (here the `memory_intensive` function) which intentionally creates and deletes large lists.
+
+Now that we are able to find specific lines that increase memory consumption, we can see how much each variable is using.
+
+If we were to use `sys.getsizeof` to measure to measure variables, we woll get questionable information for some types of data structures. 
+
+For integers or bytearrays we will get the real size in bytes, for containers such as list though, we will only get size of the container itself and not its contents.
+
+A better approach is to use the `pympler` tool that is designed for analyzing memory behaviour which can help us obtain a realistic view of Python object sizes [10].
+
+```py
+    from pympler import asizeof
+
+    print(asizeof.asizeof([1, 2, 3, 4, 5]))
+    # 256
+
+    print(asizeof.asized([1, 2, 3, 4, 5], detail=1).format())
+    # [1, 2, 3, 4, 5] size=256 flat=96
+    #     1 size=32 flat=32
+    #     2 size=32 flat=32
+    #     3 size=32 flat=32
+    #     4 size=32 flat=32
+    #     5 size=32 flat=32
+
+    print(asizeof.asized([1, 2, [3, 4], "string"], detail=1).format())
+    # [1, 2, [3, 4], 'string'] size=344 flat=88
+    #     [3, 4] size=136 flat=72
+    #     'string' size=56 flat=56
+    #     1 size=32 flat=32
+    #     2 size=32 flat=32
+```
+
+Pympler provides `asizeof` module with function of same name which correctly reports size of the list as well all values it contains and the `asized` function which can give a more detailed size breakdown of individual components of the object.
+
+Pympler has many more features including tracking class instances or identifying memory leaks.
+
+### Saving Some RAM
+
+Now we need to find a way to fix memory issues. The quickest and easiest solution can be switching to more memory-efficient data structures [10].
+
+Python lists are one of the more memory-hungry options when it comes to storing arrays of values:
+
+Here we have used the `array` module which can store primitives such as integers or characters.
+
+We can see that in this case memory usage peaked at just over 100MiB which is a huge difference in comparison to a list.
+
+We can further reduce memory usage by choosing appropriate precision:
+
+One major downside of using array as data container is that it does not support very many types.
+
+If we need to perform a lot of mathematical operations on the data then should use NumPy arrays instead:
+
+We can also improve the size of individual objects defined by Python classes using the `__slots__` class attribute which is used to explicitly declare class properties.
+
+Declaring `__slots__` on a class also prevents creation of `__dict__` and `__weakref__` attributes which can be useful:
+
+How do we store strings depends on how we want to use them. 
+
+If we are going to search through a huge number of string values then using `list` is a bad choice.
+
+The best option may be to use an optimized data structure such as tree, especially for static datasets used for querying [10]. 
+
+There is a library for using tree-like data structures called [pytries](https://github.com/pytries) [10]. 
+
+### Not Using RAM At All
+
+Perhaps the easiest way to save RAM is to not use memory in a first place. 
+
+We cannot avoid using RAM completely, but we can avoid loading the full dataset at once and work with the data incrementally, if possible.
+
+The simplest method is using generators which return a lazy iterator that computes elements on demand rather than all at once [10].
+
+An even stronger tool that we can leverage is _memory-mapped files_ which allows us to load only parts of data from a file [10].
+
+The Python standard library provides `mmap` module that can be used to create memory-mapped files which behave like both files and bytearrays that can be used with file operations such as read, seek, or write as well as string operations [10]:
+
+```py
+    import mmap
+
+    with open("some-data.txt", "r") as file:
+        with mmap.mmap(file.fileno(), 0, access=mmap.ACCESS_READ) as m:
+            print(f"Read using 'read' method: {m.read(15)}")
+            # Read using 'read' method: b'Lorem ipsum dol'
+            m.seek(0)  # Rewind to start
+            print(f"Read using slice method: {m[:15]}")
+            # Read using slice method
+```
+
+Loading and reading memory-mapped files is rather simple:
+
+Most of the time, we will probably want to read the file as shown above but we also write to the memory-mapped file:
+
+If we are performing computations in NumPy, it may he better to use its `memmap` feature which is suitable for NumPy arrays stored in binary files.
+
+
+Here are some tips to optimize memory usage in Python [7].
 
 ### Cache it
 
-In general, we want to cache anything that we download unless we know for certian that we will not  need it again or it will expire before we need it again.
+In general, we want to cache anything that we download unless we know that we will not  need it again (or it will expire before we need it again) [7].
 
-- A classical approach to caching is to organize a directory for storing the previously obtained objects by their identifiers. The identifiers may be, for example, objects’ URLs, tweet ids, or database row numbers; anything related to the objects’ sources.
+- A classical approach to caching is to organize a directory for storing the previously obtained objects by their identifiers. 
 
-- The next step is to convert an identifier to a uniform-looking unique file name. We can write the conversion function ourselves or use the standard library. Start by encoding the identifier, which is presumably a string.
+  The identifiers could be object URLs, tweet ids, or database row numbers; anything related to the object source.
 
-Apply one of the hashing functions such as the hashlib.md5() or hashlib.sha256() which is faster to get a HASH object.
+- The next step is to convert an identifier to a unique file name. 
 
-The functions do not produce totally unique file names but the likelihood of getting two identical file names (called a hash collision) is so low that we can ignore it for all practical purposes.
+  We can write the conversion function ourselves or use the standard library. 
+  
+  We can start by encoding the identifier which is presumably a string.
+
+Apply one of the hashing functions such as the `hashlib.md5()` or `hashlib.sha256()` which is faster to get a HASH object.
+
+The functions do not produce totally unique file names but the likelihood of getting two identical file namescalled a _hash collision_ is very low.
 
 - Obtain a hexadecimal digest of the object which is a 64-character ASCII string: a perfect file name that has no resemblance to the original object identifier.
 
-Assuming that the directory cache has already been created and is writable, we can pickle our objects into it.
+Assuming the directory cache has already been created and is writable, we can use pickle to save our objects [7].
 
 ```py
     import hashlib
@@ -333,27 +511,31 @@ Assuming that the directory cache has already been created and is writable, we c
 
 ### Sort big in place
 
-Sorting and searching are arguably the two most frequent and important operations in modern computing.
+Sorting and searching are arguably the two most frequent and important operations in modern computing [7]. 
 
-Sorting and searching are so important that Python has two functions for sorting lists: list.sort() and sorted().
+Python has two functions for sorting lists: `list.sort()` and `sorted()`.
 
 - `sorted()` sorts any iterable while `list.sort()` sorts only lists.
+
 - `sorted()` creates a sorted copy of the original iterable.
+
 - The `list.sort()` method sorts the list in place.
 
 The `list.sort()` method  shuffles the list items around without making a copy. If we could load the list into memory, we could surely afford to sort it. However, list.sort() ruins the original order.
 
-In summary, if our list is large then sort it in place with `list.sort()`. If our list is moderately sized or needs to preserve the original order, we can call `sorted()` and retrieve a sorted copy.
+If the list is large then sort it in place using `list.sort()`. 
+
+If the list is moderately sized or needs to preserve the original order, we can use `sorted()` to retrieve a sorted copy.
 
 ### Garbage collector
 
-Python is a language with implicit memory management. The C and C++ languages require that we allocate and deallocate memory ourselves, but Python manages allocation and deallocation itself.
+The C and C++ languages require that we allocate and deallocate memory ourselves, but Python manages allocation and deallocation itself [7].
 
-When we define a variable through the assignment statement, Python creates the variable and the objects associated with it.
+- Each Python object has a reference count which is the number of variables and other objects that refer to this object. 
 
-Each Python object has a reference count, which is the number of variables and other objects that refer to this object. When we create an object and do not assign it to a variable, the object has zero references.
+- When we create an object and do not assign it to a variable, the object has zero references.
 
-When we redefine a variable, it no longer points to the old object and the reference count decreases.
+-  When we redefine a variable, it no longer points to the old object and the reference count decreases.
 
 ```py
     'Hello, world!'         # An object without references
@@ -363,13 +545,17 @@ When we redefine a variable, it no longer points to the old object and the refer
     s1 = s2 = s3 = None     # Still one reference
 ```
 
-When the reference count becomes zero, an object becomes unreachable. For most practical purposes, an unreachable object is a piece of garbage. A part of Python runtime called garbage collector automatically collects and discards unreferenced objects. There is rarely a need to mess with garbage collection, but here is a scenario where such interference is helpful.
+When the reference count becomes zero, an object becomes unreachable. A part of Python runtime called garbage collector automatically collects and discards unreferenced objects. There is rarely a need to mess with garbage collection [7].
 
-Suppose we work with big data — something large enough to stress our computer’s RAM.
+Suppose we work with big data — something large enough to stress the computer RAM.
 
-We start with the original data set and progressively apply expensive transformations to it and record the intermediate results. An intermediate result may be used in more than one subsequent transformation. Eventually, our computer memory will be clogged with large objects, some of which are still needed while some aren’t.
+We start with the original dataset and progressively apply expensive transformations and record the intermediate results. 
 
-We can help Python by explicitly marking variables and objects associated with them for deletion using the `del` operator.
+An intermediate result may be used in more than one subsequent transformation. 
+
+Eventually, our computer memory will be clogged with large objects, some that are still needed and some that are not.
+
+We can help Python by explicitly marking variables and objects associated with them for deletion using the `del` operator [7].
 
 ```py
     bigData = ...
@@ -378,34 +564,62 @@ We can help Python by explicitly marking variables and objects associated with t
     del bigData # Not needed anymore
 ```
 
-Bear in mind that del doesn’t remove the object from memory. It merely marks it as unreferenced and destroys its identifier. The garbage collector still must intervene and collect the garbage.
+The `del` does not remove the object from memory but merely marks the object as unreferenced and destroys its identifier. The garbage collector still must intervene and collect the garbage.
 
-We may want to force garbage collection immediately in anticipation of heavy memory use.
+We can force garbage collection immediately in anticipation of heavy memory use [7].
 
 ```py
     import gc # Garbage Collector
     gc.collect()
 ```
 
-NOTE: Do not abuse this feature. Garbage collection takes a long time, so we should only let it happen only when necessary.
+NOTE: Garbage collection takes a long time, so we should only let it happen only when necessary.
 
 
 
-----------
+## How to Profile Memory Usage
 
+Here we learn how to quickly check the memory footprint of your machine learning function/module with one line of command [1].
 
+Monitor line-by-line memory usage of functions with the `memory_profiler` module.
 
-## Scikit-learn Performance
+```bash
+  pip install -U memory_profiler
 
-Sometimes scikit-learn models can take a long time to train. How can we create the best scikit-learn model in the least amount of time? [6]
+  python -m memory_profiler some-code.py
+```
 
-There are a few approaches to solving this problem:
+It is easy to use this module to track the memory consumption of the function. `@profile` decorator that can be used before each function that needs to be tracked which will track the memory consumption line-by-line in the same way as of line-profiler [1].
 
-- Changing your optimization function (solver).
+```py
+    from memory_profiler import profile
 
-- Using different hyperparameter optimization techniques (grid search, random search, early stopping).
+    @profile
+    def my_func():
+        a = [1] * (10 ** 6)
+        b = [2] * (2 * 10 ** 7)
+        c = [3] * (2 * 10 ** 8)
+        del b
+        return a
 
-- Parallelize or distribute your training with joblib and Ray.
+    if __name__=='__main__':
+        my_func()
+```
+
+We can use pthe Python `cProfile` and `timeit` modules for profiling and benchmarking code [4].
+
+```py
+import cProfile
+
+def process_climate_data():
+    temperatures = [15, 22, 30, 18, 25] * 1000000  # Large dataset
+    converted = [temp * 9/5 + 32 for temp in temperatures]
+    max_temp = max(converted)
+    return max_temp
+
+# Profile the function
+cProfile.run('process_climate_data()')
+```
 
 
 ## References
@@ -416,12 +630,25 @@ There are a few approaches to solving this problem:
 
 [3]: [5 Tips To Optimize Your Python Code](https://towardsdatascience.com/try-these-5-tips-to-optimize-your-python-code-c7e0ccdf486a?source=rss----7f60cf5620c9---4)
 
-[4]: [Optimizing memory usage in Python code](https://medium.com/geekculture/optimising-memory-usage-in-python-code-d50a9c2a562b)
+[4]: [How to Speed up Scikit-Learn Model Training](https://medium.com/distributed-computing-with-ray/how-to-speed-up-scikit-learn-model-training-aaf17e2d1e1)
 
+[5]: [Horizontal vs Vertical Scaling: Which One Should You Choose?](https://www.finout.io/blog/horizontal-vs-vertical-scaling)
 
-[6]: [How to Speed up Scikit-Learn Model Training](https://medium.com/distributed-computing-with-ray/how-to-speed-up-scikit-learn-model-training-aaf17e2d1e1)
+[6]: [Are you optimizing your Python code or ignoring performance?](https://medium.com/codex/are-you-optimizing-your-python-code-or-ignoring-performance-0053a6867b68)
 
-[7]: [How to Write Memory-Efficient Classes in Python](https://towardsdatascience.com/how-to-write-memory-efficient-classes-in-python-beb90811abfa)
+----------
+
+[7]: [Optimizing memory usage in Python code](https://medium.com/geekculture/optimising-memory-usage-in-python-code-d50a9c2a562b)
+
+[8]: [Optimizing Memory Usage in Python Applications](https://towardsdatascience.com/optimizing-memory-usage-in-python-applications-f591fc914df5)
+
+[9]: [How to Write Memory-Efficient Classes in Python](https://towardsdatascience.com/how-to-write-memory-efficient-classes-in-python-beb90811abfa)
+
+[10]: [How Much Memory is your ML Code Consuming?](https://towardsdatascience.com/how-much-memory-is-your-ml-code-consuming-98df64074c8f)
+
+[11]: [Profile Memory Consumption of Python functions in a single line of code](https://towardsdatascience.com/profile-memory-consumption-of-python-functions-in-a-single-line-of-code-6403101db419)
+
+[12]: [Are you optimizing your Python code or ignoring performance?](https://medium.com/codex/are-you-optimizing-your-python-code-or-ignoring-performance-0053a6867b68)
 
 
 [4 easy-to-implement, high-impact tweaks for supercharging your Python code’s performance](https://towardsdatascience.com/4-easy-to-implement-high-impact-tweaks-for-supercharging-your-python-codes-performance-eb0652d942b7)

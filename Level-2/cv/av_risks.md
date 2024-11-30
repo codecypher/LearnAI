@@ -23,7 +23,8 @@ Unfortunately, government bodies lack the technical competence needed to effecti
 
 ## References
 
-[1] M. L. Cummings, “WHAT SELFDRIVING CARS TELL US ABOUT AI RISKS”, IEEE Spectrum magazine, October 2023.
+[1]: M. L. Cummings, “WHAT SELFDRIVING CARS TELL US ABOUT AI RISKS”, IEEE Spectrum magazine, October 2023.
 
+[2]: [Exploring the Potential and Risks of Autonomous Vehicles](https://friedmind.hashnode.dev/exploring-the-potential-and-risks-of-autonomous-vehicles)
 
-
+[3]: M. L. Cummings, "[What Self-Driving Tells Us About AI Risks](https://spectrum.ieee.org/self-driving-cars-2662494269)," IEEE Spectrum, vol. 60, no. 10, pp. 30-35, October 2023, doi: 10.1109/MSPEC.2023.10271347.

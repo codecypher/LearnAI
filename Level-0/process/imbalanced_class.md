@@ -390,8 +390,8 @@ We can summarize these suggestions into a framework for testing imbalanced machi
 
 ## References
 
-[Multi-Class Classification Tutorial with the Keras Deep Learning Library](https://machinelearningmastery.com/multi-class-classification-tutorial-keras-deep-learning-library/)
+[1]:[Multi-Class Classification Tutorial with the Keras Deep Learning Library](https://machinelearningmastery.com/multi-class-classification-tutorial-keras-deep-learning-library/)
 
-[Imbalanced Multiclass Classification with the Glass Identification Dataset](https://machinelearningmastery.com/imbalanced-multiclass-classification-with-the-glass-identification-dataset/)
+[2]: [Imbalanced Multiclass Classification with the Glass Identification Dataset](https://machinelearningmastery.com/imbalanced-multiclass-classification-with-the-glass-identification-dataset/)
 
 

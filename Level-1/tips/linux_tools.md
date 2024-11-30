@@ -3,10 +3,12 @@
 - awk
 - bat (batmab and prettybat)
 - duf
+- ffmpeg
 - fkill
 - fzf
 - hstr
 - httpie
+- iPerf
 - js
 - mktemp
 - od (view binary file)
@@ -19,6 +21,12 @@
 
 
 Bash is a command interpreter for Linux and MacOS systems. Here are some tools and tips that will help in the daily battle against bugs and deadlines [1].
+
+ffmpeg is a very useful utility for CV projects [5]. 
+
+speedtest-cli is a command-line tool for testing internet bandwidth using speedtest.net. 
+
+iPerf is a great way to test your LAN speed (rather than your Internet speed [6]. 
 
 
 ## coreutils
@@ -313,5 +321,8 @@ zrun: Automatically uncompresses arguments to a command, simplifying the process
 
 [5]: [8 Advanced Linux Command Line Tools](https://itnext.io/8-advanced-linux-command-line-tools-9d81258c3165)
 
+[6]: [3 handy command-line internet speed tests](https://opensource.com/article/20/1/internet-speed-tests)
 
+
+[speedtest-cli](https://github.com/sivel/speedtest-cli)
 
