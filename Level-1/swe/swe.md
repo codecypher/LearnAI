@@ -300,7 +300,7 @@ With software systems, it is less work to rebuild a new system than it is to per
 
 ## API vs Web Service
 
-All web services are also APIs because they expose the data and/or functionality of an application, however not all APIs are web services. 
+All web services are also APIs because they expose the data and/or functionality of an application, however not all APIs are web services.
 
 
 ## Tech Interviews Are Broken

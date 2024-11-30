@@ -1,6 +1,6 @@
 # Optimization Functions
 
-The article [1] covers the mathematical expressions of common non-convex optimizers and their Python implementations from scratch .
+The article [1] covers the mathematical expressions of common non-convex optimizers and their Python implementations from scratch.
 
 Understanding the math behind these optimization algorithms can help enlighten your perspective when training complex machine learning models.
 
