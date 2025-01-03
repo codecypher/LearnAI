@@ -1,6 +1,8 @@
-# VS Code Extensions
+# Visual Studio
 
-## Recommended
+## VS Code Extensions
+
+### Recommended
 
 - Black Formatter
 - Color Highlight
@@ -26,13 +28,13 @@
 - Postman VS Code Extension
 
 
-## Code Snapsbots
+### Code Snapsbots
 
 - CodeSnap
 - Pola Code
 
 
-## Python
+### Python
 
 - autoDocstring
 
@@ -50,7 +52,7 @@
 - LiveCode for python (optional)
 
 
-## Development
+### Development
 
 - Better Align
 - Better Comments
@@ -73,7 +75,7 @@
 - Remote WSL
 
 
-## Themes
+### Themes
 
 - Atom One Dark Theme
 - JetBrains mono font
@@ -84,7 +86,7 @@
 - Peacock
 
 
-## JavaScript
+### JavaScript
 
 - Code Spell Checker
 - quick-lint-js
@@ -96,44 +98,6 @@
 - JavaScript Booster
 - Turbo Console Log
 - VS Code React Refactor
-
-
-## Flutter
-
-- Awesome Flutter Snippets
-- Dart Data Class Generator
-- dart-import
-- dart-lang/path
-- miguelpruivo/flutter_file_picker
-- Sub6Resources/flutter_html
-- Flutter Coverage
-- Flutter Tree
-- Flutter Stylizer
-- ponnamkarthik/FlutterToast
-- koukibadr/Motion-Toast
-- material-foundation/google-fonts-flutter
-- dart-lang/http
-- JSON to Dart Model
-- Pubspec Assist
-- tekartik/sqflite
-- PramodJoshi/toggle_switch
-
-github.com/flutter/plugins
-
-- Animations
-- camera
-- file_selector
-- image_picker
-- url_launcher
-
-Advanced
-
-- baseflow/flutter-geolocator
-- baseflow/flutter-permission-handler
-- baseflow/flutter_cached_network_image
-- fluttercandies/flutter_photo_manager
-- letsar/flutter_staggered_grid_view
-- adar2378/pin_code_fields
 
 
 ## References
