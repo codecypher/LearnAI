@@ -8,14 +8,52 @@ It is important to know how to extract information from descriptive statistics.
     # get the data info
     df.info()
 
-    # inspect the data
-    df.head()
-
     # summary stats
     df.describe()
 
+    # inspect the data
+    df.head()
+
+    df.value_counts()
+
+    # Get value counts for our target variable
+    df['income'].value_counts()
+
     # include string and categorical features
     df.describe(include=['int', 'float', 'object', 'category'])
+```
+
+## Plotly Express
+
+The `plotly.express` module (usually imported as `px`) contains functions that can create entire figures at once and is referred to as Plotly Express or PX.
+
+Plotly Express is a built-in part of the `plotly` library and is the recommended starting point for creating most common figures.
+
+We can use `plotly.express` scatter or line charts to quickly run a linear regression between 1 variable and 1 target [16].
+
+### Time series data without Trendline
+
+Time series data typically comes with a timestamp column (eg Datetime) and the value you want to plot (listed below as ‘y’) [16].
+
+```py
+    # Line plot
+    px.line(df, x='Datetime', y='y')
+
+    # Scatter plot
+    px.scatter(df, x='Datetime', y='y')
+```
+
+### Correlated variables with Trendline
+
+Using the trendline keyword in `px.scatter` draws a linear regression trendline with your x and y variables using OLS (Ordinary Least Squares) regression algorithm which is basically just a standard linear regression [16].
+
+Here is an example using the Wine Quality dataset from the UCI Machine Learning Repository (CC by 4.0 license) where we have plotted 2 features against each other to see the relationship between them [16].
+
+The OLS trendline provides you with the y=mx+b linear equation as well as the R².
+
+```py
+    # Scatter plot with trendline
+    px.scatter(df, x='fixed_acidity',y='density',trendline='ols')
 ```
 
 ### Statistical Distribution
@@ -585,6 +623,9 @@ Spot check some methods that are robust to outliers to see if there is a signifi
 [14]: [Detecting Outliers with Simple and Advanced Techniques](https://towardsdatascience.com/detecting-outliers-with-simple-and-advanced-techniques-cb3b2db60d03)
 
 [15]: [Practical Guide to Data Analysis and Preprocessing](https://towardsdatascience.com/practical-guide-to-data-analysis-and-preprocessing-080815548173)
+
+[16]: [5 Python One-Liners to Kick Off Your Data Exploration](https://towardsdatascience.com/5-python-one-liners-to-kick-off-your-data-exploration-d6221f94291e)
+
 
 [Data Analytics: The Four Approaches to Analyzing Data and How To Use Them Effectively](https://www.kdnuggets.com/2023/04/data-analytics-four-approaches-analyzing-data-effectively.html)
 
