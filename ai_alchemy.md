@@ -1,6 +1,10 @@
-# AI Hype
+# The Alchemy of AI
 
 ## Background
+
+The student of AI needs a healthy dose of skepticism [4].
+
+The two guiding principles of AI are Occam's Razor and the No Free Lunch Theorem.
 
 ## Why AI Projects Fail
 
@@ -38,6 +42,15 @@ T. Shin, [4 Reasons Why You Shouldn't Use Machine Learning](https://towardsdatas
 [Uber was just hit with a massive $320 million fine. Here’s why](https://www.digitaltrends.com/mobile/uber-just-hit-with-massive-320-million-dollar-fine-heres-why/)
 
 
+## AI Ethics
+
+F. S. Grodzinsky, M. J. Wolf, and K. W. Miller, "[Ethical Issues From Emerging AI Applications: Harms Are Happening](https://ieeexplore.ieee.org/document/10417760)," Computer, vol. 57, no. 2, pp. 44-52, Feb. 2024, doi: 10.1109/MC.2023.3332850. 
+
+M. L. Cummings, "[What Self-Driving Tells Us About AI Risks](https://spectrum.ieee.org/self-driving-cars-2662494269)," IEEE Spectrum, vol. 60, no. 10, pp. 30-35, October 2023, doi: 10.1109/MSPEC.2023.10271347.
+
+J. B. Michael and T. C. Wingfield, "[Defensive AI: The Future Is Yesterday](https://ieeexplore.ieee.org/document/9524660)," Computer, vol. 54, no. 9, pp. 90-96, Sept. 2021, doi: 10.1109/MC.2021.3092480.
+
+
 ## AI Risks
 
 J. B. Michael and M. Orescanin, "[Developing and Deploying Artificial Intelligence Systems](https://ieeexplore.ieee.org/document/9789299)," Computer, vol. 55, no. 6, pp. 15-17, June 2022, doi: 10.1109/MC.2022.3166488.
@@ -50,25 +63,17 @@ J. B. Michael and M. Orescanin, "[Developing and Deploying Artificial Intelligen
 
 [Public AI Training Datasets Are Rife With Licensing Errors](https://spectrum.ieee.org/data-ai)
 
+[The Dark Side of Model Evaluation That Nobody Talks About](https://blog.gopenai.com/the-dark-side-of-model-evaluation-that-nobody-talks-about-b2050ccf0814)
+
 ----------
 
 C. Y. Laporte, G. Verret, and M. Muñoz, "[A Software Project That Partially Failed: A Small Organization That Ignored the Management and Technical Practices of Software Standards](https://ieeexplore.ieee.org/document/10109288)," Computer, vol. 56, no. 5, pp. 138-144, May 2023, doi: 10.1109/MC.2023.3253979.
 
 B. Hubert, "[Why Bloat is Still Software's Biggest Vulnerability](https://spectrum.ieee.org/lean-software-development)," IEEE Spectrum, vol. 61, no. 4, pp. 22-50, April 2024, doi: 10.1109/MSPEC.2024.10491389.
 
-
 [GenAI’s products: Move fast and fail](https://pub.towardsai.net/genais-products-move-fast-and-fail-795697674039)
 
 [Gen AI Increases Workloads and Decreases Productivity, Upwork Study Finds](https://www.infoq.com/news/2024/07/genai-hampers-productivity-study/)
-
-
-## AI Ethics
-
-F. S. Grodzinsky, M. J. Wolf, and K. W. Miller, "[Ethical Issues From Emerging AI Applications: Harms Are Happening](https://ieeexplore.ieee.org/document/10417760)," Computer, vol. 57, no. 2, pp. 44-52, Feb. 2024, doi: 10.1109/MC.2023.3332850. 
-
-M. L. Cummings, "[What Self-Driving Tells Us About AI Risks](https://spectrum.ieee.org/self-driving-cars-2662494269)," IEEE Spectrum, vol. 60, no. 10, pp. 30-35, October 2023, doi: 10.1109/MSPEC.2023.10271347.
-
-J. B. Michael and T. C. Wingfield, "[Defensive AI: The Future Is Yesterday](https://ieeexplore.ieee.org/document/9524660)," Computer, vol. 54, no. 9, pp. 90-96, Sept. 2021, doi: 10.1109/MC.2021.3092480.
 
 
 ## Problems with AI Research
