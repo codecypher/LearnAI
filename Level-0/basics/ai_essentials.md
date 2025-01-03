@@ -1,9 +1,9 @@
 # AI Essentials
 
-When learning AI, you need a healthy dose of _skepticism_ in what you read, especially research articles which is discussed in the Russell and Norivg and other graduate textbooks.
+The student of AI needs a healthy dose of _skepticism_, especially when reading research articles which is discussed in graduate textbooks on AI/ML [2]. 
 
 
-## Terminology
+## Guiding Principles of AI
 
 > Occam’s Razor: The simplest model that fits the data is usually the best.
 
@@ -17,7 +17,6 @@ The term **bootstrap** means to randomly draw (with replacement) rows from the t
 
 > Torture the data, and it will confess to anything - Ronald Coase
 
-
 ### No Free Lunch Theorem
 
 **No Free Lunch Theorem:** Any two algorithms are equivalent when their performance is averaged across all possible problems.
@@ -30,7 +29,6 @@ When we say that a learning algorithm is _good_, we only quantify how well its i
 
 Thus, a general-purpose universal optimization strategy is theoretically impossible and the only way one strategy can outperform another is if it is specialized to the specific problem under consideration (expert system). 
 
-
 ### The Curse of Dimensionality
 
 The _curse of dimensionality_ refers to the problems that arise when working with data in the higher dimensions which does not exist in lower dimensions.
@@ -42,7 +40,6 @@ The _curse of dimensionality_ refers to the problems that arise when working wit
 - A machine learning model that is trained on a large number of features becomes increasingly dependent on the data it was trained on and in turn overfitted which results in poor performance on new unseen data.
 
 Avoiding overfitting is a major motivation for performing dimensionality reduction: the fewer features our training data has, the fewer assumptions our model makes and the simpler it will be.
-
 
 
 ## When You Should not use ML
@@ -59,8 +56,6 @@ Current Machine Learning has issues with reliability due to the poor performance
 We are used to relying on the IID (Independent & Identically Distributed) hypothesis that the test distribution and the training distribution are the same.
 
 Without this assumption, we need some alternative hypothesis to perform the generalization.
-
-
 
 
 ## Disinformation in AI Research
@@ -172,7 +167,6 @@ Often the hardest part of solving a machine learning problem can be finding the 
 Different estimators are better suited for different types of data and different problems.
 
 The [flowchart](https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html) is designed to give users a bit of a rough guide on how to approach problems with regard to which estimators to try on your data [11].
-
 
 
 ------
@@ -343,6 +337,8 @@ After being exposed to a certain portion of the dataset, the model is not allowe
 [1]: E. Alpaydin, Introduction to Machine Learning, 3rd ed., MIT Press, ISBN: 978-0262028189, 2014.
 
 [2]: S. Russell and P. Norvig, Artificial Intelligence: A Modern Approach, 3rd ed. Upper Saddle River, NJ, USA: Prentice Hall, 2010.
+
+S. Russell and P. Norvig, Artificial Intelligence: A Modern Approach, 4th ed. Upper Saddle River, NJ: Prentice Hall, ISBN: 0-13-461099-7, 2021.
 
 [3]: aima-python: Python code for Artificial Intelligence: A Modern Approach. Accessed: June 14, 2020. [Online]. Available: <https://github.com/aimacode/aima-python>, 0.17.3. 2020.
 

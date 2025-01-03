@@ -75,7 +75,7 @@ In general, the results of AI research articles are irreproducible. In fact, the
 
 The further away you get from reputable publications such as IEEE, the worse it gets.  I have seen numerous articles that I have no idea how they were ever published (major mistakes and errors). 
 
-When learning AI, you need a healthy dose of skepticism in what you read, especially research articles. This is all discussed in the Russell and Norivg and other graduate textbooks.
+When learning AI, you need a healthy dose of skepticism in what you read, especially research articles which discussed in the Russell and Norivg and other graduate textbooks.
 
 
 ## How to ask an AI/ML question
