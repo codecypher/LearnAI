@@ -2,13 +2,21 @@
 
 ## Python decorator attributes
 
-A _decorator_ is a function that takes another function as input, extends its behavior, and returns a new function as output which is possible becaus functions are first-class objects in Python which means they can be passed as arguments to functions and also be returned from functions just like other types of objects such as string, int, or float. Thus, a decorator can be used to decorate a function or a class.
+A _decorator_ is a function that takes another function as input, extends its behavior, and returns a new function as output [2]. 
+
+A decorator wraps a function inside another function that adds extra functionality before or after the wrapped function is executed [9].
+
+The decorator is useful for logging, access control, memoization, and function timing. 
+
+In a nutshell, decorators allow us to add behavior to functions without altering their core logic or structure [9].
+
+This is possible because functions are first-class objects in Python which means they can be passed as arguments to functions and also be returned from functions just like other types of objects such as string, int, or float. Thus, a decorator can be used to decorate a function or a class.
 
 Here we discuss three special decorators: @staticmethod, @classmethod, and @property which are “magical” decorators that can be very handy for our development work and make your code more clean [2].
 
 ### @staticmethod
 
-A static method is a method that does not require the creation of an instance of a class. 
+A `static` method is a method that does not require the creation of an instance of a class. 
 
 ```py
     class Cellphone:
@@ -136,6 +144,27 @@ Here is the complete example using the three decorators in Python: `@staticmetho
             print("An iPhone is created.")
             return _iphone
 ```
+
+
+## Using Decorators
+
+Here are some useful topics on decorators discussed in [9]:
+
+- Decorators with Arguments
+- Chaining Multiple Decorators
+- The Importance of functools.wraps
+
+Practical Use Cases of Decorators
+
+Some of the most common use cases for decorators:
+
+- Logging: Track function calls, arguments, and results.
+
+- Memoization: Cache function results to improve performance.
+
+- Access Control: Restrict access to certain functions based on conditions (such as user permissions).
+
+- Timing: Measure how long a function takes to execute.
 
 
 ## Utility Decorators
@@ -1250,5 +1279,6 @@ There are eight built-in Python decorators discussed in [8] that can help you wr
 
 [8]: [8 Built-in Python Decorators to Write Elegant Code](https://www.kdnuggets.com/8-built-in-python-decorators-to-write-elegant-code)
 
+[9]: [Mastering Python Decorators: A Deep Dive Into Function Wrapping and Enhancements](https://medium.com/codex/mastering-python-decorators-a-deep-dive-into-function-wrapping-and-enhancements-2092d70ff26f)
 
-[The Python Decorator Handbook](https://www.freecodecamp.org/news/the-python-decorator-handbook/)
+[10]: [The Python Decorator Handbook](https://www.freecodecamp.org/news/the-python-decorator-handbook/)
