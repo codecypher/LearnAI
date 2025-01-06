@@ -1,10 +1,22 @@
 # The Alchemy of AI
 
+
 ## Background
 
-The student of AI needs a healthy dose of skepticism [4].
+The student of AI needs the following:
 
-The two guiding principles of AI are Occam's Razor and the No Free Lunch Theorem.
+- A healthy dose of skepticism [4].
+
+- Knowledge of the history and reasons that led to the _AI Winter_. 
+
+- Be aware of the hype, misinformation, and  alchemy that is common in the field AI. 
+
+
+The two guiding principles of AI are:
+
+1. Occam's Razor
+2. No Free Lunch Theorem
+
 
 ## Why AI Projects Fail
 
@@ -31,15 +43,6 @@ T. Shin, [4 Reasons Why You Shouldn't Use Machine Learning](https://towardsdatas
 [OpenAI Is Disbanding Its Robotics Research Team](https://lastfuturist.com/openai-is-disbanding-its-robotics-research-team/)
 
 [Microsoft invests $1 billion in OpenAI to pursue holy grail of artificial intelligence](https://www.theverge.com/2019/7/22/20703578/microsoft-openai-investment-partnership-1-billion-azure-artificial-general-intelligence-agi)
-
-
-## AI Failures in the News
-
-[The $500mm+ Debacle at Zillow Offers – What Went Wrong with the AI Models?](https://insideainews.com/2021/12/13/the-500mm-debacle-at-zillow-offers-what-went-wrong-with-the-ai-models/)
-
-[Humana also using AI tool with 90% error rate to deny care, lawsuit claims](https://arstechnica.com/science/2023/12/humana-also-using-ai-tool-with-90-error-rate-to-deny-care-lawsuit-claims/)
-
-[Uber was just hit with a massive $320 million fine. Here’s why](https://www.digitaltrends.com/mobile/uber-just-hit-with-massive-320-million-dollar-fine-heres-why/)
 
 
 ## AI Ethics
