@@ -7,6 +7,42 @@
 [Directory of Open Access Journals](https://doaj.org)
 
 
+## Prerequisites
+
+### Mathematics
+
+K. Rosen, Discrete Mathematics and Its Applications, 8th ed., McGraw Hill, ISBN: 978-1-259-67651-2, 2019.
+
+J. Fanchi, Math Refresher for Scientists and Engineers, 3rd ed., Wiley, ISBN: 0-471-75715-2, 2006.
+
+M. P. Deisenroth, A. A. Faisal, and C. S. Ong, Mathematics for Machine Learning, Cambridge, UK: Cambridge University Press, ISBN: 978-1-108-47004-9, 2020.
+
+D. Zwillinger, CRC Standard Mathematical Tables and Formulas, 33rd ed., CRC Press, ISBN: 978-1-4987-7780-3, 2018.
+
+R. V. Hogg, J. W. McKean, and A. T. Craig, Introduction to Mathematical Statistics, Pearson, ISBN 0134686993, 2019.
+
+D. P. Bertsekas and J. N. Tsitduklis, Introduction to Probability, 2nd ed., Athena Scientific, ISBN: 978-1-886529-23-6, 2008.
+
+### Computer Science
+
+C. Hamacher, Z. Vranesic, S. Zaky, and N. Manjikian, Computer Organization and Embedded Systems, 6th ed., McGraw Hill, ISBN: 978–0–07–338065–0, 2012.
+
+M. T. Goodrich, R. Tamassia, and M. H. Goldwasser, Data Structures and Algorithms in Java, 6th ed., Wiley, ​ISBN: 978-1118771334, 2014.
+
+A. S. Tanenbaum and D. J. Wetherall, Computer Networks, 5th ed., Pearson, ISBN: 0-13-212695-8, 2011.
+
+R. H. Arpaci-Dusseau and A. C. Arpaci-Dusseau, Operating Systems: Three Easy Pieces, 2018, v. 1.01, Available online: https://pages.cs.wisc.edu/~remzi/OSTEP/
+
+J. Zobel, Writing in Computer Science, London: Springer, ISBN: 978–1–4471–6638–2, 2014.
+
+### Software Engineering
+
+S. McConnell, Code Complete, 2nd ed., Microsoft Press, ISBN: 0-7356-1967-0, 2004.
+
+M. Howard and D. LeBlanc, Writing Secure Code, 2nd ed., Microsoft Press Press, ISBN: 0735617228, 2003.
+
+E. Gamma, R. Helm, R. Johnson, and J. Vlissides, Design Patterns: Elements of Reusable Object-Oriented Software, 1st ed., Addison-Wesley Professionalw, ISBN-10: 0201633612, 1994.
+
 
 ## Quickstart Resources
 
@@ -15,7 +51,6 @@
 [Cheatsheets](https://github.com/Neklaustares-tPtwP/Resources/tree/main/Cheat%20Sheets)
 
 [Introduction to APIs in Python](https://towardsdatascience.com/quick-fire-guide-to-apis-in-python-891dd98c8877?source=rss----7f60cf5620c9---4)
-
 
 [Mathematics for Machine Learning](https://mml-book.github.io/)
 
@@ -72,49 +107,6 @@ J. Matthew, PyTorch Artificial Intelligence Fundamentals, Birmingham, U.K.: Pack
 - PyTorch Computer Vision Cookbook
 
 
-
-----------
-
-
-
-## Prerequisites
-
-### Mathematics
-
-K. Rosen, Discrete Mathematics and Its Applications, 8th ed., McGraw Hill, ISBN: 978-1-259-67651-2, 2019. 
-
-J. Fanchi, Math Refresher for Scientists and Engineers, 3rd ed., Wiley, ISBN: 0-471-75715-2, 2006. 
-
-M. P. Deisenroth, A. A. Faisal, and C. S. Ong, Mathematics for Machine Learning, Cambridge, UK: Cambridge University Press, ISBN: 978-1-108-47004-9, 2020.
-
-D. Zwillinger, CRC Standard Mathematical Tables and Formulas, 33rd ed., CRC Press, ISBN: 978-1-4987-7780-3, 2018.
-
-R. V. Hogg, J. W. McKean, and A. T. Craig, Introduction to Mathematical Statistics, Pearson, ISBN 0134686993, 2019.  
-
-D. P. Bertsekas and J. N. Tsitduklis, Introduction to Probability, 2nd ed., Athena Scientific, ISBN: 978-1-886529-23-6, 2008. 
-
-### Computer Science
-
-C. Hamacher, Z. Vranesic, S. Zaky, and N. Manjikian, Computer Organization and Embedded Systems, 6th ed., McGraw Hill, ISBN: 978–0–07–338065–0, 2012. 
-
-M. T. Goodrich, R. Tamassia, and M. H. Goldwasser, Data Structures and Algorithms in Java, 6th ed., Wiley, ​ISBN: 978-1118771334, 2014. 
-
-A. S. Tanenbaum and D. J. Wetherall, Computer Networks, 5th ed., Pearson, ISBN: 0-13-212695-8, 2011. 
-
-R. H. Arpaci-Dusseau and A. C. Arpaci-Dusseau, Operating Systems: Three Easy Pieces, 2018, v. 1.01, Available online: https://pages.cs.wisc.edu/~remzi/OSTEP/
-
-J. Zobel, Writing in Computer Science, London: Springer, ISBN: 978–1–4471–6638–2, 2014.
-
-### Software Engineering
-
-S. McConnell, Code Complete, 2nd ed., Microsoft Press, ISBN: 0-7356-1967-0, 2004. 
-
-M. Howard and D. LeBlanc, Writing Secure Code, 2nd ed., Microsoft Press Press, ISBN: 0735617228, 2003. 
-
-E. Gamma, R. Helm, R. Johnson, and J. Vlissides, Design Patterns: Elements of Reusable Object-Oriented Software, 1st ed., Addison-Wesley Professionalw, ISBN-10: 0201633612, 1994. 
-
-
-
 ## AI Textbooks
 
 E. Alpaydin, Introduction to Machine Learning, 4th ed., MIT Press, ISBN: 9780262358064, 2020.
@@ -133,10 +125,6 @@ D. Jurafsky and J. H. Martin, 2nd edition. Speech and Language Processing. Prent
 B. Siciliano, L. Sciavicco, L. Villani, and G. Oriolo, Robotics: Modeling, Planning and Control, London: Springer, ISBN: 978-1-84628-641-4, 2010.
 
 
-----------
-
-
-
 ## Software Engineering Ethics
 
 There seems to be a general problem with ethics in computer science in general but specifically in software engineering. A majority of researchers have admitted to manipulating data, and I worked with a professor who manipulated results for some NIH grants. I come across ethics problems a lot as a software engineer (and you will too) even when working on government projects, so I end up looking for another job. 
@@ -151,7 +139,6 @@ R. Martin, _The Clean Coder: A Code of Conduct for Professional Programmers_, Pe
 R. McGinn, _The Ethical Engineer: Contemporary Concepts and Cases_, Princeton University Press, ISBN: 0691177708, 2018. 
 
 B. Franks, _97 Things About Ethics Everyone in Data Science Should Know: Collective Wisdom from the Experts_, O'Reilly Media, 1st ed., ISBN: 1492072664, 2020. 
-
 
 
 ## Code Repos
