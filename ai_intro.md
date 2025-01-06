@@ -39,37 +39,39 @@ Here are some lists of articles that covers some of the problems with **AI Engin
 
 A. DeNisco Rayome, [Why 85% of AI projects fail](https://www.techrepublic.com/article/why-85-of-ai-projects-fail/), TechRepublic, June 20, 2019.
 
-[Why most AI implementations fail, and what enterprises can do to beat the odds](https://learnwithclint.com/why-most-ai-implementations-fail-and-what/)
+S. Reisner, [Why most AI implementations fail, and what enterprises can do to beat the odds](https://venturebeat.com/ai/why-most-ai-implementations-fail-and-what-enterprises-can-do-to-beat-the-odds/), Venture Beat, June 28, 2021. 
 
 Y. Kosarenko, [The majority of business analytics and AI projects are still failing](https://www.datadriveninvestor.com/2020/04/30/the-majority-of-business-analytics-and-ai-projects-are-still-failing/), Data Driven Investor, April 30, 2020.
 
-[AI trained on AI garbage spits out AI garbage](https://www.technologyreview.com/2024/07/24/1095263/ai-that-feeds-on-a-diet-of-ai-garbage-ends-up-spitting-out-nonsense/)
+S. Mulligan, [AI trained on AI garbage spits out AI garbage](https://www.technologyreview.com/2024/07/24/1095263/ai-that-feeds-on-a-diet-of-ai-garbage-ends-up-spitting-out-nonsense/), 
+MIT Technology Review, July 24, 2024. 
 
-[Bursting the AI Hype Bubble Once and for All](https://towardsdatascience.com/bursting-the-ai-hype-bubble-once-and-for-all-581a994fe762)
+P. Raco, [Bursting the AI Hype Bubble Once and for All](https://towardsdatascience.com/bursting-the-ai-hype-bubble-once-and-for-all-581a994fe762), Towards Data Science, Oct. 11, 2024. 
 
-[Failed Machine Learning (FML)](https://github.com/kennethleungty/Failed-ML)
+[Failed Machine Learning (FML)](https://github.com/kennethleungty/Failed-ML), GitHub, kennethleungty/Failed-ML.
 
 
 ## AI Failures in the News
 
-[The $500mm+ Debacle at Zillow Offers – What Went Wrong with the AI Models?](https://insideainews.com/2021/12/13/the-500mm-debacle-at-zillow-offers-what-went-wrong-with-the-ai-models/)
+[The $500mm+ Debacle at Zillow Offers – What Went Wrong with the AI Models?](https://insideainews.com/2021/12/13/the-500mm-debacle-at-zillow-offers-what-went-wrong-with-the-ai-models/), Inside AI News, Dec. 13, 2021. 
 
-[Humana also using AI tool with 90% error rate to deny care, lawsuit claims](https://arstechnica.com/science/2023/12/humana-also-using-ai-tool-with-90-error-rate-to-deny-care-lawsuit-claims/)
+B. Mole, [Humana also using AI tool with 90% error rate to deny care, lawsuit claims](https://arstechnica.com/science/2023/12/humana-also-using-ai-tool-with-90-error-rate-to-deny-care-lawsuit-claims/), ars Technica, Dec. 13, 2023. 
 
-[Uber was just hit with a massive $320 million fine. Here’s why](https://www.digitaltrends.com/mobile/uber-just-hit-with-massive-320-million-dollar-fine-heres-why/)
+P. Hearn, [Uber was just hit with a massive $320 million fine. Here’s why](https://www.digitaltrends.com/mobile/uber-just-hit-with-massive-320-million-dollar-fine-heres-why/), digitaltrends, Aug. 26, 2024
 
 
 ## AI Risks
 
-J. B. Michael and M. Orescanin, "[Developing and Deploying Artificial Intelligence Systems](https://ieeexplore.ieee.org/document/9789299)," Computer, vol. 55, no. 6, pp. 15-17, June 2022, doi: 10.1109/MC.2022.3166488.
+J. B. Michael and M. Orescanin, "[Developing and Deploying Artificial Intelligence Systems](https://ieeexplore.ieee.org/document/9789299)," IEEE Computer, vol. 55, no. 6, pp. 15-17, June 2022, doi: 10.1109/MC.2022.3166488.
 
-[Machine Learning: The High Interest Credit Card of Technical Debt](https://research.google.com/pubs/pub43146.html)
+D. Sculley, G. Holt, D. Golovin, E. Davydov, T. Phillips, D.  Ebner, V. Chaudhary, and M. Young
+[Machine Learning: The High Interest Credit Card of Technical Debt](https://research.google.com/pubs/pub43146.html?authuser=2), SE4ML: Software Engineering for Machine Learning (NIPS 2014 Workshop), 2014. 
 
-[Beware AI’s hidden costs before they bankrupt innovation](https://techcrunch.com/2023/12/27/beware-ais-hidden-costs-before-they-bankrupt-innovation/)
+M. Troller, [Beware AI’s hidden costs before they bankrupt innovation](https://techcrunch.com/2023/12/27/beware-ais-hidden-costs-before-they-bankrupt-innovation/), techcrunch, Dec. 27, 2023.
 
-[Confronting the risks of artificial intelligence](https://www.mckinsey.com/capabilities/quantumblack/our-insights/confronting-the-risks-of-artificial-intelligence)
+B. Cheatham, K. Javanmardian, and H. Samandari, [Confronting the risks of artificial intelligence](https://www.mckinsey.com/capabilities/quantumblack/our-insights/confronting-the-risks-of-artificial-intelligence), McKinsey Quarterly, April 26, 2019. 
 
-[Public AI Training Datasets Are Rife With Licensing Errors](https://spectrum.ieee.org/data-ai)
+E. Gent, [Public AI Training Datasets Are Rife With Licensing Errors](https://spectrum.ieee.org/data-ai), IEEE Spectrum, Nov. 8, 2023. 
 
 
 ## Problems with AI Research
@@ -77,23 +79,4 @@ J. B. Michael and M. Orescanin, "[Developing and Deploying Artificial Intelligen
 J. F. DeFranco and J. Voas, "[Reproducibility, Fabrication, and Falsification](https://ieeexplore.ieee.org/document/9622314)," Computer, vol. 54, no. 12, pp. 24-26, Dec. 2021, doi: 10.1109/MC.2021.3055926.
 
 M. Parashar, M. A. Heroux,and V. Stodden, "[Research Reproducibility](https://ieeexplore.ieee.org/document/9847295)," Computer, vol. 55, no. 8, pp. 16-18, Aug. 2022, doi: 10.1109/MC.2022.3176988.
-
-
-## References
-
-[1]: I. Sommerville, Software Engineering 10th ed., Pearson, ISBN: 978-0133943030, 2015.
-
-[2]: P. Bourque and R. E. Fairley, [Guide to the Software Engineering Body of Knowledge (SWEBOK)](https://www.computer.org/education/bodies-of-knowledge/software-engineering), v. 3, IEEE, 2014.
-
-[3]: E. Alpaydin, Introduction to Machine Learning, 4th ed., MIT Press, ISBN: 9780262358064, 2020.
-
-[4]: S. Russell and P. Norvig, Artificial Intelligence: A Modern Approach, 4th ed. Upper Saddle River, NJ: Prentice Hall, ISBN: 0-13-461099-7, 2021.
-
-[5]: B. M. Nedgu, “Why 85% of AI projects fail,” Towards Data Science Nov. 11, 2020.
-
-[6]: S. Reisner, “Why most AI implementations fail and what enterprises can do to beat the odds,” Venture Beat, June 28, 2021.
-
-[7]: J. F. DeFranco and J. Voas, “Reproducibility, Fabrication, and Falsification,” Computer, vol. 54 no. 12, 2021.
-
-[8]: M. Parashar, M. A. Heroux,and V. Stodden, "Research Reproducibility," Computer, vol. 55, no. 8, pp. 16-18, Aug. 2022, doi: 10.1109/MC.2022.3176988.
 
