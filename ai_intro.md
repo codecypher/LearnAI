@@ -32,21 +32,27 @@ Here are some lists of articles that covers some of the problems with **AI Engin
 
 [Getting Started with AI](https://pub.towardsai.net/getting-started-with-ai-f565c7877bee)
 
+A. Pillai, [Begin with problems, sandbox, identify trustworth vendors — a quick guide to getting started with AI](https://venturebeat.com/ai/begin-with-problems-sandbox-identify-trustworth-vendors-a-quick-guide-to-getting-started-with-ai/), VentureBeat, Feb. 8, 2025. 
+
+M. Jayasinghe, [Top Strategies for Building Scalable and Secure AI Applications](https://thenewstack.io/top-strategies-for-building-scalable-and-secure-ai-applications/), The New Stack, Feb. 5, 2025. 
+
+T. Shin, [4 Reasons Why You Shouldn’t Use Machine Learning](https://towardsdatascience.com/4-reasons-why-you-shouldnt-use-machine-learning-639d1d99fe11/), Towards Data Science, Oct. 5, 2021.
+
 [Recommended Resources](./Level-1/tips/ai_books.md)
 
 
-## Why AI Projects Fail 
+## Why AI Projects Fail
 
 A. DeNisco Rayome, [Why 85% of AI projects fail](https://www.techrepublic.com/article/why-85-of-ai-projects-fail/), TechRepublic, June 20, 2019.
 
 S. Reisner, [Why most AI implementations fail, and what enterprises can do to beat the odds](https://venturebeat.com/ai/why-most-ai-implementations-fail-and-what-enterprises-can-do-to-beat-the-odds/), Venture Beat, June 28, 2021. 
 
-Y. Kosarenko, [The majority of business analytics and AI projects are still failing](https://www.datadriveninvestor.com/2020/04/30/the-majority-of-business-analytics-and-ai-projects-are-still-failing/), Data Driven Investor, April 30, 2020.
-
 S. Mulligan, [AI trained on AI garbage spits out AI garbage](https://www.technologyreview.com/2024/07/24/1095263/ai-that-feeds-on-a-diet-of-ai-garbage-ends-up-spitting-out-nonsense/), 
 MIT Technology Review, July 24, 2024. 
 
-P. Raco, [Bursting the AI Hype Bubble Once and for All](https://towardsdatascience.com/bursting-the-ai-hype-bubble-once-and-for-all-581a994fe762), Towards Data Science, Oct. 11, 2024. 
+P. Raco, [Bursting the AI Hype Bubble Once and for All](https://towardsdatascience.com/bursting-the-ai-hype-bubble-once-and-for-all-581a994fe762), Towards Data Science, Oct. 11, 2024.
+
+M. Asay, [AI’s moment of disillusionment](https://www.infoworld.com/article/3715682/ais-moment-of-disillusionment.html), Infoworld, July 8, 2024. 
 
 [Failed Machine Learning (FML)](https://github.com/kennethleungty/Failed-ML), GitHub, kennethleungty/Failed-ML.
 
@@ -64,14 +70,14 @@ P. Hearn, [Uber was just hit with a massive $320 million fine. Here’s why](htt
 
 J. B. Michael and M. Orescanin, "[Developing and Deploying Artificial Intelligence Systems](https://ieeexplore.ieee.org/document/9789299)," IEEE Computer, vol. 55, no. 6, pp. 15-17, June 2022, doi: 10.1109/MC.2022.3166488.
 
+P. Ferguson, [AI Development vs Software Engineering: Key Differences Explained](https://medium.com/towards-data-science/ai-development-vs-software-engineering-key-differences-explained-0709633e81d2), Towards Data Science, Jan. 31, 2025. 
+
 D. Sculley, G. Holt, D. Golovin, E. Davydov, T. Phillips, D.  Ebner, V. Chaudhary, and M. Young
-[Machine Learning: The High Interest Credit Card of Technical Debt](https://research.google.com/pubs/pub43146.html?authuser=2), SE4ML: Software Engineering for Machine Learning (NIPS 2014 Workshop), 2014. 
+[Machine Learning: The High Interest Credit Card of Technical Debt](https://research.google.com/pubs/pub43146.html?authuser=2), SE4ML: Software Engineering for Machine Learning (NIPS 2014 Workshop), 2014.
 
 M. Troller, [Beware AI’s hidden costs before they bankrupt innovation](https://techcrunch.com/2023/12/27/beware-ais-hidden-costs-before-they-bankrupt-innovation/), techcrunch, Dec. 27, 2023.
 
 B. Cheatham, K. Javanmardian, and H. Samandari, [Confronting the risks of artificial intelligence](https://www.mckinsey.com/capabilities/quantumblack/our-insights/confronting-the-risks-of-artificial-intelligence), McKinsey Quarterly, April 26, 2019. 
-
-E. Gent, [Public AI Training Datasets Are Rife With Licensing Errors](https://spectrum.ieee.org/data-ai), IEEE Spectrum, Nov. 8, 2023. 
 
 
 ## Problems with AI Research

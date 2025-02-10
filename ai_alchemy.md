@@ -31,7 +31,7 @@ Y. Kosarenko, [The majority of business analytics and AI projects are still fail
 
 [Bursting the AI Hype Bubble Once and for All](https://towardsdatascience.com/bursting-the-ai-hype-bubble-once-and-for-all-581a994fe762)
 
-[AI’s moment of disillusionment](https://www.infoworld.com/article/3715682/ais-moment-of-disillusionment.html)
+M. Asay, [AI’s moment of disillusionment](https://www.infoworld.com/article/3715682/ais-moment-of-disillusionment.html), Infoworld, July 8, 2024. 
 
 [Failed Machine Learning (FML)](https://github.com/kennethleungty/Failed-ML)
 
@@ -56,15 +56,7 @@ J. B. Michael and T. C. Wingfield, "[Defensive AI: The Future Is Yesterday](http
 
 ## AI Risks
 
-J. B. Michael and M. Orescanin, "[Developing and Deploying Artificial Intelligence Systems](https://ieeexplore.ieee.org/document/9789299)," Computer, vol. 55, no. 6, pp. 15-17, June 2022, doi: 10.1109/MC.2022.3166488.
-
-[Machine Learning: The High Interest Credit Card of Technical Debt](https://research.google.com/pubs/pub43146.html)
-
-[Beware AI’s hidden costs before they bankrupt innovation](https://techcrunch.com/2023/12/27/beware-ais-hidden-costs-before-they-bankrupt-innovation/)
-
-[Confronting the risks of artificial intelligence](https://www.mckinsey.com/capabilities/quantumblack/our-insights/confronting-the-risks-of-artificial-intelligence)
-
-[Public AI Training Datasets Are Rife With Licensing Errors](https://spectrum.ieee.org/data-ai)
+E. Gent, [Public AI Training Datasets Are Rife With Licensing Errors](https://spectrum.ieee.org/data-ai), IEEE Spectrum, Nov. 8, 2023. 
 
 [The Dark Side of Model Evaluation That Nobody Talks About](https://blog.gopenai.com/the-dark-side-of-model-evaluation-that-nobody-talks-about-b2050ccf0814)
 
@@ -97,6 +89,8 @@ R. Mariani et al., "[Trustworthy AI — Part I](https://ieeexplore.ieee.org/docu
 R. Mariani et al., "[Trustworthy AI — Part II](https://ieeexplore.ieee.org/document/10109318)," Computer, vol. 56, no. 5, pp. 13-16, May 2023, doi: 10.1109/MC.2023.3253980.
 
 R. Mariani et al., "[Trustworthy AI — Part III](https://ieeexplore.ieee.org/document/10461705)," Computer, vol. 57, no. 3, pp. 22-24, March 2024, doi: 10.1109/MC.2024.3359766.
+
+[Bogus research is undermining good science, slowing lifesaving research](https://theconversation.com/bogus-scientific-papers-are-enriching-fraudsters-and-slowing-lifesaving-medical-research-248291)
 
 
 ## Integrating LLMs in a Software System
@@ -135,3 +129,5 @@ Despite the many advantages of integrating LLMs into existing software, there ar
 [9]: T. Shin, “4 Reasons Why You Shouldn’t Use Machine Learning,” Towards Data Science, Oct. 5, 2021.
 
 [10]: [Integrating Language Models into Existing Software Systems](https://www.kdnuggets.com/integrating-language-models-into-existing-software-systems)
+
+
