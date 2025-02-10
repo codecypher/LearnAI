@@ -7,53 +7,36 @@ Automated Machine Learning (AutoML) is an emerging field in which the process of
 [Considerations for Deploying Machine Learning Models in Production](https://www.anyscale.com/blog/considerations-for-deploying-machine-learning-models-in-production)
 
 
-Here is a list of AutoML tools that I have found to be helpful to an AI/ML engineer. 
+Here is a list of AutoML tools that I have found to be helpful for AI/ML engineering:
 
 [GitHub Lists](https://github.com/codecypher?tab=stars)
 
 
 ## Quick Start
 
-- PyCaret
+- Orange
+- AutoGluon
 - auto-sklearn
+- AutoKeras
 - Auto-ViML
 - AutoViz
+
 - H2O
-
-- MLFlow
-- wandb
-
-
-
-## MLOps Tools
-
-- MLFlow
-
-### [wandb](https://docs.wandb.ai/)
-
-Weights and biases (W&B/wandb) lets you track, compare, visualize, and optimize machine learning experiments with just a few lines of code. 
-
-wandb also lets you track your datasets. 
-
-Using W&B's lightweight tools, you can quickly track experiments, version and iterate on datasets, evaluate model performance, reproduce models, visualize results and spot regressions, and share findings with colleagues. 
-
-
-### Tutorials
-
-[Tutorial](https://www.mlflow.org/docs/latest/tutorials-and-examples/tutorial.html)
-
+- SpeedML
 
 
 ## AutoML Tools
 
-- auto-sklearn
+- Orange
 - AutoGluon
 - AutoKeras
+- auto-sklearn
 - Auto-ViML
-- SpeedML
+- AutoViz
 
 - FLAML
 - H2O
+- SpeedML
 - PyCaret
 
 - Hydra
@@ -85,7 +68,7 @@ Using W&B's lightweight tools, you can quickly track experiments, version and it
 [AutoViz: A New Tool for Automated Visualization](https://towardsdatascience.com/autoviz-a-new-tool-for-automated-visualization-ec9c1744a6ad)
 
 
-### [SageMaker](https://aws.amazon.com/sagemaker/?nc2=h_a1)
+### SageMaker
 
 SageMaker is a machine learning environment that simplifies the work of an ML developer by providing tools for extra fast model building and deployment.
 
@@ -94,17 +77,40 @@ In 2021, Amazon launched SageMaker Studio, the first integrated IDE for machine 
 SageMaker is closely integrated into the AWS cloud and it also offers data labeling software and other features.
 
 
-## Time Series Libraries
+## MLOps Tools
 
-- PyCaret
+- MLFlow
+- wandb
+
+### wandb
+
+Weights and biases (W&B/wandb) lets you track, compare, visualize, and optimize machine learning experiments with just a few lines of code. 
+
+wandb also lets you track your datasets. 
+
+Using W&B's lightweight tools, you can quickly track experiments, version and iterate on datasets, evaluate model performance, reproduce models, visualize results and spot regressions, and share findings with colleagues. 
+
+
+### Tutorials
+
+[Tutorial](https://www.mlflow.org/docs/latest/tutorials-and-examples/tutorial.html)
+
+
+
+## Time Series Libraries
 
 - AutoGluon
 - AutoKeras
 - AutoTS
-- Darts
 - mlforecast
 
 - TimeSynth
 - TimeGAN
 - Gretel.ai
 
+The three major statistical forecasting packages for python are: StatsForecast, Sktime, and DARTS. 
+
+
+## References
+
+[1]: [wandb](https://docs.wandb.ai/)

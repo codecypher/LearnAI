@@ -1,6 +1,6 @@
-# Machine Learning Tools
+# AI/ML Tools
 
-Here is a list of ML tools that I have found to be helpful for AI engineering.
+Here is a list of tools that I have found to be helpful for AI engineering.
 
 For items without links, see **Github Stars**. 
 
@@ -45,6 +45,56 @@ There are many tools that will help you in automating the entire feature enginee
 
 [The Only Web Scraping Tool you need for Data Science](https://medium.com/nerd-for-tech/the-only-web-scraping-tool-you-need-for-data-science-f388e2afa187)
 
+
+## Machine Learning Tools
+
+- Kedro
+- Comet
+- DagsHub
+
+- OpenML
+
+- ONNX
+- openai/gym
+- PyMC (Bayesian statistical modeling)
+- Snap ML
+
+
+### Poetry
+
+[Poetry Docs](https://python-poetry.org/docs/)
+
+Poetry: Dependency Management for Python
+ 
+Poetry helps you declare, manage, and install dependencies of Python projects, ensuring you have the right stack everywhere.
+
+poetry is a tool to handle dependency installation as well as building and packaging of Python packages. It only needs one file to do all of that: the new, standardized pyproject.toml.
+
+This means poetry uses `pyproject.toml` to replace setup.py, requirements.txt, setup.cfg, MANIFEST.in and Pipfile.
+
+### PySpark
+
+[Getting Started](https://spark.apache.org/docs/latest/api/python/getting_started/index.html)
+
+PySpark is an interface for Apache Spark in Python. It not only allows you to write Spark applications using Python APIs, but also provides the PySpark shell for interactively analyzing your data in a distributed environment. PySpark supports most of Spark’s features such as Spark SQL, DataFrame, Streaming, MLlib (Machine Learning) and Spark Core.
+
+### Snap ML
+
+[Snap ML](https://www.zurich.ibm.com/snapml/)
+
+Snap ML is a library that provides high-speed training of popular machine learning models on modern CPU/GPU computing systems
+
+[This Library is 30 Times Faster Than Scikit-Learn](https://medium.com/@irfanalghani11/this-library-is-30-times-faster-than-scikit-learn-206d1818d76f)
+
+[IBM Snap ML Examples](https://github.com/IBM/snapml-examples)
+
+### Tutorials
+
+[A Gentle Introduction to Bayesian Belief Networks](https://machinelearningmastery.com/introduction-to-bayesian-belief-networks/)
+
+[Building DAGs with Python](https://mungingdata.com/python/dag-directed-acyclic-graph-networkx/)
+
+[bnlearn](https://github.com/erdogant/bnlearn)
 
 
 ## Deep Learning Tools
@@ -102,65 +152,7 @@ When used with a loop (here we use with a loop over a torch.utils.data.DataLoade
 [3 Tools to Track and Visualize the Execution of Your Python Code](https://www.kdnuggets.com/2021/12/3-tools-track-visualize-execution-python-code.html)
 
 
-
-## ML Libraries
-
-- mambaforge (miniforge with Mamba)
-- Kedro
-- OpenML
-
-- ONNX
-- openai/gym
-- PyMC (Bayesian statistical modeling)
-- Snap ML
-
-
-### Poetry: Dependency Management for Python
-
-[Poetry Docs](https://python-poetry.org/docs/)
-
-Poetry helps you declare, manage, and install dependencies of Python projects, ensuring you have the right stack everywhere.
-
-poetry is a tool to handle dependency installation as well as building and packaging of Python packages. It only needs one file to do all of that: the new, standardized pyproject.toml.
-
-This means poetry uses `pyproject.toml` to replace setup.py, requirements.txt, setup.cfg, MANIFEST.in and Pipfile.
-
-### PySpark
-
-[Getting Started](https://spark.apache.org/docs/latest/api/python/getting_started/index.html)
-
-PySpark is an interface for Apache Spark in Python. It not only allows you to write Spark applications using Python APIs, but also provides the PySpark shell for interactively analyzing your data in a distributed environment. PySpark supports most of Spark’s features such as Spark SQL, DataFrame, Streaming, MLlib (Machine Learning) and Spark Core.
-
-### Snap ML
-
-[Snap ML](https://www.zurich.ibm.com/snapml/)
-
-Snap ML is a library that provides high-speed training of popular machine learning models on modern CPU/GPU computing systems
-
-[This Library is 30 Times Faster Than Scikit-Learn](https://medium.com/@irfanalghani11/this-library-is-30-times-faster-than-scikit-learn-206d1818d76f)
-
-[IBM Snap ML Examples](https://github.com/IBM/snapml-examples)
-
-### Tutorials
-
-[A Gentle Introduction to Bayesian Belief Networks](https://machinelearningmastery.com/introduction-to-bayesian-belief-networks/)
-
-[Building DAGs with Python](https://mungingdata.com/python/dag-directed-acyclic-graph-networkx/)
-
-[bnlearn](https://github.com/erdogant/bnlearn)
-
-
-
-## Time Series
-
-- statsmodels
-- stumpy
-- AutoTS
-- Darts
-- TsFresh
-
-
-## Pretrained Model Repos
+## Pretrained Models
 
 - [Model Zoo](https://modelzoo.co/)
 - [TensorFlow Hub](https://tfhub.dev/)
@@ -170,8 +162,7 @@ Snap ML is a library that provides high-speed training of popular machine learni
 - [Papers with Code](https://paperswithcode.com/)
 
 
-
-## Python Libraries
+## Python Tools
 
 - dateutil
 - tqdm
@@ -231,7 +222,6 @@ Pickle can be used to save and load the python classes or PyTorch models for reu
 - snoop
 
 
-
 ## CV Libraries
 
 - OpenCV
@@ -240,6 +230,14 @@ Pickle can be used to save and load the python classes or PyTorch models for reu
 - ageitgey/face_recognition
 - qubvel/segmentation_models
 
+
+## Time Series
+
+- statsmodels
+- stumpy
+- AutoTS
+- Darts
+- TsFresh
 
 
 ## NLP Libraries
@@ -259,16 +257,22 @@ Pickle can be used to save and load the python classes or PyTorch models for reu
 - TextAttack
 
 
+## GenAI
+
+- 1min.ai
+- you.com
+- app.aimagicx.com
+- insmind.com
+
 
 
 ## References
 
-[All Top Python Libraries for Data Science Explained](https://towardsdatascience.com/all-top-python-libraries-for-data-science-explained-with-code-40f64b363663)
+[1]: [All Top Python Libraries for Data Science Explained](https://towardsdatascience.com/all-top-python-libraries-for-data-science-explained-with-code-40f64b363663)
 
-[26 GitHub Repositories To Inspire Your Next Data Science Project](https://towardsdatascience.com/26-github-repositories-to-inspire-your-next-data-science-project-3023c24f4c3c)
+[2]: [26 GitHub Repositories To Inspire Your Next Data Science Project](https://towardsdatascience.com/26-github-repositories-to-inspire-your-next-data-science-project-3023c24f4c3c)
 
-[4 Amazing Python Libraries That You Should Try Right Now](https://towardsdatascience.com/4-amazing-python-libraries-that-you-should-try-right-now-872df6f1c93)
+[3]: [4 Amazing Python Libraries That You Should Try Right Now](https://towardsdatascience.com/4-amazing-python-libraries-that-you-should-try-right-now-872df6f1c93)
 
-[Tools for Efficient Deep Learning](https://towardsdatascience.com/tools-for-efficient-deep-learning-c9585122ded0)
-
+[4]: [Tools for Efficient Deep Learning](https://towardsdatascience.com/tools-for-efficient-deep-learning-c9585122ded0)
 
