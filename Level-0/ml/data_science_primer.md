@@ -749,16 +749,19 @@ There are a few different methods for ensembling, but the two most common are:
 
 - Boosting combines all the weak learners into a single strong learner.
 
+
 While bagging and boosting are both ensemble methods, they approach the problem from opposite directions:
 
-- Bagging uses complex base models and tries to "smooth out" their predictions.
-- Boosting uses simple base models and tries to "boost" their aggregate complexity.
+- Bagging uses complex base models and tries to "smooth out" the predictions.
 
-Ensembling is a general term but winhen the **base models** are decision trees, they have special names: random forests and boosted trees!
+- Boosting uses simple base models and tries to "boost" the aggregate complexity.
+
+Ensembling is a general term but when the **base models** are decision trees, they have special names: random forests and boosted trees!
+
 
 #### Gradient Boosting
 
-**Gradient boosting** is a machine learning technique for regression and classification problems which produces a prediction model in the form of an _ensemble_ of weak prediction models, typically decision trees.
+**Gradient boosting** is a machine learning technique for regression and classification problems which produces a prediction model in the form of an _ensemble_ of weak prediction models, usually decision trees.
 
 When a decision tree is the weak learner, the resulting algorithm is called gradient boosted trees which usually outperforms random forest.
 

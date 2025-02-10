@@ -250,7 +250,7 @@ Ensemble Algorithms
 The order of the steps is probably not flexible. Think of the order of algorithms as increasing in complexity and capability.
 
 
-## Spot Check Imbalanced Algorithms
+## Spot-Check Imbalanced Algorithms
 
 Spot-checking imbalanced algorithms is much like spot-checking machine learning algorithms.
 

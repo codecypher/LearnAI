@@ -673,6 +673,9 @@ def create_datasets(params: Params, debug: bool = False):
 [The Complete Guide to Time Series Forecasting Using Sklearn, Pandas, and Numpy](https://towardsdatascience.com/the-complete-guide-to-time-series-forecasting-using-sklearn-pandas-and-numpy-7694c90e45c1)
 
 
+The three major statistical forecasting packages for python are: StatsForecast, Sktime, and DARTS. 
+
+
 ## Time Series Forecasting using Keras
 
 [Quick Keras Recipes](https://keras.io/examples/keras_recipes/)

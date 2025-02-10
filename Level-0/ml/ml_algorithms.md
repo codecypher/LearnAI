@@ -24,7 +24,6 @@ Here is how to get started with machine learning algorithms:
 - Master Machine Learning Algorithms
 
 
-
 ----------
 
 
@@ -366,7 +365,7 @@ Ensemble methods are models composed of multiple weaker models that are independ
 
 Much effort is put into what types of weak learners to combine and the ways in which to combine them. 
 
-Ensemble is a very powerful class of techniques and as such is very popular.
+Ensemble is a very powerful class of techniques that is very popular.
 
 - Boosting
 - Bootstrapped Aggregation (Bagging)

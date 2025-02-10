@@ -39,6 +39,7 @@ Now that we have discussed pre-processing methods and Python libraries, we can p
 For each example, we discuss a couple of NLP algorithms, pick one based on our rapid development goals, and create a simple implementation using one of the libraries [6]:
 
 - Pre-Processing
+
 - Sentiment Analysis
 
 - Document Clustering
