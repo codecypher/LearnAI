@@ -23,89 +23,33 @@ It is important to know how to extract information from descriptive statistics.
     df.describe(include=['int', 'float', 'object', 'category'])
 ```
 
-## Plotly Express
+## Python Graphing Libraries
 
-The `plotly.express` module (usually imported as `px`) contains functions that can create entire figures at once and is referred to as Plotly Express or PX.
+Here are some useful Python graphing libraries [17]:
 
-Plotly Express is a built-in part of the `plotly` library and is the recommended starting point for creating most common figures.
+Altair: Declarative Visualization Made Simple
+ 
+Altair is a declarative statistical visualization library focusing on simplicity and expressiveness that minimizes boilerplate code and emphasizes interactive charts.
 
-We can use `plotly.express` scatter or line charts to quickly run a linear regression between 1 variable and 1 target [16].
+DuckDB: High-Performance SQL OLAP
+ 
+DuckDB is an in-process SQL OLAP database optimized for analytical workload which allows seamless integration with Python tools like Pandas and Jupyter.
 
-### Time series data without Trendline
+FlashText: Efficient Text Search and Replacement
 
-Time series data typically comes with a timestamp column (eg Datetime) and the value you want to plot (listed below as ‘y’) [16].
+FlashText is a lightweight library for keyword extraction and replacement, outperforming regex in speed and simplicity for many use cases.
 
-```py
-    # Line plot
-    px.line(df, x='Datetime', y='y')
+Missingno: Visualizing Missing Data
 
-    # Scatter plot
-    px.scatter(df, x='Datetime', y='y')
-```
+Missingno provides quick and intuitive visualizations for missing data, helping identify patterns and correlations.
 
-### Correlated variables with Trendline
+NetworkX: Analyzing Graph Data
+ 
+NetworkX is a versatile library for analyzing and visualizing graph structures from social networks to transportation systems.
 
-Using the trendline keyword in `px.scatter` draws a linear regression trendline with your x and y variables using OLS (Ordinary Least Squares) regression algorithm which is basically just a standard linear regression [16].
-
-Here is an example using the Wine Quality dataset from the UCI Machine Learning Repository (CC by 4.0 license) where we have plotted 2 features against each other to see the relationship between them [16].
-
-The OLS trendline provides you with the y=mx+b linear equation as well as the R².
-
-```py
-    # Scatter plot with trendline
-    px.scatter(df, x='fixed_acidity',y='density',trendline='ols')
-```
-
-### Statistical Distribution
-
-#### Mean
-
-With the mean value, you are trying to get a sense of what an average data point looks like.
-
-#### Standard Deviation
-
-Standard deviation is a measure of variation/dispersion of data points with respect to the mean.
-
-Smaller STD indicates that the data are mostly centered around the mean whereas a higher STD value indicates the data points are rather dispersed.
-
-#### Median (50%)
-
-The 50th percentile (the 50% column) is also known as the median. Like mean, it’s another measure of central tendency.
-
-Median is a preferred metric rather than mean if there are outliers or high variability in the data.
-
-If the difference between mean and median is _small_, you can infer that the data is symmetrically distributed.
-
-If the median is higher than the mean, data is likely _left-skewed_ in distribution.
-
-#### Min and Max
-
-Min and max values represent the lower and upper limit of a variable in the dataset.
-
-
-### Anomalies
-
-You can get a sense of outliers, anomalies, and other points of interest in the dataset using descriptive statistics.
-
-#### Outliers
-
-A large difference between the 75th percentile and the maximum value indicates the presence of potential outliers.
-
-Likewise, a large difference between the minimum value and the 25th percentile indicates the presence of potential outliers.
-
-To confirm outliers you can create a boxplot for visual inspection:
-
-```py
-    sns.boxplot(y=df['total_bill']);
-```
-
-#### Red flags
-
-Sometimes descriptive statistics can raise red flags.
-
-Places with unexpected minimum values (0 or negative) or absolutely unacceptible maximum values (such as someone’s age 120 years!).
-
-These are obvious indications that there are issues in the data and need further investigation.
+Ydata Profiling: Automated Data Insights
+ 
+Ydata Profiling automates dataset exploration by generating detailed HTML reports that highlight distributions, correlations, and data quality.
 
 
 ## Exploratory Data Analysis
@@ -590,6 +534,93 @@ There are also models such as decision trees that are robust to outliers.
 Spot check some methods that are robust to outliers to see if there is a significant improvement in model performance metrics.
 
 
+## Plotly Express
+
+The `plotly.express` module contains functions that can create entire figures at once.
+
+Plotly Express is a built-in part of the `plotly` library and is the recommended starting point for creating most common figures.
+
+We can use `plotly.express` scatter or line charts to quickly run a linear regression between 1 variable and 1 target [16].
+
+### Time series data without Trendline
+
+Time series data typically comes with a timestamp column (eg Datetime) and the value you want to plot (listed below as ‘y’) [16].
+
+```py
+    # Line plot
+    px.line(df, x='Datetime', y='y')
+
+    # Scatter plot
+    px.scatter(df, x='Datetime', y='y')
+```
+
+### Correlated variables with Trendline
+
+Using the trendline keyword in `px.scatter` draws a linear regression trendline with your x and y variables using OLS (Ordinary Least Squares) regression algorithm which is basically just a standard linear regression [16].
+
+Here is an example using the Wine Quality dataset from the UCI Machine Learning Repository (CC by 4.0 license) where we have plotted 2 features against each other to see the relationship between them [16].
+
+The OLS trendline provides you with the y=mx+b linear equation as well as the R².
+
+```py
+    # Scatter plot with trendline
+    px.scatter(df, x='fixed_acidity',y='density',trendline='ols')
+```
+
+### Statistical Distribution
+
+#### Mean
+
+With the mean value, you are trying to get a sense of what an average data point looks like.
+
+#### Standard Deviation
+
+Standard deviation is a measure of variation/dispersion of data points with respect to the mean.
+
+Smaller STD indicates that the data are mostly centered around the mean whereas a higher STD value indicates the data points are rather dispersed.
+
+#### Median (50%)
+
+The 50th percentile (the 50% column) is also known as the median. Like mean, it’s another measure of central tendency.
+
+Median is a preferred metric rather than mean if there are outliers or high variability in the data.
+
+If the difference between mean and median is _small_, you can infer that the data is symmetrically distributed.
+
+If the median is higher than the mean, data is likely _left-skewed_ in distribution.
+
+#### Min and Max
+
+Min and max values represent the lower and upper limit of a variable in the dataset.
+
+
+### Anomalies
+
+You can get a sense of outliers, anomalies, and other points of interest in the dataset using descriptive statistics.
+
+#### Outliers
+
+A large difference between the 75th percentile and the maximum value indicates the presence of potential outliers.
+
+Likewise, a large difference between the minimum value and the 25th percentile indicates the presence of potential outliers.
+
+To confirm outliers you can create a boxplot for visual inspection:
+
+```py
+    sns.boxplot(y=df['total_bill']);
+```
+
+#### Red flags
+
+Sometimes descriptive statistics can raise red flags.
+
+Places with unexpected minimum values (0 or negative) or absolutely unacceptible maximum values (such as someone’s age 120 years!).
+
+These are obvious indications that there are issues in the data and need further investigation.
+
+
+
+
 ## References
 
 [1]: [Reading and interpreting summary statistics](https://towardsdatascience.com/reading-and-interpreting-summary-statistics-df34f4e69ba6)
@@ -625,6 +656,8 @@ Spot check some methods that are robust to outliers to see if there is a signifi
 [15]: [Practical Guide to Data Analysis and Preprocessing](https://towardsdatascience.com/practical-guide-to-data-analysis-and-preprocessing-080815548173)
 
 [16]: [5 Python One-Liners to Kick Off Your Data Exploration](https://towardsdatascience.com/5-python-one-liners-to-kick-off-your-data-exploration-d6221f94291e)
+
+[17]: [10 Little-Known Python Libraries That Will Make You Feel Like a Data Wizard](https://www.kdnuggets.com/10-little-known-python-libraries-data-wizard)
 
 
 [Data Analytics: The Four Approaches to Analyzing Data and How To Use Them Effectively](https://www.kdnuggets.com/2023/04/data-analytics-four-approaches-analyzing-data-effectively.html)

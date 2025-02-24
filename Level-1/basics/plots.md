@@ -6,8 +6,21 @@ Matplolib is the basis of image visualization in Python but there are other alte
 
 [This Is How You Should Be Visualizing Your Data](https://towardsdatascience.com/this-is-how-you-should-be-visualizing-your-data-4512495c007b)
 
-[An Atlas of Simple Matplotlib Charts](https://medium.com/geekculture/an-atlas-of-simple-matplotlib-charts-2f6fd32ca4cf()
+[An Atlas of Simple Matplotlib Charts](https://medium.com/geekculture/an-atlas-of-simple-matplotlib-charts-2f6fd32ca4cf)
 
+
+## Python Graphing Libraries
+
+- Plotly
+- Seaborn
+- Bokeh
+- Cufflinks
+
+- Altair
+- Ydata Profiling
+
+- SciPy
+- Statsmodels
 
 
 ## Tips for Improving Charts with Matplotlib
@@ -1161,7 +1174,11 @@ Use the catplot function using kind=’strip’ (default) and provide the hue pa
 
 ## Bokeh and Cufflinks
 
-Here we discuss two visualization libraries  `pandas_bokeh` and `cufflinks` to create plotly and bokeh charts using the basic pandas plotting syntax.
+Bokeh: Interactive Web-Based Visualization
+
+Bokeh is ideal for creating interactive visualizations for modern web browsers. It allows you to build elegant, interactive plots, dashboards, and data applications.
+
+Here we create plotly and bokeh charts using the basic pandas plotting syntax.
 
 We also discuss the pandas plotting functions.
 

@@ -260,9 +260,10 @@ Pickle can be used to save and load the python classes or PyTorch models for reu
 ## GenAI
 
 - 1min.ai
-- you.com
+- console.groq.com
 - app.aimagicx.com
-- insmind.com
+- you.com
+- insmind.com (photos and images)
 
 
 
