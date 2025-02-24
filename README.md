@@ -14,9 +14,9 @@ If you are like me and try to follow the principles of DRY, KISS, Design Pattern
 - [AI Alchemy](./ai_alchemy.md)
 - [Books](.ai_books.md)
 
-- Level-0 (Beginner)
-- Level-1 (Advanced)
-- Level-2 (Expert)
+- Level-1 (Beginner)
+- Level-2 (Advanced)
+- Level-3 (Expert)
 
 ## Noteworthy Quotes
 

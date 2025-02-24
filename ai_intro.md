@@ -34,7 +34,9 @@ Here are some lists of articles that covers some of the problems with **AI Engin
 
 A. Pillai, [Begin with problems, sandbox, identify trustworth vendors — a quick guide to getting started with AI](https://venturebeat.com/ai/begin-with-problems-sandbox-identify-trustworth-vendors-a-quick-guide-to-getting-started-with-ai/), VentureBeat, Feb. 8, 2025. 
 
-M. Jayasinghe, [Top Strategies for Building Scalable and Secure AI Applications](https://thenewstack.io/top-strategies-for-building-scalable-and-secure-ai-applications/), The New Stack, Feb. 5, 2025. 
+M. Jayasinghe, [Top Strategies for Building Scalable and Secure AI Applications](https://thenewstack.io/top-strategies-for-building-scalable-and-secure-ai-applications/), The New Stack, Feb. 5, 2025.
+
+[Pragmatic AI Automation — Balancing Efficiency & Risk](https://blog.gopenai.com/pragmatic-ai-automation-balancing-efficiency-risk-d39c85333704), GoPenAI, Feb. 10, 2025. 
 
 T. Shin, [4 Reasons Why You Shouldn’t Use Machine Learning](https://towardsdatascience.com/4-reasons-why-you-shouldnt-use-machine-learning-639d1d99fe11/), Towards Data Science, Oct. 5, 2021.
 

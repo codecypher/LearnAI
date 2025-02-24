@@ -97,6 +97,8 @@ R. Mariani et al., "[Trustworthy AI — Part III](https://ieeexplore.ieee.org/do
 
 Despite the many advantages of integrating LLMs into existing software, there are many risks that need to be considered [10].
 
+> The tendency to make things up is holding chatbots back. But that’s just what they do. (MIT Technology Review)
+
 - Computational costs of training models and during model inferences due to heavy reliance on high-end GPUs and TPUs
 
 - Making frequent API calls can be expensive, especially for high-traffic applications
