@@ -152,6 +152,21 @@ When used with a loop (here we use with a loop over a torch.utils.data.DataLoade
 [3 Tools to Track and Visualize the Execution of Your Python Code](https://www.kdnuggets.com/2021/12/3-tools-track-visualize-execution-python-code.html)
 
 
+## LLM Tools
+
+LangChain is a framework to help developers build LLM applications that combine LLMs with other sources of computation or knowledge. 
+
+LlamaIndex is a framework to help developers connect custom data with LLMs by providing the framework for ingesting, structuring, and accessing private or domain-specific data in LLM applications.
+
+ChromaDB is an open-source embeddings database for AI applications that provides efficient storage and retrieval of vector embeddings which is ideal for semantic search and information retrieval systems.
+
+Weaviate is a vector search engine that enables semantic search across multiple data types that can handle large-scale vector operations with rich querying capabilities via GraphQL.
+
+Weights and Biases is an experiment tracking and model monitoring platform.
+
+LangSmith is a model monitoring and evaluation platform for LLM applications. 
+
+
 ## Pretrained Models
 
 - [Model Zoo](https://modelzoo.co/)
