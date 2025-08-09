@@ -36,7 +36,7 @@ The key terms for discussing the machine learning workflow:
 
 ETL and ELT (extract, transform, load or extract, load, and transform).
 
-ETL transforms the data before loading it into a data warehouse while ELT loads the data and allows the transformation to be handled within the data warehouse [21].
+ETL transforms the data before loading it into a data warehouse while ELT loads the data and allows the transformation to be handled within the data warehouse [12].
 
 - **Extract:** This refers to pulling the source data from the original database or data source.
 
@@ -54,7 +54,7 @@ ETL transforms the data before loading it into a data warehouse while ELT loads 
 
 ## Overview
 
-The process of applied machine learning consists of a sequence of steps [6], [32]:
+The process of applied machine learning consists of a sequence of steps [6], [18]:
 
 1. Define Problem
 2. Prepare Data
@@ -179,7 +179,7 @@ Strategies to compensate for lack of data [8]:
 
 ### 2. Data Cleaning
 
-The data obtained is usually not suitable for ML which ia why data cleaning or simply preparing raw data is required [8], [9]:
+The data obtained is usually not suitable for ML which ia why data cleaning or simply preparing raw data is required [8], [9], [19]:
 
 - Handling missing data: Imputation, interpolation, deletion.
 
@@ -267,7 +267,7 @@ Recommended techniques:
 
 ## Data Preprocessing Steps
 
-The three mosy common data preprocessing steps are: formatting, cleaning, and sampling [5].
+The three most common data preprocessing steps are: formatting, cleaning, and sampling [5].
 
 1. Formatting: The data you have selected may not be in the format that is needed which includes: format adjustments, correct inconsistencies, and handle errors in variables.
 
@@ -311,7 +311,7 @@ We can use AutoML or create a custom test harness to build and evaluate many mod
 
 ## Avoid Data Leakage
 
-In general, we must answer two key questions to prevent data leakage [27]:
+In general, we must answer two key questions to prevent data leakage [16]:
 
 1. Am I exposing information from the test set to the training process?
 
@@ -323,9 +323,9 @@ We should also apply the same principles to the cross-validation process to ensu
 
 ## Notes on Data Preparation
 
-The articles in [21] cover exploratory analysis, data cleaning, feature engineering, algorithm selection, and model training.
+The articles in [12] cover exploratory analysis, data cleaning, feature engineering, algorithm selection, and model training.
 
-How to Make Your Data Models Modular to Avoid highly coupled systems and unexpected production bugs [24].
+How to Make Your Data Models Modular to Avoid highly coupled systems and unexpected production bugs [14].
 
 Here are some relevant topics disucssed in [1]:
 
@@ -374,7 +374,7 @@ For ML projects, it can be confusing to determine which library to choose to rea
 
 ## Data Cleaning
 
-Data cleaning includes the following tasks [8], [9], [25]:
+Data cleaning includes the following tasks [8], [9], [15], [19]:
 
 - Delete Unnecessary Columns
 - Remove irrelevant data
@@ -403,11 +403,11 @@ Data cleaning refers to identifying and correcting errors in the dataset that ma
 - Identify Rows that Contain Duplicate Data
 - Delete Rows that Contain Duplicate Data
 
-The article [17] provides some Tips and Tricks to Deal with a Messy Date String Column in Pandas Dataframe.
+The article [11] provides some Tips and Tricks to Deal with a Messy Date String Column in Pandas Dataframe.
 
 ### Delete Unnecessary Columns
 
-There can be columns in the dataset that we do not need in our data analysis, so we can remove them using the `drop()` method with the specified column name [25].
+There can be columns in the dataset that we do not need in our data analysis, so we can remove them using the `drop()` method with the specified column name [15].
 
 ```py
   df.drop('last_name', axis = 1, inplace = True)
@@ -438,7 +438,7 @@ We set the axis to 1 to specify that we want wasto delete a column and the inpla
 
 ### Data Type Conversion
 
-Sometimes, data types might not be correct. For example, a date column might be interpreted as strings [25].
+Sometimes, data types might not be correct. For example, a date column might be interpreted as strings [15].
 
 We need to convert these columns to the appropriate types.
 
@@ -473,7 +473,7 @@ The data you have selected may not be in the format that is needed which include
 
 ### Handle Missing Values
 
-There are various ways of dealing with missing values and it is likely that we will need to determine which method is right for a task at hand on a case-by-case basis [9], [10], [22], [29].
+There are various ways of dealing with missing values and it is likely that we will need to determine which method is right for a task at hand on a case-by-case basis [9], [10], [13], [17].
 
 Missing data can happen due to forgotten to store, inappropriate data handling, inefficient data entry at the ground level, etc.
 
@@ -481,7 +481,7 @@ The removal of samples or dropping of feature columns may not feasible because w
 
 We can use interpolation techniques to estimate the missing values from the other training samples in the dataset.
 
-There are various methods [29]:
+There are various methods [17]:
 
 1. Fill with constant values ​​(0, 1, 2, etc.)
 
@@ -661,24 +661,6 @@ We can drop or fill the `NaN` values.
           return outs
 ```
 
-Outliers can skew the analysis of numerical columns.
-
-We can use the 25th and 75th quartile on numerical data to get the inter-quartile range. Then we can filter out any values outside this range [34].
-
-In statistics, outliers are usually defined as values occurring outside 1.5 times the interquartile range (IQR) from the first quartile (Q1) or third quartile (Q3).
-
-```py
-  Q1 = df['salary'].quantile(0.25)
-  Q3 = df['salary'].quantile(0.75)
-  IQR = Q3 - Q1
-```
-
-The above methods find the inter-quartile range on the salary column. Then, we can now filter out outliers using conditional indexing as shown before. This removes the outliers and we are left with rows with values within the acceptable range [34].
-
-```py
-  # Filter salaries within the acceptable range
-  df = df[(df['salary'] >= Q1 - 1.5 * IQR) & (df['salary'] <= Q3 + 1.5 * IQR)]
-```
 
 ### Remove Outliers
 
@@ -692,628 +674,12 @@ The above methods find the inter-quartile range on the salary column. Then, we c
   df = df[((np.abs(stats.zscore(df[out_list])) < 3)).all(axis=1)]
 ```
 
-## Data Cleaning (Python)
-
-Here are 5 functions to provide examples for creating a custom data cleaning toolset [26].
-
-1. Remove Multiple Spaces
-
-We can create a function  to remove excessive whitespace from text.
-
-If we want to remove multiple spaces within a string or excessive leading or trailing spaces, this single line function will work.
-
-We make use of regular expressions for internal spaces and `strip()` for leading/trailing whitespace.
-
-```py
-  def clean_spaces(text: str) -> str:
-      """
-      Remove multiple spaces from a string and trim leading/trailing spaces.
-
-      :param text: The input string to clean
-      :returns: A string with multiple spaces removed and trimmed
-      """
-      return re.sub(' +', ' ', str(text).strip())
-```
-
-```py
-  messy_text = "This   has   too    many    spaces"
-  clean_text = clean_spaces(messy_text)
-  print(clean_text)
-  # This has too many spaces
-```
-
-2. Standardize Date Formats
-
-This function will standardize dates to the specified format (YYYY-MM-DD).
-
-```py
-  def standardize_date(date_string: str) -> Optional[str]:
-      """
-      Convert various date formats to YYYY-MM-DD.
-
-      :param date_string: The input date string to standardize
-      :returns: A standardized date string in YYYY-MM-DD format, or None if parsing fails
-      """
-      date_formats = ["%Y-%m-%d", "%d-%m-%Y", "%m/%d/%Y", "%d/%m/%Y", "%B %d, %Y"]
-      for fmt in date_formats:
-          try:
-              return datetime.strptime(date_string, fmt).strftime("%Y-%m-%d")
-          except ValueError:
-              pass
-      # Return None if no format matches
-      return None
-``
-
-```py
-  dates = ["2023-04-01", "01-04-2023", "04/01/2023", "April 1, 2023"]
-  standardized_dates = [standardize_date(date) for date in dates]
-  print(standardized_dates)
-  # ['2023-04-01', '2023-04-01', '2023-04-01', '2023-04-01']
-```
-
-3. Handle Missing Values
-
-To deal with missing values, we can specify the numeric data strategy to use (‘mean’, ‘median’, or ‘mode’) or categorical data strategy (‘mode’ or ‘dummy’).
-
-```py
-  def handle_missing(df: pd.DataFrame, numeric_strategy: str = 'mean', categorical_strategy: str = 'mode') -> pd.DataFrame:
-      """
-      Fill missing values in a DataFrame.
-
-      :param df: The input DataFrame
-      :param numeric_strategy: Strategy for handling missing numeric values ('mean', 'median', or 'mode')
-      :param categorical_strategy: Strategy for handling missing categorical values ('mode' or 'dummy')
-      :returns: A DataFrame with missing values filled
-      """
-      for column in df.columns:
-          if df[column].dtype in ['int64', 'float64']:
-              if numeric_strategy == 'mean':
-                  df[column].fillna(df[column].mean(), inplace=True)
-              elif numeric_strategy == 'median':
-                  df[column].fillna(df[column].median(), inplace=True)
-              elif numeric_strategy == 'mode':
-                  df[column].fillna(df[column].mode()[0], inplace=True)
-          else:
-              if categorical_strategy == 'mode':
-                  df[column].fillna(df[column].mode()[0], inplace=True)
-              elif categorical_strategy == 'dummy':
-                  df[column].fillna('Unknown', inplace=True)
-      return df
-```
-
-```py
-  df = pd.DataFrame({'A': [1, 2, np.nan, 4], 'B': ['x', 'y', np.nan, 'z']})
-  cleaned_df = handle_missing(df)
-  print(cleaned_df)
-```
-
-```
-  df[column].fillna(df[column].mode()[0], inplace=True)
-
-            A  B
-  0  1.000000  x
-  1  2.000000  y
-  2  2.333333  x
-```
-
-4. Remove Outliers
-
-We can use the IQR method to remove outliers from our data.
-
-We pass in the data and specify the columns to check for outliers and return an outlier-free dataframe.
-
-```py
-  import pandas as pd
-  import numpy as np
-  from typing import List
-
-  def remove_outliers_iqr(df: pd.DataFrame, columns: List[str], factor: float = 1.5) -> pd.DataFrame:
-      """
-      Remove outliers from specified columns using the Interquartile Range (IQR) method.
-
-      :param df: The input DataFrame
-      :param columns: List of column names to check for outliers
-      :param factor: The IQR factor to use (default is 1.5)
-      :returns: A DataFrame with outliers removed
-      """
-      mask = pd.Series(True, index=df.index)
-      for col in columns:
-          Q1 = df[col].quantile(0.25)
-          Q3 = df[col].quantile(0.75)
-          IQR = Q3 - Q1
-          lower_bound = Q1 - factor * IQR
-          upper_bound = Q3 + factor * IQR
-          mask &= (df[col] >= lower_bound) & (df[col] <= upper_bound)
-
-      cleaned_df = df[mask]
-
-      return cleaned_df
-```
-
-```py
-  df = pd.DataFrame({'A': [1, 2, 3, 100, 4, 5], 'B': [10, 20, 30, 40, 50, 1000]})
-  print("Original DataFrame:")
-  print(df)
-  print("\nCleaned DataFrame:")
-  cleaned_df = remove_outliers_iqr(df, ['A', 'B'])
-  print(cleaned_df)
-```
-
-```
-  Original DataFrame:
-       A     B
-  0    1    10
-  1    2    20
-  2    3    30
-  3  100    40
-  4    4    50
-  5    5  1000
-
-  Cleaned DataFrame:
-     A   B
-  0  1  10
-  1  2  20
-```
-
-5. Normalize Text Data
-
-We can create a function to convert all text to lowercase, strip out whitespace, and remove special characters.
-
-```py
-  def normalize_text(text: str) -> str:
-      """
-      Normalize text data by converting to lowercase, removing special characters, and extra spaces.
-
-      :param text: The input text to normalize
-      :returns: Normalized text
-      """
-      # Convert to lowercase
-      text = str(text).lower()
-
-      # Remove special characters
-      text = re.sub(r'[^\w\s]', '', text)
-
-      # Remove extra spaces
-      text = re.sub(r'\s+', ' ', text).strip()
-
-      return text
-```
-
-```py
-  messy_text = "This is MESSY!!! Text   with $pecial ch@racters."
-  clean_text = normalize_text(messy_text)
-  print(clean_text)
-  # this is messy text wit
-```
-
-----------
-
-
-## Python One-Liners for Data Cleaning
-
-Some useful Python one-liners for common data cleaning tasks [30].
-
-### Quick Data Quality Checks
-
-Here are some essential one-liners to help identify common data quality issues.
-
-```py
-  df.info()
-
-  # Check for Missing Values
-  missing_values = df.isnull().sum()
-  print("Missing Values:\n", missing_values)
-
-  # Identify Incorrect Data Types
-  print("Data Types:\n", df.dtypes)
-```
-
-Convert Dates to a Consistent Format
-
-Here we convert ‘TransactionDate’ to a consistent datetime format. Any unconvertible values—invalid formats—are replaced with NaT (Not a Time).
-
-```py
-  df["TransactionDate"] = pd.to_datetime(df["TransactionDate"], errors="coerce")
-  print(df["TransactionDate"])
-```
-
-Find Outliers in Numeric Columns
-
-Finding outliers in numeric columns is another important check but it requires some domain knowledge to identify potential outliers. Here, we filter the rows where the ‘Price’ is less than 0, flagging negative values as potential outliers.
-
-```py
-  outliers = df[df["Price"] < 0]
-  print("Outliers:\n", outliers)
-```
-
-Check for Duplicate Records
-
-We can check for duplicate rows based on ‘CustomerName’ and ‘Product’, ignoring unique TransactionIDs. Duplicates can indicate repeated entries.
-
-```py
-  duplicates = df.duplicated(subset=["CustomerName", "Product"], keep=False)
-  print("Duplicate Records:\n", df[duplicates])
-```
-
-Standardize Text Data
-
-Here we standardize CustomerName by removing extra spaces and ensuring proper capitalization ( "jane rust" → "Jane Rust").
-
-```py
-  df["CustomerName"] = df["CustomerName"].str.strip().str.title()
-  print(df["CustomerName"])
-```
-
-Validate Data Ranges
-
-We need to verify that numeric values lie within the expected range.
-
-Here we check if all prices fall within a realistic range, say 0 to 5000. Rows with price values outside this range are flagged.
-
-```py
-  invalid_prices = df[~df["Price"].between(0, 5000)]
-  print("Invalid Prices:\n", invalid_prices)
-```
-
-Count Unique Values in a Column
-
-We can check how many times each product appears using the `value-counts()` method which is useful for finding typos or anomalies in categorical data.
-
-```py
-  unique_products = df["Product"].value_counts()
-  print("Unique Products:\n", unique_products)
-```
-
-Check for Inconsistent Formatting Across Columns
-
-We can check for inconsistently formatted entries in 'CustomerName' using regex flags to find names that may not match the expected title case format.
-
-```py
-  inconsistent_names = df["CustomerName"].str.contains(r"[A-Z]{2,}", na=False)
-  print("Inconsistent Formatting in Names:\n", df[inconsistent_names])
-```
-
-Find Rows with Multiple Issues
-
-We can find rows with more than one issue such as missing values, negative prices, or invalid dates that may need more careful review.
-
-```py
-  issues = df.isnull().sum(axis=1) + (df["Price"] < 0) + (~df["TransactionDate"].notnull())
-  problematic_rows = df[issues > 1]
-  print("Rows with Multiple Issues:\n", problematic_rows)
-```
-
-### Capitalize Strings
-
-```py
-  # Convert Strings to Uppercase
-  strings = ["hello", "world", "python", "rocks"]
-  uppercase_strings = [s.upper() for s in strings]
-
-  df['name'] = df['name'].apply(lambda x: x.lower())
-```
-
-### String Manipulation
-
-Here are Python one-liners that perform string manipulation.
-
-```py
-  # Find Strings Containing a Specific Substring
-  fruits = ["apple", "banana", "cherry", "apricot", "blueberry"]
-  filtered = [s for s in fruits if "ap" in s]
-
-  # Reverse Strings
-  to_do = ["code", "debug", "refactor"]
-  reversed_strings = [task[::-1] for task in to_do]
-
-  # Split Strings into Substrings
-  strings = ["learn python", "python is fun"]
-  split_strings = [s.split() for s in strings]
-
-  # Replace Substrings in Strings
-  strings = ["Learn C", "Code in C"]
-  replaced_strings = [string.replace("C", "Python") for string in strings]
-
-  # Count Occurrences of a Character
-  strings = ["apple", "banana", "cherry"]
-  char_counts = [s.count("a") for s in strings]
-
-  # Join Strings
-  strings = ["Python", "is", "great"]
-  sentence = " ".join(strings)
-
-  # Find the Length of Strings
-  strings = ["elephant", "cat", "dinosaur", "ant"]
-  lengths = [len(s) for s in strings]
-
-  # Check if Strings are Alphanumeric
-  strings = ["hello123", "world!", "python3.12", "rocks"]
-  is_alphanumeric = [s.isalnum() for s in strings]
-
-  # Add Suffixes to Strings
-  files = ["main", "test", "app"]
-  suffixed_files = [file + ".py" for file in files]
-
-  # Extract the First Letter of Each String
-  strings = ["banana", "cherry", "date", "blueberry"]
-  first_letters = [s[0] for s in strings]
-
-  # Sort Strings Alphabetically in Lowercase
-  strings = ["Apple", "banana", "Cherry", "date"]
-  sorted_strings = sorted(strings, key=lambda s: s.lower())
-```
-
-### Convert Data Types
-
-Ensuring that data types are consistent and correct across the dataset is necessary for accurate analysis.
-
-```py
-  # Converting age to an integer type, defaulting to 25 if conversion fails
-  data = [{**d, "age": int(d["age"]) if isinstance(d["age"], (int, float)) else 25} for d in data]
-```
-
-### Validate Numeric Ranges
-
-It is important to check that numeric values fall within acceptable ranges.
-
-```py
-  # Ensuring age is an integer within the range of 18 to 60; otherwise, set to 25
-  data = [{**d, "age": d["age"] if isinstance(d["age"], int) and 18 <= d["age"] <= 60 else 25} for d in data]
-```
-
-### Validate Email
-
-Formatting inconsistencies are common with text fields.
-
-Here we check that email addresses are valid and replacing invalid ones with a default address:
-
-```py
-  # Verifying that the email contains both an "@" and a ".";
-  #assigning 'invalid@example.com' if the format is incorrect
-  data = [{**d, "email": d["email"] if "@" in d["email"] and "." in d["email"] else "invalid@example.com"} for d in data]
-```
-
-### Handle Missing Values
-
-Missing values are another common problem in most datasets.
-
-Here we check for missing salary values and replace with a default value:
-
-```py
-  # Assign default salary of 30,000 if the salary is missing
-  data = [{**d, "salary": d["salary"] if d["salary"] is not None else 30000.00} for d in data]
-```
-
-We can fill the numerical missing data with the median and the categorical missing data with the mode [31].
-
-```py
-  df.fillna({col: df[col].median() for col in df.select_dtypes(include='number').columns} |
-            {col: df[col].mode()[0] for col in df.select_dtypes(include='object').columns}, inplace=True)
-```
-
-### Standardize Date Formats
-
-It is important to have all dates and times in the same format.
-
-Here we convert various date formats to a single default format with a placeholder for invalid entries:
-
-```py
-  from datetime import datetime
-
-  # Attempting to convert the date to a standardized format and defaulting to '2023-01-01' if invalid
-  data = [{**d, "join_date": (lambda x: (datetime.strptime(x, '%Y-%m-%d').date() if '-' in x and len(x) == 10 else datetime.strptime(x, '%d-%m-%Y').date()) if x and 'invalid-date' not in x else '2023-01-01')(d['join_date'])} for d in data]
-```
-
-It might be better to break this down into multiple steps instead.
-
-Read "Why You Should Not Overuse List Comprehensions in Python" to learn why you should not use comprehensions at the cost of readability and maintainability.
-
-### Remove Negative Values
-
-Sometimes we need to check that certain numerical fields have only non-negative values such as age, salary, and more.
-
-Here we replace any negative salary values with zero:
-
-```py
-  # Replace negative salary values with zero to ensure all values are non-negative
-  data = [{**d, "salary": max(d["salary"], 0)} for d in data]
-```
-
-### Check for Duplicates
-
-Removing duplicate records is important before we can analyze the dataset.
-
-Here we check that only unique records remain by checking for duplicate names:
-
-```py
-  # Keeping only unique entries based on the name field
-
-  # Use set to remove duplicates
-  data = {tuple(d.items()) for d in data}
-
-  # Convert back to list of dictionaries
-  data = [dict(t) for t in data]
-```
-
-### Scale Numeric Values
-
-Scaling numeric values can usuallt help with consistent analysis.
-
-We can a list comprehension to scale salaries to a percentage of the maximum salary in the dataset:
-
-```py
-  # Normalizing salary values to a percentage of the maximum salary
-  max_salary = max(d["salary"] for d in data)
-  data = [{**d, "salary": (d["salary"] / max_salary * 100) if max_salary > 0 else 0} for d in data]
-```
-
-### Trim Whitespace
-
-Sometimes we need to remove unnecessary whitespaces from strings.
-
-Here is a one-liner to trim leading and trailing spaces from the name strings:
-
-```py
-  # Trim whitespace from names for cleaner data
-  strings = ["  fun ", " funky "]
-  trimmed_strings = [s.strip() for s in strings]
-```
-
-### Remove Highly Correlated Features
-
-Multicollinearity occurs when our dataset contains many independent variables that are highly correlated with each other instead of with the target which negatively impacts the model performance, so we want to keep less correlated features [31].
-
-We can combine the Pandas correlation feature with the conditional selection to quickly select the less correlated features. For example, here is how we can choose the features that have the maximum Pearson correlation with the others below 0.95.
-
-```py
-  df = df.loc[:, df.corr().abs().max() < 0.95]
-```
-
-We can try using the correlation features and the threshold to evaluate the prediction model.
-
-### Conditional Column Apply
-
-Creating a new column with multiple conditions can sometimes be complicated, and the line to perform them can be long [31].
-
-We can use the `apply` method from Pandas to use specific conditions to create the new feature.
-
-Here are examples of creating a new column where the values are based on the condition of the other column values.
-
-```py
-  df['new_col'] = df.apply(lambda x: x['A'] * x['B'] if x['C'] > 0 else x['A'] + x['B'], axis=1)
-```
-
-### Finding Common and Different Element
-
-The `Set` data type is unique data that represents an unordered list of data but only with unique elements which can be used to find the common or different elements between two sets [31].
-
-```py
-  set1.intersection(set2)
-  set1.difference(set2)
-```
-
-### Boolean Masks for Filtering
-
-When working with the NumPy array and its derivate object, we often want to filter the data according to our requirements [31].
-
-We can create a boolean mask to filter the data based on the boolean condition we set.
-
-```py
-  import numpy as np
-
-  data = np.array([10, 15, 20, 25, 30, 35, 40, 45, 50])
-```
-
-We can use the boolean mask to filter the data to show only even numbers.
-
-```py
-  data[(data % 2 == 0)]
-```
-
-This is also the basis of the Pandas filtering, but a Boolean mask can be more versatile since it also works with NumPy arrays.
-
-### List Count Occurrence
-
-When working with a list or any other data with multiple values, there are times when we want to know the frequency for each value [31].
-
-We can use the `counter` function to count values automatically.
-
-```py
-  data = [10, 10, 20, 20, 30, 35, 40, 40, 40, 50]
-
-  
-  from collections import Counter
-
-  Counter(data)
-
-  # Counter({10: 2, 20: 2, 30: 1, 35: 1, 40: 3, 50: 1})
-```
-
-The result is a dictionary for the count occurrence.
-
-### Numerical Extraction from Text
-
-Regular expressions (Regex) are character lists that match a pattern in text.
-
-Regex are usually used when we want to perform specific text manipulation [31].
-
-We can use a combination of Regex and map to extract numbers from the text.
-
-```py
-  import re
-
-  list(map(int, re.findall(r'\d+', "Sample123Text456")))
-
-  # [123, 456]
-```
-
-### Flatten Nested List
-
-In data preparation, we often encounter nested list data that contains a list within a list [31].
-
-We usually want to flatten the nested list for further data processing.
-
-```py
-  nested_list = [
-
-      [1, 2, 3],
-
-      [4, 5],
-
-      [6, 7, 8, 9]
-
-  ]
-```
-
-We can then flatten the list with the following code.
-
-```py
-  sum(nested_list, [])
-  # [1, 2, 3, 4, 5, 6, 7, 8, 9]
-```
-
-Now we can use this one-dimensional list to further analyze the data in a more straightforward manner.
-
-### List to Dictionary
-
-Sometimes we have several lists that we want to combine into dictionary format [31].
-
-We can convert the list we have into a dictionary using the zip function.
-
-```py
-  fruit = ['apple', 'banana', 'cherry']
-  values = [100, 200, 300]
-```
-
-We can use zip and dict to combine both of the lists into one structure that can then be used for further data preprocessing.
-
-```py
-  dict(zip(fruit, values))
-  # {'apple': 100, 'banana': 200, 'cherry': 300}
-```
-
-### Dictionary Merging
-
-When we have a dictionary that contains the information we require for data preprocessing, we usually want to combine them.
-
-```py
-  fruit_mapping = {'apple': 100, 'banana': 200, 'cherry': 300}
-  furniture_mapping = {'table': 100, 'chair': 200, 'sofa': 300}
-```
-
-We can combine dictionaries using the following one-liner.
-
-```py
-  {**fruit_mapping, **furniture_mapping }
-```
-
-Now both dictionaries have been merged into one dictionary which is very useful in many cases that require us to aggregate data.
 
 ## Encoding Categorical Features (Python)
 
-Most machine learning algorithms and deep learning neural networks require that input and output variables are numbers [27] which means that categorical data must be encoded to numbers before we can use it to fit and evaluate a model.
+Most machine learning algorithms and deep learning neural networks require that input and output variables are numbers [16] which means that categorical data must be encoded to numbers before we can use it to fit and evaluate a model.
 
-_Binning_ is a technique for transforming variables whose values ​​are numeric into categorical ones [29].
+_Binning_ is a technique for transforming variables whose values ​​are numeric into categorical ones [17].
 
 For categorical data, we need to distinguish between _nominal_ and _ordinal_ features.
 
@@ -1325,7 +691,7 @@ For categorical data, we need to distinguish between _nominal_ and _ordinal_ fea
 
   Example: T-shirt color is a nominal feature since it typically does not make sense to say that red is larger than blue.
 
-There are several ways to encode categorical variables [9], [27]:
+There are several ways to encode categorical variables [9], [16]:
 
   1. Integer (Ordinal) Encoding: each unique label or category is mapped to an integer.
 
@@ -1381,6 +747,10 @@ There is a convenient `LabelEncoder` class in scikit-learn to achieve the same r
     # array(['class1', 'class2', 'class1'], dtype=object)
 ```
 
+```py
+
+```
+
 ### One-Hot Encoding of Nominal Features
 
 A one-hot encoding is a type of encoding in which an element of a finite set is represented by the index in that set where only one element has its index set to “1” and all other elements are assigned indices within the range [0, n-1].
@@ -1431,6 +801,9 @@ Applied to a DataFrame, the `get_dummies` method will only convert string column
 
 ```py
     pd.get_dummies(df[['price', 'color', 'size']])
+    
+    # drops the header row 
+    df_encoded = pd.get_dummies(df, drop_first=True)
 ```
 
 A dummy variable representation is required for some models such as linear regression model (and other regression models that have a bias term) since a one hot encoding will cause the matrix of input data to become singular which means it cannot be inverted, so the linear regression coefficients cannot be calculated using linear algebra. Therefore, a dummy variable encoding must be used.
@@ -1562,7 +935,9 @@ A train-test split conists of the following:
 
 > Instead of discarding the allocated test data after model training and evaluation, it is a good idea to retrain a classifier on the entire dataset for optimal performance.
 
+
 ----------
+
 
 ## Data Pipelines
 
@@ -1582,9 +957,13 @@ The bootstrap sampling distribution then allows us to draw statistical inference
 
 ----------
 
-## Code Examples and Tutorials
+## Examples and Tutorials
+
+Here are some code samples and tutorials:
 
 ### Data Preparation
+
+[How to Fully Automate Data Cleaning with Python in 5 Steps](https://www.kdnuggets.com/how-to-fully-automate-data-cleaning-with-python-in-5-steps)
 
 [Data Preparation for Machine Learning (Python)](https://machinelearningmastery.com/start-here/#dataprep)
 
@@ -1712,65 +1091,62 @@ Kestra is able to handle both because all transformations are considered to be r
 
 [9]: [5 Essential Machine Learning Techniques to Master Your Data Preprocessing](https://pub.towardsai.net/5-machine-learning-data-preprocessing-techniques-e888f6d220e1)
 
-----------
-
 [10]: [Read datasets with URL](https://towardsdatascience.com/dont-download-read-datasets-with-url-in-python-8245a5eaa919)
 
-[11]: [13 ways to access data in Python](https://towardsdatascience.com/13-ways-to-access-data-in-python-bac5683e0063)
+[11]: [Clean a Messy Date Column with Mixed Formats in Pandas](https://towardsdatascience.com/clean-a-messy-date-column-with-mixed-formats-in-pandas-1a88808edbf7)
 
-[12]: [INFOGRAPHIC: Data prep and Labeling](https://www.cognilytica.com/2019/04/19/infographic-data-prep-and-labeling/)
+[12]: [ELT vs ETL: Why not both?](https://medium.com/geekculture/elt-vs-etl-why-not-both-d0c4a0d30fc0)
 
-[13]: [Kaggle Data Cleaning Challenge: Missing values](https://www.kaggle.com/rtatman/data-cleaning-challenge-handling-missing-values)
+[13]: [How to Detect Missing Values and Dealing with Them: Explained](https://medium.com/geekculture/ow-to-detect-missing-values-and-dealing-with-them-explained-13232230cb64)
 
-[14]: [A Better Way for Data Preprocessing: Pandas Pipe](https://towardsdatascience.com/a-better-way-for-data-preprocessing-pandas-pipe-a08336a012bc)
+[14]: [How to Make Your Data Models Modular](https://towardsdatascience.com/how-to-make-your-data-models-modular-71b21cdf5208)
 
-[15]: [Introduction to Scikit-learn’s Pipelines](https://towardsdatascience.com/introduction-to-scikit-learns-pipelines-565cc549754a)
+[15]: [Mastering the Art of Data Cleaning in Python](https://www.kdnuggets.com/mastering-the-art-of-data-cleaning-in-python)
 
-[16]: [Refactoring for Scalable Python Code With Pandas](https://betterprogramming.pub/refactoring-for-scalable-python-code-with-pandas-727d15f14852)
+[16]: [Seven Common Causes of Data Leakage in Machine Learning](https://towardsdatascience.com/seven-common-causes-of-data-leakage-in-machine-learning-75f8a6243ea5)
 
-[17]: [Clean a Messy Date Column with Mixed Formats in Pandas](https://towardsdatascience.com/clean-a-messy-date-column-with-mixed-formats-in-pandas-1a88808edbf7)
+[17]: [10 Basic Feature Engineering Techniques to Prepare Your Data](https://pub.towardsai.net/10-basic-feature-engineering-techniques-to-prepare-your-data-a43e99a0bf00)
 
-[18]: [Major Problems of Machine Learning Datasets: Part 1](https://heartbeat.comet.ml/major-problems-of-machine-learning-datasets-part-1-5d5a06221c90)
+[18]: [Data4ML Preparation Guidelines (Beyond The Basics)](https://pub.towardsai.net/data4ml-preparation-guidelines-beyond-the-basics-7613ff4282ff)
 
-[19]: [Major Problems of Machine Learning Datasets: Part 2](https://heartbeat.comet.ml/major-problems-of-machine-learning-datasets-part-2-ba82e551fee2)
+[19]: [Understanding Outliers in Machine Learning](https://blog.gopenai.com/understanding-outliers-in-machine-learning-732e43566763)
 
-[20]: [Major Problems of Machine Learning Datasets: Part 3](https://heartbeat.comet.ml/major-problems-of-machine-learning-datasets-part-3-eae18ab40eda)
 
-[21]: [ELT vs ETL: Why not both?](https://medium.com/geekculture/elt-vs-etl-why-not-both-d0c4a0d30fc0)
+----------
 
-[22]: [How to Detect Missing Values and Dealing with Them: Explained](https://medium.com/geekculture/ow-to-detect-missing-values-and-dealing-with-them-explained-13232230cb64)
 
-[23]: [Deduplicate and clean up millions of location records](https://towardsdatascience.com/deduplicate-and-clean-up-millions-of-location-records-abcffb308ebf)
+[13 ways to access data in Python](https://towardsdatascience.com/13-ways-to-access-data-in-python-bac5683e0063)
 
-[24]: [How to Make Your Data Models Modular](https://towardsdatascience.com/how-to-make-your-data-models-modular-71b21cdf5208)
+[Refactoring for Scalable Python Code With Pandas](https://betterprogramming.pub/refactoring-for-scalable-python-code-with-pandas-727d15f14852)
 
-[25]: [Mastering the Art of Data Cleaning in Python](https://www.kdnuggets.com/mastering-the-art-of-data-cleaning-in-python)
+[Concatenating CSV files using Pandas module](https://www.geeksforgeeks.org)
 
-[26]: [5 DIY Python Functions for Data Cleaning](https://machinelearningmastery.com/5-diy-python-functions-for-data-cleaning/)
+[Data Preprocessing for Effective Machine Learning Models](https://pub.towardsai.net/data-preprocessing-for-effective-machine-learning-models-e6ed0e83e888)
 
-[27]: [Seven Common Causes of Data Leakage in Machine Learning](https://towardsdatascience.com/seven-common-causes-of-data-leakage-in-machine-learning-75f8a6243ea5)
 
-[28]: [Concatenating CSV files using Pandas module](https://www.geeksforgeeks.org)
+[Major Problems of Machine Learning Datasets: Part 3](https://heartbeat.comet.ml/major-problems-of-machine-learning-datasets-part-3-eae18ab40eda)
 
-[29]: [10 Basic Feature Engineering Techniques to Prepare Your Data](https://pub.towardsai.net/10-basic-feature-engineering-techniques-to-prepare-your-data-a43e99a0bf00)
+[6 Tips for Dealing With Null Values](https://towardsdatascience.com/6-tips-for-dealing-with-null-values-e16d1d1a1b33)
 
-[30]: [10 Useful Python One-Liners for Data Cleaning](https://www.kdnuggets.com/10-useful-python-one-liners-for-data-cleaning)
 
-[31]: [10 Python One-Liners That Will Boost Your Data Science Workflow](https://machinelearningmastery.com/10-python-one-liners-that-will-boost-your-data-science-workflow/)
+[A Better Way for Data Preprocessing: Pandas Pipe](https://towardsdatascience.com/a-better-way-for-data-preprocessing-pandas-pipe-a08336a012bc)
 
-[32]: [Data4ML Preparation Guidelines (Beyond The Basics)](https://pub.towardsai.net/data4ml-preparation-guidelines-beyond-the-basics-7613ff4282ff)
+[Introduction to Scikit-learn’s Pipelines](https://towardsdatascience.com/introduction-to-scikit-learns-pipelines-565cc549754a)
 
-[33]: [15 Useful Python One-Liners for String Manipulation](https://www.kdnuggets.com/15-useful-python-one-liners-string-manipulation)
 
-[34]: [10 Essential Pandas Commands for Data Preprocessing](https://www.kdnuggets.com/10-essential-pandas-commands-data-preprocessing)
+[INFOGRAPHIC: Data prep and Labeling](https://www.cognilytica.com/2019/04/19/infographic-data-prep-and-labeling/)
+
+[Kaggle Data Cleaning Challenge: Missing values](https://www.kaggle.com/rtatman/data-cleaning-challenge-handling-missing-values)
+
+[Deduplicate and clean up millions of location records](https://towardsdatascience.com/deduplicate-and-clean-up-millions-of-location-records-abcffb308ebf)
+
+
+[7 Cognitive Biases That Affect Your Data Analysis (and How to Overcome Them)](https://www.kdnuggets.com/7-cognitive-biases-that-affect-your-data-analysis-and-how-to-overcome-them)
 
 
 ----------
 
 [Build an Anomaly Detection Pipeline with Isolation Forest and Kedro](https://towardsdatascience.com/build-an-anomaly-detection-pipeline-with-isolation-forest-and-kedro-db5f4437bfab)
 
-[6 Tips for Dealing With Null Values](https://towardsdatascience.com/6-tips-for-dealing-with-null-values-e16d1d1a1b33)
-
 [Customizing Sklearn Pipelines: TransformerMixin](https://towardsdatascience.com/customizing-sklearn-pipelines-transformermixin-a54341d8d624?source=rss----7f60cf5620c9---4)
-
 
