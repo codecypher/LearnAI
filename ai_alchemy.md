@@ -6,19 +6,40 @@
 The student of AI needs the following:
 
 - A healthy dose of skepticism [4].
+- Knowledge of the history and reasons that led to the _AI Winter_.
+- Be aware of the hype, misinformation, and  alchemy that is common in the field of AI.
 
-- Knowledge of the history and reasons that led to the _AI Winter_. 
-
-- Be aware of the hype, misinformation, and  alchemy that is common in the field AI. 
-
-
-The two guiding principles of AI are:
+The two guiding principles of AI engineering are:
 
 1. Occam's Razor
 2. No Free Lunch Theorem
 
 
-## Why AI Projects Fail
+## Ethics Crisis in AI Research
+
+J. F. DeFranco and J. Voas, "[Reproducibility, Fabrication, and Falsification](https://ieeexplore.ieee.org/document/9622314)," Computer, vol. 54, no. 12, pp. 24-26, Dec. 2021, doi: 10.1109/MC.2021.3055926.
+
+M. Parashar, M. A. Heroux,and V. Stodden, "[Research Reproducibility](https://ieeexplore.ieee.org/document/9847295)," Computer, vol. 55, no. 8, pp. 16-18, Aug. 2022, doi: 10.1109/MC.2022.3176988.
+
+
+T. Hoefler, "[Benchmarking Data Science: 12 Ways to Lie With Statistics and Performance on Parallel Computers](https://ieeexplore.ieee.org/document/9847318)," Computer, vol. 55, no. 8, pp. 49-56, Aug. 2022, doi: 10.1109/MC.2022.3152681.
+
+D. Kreps and M. d. Roche, "[The International Federation for Information Processing Code of Ethics in Context](https://ieeexplore.ieee.org/document/10417801)," Computer, vol. 57, no. 2, pp. 24-32, Feb. 2024, doi: 10.1109/MC.2023.3327628.
+
+----------
+
+R. Mariani et al., "[Trustworthy AI — Part I](https://ieeexplore.ieee.org/document/10042078)," Computer, vol. 56, no. 2, pp. 14-18, Feb. 2023, doi: 10.1109/MC.2022.3227683.
+
+R. Mariani et al., "[Trustworthy AI — Part II](https://ieeexplore.ieee.org/document/10109318)," Computer, vol. 56, no. 5, pp. 13-16, May 2023, doi: 10.1109/MC.2023.3253980.
+
+R. Mariani et al., "[Trustworthy AI — Part III](https://ieeexplore.ieee.org/document/10461705)," Computer, vol. 57, no. 3, pp. 22-24, March 2024, doi: 10.1109/MC.2024.3359766.
+
+[Bogus research is undermining good science, slowing lifesaving research](https://theconversation.com/bogus-scientific-papers-are-enriching-fraudsters-and-slowing-lifesaving-medical-research-248291)
+
+
+## Why AI Projects Fail?
+
+I. Bernardo, "Why AI Projects Fail," Towards Data Science, pJune 6, 2025.
 
 A. DeNisco Rayome, [Why 85% of AI projects fail](https://www.techrepublic.com/article/why-85-of-ai-projects-fail/), TechRepublic, June 20, 2019.
 
@@ -54,11 +75,12 @@ M. L. Cummings, "[What Self-Driving Tells Us About AI Risks](https://spectrum.ie
 J. B. Michael and T. C. Wingfield, "[Defensive AI: The Future Is Yesterday](https://ieeexplore.ieee.org/document/9524660)," Computer, vol. 54, no. 9, pp. 90-96, Sept. 2021, doi: 10.1109/MC.2021.3092480.
 
 
-## AI Risks
+## What are the risks with AI?
 
 E. Gent, [Public AI Training Datasets Are Rife With Licensing Errors](https://spectrum.ieee.org/data-ai), IEEE Spectrum, Nov. 8, 2023. 
 
 [The Dark Side of Model Evaluation That Nobody Talks About](https://blog.gopenai.com/the-dark-side-of-model-evaluation-that-nobody-talks-about-b2050ccf0814)
+
 
 ----------
 
@@ -68,29 +90,7 @@ B. Hubert, "[Why Bloat is Still Software's Biggest Vulnerability](https://spectr
 
 [GenAI’s products: Move fast and fail](https://pub.towardsai.net/genais-products-move-fast-and-fail-795697674039)
 
-[Gen AI Increases Workloads and Decreases Productivity, Upwork Study Finds](https://www.infoq.com/news/2024/07/genai-hampers-productivity-study/)
-
-
-## Problems with AI Research
-
-J. F. DeFranco and J. Voas, "[Reproducibility, Fabrication, and Falsification](https://ieeexplore.ieee.org/document/9622314)," Computer, vol. 54, no. 12, pp. 24-26, Dec. 2021, doi: 10.1109/MC.2021.3055926.
-
-M. Parashar, M. A. Heroux,and V. Stodden, "[Research Reproducibility](https://ieeexplore.ieee.org/document/9847295)," Computer, vol. 55, no. 8, pp. 16-18, Aug. 2022, doi: 10.1109/MC.2022.3176988.
-
-
-T. Hoefler, "[Benchmarking Data Science: 12 Ways to Lie With Statistics and Performance on Parallel Computers](https://ieeexplore.ieee.org/document/9847318)," Computer, vol. 55, no. 8, pp. 49-56, Aug. 2022, doi: 10.1109/MC.2022.3152681.
-
-D. Kreps and M. d. Roche, "[The International Federation for Information Processing Code of Ethics in Context](https://ieeexplore.ieee.org/document/10417801)," Computer, vol. 57, no. 2, pp. 24-32, Feb. 2024, doi: 10.1109/MC.2023.3327628.
-
-----------
-
-R. Mariani et al., "[Trustworthy AI — Part I](https://ieeexplore.ieee.org/document/10042078)," Computer, vol. 56, no. 2, pp. 14-18, Feb. 2023, doi: 10.1109/MC.2022.3227683.
-
-R. Mariani et al., "[Trustworthy AI — Part II](https://ieeexplore.ieee.org/document/10109318)," Computer, vol. 56, no. 5, pp. 13-16, May 2023, doi: 10.1109/MC.2023.3253980.
-
-R. Mariani et al., "[Trustworthy AI — Part III](https://ieeexplore.ieee.org/document/10461705)," Computer, vol. 57, no. 3, pp. 22-24, March 2024, doi: 10.1109/MC.2024.3359766.
-
-[Bogus research is undermining good science, slowing lifesaving research](https://theconversation.com/bogus-scientific-papers-are-enriching-fraudsters-and-slowing-lifesaving-medical-research-248291)
+[GenAI Increases Workloads and Decreases Productivity, Upwork Study Finds](https://www.infoq.com/news/2024/07/genai-hampers-productivity-study/)
 
 
 ## Integrating LLMs in a Software System
@@ -130,6 +130,8 @@ Despite the many advantages of integrating LLMs into existing software, there ar
 
 [9]: T. Shin, “4 Reasons Why You Shouldn’t Use Machine Learning,” Towards Data Science, Oct. 5, 2021.
 
-[10]: [Integrating Language Models into Existing Software Systems](https://www.kdnuggets.com/integrating-language-models-into-existing-software-systems)
+[10]: [Integrating Language Models into Existing Software Systems](https://www.kdnuggets no.com/integrating-language-models-into-existing-software-systems)
 
+----------
 
+[Why AI projects fail, and how developers can help them succeed](https://www.infoworld.com/article/4010313/why-ai-projects-fail-and-how-developers-can-help-them-succeed.html)
