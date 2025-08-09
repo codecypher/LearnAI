@@ -1130,5 +1130,7 @@ Since the errors are squared and due to which RMSE will not be in the same scale
 
 [5]: [Error Metrics in Machine learning](https://medium.com/analytics-vidhya/error-metrics-in-machine-learning-f9eed7b139f)
 
+[6]: [11 Types of Variables in a Dataset](https://blog.dailydoseofds.com/p/11-types-of-variables-in-a-dataset-d49)
+
 
 [Datasets for Data Science and Machine Learning](https://elitedatascience.com/datasets)

@@ -95,7 +95,21 @@ If the test and validation sets were the same, we would see the same score that 
 Thus, we make use of the test dataset that was never used in previous steps (holdout set) to evaluate the performance on unseen data which is called _generalization_.  
 
 
+## Code Samples
+
+```py
+  X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+```
+
+The above example randomly splits the data observations into a training set containing 80% of the original observations and a test set housing the remaining 20% instances.
+
+```py
+  # split the dataset into train and test sets
+  X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=1)
+```    
+
+
 ## References
 
-[About Train, Validation, and Test Sets in Machine Learning](https://towardsdatascience.com/train-validation-and-test-sets-72cb40cba9e7)
+[1]: [About Train, Validation, and Test Sets in Machine Learning](https://towardsdatascience.com/train-validation-and-test-sets-72cb40cba9e7)
 

@@ -122,6 +122,8 @@ Statistics for Machine Learning (7-Day Mini-Course)
 
 [4]: [SOCS: A Helpful Acronym for Describing Distributions](https://www.statology.org/statistics-socs/)
 
+[5]: [11 Types of Variables in a Dataset](https://blog.dailydoseofds.com/p/11-types-of-variables-in-a-dataset-d49)
+
 
 [What does RMSE really mean?](https://towardsdatascience.com/what-does-rmse-really-mean-806b65f2e48e)
 

@@ -37,7 +37,7 @@ Thus, testing may provide more confidence and trust than XAI.
 E. Alpaydin, Introduction to Machine Learning, 3rd ed., MIT Press, ISBN: 978-0262028189, 2014.
 
 - confidence interval estimation
-- cross-validation and bootstraping,
+- cross-validation and bootstraping
 - hypothesis testing
 - comparing classification algorithms (expected error rate, ANOVA)
 - comparing algorithms over multiple datasets

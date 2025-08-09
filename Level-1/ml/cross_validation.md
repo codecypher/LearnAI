@@ -172,6 +172,10 @@ When choosing a value for _k_ each fold (group) should be large enough to be **r
 
 As a general rule, as _k_ increases, bias decreases and variance increases.
 
+```py
+  scores = cross_val_score(model, X, y, cv=5)
+```
+
 Let us work though an example with our dataset from earlier.
 
 We will make use of a linear model again, but this time do model validation with scikit learn’s `cross_val_predict` method which will do most of the heavy lifting in generating K-Fold predictions. Here we set k=10.

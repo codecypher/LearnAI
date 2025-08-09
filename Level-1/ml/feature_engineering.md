@@ -365,6 +365,11 @@ We can apply standardization using `StandardScaler` class from sklearn.
     scaled = scaler.fit_transform(data)
 ```
 
+```py
+  # We can do this in a single line using Scikit-learn StandardScaler
+  X_scaled = StandardScaler().fit_transform(X)
+```
+
 We can apply the standardization in Pandas using the `.mean()` and `.std()` methods which preserves the column headers/names.
 
 ```py

@@ -142,6 +142,7 @@ def explore(df, title='Plot each column'):
 
 
 def plot_confusion_matrix(model, X_test, y_test, y_hat):
+    # Evaluate Model Accuracy on Test Data
     score = model.score(X_test, y_test)
 
     # Show confusion matrix

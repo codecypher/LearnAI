@@ -659,6 +659,8 @@ These are obvious indications that there are issues in the data and need further
 
 [17]: [10 Little-Known Python Libraries That Will Make You Feel Like a Data Wizard](https://www.kdnuggets.com/10-little-known-python-libraries-data-wizard)
 
+[18]: [Understanding Outliers in Machine Learning](https://blog.gopenai.com/understanding-outliers-in-machine-learning-732e43566763)
+
 
 [Data Analytics: The Four Approaches to Analyzing Data and How To Use Them Effectively](https://www.kdnuggets.com/2023/04/data-analytics-four-approaches-analyzing-data-effectively.html)
 

@@ -88,5 +88,6 @@ For the performance comparison we created a system that aimed to provide an obje
 
 [6]: [How to perform anomaly detection with the Isolation Forest algorithm](https://towardsdatascience.com/how-to-perform-anomaly-detection-with-the-isolation-forest-algorithm-e8c8372520bc?gi=9b318130c70a)
 
+[7]: [Understanding Outliers in Machine Learning](https://blog.gopenai.com/understanding-outliers-in-machine-learning-732e43566763)
 
 [Simple Anomaly Detection algorithms for Streaming Data](https://medium.com/wearesinch/simple-anomaly-detection-algorithms-for-streaming-data-machine-learning-92cfaeb6f43b)

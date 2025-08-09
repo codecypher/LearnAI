@@ -406,9 +406,9 @@ Some of the available tools in Kubeflow:
 
 [17]: [Mlflow documentation](https://mlflow.org/docs/latest/index.html)
 
-
 [18]: [Is My Model Really Better?](https://towardsdatascience.com/is-my-model-really-better-560e729f81d2)
 
+[19]: [From Prototype to Production: Deployment Strategies for Machine Learning Models](https://pub.towardsai.net/from-prototype-to-production-deployment-strategies-for-machine-learning-models-858b2c8a7c43)
 
 ----------
 

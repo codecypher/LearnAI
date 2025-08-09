@@ -1,14 +1,5 @@
 # Frequently Asked Questions
 
-## What is an AI Engineer
-
-[Artificial Intelligence Engineering](https://www.sei.cmu.edu/our-work/artificial-intelligence-engineering/)
-
-In simplest terms, an AI Engineer is a type of software engineer specializing in development of AI/ML applications. Thus, he/she needs to have a thorough understanding of the core software engineering concepts (SWEBOK) as well as the full software development life cycle for AI/ML applications which has some  differences.
-
-> In a nutshell, when you create a program to solve an AI problem you are performing AI engineering.
-
-
 
 ## What is the difference between AI and ML
 

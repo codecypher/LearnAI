@@ -5,8 +5,10 @@
 Here are some tips on using Pandas [18] to [21].
 
 ```py
-  # Load a dataset (e.g., CSV file)
+  # Load a dataset (CSV file)
   titanic_df = pd.read_csv('titanic.csv')
+  df = pd.DataFrame(load_iris().data, columns=load_iris().feature_names)
+  
 
   # Export the DataFrame to a CSV file
   df.to_csv('output_dataset.csv', index=False)

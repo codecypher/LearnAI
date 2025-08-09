@@ -33,7 +33,8 @@ If you are like me and try to follow the principles of DRY, KISS, Design Pattern
 
 The field of AI requires:
 
-1. A healthy dose of skepticism. 
+1. A healthy dose of skepticism.
+
 2. A change in mindset from "best" to "good enough". 
 
 
@@ -56,11 +57,13 @@ Software developers and even companies seem obsessed with using a model-centric,
 
 This repo contains notes from various articles and other resources on a variety of topics in Artificial Intelligence (AI) and Machine Learning (ML).
 
-The intended audience for this repo is the undergraduate (junior or senior) or graduate student in computer science. It should be a supplement to an undergraduate or graduate textbook on machine learning (ML) [3] and artificial intelligence (AI) [4] or one of the **Recommended Books on AI** given below.
+The intended audience for this repo is the undergraduate (junior or senior) or graduate student in computer science. 
+
+This repo should be a supplement to an undergraduate or graduate textbook on machine learning (ML) [3] and artificial intelligence (AI) [4] or one of the **Recommended Books on AI** given below.
 
 Whether or not you find this repo useful will depend on your style of learning and taking notes.
 
-This is a work in progress, so there is probably some content missing and the content will be changing.
+This is a work in progress, so there is probably some content missing and the content may be changing frequently. 
 
 ## References
 

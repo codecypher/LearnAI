@@ -261,7 +261,7 @@ Ockham's Razor: The less complex an ML model, the more likely that a good empiri
 
 In modern times, we have formalized Ockham's razor into the fields of statistical learning theory and computational learning theory. 
 
-These fields have developed **generalization bounds** whicha is a statistical description of a model's ability to generalize to new data based on factors such as:
+These fields have developed **generalization bounds** which is a statistical description of a model's ability to generalize to new data based on factors such as:
 
   - the complexity of the model
   - the model's performance on training data
@@ -354,11 +354,12 @@ The following figure shows this new workflow:
 In this improved workflow:
 
   1. Pick the model that does best on the validation set.
+
   2. Double-check that model against the test set. 
   
 This is a better workflow because it creates fewer exposures to the test set.
 
-**TIP:** Test sets and validation sets "wear out" with repeated use. That is, the more you use the same data to make decisions about hyperparameter settings or other model improvements, the less confidence you'll have that these results actually generalize to new, unseen data.
+**TIP:** Test sets and validation sets "wear out" with repeated use. That is, the more you use the same data to make decisions about hyperparameter settings or other model improvements, the less confidence you will have that these results actually generalize to new, unseen data.
 
 If possible, it is a good idea to collect more data to "refresh" the test set and validation set. Starting anew is a great reset.
 
