@@ -701,7 +701,7 @@ We can create a class to hold data using the `dataclass` decorator [3].
 
 ## Better Error Handling
 
-Clean up your code by creating your own custom exceptions [9].
+Clean up your code by creating your own custom exceptions [9] and [19].
 
 ### Create custom exceptions
 
@@ -714,7 +714,7 @@ class UserNotFoundException(Exception):
     email:str
     def __init__(self, email:str, *args, **kwargs):
         self.email = email
-        super().__init__(args, kwargs)
+        super().__init__(args, kwargsp)
 
     def __str__(self):
         return f"Could not find an account associated with email '{self.email}'"
@@ -736,9 +736,6 @@ def login(email: str, password: str) -> None:
     if (not credentials_valid(email=email, password=password)):
         raise InvalidCredentialsException()
 ```
-
-
-Calling the login
 
 In `main.py` file we can now call the login function:
 
@@ -957,6 +954,39 @@ def baz(x: float) -> tuple[int, float, str]:
 ```
 
 
+## Python Debug
+
+While mistakes are unavoidable, getting better at debugging can save a lot of time and frustration  
+
+### Avoid Mutable Default Argument Pitfalls
+ 
+One classic Python gotcha involves default arguments in functions, especially mutable ones such as lists or dictionaries [18]. 
+
+```py
+def add_item(item, my_list=[]):
+    my_list.append(item)
+    return my_list
+
+print(add_item("apple"))  # ['apple']
+print(add_item("banana")) # ['apple', 'banana']
+```
+
+You might have expected each call to start with an empty list, but instead the list “remembers” past calls. 
+
+Python evaluates default arguments only once when the function is defined, not each time it is called which means the same list is reused. 
+
+A safer pattern is to use None and then create a new list inside:
+
+```py
+def add_item(item, my_list=None):
+    if my_list is None:
+        my_list = []
+    my_list.append(item)
+    return my_list
+```
+
+Now each call without an explicit list gets a fresh list. 
+
 
 ## References
 
@@ -994,6 +1024,10 @@ def baz(x: float) -> tuple[int, float, str]:
 [16]: [5 Python Tips for Data Efficiency and Speed](https://www.kdnuggets.com/5-python-tips-for-data-efficiency-and-speed)
 
 [17]: [How To Speed Up Python Code with Caching](https://www.kdnuggets.com/how-to-speed-up-python-code-with-caching)
+
+[18]: [7 Python Debugging Techniques Every Beginner Should Know](https://www.kdnuggets.com/7-python-debugging-techniques-every-beginner-should-know)
+
+[19]: [5 Error Handling Patterns in Python (Beyond Try-Except)](https://www.kdnuggets.com/5-error-handling-patterns-in-python-beyond-try-except)
 
 
 [Python: Pretty Print a Dict (Dictionary) – 4 Ways](https://datagy.io/python-pretty-print-dictionary/)

@@ -63,6 +63,23 @@ Below are some common pre-processing steps [3]:
 
   For example, we can focus on nouns for keyword extraction.
   
+  
+## Automate Text Data Cleaning with Python
+  
+Cleaning text manually can problematic and time comsumubg for large datasets. 
+
+Python has tools that cab automate the process such Pandas, re, NLTK, and spaCy [9]. 
+
+
+1. Remove Noise and Special Characters: Clean the text by removing unnecessary symbols, numbers, and spaces. 
+
+2. Normalize Text: Make the text uniform by converting words to lowercase and reducing them to their base form.
+
+3. Handle Contractions: Convert shortened words into their full forms for clarity. 
+
+4. Remove Duplicate and Irrelevant Data: Get rid of repeated and irrelevant content that could affect analysis. 
+
+5. Eliminate Excessive Whitespace: Remove extra spaces to ensure the text is consistent and neat. 
 
 
 ## Preprocessing Textual Data with Pandas
@@ -260,11 +277,14 @@ The value in the “group1” column is "A", the value in column "A" is 1, etc.
 
 [8]: [Two minutes NLP — Python Regular Expressions cheatsheet](https://medium.com/nlplanet/two-minutes-nlp-python-regular-expressions-cheatsheet-d880e95bb468)
 
+[9]: [How to Fully Automate Text Data Cleaning with Python in 5 Steps](https://www.kdnuggets.com/how-to-fully-automate-text-data-cleaning-with-python-in-5-steps)
+
 
 [Cleaning and Preprocessing Text Data in Pandas for NLP Tasks](https://www.kdnuggets.com/cleaning-and-preprocessing-text-data-in-pandas-for-nlp-tasks)
 
 [Boost Performance of Text Classification tasks with Easy Data Augmentation](https://towardsdatascience.com/boost-performance-of-text-classification-tasks-with-easy-data-augmentation-1420d45b914a)
 
+==========
 
 [Complete Guideline to Implementation of Basic NLP Techniques with NLTK and spaCy](https://towardsdatascience.com/hands-on-implementation-of-basic-nlp-techniques-nltk-or-spacy-687099e02816)
 

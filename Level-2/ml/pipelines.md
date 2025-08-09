@@ -77,6 +77,17 @@ Here we are using the `Pipeline` class from scikit-learn [1].
     print('Test Accuracy Score: {:.4f}'.format(accuracy_score(testY, y_predict)))
 ```
 
+Building Preprocessing and Model Training Pipelines
+
+The Scikit-learn `make_pipeline()` function creates Pipeline objects from estimators [11].
+
+```py
+  pipe = make_pipeline(StandardScaler(), LogisticRegression()).fit(X_train, y_train)
+```
+
+The above pipeline manages the dataset’s feature scaling, model initialization, and model training as a unified process.
+
+
 ## Best Scaler
 
 ```py
@@ -375,6 +386,8 @@ It is a shift in thinking that may take some time to get used to.
 [9]: [Simplify Data Processing with Pandas Pipeline](https://www.kdnuggets.com/2022/08/simplify-data-processing-pandas-pipeline.html)
 
 [10]: [Building Data Science Pipelines Using Pandas](https://www.kdnuggets.com/building-data-science-pipelines-using-pandas)
+
+[11]: [10 Python One-Liners for Machine Learning Modeling](https://machinelearningmastery.com/10-python-one-liners-for-machine-learning-modeling/)
 
 
 [Recursive Feature Elimination (RFE) for Feature Selection in Python](https://machinelearningmastery.com/rfe-feature-selection-in-python/)

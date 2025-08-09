@@ -302,6 +302,8 @@ With software systems, it is less work to rebuild a new system than it is to per
 
 All web services are also APIs because they expose the data and/or functionality of an application, however not all APIs are web services.
 
+Beyond the API: The Hidden Architecture of AI Apps That Actually Work [12]. 
+
 
 ## Tech Interviews Are Broken
 
@@ -346,6 +348,10 @@ Being interviewed by someone with a list of precise technical questions is prett
 
 [11]: A. Wooley, “Why You Should Never Consent to a Coding Test in an Interview”, The Startup, Dec. 28, 2020.
 
+[12]: [Beyond the API](https://pub.towardsai.net/beyond-the-api-504a52ed960e)
+
+[13]: [When Best Practices Become Worst Practices](https://itnext.io/when-best-practices-become-worst-practices-02b1a9e0ce64)
+
 
 [CUPID for better coding](https://medium.com/codex/cupid-for-better-coding-4c6eb401c8f5)
 
@@ -370,3 +376,4 @@ Being interviewed by someone with a list of precise technical questions is prett
 [An Introduction to Event-Driven Architecture](https://aws.plainenglish.io/event-driven-architecture-2436055f64b1?gi=62c6bfcf207)
 
 [The Comparison of the Modes of Event-Driven Architecture](https://medium.com/geekculture/the-comparison-of-the-modes-of-event-driven-architecture-1742711d79bb)
+
