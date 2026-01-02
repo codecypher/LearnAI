@@ -1,4 +1,4 @@
-# How to Diagnose Overfitting and Underfitting?
+# How to Diagnose Overfitting and Underfitting
 
 Here are some notes on analyzing overfitting and underfitting.
 
@@ -8,7 +8,7 @@ Here are some common solutions to reduce generalization error:
 
 - Collect more training data
 
-Collecting more training data is often not applicable. 
+Collecting more training data is often not applicable.
 
 - Simplify the model
 
@@ -26,21 +26,21 @@ In short, we introduce a penalty for complexity via regularization.
 
 - Data augmentation
 
-Data augmentation is a task that is very often used in ML for image treatment. 
+Data augmentation is a task that is very often used in ML for image treatment.
 
 It is easy to augment image data by adding slightly transformed images to your train data set. Examples are:
 
 Many functions exist for data augmentation on images such as the Tensorflow data augmentation layers.
 
-For tabular data, data augmentation includes oversampling and undersampling techniques such as SMOTE. 
+For tabular data, data augmentation includes oversampling and undersampling techniques such as SMOTE.
 
 - Reduce the dimensionality of the data
 
-In the next chapter, we will learn about a useful technique to check whether more training data is helpful. 
+In the next chapter, we will learn about a useful technique to check whether more training data is helpful.
 
 Here we look at some ways to reduce overfitting using regularization and dimensionality reduction via feature selection.
 
-Another useful approach to select relevant features from a dataset is to use a random forest which is an ensemble technique. 
+Another useful approach to select relevant features from a dataset is to use a random forest which is an ensemble technique.
 
 - Hyperparameter tuning with cross-validation
 
@@ -52,11 +52,11 @@ This, we can find the hyperparameter combination that yields the best cross-vali
 
 - Ensemble models
 
-Random Forests claim not ro overfit but practice this is debatable. 
+Random Forests claim not ro overfit but practice this is debatable.
 
 However, it is safe to say that ensemble can be a great help in avoiding overfitting.
 
-An ensemble model is the art of putting multiple weak learners together. The new prediction is the average prediction of all of those weak learners. 
+An ensemble model is the art of putting multiple weak learners together. The new prediction is the average prediction of all of those weak learners.
 
 We can create an ensemble by grouping multiple models into an ensemble wrapper:
 
@@ -68,14 +68,13 @@ Stacking Classifier: Build an additional classification model that uses the pred
 
 Stacking Regressor: Build an additional regression model that uses the predictions of each individual model as an input for a final regression model that combines them into a final prediction.
 
-
 ## Principles of Overfitting and Underfitting
 
 ### Bias/Variance Trade-off
 
-_Underfitting_ is when your model is too simple for your data (high bias). 
+_Underfitting_ is when your model is too simple for your data (high bias).
 
-_Overfitting_ is when your model is too complex for your data (high variance) but does not generalize well to new data. 
+_Overfitting_ is when your model is too complex for your data (high variance) but does not generalize well to new data.
 
 In the bias/variance trade-off, here are possible values:
 
@@ -87,7 +86,7 @@ In the bias/variance trade-off, here are possible values:
 
 - high bias, high variance: very bad algorithm (rare occurance).
 
-_Variance_ measures the consistency or variability of the model prediction for a particular sample instance if we were to retrain the model multiple times using different subsets of the training dataset. Thus, we say that the model is sensitive to the _randomness_ in the training data. 
+_Variance_ measures the consistency or variability of the model prediction for a particular sample instance if we were to retrain the model multiple times using different subsets of the training dataset. Thus, we say that the model is sensitive to the _randomness_ in the training data.
 
 _Bias_ measures how far off the predictions are from the correct values on average if we rebuild the model multiple times on different training datasets. Thus, bias is the measure of the _error_ that is not due to randomness.
 
@@ -99,26 +98,25 @@ Overfitting means that your model makes not accurate predictions. In this case, 
 
 When you find a good model, train error is small (but larger than in the case of overfitting) and val/test error is also small.
 
-
 NOTE: The train, validation, and test datasets should all have the same distribution.
 
 ### More Simple / Complex Model
 
-To complicate the model, you need to add more parameters called _degrees of freedom_ which means to try a more powerful model. 
+To complicate the model, you need to add more parameters called _degrees of freedom_ which means to try a more powerful model.
 
-If the algorithm is already quite complex (neural network or some ensemble model), you need to add more parameters to it such as increase the number of models in boosting. 
+If the algorithm is already quite complex (neural network or some ensemble model), you need to add more parameters to it such as increase the number of models in boosting.
 
 In the context of neural networks, this means adding more layers / more neurons in each layer / more connections between layers / more filters for CNN, and so on.
 
-To simplify the model, you need to reduce the number of parameters by changing the algorithm (such as random forest instead of deep neural network) or reduce the number of degrees of freedom. 
+To simplify the model, you need to reduce the number of parameters by changing the algorithm (such as random forest instead of deep neural network) or reduce the number of degrees of freedom.
 
 ### More Regularization / Less Regularization
 
-Regularization is an indirect and forced simplification of the model. 
+Regularization is an indirect and forced simplification of the model.
 
 The regularization term requires the model to keep parameters values as small as possible which requires the model to be as simple as possible. Complex models with strong regularization often perform better than simple models, so this is a very powerful tool.
 
-More regularization (simplifying the model) means increasing the impact of the regularization term which depends on the algorithm, so the regularization parameters are different. 
+More regularization (simplifying the model) means increasing the impact of the regularization term which depends on the algorithm, so the regularization parameters are different.
 
 Thus, you should study the parameters of the algorithm and pay attention to whether they should be increased or decreased in a particular situation. There are a lot of such parameters — L1/L2 coefficients for linear regression, C and gamma for SVM, maximum tree depth for decision trees, and so on. In the context of neural networks, the main regularization methods are:
 
@@ -134,7 +132,7 @@ Adding new features also complicates the model.
 
 We can obtain new features for existing data is used infrequently, mainly due to the fact that it is very expensive and long but sometimes this can help.
 
-We can obtain artificial features from existing ones called _feature engineering_ which is often used for classical machine learning models. 
+We can obtain artificial features from existing ones called _feature engineering_ which is often used for classical machine learning models.
 
 There are as many examples of such transformations but here are the main ones:
 
@@ -154,7 +152,7 @@ For neural networks, feature engineering and feature selection make almost no se
 
 ### Why Getting More Data Sometimes Can’t Help
 
-One of the techniques to combat overfitting is to get more data. Surprisingly, this may not always help. 
+One of the techniques to combat overfitting is to get more data. Surprisingly, this may not always help.
 
 Getting more data will not help in case of underfitting.
 
@@ -162,16 +160,9 @@ Getting more data can help with overfitting (not underfitting) if the model is n
 
 Some tools such as data cleaning and cross-validation or hold-out validation are common practices in  machine learning projects that can also be used to combat overfitting.
 
-
 ![Techniques (extended)|600xauto {Techniques to fight underfitting and overfitting (extended)}](https://towardsdatascience.com/overfitting-and-underfitting-principles-ea8964d9c45c)
 
-
-**Table:** Techniques to fight underfitting and overfitting (extended). 
-
-
-—————
-
-
+**Table:** Techniques to fight underfitting and overfitting (extended).
 
 ## Why is my validation loss lower than my training loss?
 
@@ -211,7 +202,6 @@ For most tasks:
 
 ### Reason 1: Regularization applied during training but not during validation/testing
 
-
 When training a deep neural network we often apply **regularization** to help our model:
 
 - Obtain higher validation/testing accuracy
@@ -221,7 +211,6 @@ Regularization methods often **sacrifice training accuracy to improve validation
 
 Also keep in mind that regularization methods such as dropout are not applied at validation/testing time.
 
-
 ### Reason 2: Training loss is measured during each epoch while validation loss is measured after each epoch
 
 The second reason you may see validation loss lower than training loss is due to how the loss value is measured and reported:
@@ -229,7 +218,7 @@ The second reason you may see validation loss lower than training loss is due to
 - Training loss is measured _during_ each epoch
 - While validation loss is measured _after_ each epoch
 
-Your training loss is continually reported over the course of an entire epoch, but **validation metrics are computed over the validation set only once the current training epoch is completed**. 
+Your training loss is continually reported over the course of an entire epoch, but **validation metrics are computed over the validation set only once the current training epoch is completed**.
 
 Thus, on average the training losses are measured half an epoch earlier.
 
@@ -248,11 +237,6 @@ Consider how your validation set was acquired:
 - Are you confident your code created the training, validation, and testing splits properly?
 
 Every deep learning practitioner has made the above mistakes at least once in their career.
-
-
-----------
-
-
 
 ## Diagnose Overfitting and Underfitting of LSTM Models
 
@@ -281,12 +265,11 @@ This tutorial is divided into 6 parts:
 5. Overfit Example
 6. Multiple Runs Example
 
-
 ### Training History in Keras
 
 You can learn a lot about the behavior of your model by reviewing its performance over time.
 
-LSTM models are trained by calling the `fit()` function which returns a variable called _history_ that contains a trace of the loss and any other metrics specified during the compilation of the model. 
+LSTM models are trained by calling the `fit()` function which returns a variable called _history_ that contains a trace of the loss and any other metrics specified during the compilation of the model.
 
 Theae metric scores are recorded at the end of each epoch.
 
@@ -296,22 +279,21 @@ The training history of your LSTM models can be used to diagnose the behavior of
 
 **Learning Curve:** Line plot of learning (y-axis) over experience (x-axis).
 
-During the training of a machine learning model, the current state of the model at each step of the training algorithm can be evaluated. It can be evaluated on the training dataset to give an idea of how well the model is learning. 
+During the training of a machine learning model, the current state of the model at each step of the training algorithm can be evaluated. It can be evaluated on the training dataset to give an idea of how well the model is learning.
 
-You can plot the performance of your model using the `matplotlib` library. 
+You can plot the performance of your model using the `matplotlib` library.
 
 - **Train Learning Curve:** Learning curve calculated from the training dataset that gives an idea of how well the model is learning.
 
 - **Validation Learning Curve:** Learning curve calculated from a hold-out validation dataset that gives an idea of how well the model is generalizing.
 
-It is common to create learning curves for multiple metrics such as in the case of classification predictive modeling problems, where the model may be optimized according to cross-entropy loss and model performance is evaluated using classification accuracy. 
+It is common to create learning curves for multiple metrics such as in the case of classification predictive modeling problems, where the model may be optimized according to cross-entropy loss and model performance is evaluated using classification accuracy.
 
-In this case, two plots are created: one for the learning curves of each metric where each plot can show two learning curves (one for each of the train and validation datasets). 
+In this case, two plots are created: one for the learning curves of each metric where each plot can show two learning curves (one for each of the train and validation datasets).
 
 - **Optimization Learning Curves:** Learning curves calculated on the metric by which the parameters of the model are being optimized such as loss.
 
 - **Performance Learning Curves:** Learning curves calculated on the metric by which the model will be evaluated and selected such as accuracy.
-
 
 ### Underfit Example
 
@@ -319,21 +301,17 @@ An underfit model is one that is demonstrated to perform well on the training da
 
 This can be diagnosed from a plot where the training loss is lower than the validation loss, and the validation loss has a trend that suggests further improvements are possible.
 
-
 #### Underfit Example 1
 
 ![Underfit Example 1|600xauto {Plot showing underfit model}](https://machinelearningmastery.com/wp-content/uploads/2017/07/Diagnostic-Line-Plot-Showing-an-Underfit-Model.png)
-
 
 #### Underfit Example 2
 
 ![Underfit Example 2|600xauto {Plot of Training Learning Curve of Underfit Model That Does Not Have Sufficient Capacity}](https://machinelearningmastery.com/wp-content/uploads/2019/02/Example-of-Training-Learning-Curve-Showing-An-Underfit-Model-That-Does-Not-Have-Sufficient-Capacity.png)
 
-
 #### Underfit Example 3
 
 ![Underfit Example 3|600xauto {Plot of Training Learning Curve Showing an Underfit Model That Requires Further Training}](https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Training-Learning-Curve-Showing-An-Underfit-Model-That-Requires-Further-Training.png)
-
 
 A plot of learning curves shows underfitting if:
 
@@ -347,17 +325,13 @@ A good fit is a case where the performance of the model is good on both the trai
 
 This can be diagnosed from a plot where the train and validation loss decrease and stabilize around the same point.
 
-
 #### Good Fit Example 1
 
 ![Goodfit Example 1|600xauto {Plot showing good fit}](https://machinelearningmastery.com/wp-content/uploads/2017/07/Diagnostic-Line-Plot-Showing-a-Good-Fit-for-a-Model.png)
 
-
 #### Good Fit Example 2
-    
+
 ![Goodfit Example 2|600xauto {Plot of Train and Validation Learning Curves Showing a Good Fit}](https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Train-and-Validation-Learning-Curves-Showing-A-Good-Fit.png)
-
-
 
 ### Overfit Example
 
@@ -366,20 +340,18 @@ An overfit model is one where performance on the train set is good and continues
 This can be diagnosed from a plot where the train loss slopes down and the validation loss slopes down, hits an inflection point, and starts to slope up again.
 
 #### Underfit Example 1
-    
-![Underfit Example 1|600xauto {Plot showing underfit model}](https://machinelearningmastery.com/wp-content/uploads/2017/07/Diagnostic-Line-Plot-Showing-an-Overfit-Model.png)
 
+![Underfit Example 1|600xauto {Plot showing underfit model}](https://machinelearningmastery.com/wp-content/uploads/2017/07/Diagnostic-Line-Plot-Showing-an-Overfit-Model.png)
 
 #### Underfit Example 2
 
 ![Underfit Example 2|600xauto {Plot of Train and Validation Learning Curves Showing an underfit model}](https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Train-and-Validation-Learning-Curves-Showing-An-Overfit-Model.png)
 
-
 ### Multiple Runs Example
 
 LSTMs are stochastic which means that you will get a different diagnostic plot each run.
 
-It can be useful to repeat the diagnostic run multiple times (say 5, 10, or 30). 
+It can be useful to repeat the diagnostic run multiple times (say 5, 10, or 30).
 
 The train and validation traces from each run can then be plotted to give a more robust idea of the behavior of the model over time.
 
@@ -417,21 +389,17 @@ This may occur if the validation dataset has too few examples as compared to the
 
 This case can be identified by a learning curve for training loss that looks like a good fit (or other fits) and a learning curve for validation loss that shows noisy movements around the training loss.
 
-
 ![Unrepresentative Validation Dataset 1|600xauto {Plot of Train and Validation Learning Curves Showing a Validation dataset that may be too small relative to the Training dataset}](https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Train-and-Validation-Learning-Curves-Showing-a-Validation-Dataset-the-May-be-too-Small-Relative-to-the-Training-Dataset.png)
 
 This may also be identified by a validation loss that is lower than the training loss which indicates that the validation dataset may be easier for the model to predict than the training dataset.
 
-
 ![Unrepresentative Validation Dataset 2|600xauto {Plot of Train and Validation Learning Curves Showing a dataset that is easier to Predict than the Training dataset}](https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Train-and-Validation-Learning-Curves-Showing-a-Validation-Dataset-that-is-Easier-to-Predict-than-the-Training-Dataset.png)
-
 
 ## References
 
 [1]: [Overfitting and Underfitting Principles](https://towardsdatascience.com/overfitting-and-underfitting-principles-ea8964d9c45c)
 
 [2]: [How to Diagnose Overfitting and Underfitting of LSTM Models](https://machinelearningmastery.com/diagnose-overfitting-underfitting-lstm-models/)
-
 
 [3]: [Why is my validation loss lower than my training loss?](https://www.pyimagesearch.com/2019/10/14/why-is-my-validation-loss-lower-than-my-training-loss/)
 

@@ -1,6 +1,5 @@
 # Pandas Code Snippets
 
-
 ## Code Snippets
 
 Here are some useful python code snippets for data science and analysis projects [1].
@@ -13,11 +12,10 @@ Here are some useful python code snippets for data science and analysis projects
     excel_file = pd.read_excel(‘file.xlsx’, sheet_name=None)
     dataset_combined = pd.concat(excel_file.values())
 
-    # Extract the year from a date data In pandas
-    df['year'] = df['date'].dt.year if we put dt.month is for month etc..
+    # Extract the year from a date data in pandas
+    df['year'] = df['date'].dt.year
     df.head()
 ```
-
 
 ### Find boundaries for outliers
 
@@ -31,7 +29,6 @@ Here are some useful python code snippets for data science and analysis projects
 
         return upper_boundary, lower_boundary
 ```
-
 
 ### Compute cardinality of datasets
 
@@ -100,11 +97,87 @@ Here are some useful python code snippets for data science and analysis projects
         df['preprocessed_txt'] = df['Text'].apply(preprocess)
 ```
 
+## Python one-liners
 
+Here are some helpful python one-liners that can save time [5]:
+
+```py
+    # Palindrome Python One-Liner
+    phrase.find(phrase[::-1])
+
+    # Swap Two Variables Python One-Liner
+    a, b = b, a
+
+    # Sum Over Every Other Value Python One-Liner
+    sum(stock_prices[::2])
+
+    # Read File Python One-Liner
+    [line.strip() for line in open(filename)]
+
+    # Factorial Python One-Liner
+    reduce(lambda x, y: x * y, range(1, n+1))
+
+    # Performance Profiling Python One-Liner
+    python -m cProfile foo.py
+
+    # Superset Python One-Liner
+    lambda l: reduce(lambda z, x: z + [y + [x] for y in z], l, [[]])
+
+    # Fibonacci Python One-Liner
+    lambda x: x if x<=1 else fib(x-1) + fib(x-2)
+
+    # Quicksort Python One-liner
+    lambda L: [] if L==[] else qsort([x for x in L[1:] if x< L[0]]) + L[0:1] + qsort([x for x in L[1:] if x>=L[0]])
+
+    # Sieve of Eratosthenes Python One-liner
+    reduce( (lambda r,x: r-set(range(x**2,n,x)) if (x in r) else r), range(2,int(n**0.5)), set(range(2,n)))
+```
+
+
+```py
+    # swap two variables
+    a,b = b,a
+
+    # reverse list
+    lst = [2,3,22,4,1]
+    lst[::-1]
+
+    # find square of even numbers with list comprehension
+    result2 = [i**2 for i in range(10) if i%2==0]
+    print(result2)
+
+    # Dictionary comprehension
+    myDict = {x: x**2 for x in [1,2,3,4,5]}
+    print(myDict)
+
+    # lambda function to square a number
+    sqr = lambda x: x * x
+    sqr(10)
+
+
+    # Read file contents into a list: one-liner
+    file_lines = [line.strip() for line in open(filename)]
+
+    # convert binary number to int
+    n = '100' ##binary 100
+    dec_num = int(n,base = 2)
+    print(dec_num)
+
+    from itertools import combinations
+    print(list(combinations([1, 2, 3, 4], 2)))
+
+    from itertools import permutations
+    print(list(permutations([1, 2, 3, 4], 2)))
+
+
+    # Find longest string
+    words = ['This', 'is', 'a', 'list', 'of', 'keyword']
+    print(max(words, key=len))
+```
 
 ## Pandas one-liners
 
-Here are some helpful Pandas one-liners [2]: [3]: [4].
+Here are some helpful Pandas one-liners [2], [3]. [4].
 
 ```py
   # n-largest values in a series
@@ -117,8 +190,30 @@ Here are some helpful Pandas one-liners [2]: [3]: [4].
   data.nsmallest(n, "Employee Salary", keep = "all")
 ```
 
-Crosstab computes a cross-tabulation of two (or more) columns/series and returns a frequency of each combination
+### Filtering
 
+Suppose we want to update the values in a column based on whether some condition is true.
+
+The following code works but we overwrite our original data which means we would first have to copy the original column then run this line on the new column.
+
+```py
+  df.loc[df["alcohol"] >= 10, "quality"] = 0
+```
+
+The alternative is to use the `mask` method:
+
+```py
+  df = pd.read_csv("https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv", sep=';')
+
+  # Set to NaN, all values where the age is over 30
+  new_df = df.mask(df["age"] > 30)
+
+  df["quality_updated"] = df["quality"].mask(df["alcohol"] >= 10)
+```
+
+### crosstab and pivot
+
+`crosstab` computes a cross-tabulation of two (or more) columns/series and returns a frequency of each combination.
 
 ```py
   # compute the number of employees working from each location within every company
@@ -153,7 +248,7 @@ Similar to crosstabs, pivot tables in Pandas provide a way to cross-tabulate you
   sns.heatmap(result_pivot, annot=True, fmt='g')
 ```
 
-Mark duplicate rows
+### Mark duplicate rows
 
 ```py
   # Marks all duplicates as True except for the first occurrence.
@@ -174,22 +269,22 @@ Mark duplicate rows
   view raw
 ```
 
-Remove columns with null values
+### Remove columns with null values
 
 ```py
   # remove columns with any number of null values
   df.drop(df.columns[df.isnull().sum() > 0], axis=1, inplace=True)
 ```
 
-The apply method
+The `apply` method:
 
-```
+```py
   # create a new column based on existing columns
   df['new_col'] = df.apply(lambda x: x['col_1'] * x['col_2'], axis=1)
 ```
 
 
-Aggregate operations
+### Aggregate operations
 
 ```py
   # group and calculate the mean of columns
@@ -203,7 +298,7 @@ Aggregate operations
 ```
 
 
-Create a dictionary from a list
+### Create a dictionary from a list
 
 ```py
   grades = ["A", "A", "B", "B", "A", "C", "A", "B", "C", "A"]
@@ -211,7 +306,7 @@ Create a dictionary from a list
   pd.Series(grades).value_counts().to_dict()
 ```
 
-Create a DataFrame from a JSON file
+### Create a DataFrame from a JSON file
 
 ```py
   with open("data.json") as f:
@@ -220,7 +315,7 @@ Create a DataFrame from a JSON file
   df = pd.json_normalize(data, "data")
 ```
 
-Reformat using the explode function
+### Reformat using explode
 
 Consider a case where you have a list of items that match a particular record. You need to reformat it in a way that there is a separate row for each item in that list.
 
@@ -230,9 +325,9 @@ Consider a case where you have a list of items that match a particular record. Y
 
 The reset_index assigns a new integer index to the resulting DataFrame. Otherwise, the index before exploding would be preserved (i.e. all the rows with a key value of A would have an index of 0).
 
-Combine first
+### Using combine_first
 
-The combine_first function serves for a specific purpose but simplifies that specific task greatly.
+The `combine_first` function serves for a specific purpose but simplifies that specific task greatly.
 
 If there is a row in column A with a missing value (i.e. NaN), we want it to be filled with the value of the same row in column B.
 
@@ -240,14 +335,13 @@ If there is a row in column A with a missing value (i.e. NaN), we want it to be 
   df["A"].combine_first(df["B"])
 ```
 
-If there are 3 columns that we want to use, we can chain combine_first functions.
+If there are 3 columns that we want to use, we can chain `combine_first` functions.
 
 The following line of code first checks column A. If there is a missing value, it takes it from column B. If the corresponding row in column B is also NaN, then it takes the value from column C.
 
 ```py
   df["A"].combine_first(df["B"]).combine_first(df["C"])
 ```
-
 
 ## References
 
@@ -258,3 +352,5 @@ The following line of code first checks column A. If there is a missing value, i
 [3]: [10 Pandas One Liners for Data Access, Manipulation, and Management](https://www.kdnuggets.com/2023/01/pandas-one-liners-data-access-manipulation-management.html)
 
 [4]: [4 Pandas One-Liners That Solve Particular Tasks Efficiently](https://towardsdatascience.com/4-pandas-one-liners-that-surprised-me-in-a-good-way-b67955211f81)
+
+[5]: [Learn Python By Example: 10 Python One-Liners That Will Help You Save Time](https://medium.com/@alains/learn-python-by-example-10-python-one-liners-that-will-help-you-save-time-ccc4cabb9c68)
