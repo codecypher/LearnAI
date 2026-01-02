@@ -4,7 +4,6 @@
   This program implements Multivariate LSTM for the Pollution dataset using Keras.
 
   [Multivariate Time Series Forecasting with LSTMs in Keras](https://machinelearningmastery.com/multivariate-time-series-forecasting-lstms-keras/)
-  [Timeseries forecasting for weather prediction](https://keras.io/examples/timeseries/timeseries_weather_forecasting)
 """
 import numpy as np
 import pandas as pd
