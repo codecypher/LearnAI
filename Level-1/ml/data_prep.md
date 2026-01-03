@@ -85,7 +85,7 @@ Here are some things to keep in mind about data preparation:
 
 - It is estimated that 80% of AI project development time is spent on preparing the data [4].
 
-## Data Preparation Stage
+## Data Preparation
 
 The types of data preparation performed usually involve the following tasks [6], depending on the data:
 
@@ -122,8 +122,6 @@ The data preparation stage usually involves three steps that may overlap [5]:
   Split first and normalize later which means that we should perform the train-test split first then normalize the datasets.
 
 Data preparation is a large topic that can involve a lot of iterations, exploration, and analysis.
-
-----------
 
 ## 6 Steps for Data Preparation
 
@@ -265,61 +263,6 @@ Recommended techniques:
 
 - Domain knowledge: Leveraging expertise to create meaningful features.
 
-## Data Preprocessing Steps
-
-The three most common data preprocessing steps are: formatting, cleaning, and sampling [5].
-
-1. Formatting: The data you have selected may not be in the format that is needed which includes: format adjustments, correct inconsistencies, and handle errors in variables.
-
-2. Cleaning: Identify and correct mistakes or errors in the data which includes: check data types; handle missing or invalid values; handle outliers; handle categorical values; encode class labels; parse dates; character encodings; handle imbalanced data.
-  
-  Check for extreme values:
-
-- High Cardinality: the number of different labels in categorical data is very high which causes problems for the model to learn.
-  
-- Outliers: the extreme cases that may be due to error but not in every case.
-
-  There may be data instances that are incomplete and do not contain the data needed to address the problem; these instances may need to be removed.
-
-  There may be sensitive information in some of the attributes and these attributes may need to be anonymized or removed from the data entirely.
-
-3. Sampling: There may be far more selected data available than we need.
-
-  More data can result in much longer running times for algorithms and larger computational and memory requirements.
-
-  We can use a smaller representative sample of the selected data that may be faster for exploring and prototyping solutions before considering the whole dataset.
-
-----------
-
-Data preparation: This step includes the following tasks: data preprocessing, data cleaning, and exploratory data analysis (EDA).
-
-For image data, we would resize images to a lower dimension, such as (299 x 299), to allow mini-batch learning and also to keep up the computing limitations.
-
-For text data, we would Remove newlines and tabs; Strip HTML Tags; Remove Links; Remove Whitespaces, and other possible steps listed in NLP Text Preprocessing on my GitHub repo.
-
-Feature engineering: This step includes the following tasks: quantization or binning; mathematical transforms; scaling and normalization; modifying and/or creating new features.
-
-For image data, we would perform image augmentation, which is described in Image Augmentation on my GitHub repo.
-
-For text data, we would convert text data features into vectors and perform Tokenization, Stemming, and Lemmatization, as well as other possible steps described in Natural Language Processing on my GitHub repo.
-
-----------
-
-Design: This step includes the following tasks: data preparation, decomposing the problem, and building and evaluating models.
-
-We can use AutoML or create a custom test harness to build and evaluate many models to determine what algorithms and views of the data should be chosen for further study.
-
-## Avoid Data Leakage
-
-In general, we must answer two key questions to prevent data leakage [16]:
-
-1. Am I exposing information from the test set to the training process?
-
-2. Am I using future data that won’t be available when making predictions?
-
-These two questions will help avoid overly optimistic performance metrics and build models that generalize well to new data.
-
-We should also apply the same principles to the cross-validation process to ensure each fold is free from leakage.
 
 ## Notes on Data Preparation
 
@@ -370,7 +313,29 @@ For ML projects, it can be confusing to determine which library to choose to rea
 
 - Outliers: the extreme cases that may be due to error, but not in every case.
 
-----------
+### Avoid Data Leakage
+
+In general, we must answer two key questions to prevent data leakage [16]:
+
+1. Am I exposing information from the test set to the training process?
+2. Am I using future data that won’t be available when making predictions?
+
+These two questions will help avoid overly optimistic performance metrics and build models that generalize well to new data.
+
+We should also apply the same principles to the cross-validation process to ensure each fold is free from leakage.
+
+### Imbalanced Datasets
+
+Imbalanced data occurs when there is an uneven distribution of classes or labels [10].
+
+Models trained with imbalanced data usually have high precision and recall scores for the majority class, whereas these scores will likely drop significantly for the minority class.
+
+In a credit card detection task, the number of non-fraudulent transactions will likely be much greater than the number of fraudulent credit card transactions.
+
+Need to upsample but categories with only 1 entry when oversampled will give a 100% accuracy and artificially inflate the total accuracy/precision.
+
+- We can use `UpSample` in Keras/PyTorch and `pd.resample()` in Pandas
+
 
 ## Data Cleaning
 
@@ -674,8 +639,83 @@ We can drop or fill the `NaN` values.
   df = df[((np.abs(stats.zscore(df[out_list])) < 3)).all(axis=1)]
 ```
 
+## Data Preprocessing
 
-## Encoding Categorical Features (Python)
+The three most common data preprocessing steps are: formatting, cleaning, and sampling [5].
+
+1. Formatting: The data you have selected may not be in the format that is needed which includes: format adjustments, correct inconsistencies, and handle errors in variables.
+
+2. Cleaning: Identify and correct mistakes or errors in the data which includes: check data types; handle missing or invalid values; handle outliers; handle categorical values; encode class labels; parse dates; character encodings; handle imbalanced data.
+
+  Check for extreme values:
+
+- High Cardinality: the number of different labels in categorical data is very high which causes problems for the model to learn.
+
+- Outliers: the extreme cases that may be due to error but not in every case.
+
+  There may be data instances that are incomplete and do not contain the data needed to address the problem; these instances may need to be removed.
+
+  There may be sensitive information in some of the attributes and these attributes may need to be anonymized or removed from the data entirely.
+
+3. Sampling: There may be far more selected data available than we need.
+
+  More data can result in much longer running times for algorithms and larger computational and memory requirements.
+
+  We can use a smaller representative sample of the selected data that may be faster for exploring and prototyping solutions before considering the whole dataset.
+
+----------
+
+Data preparation: This step includes the following tasks: data preprocessing, data cleaning, and exploratory data analysis (EDA).
+
+For image data, we would resize images to a lower dimension, such as (299 x 299), to allow mini-batch learning and also to keep up the computing limitations.
+
+For text data, we would Remove newlines and tabs; Strip HTML Tags; Remove Links; Remove Whitespaces, and other possible steps listed in NLP Text Preprocessing on my GitHub repo.
+
+Feature engineering: This step includes the following tasks: quantization or binning; mathematical transforms; scaling and normalization; modifying and/or creating new features.
+
+For image data, we would perform image augmentation, which is described in Image Augmentation on my GitHub repo.
+
+For text data, we would convert text data features into vectors and perform Tokenization, Stemming, and Lemmatization, as well as other possible steps described in Natural Language Processing on my GitHub repo.
+
+----------
+
+Design: This step includes the following tasks: data preparation, decomposing the problem, and building and evaluating models.
+
+We can use AutoML or create a custom test harness to build and evaluate many models to determine what algorithms and views of the data should be chosen for further study.
+
+### Parsing dates (Python)
+
+Method 1: Parse date columns using `read_csv`
+
+```py
+    def parser(x):
+        return dt.datetime.strptime(x, "%Y-%m-%d")
+
+    def load_data(name):
+        df_data = pd.read_csv(
+            file_path,
+            header=0,
+            index_col=0,
+            parse_dates=["day"],
+            date_parser=parser    # optional
+        )
+
+        return df_data
+```
+
+Method 2: Parse dates using `to_datetime`
+
+```py
+    def load_data(name):
+        df_data = pd.read_csv(name, header=3, index_col=0)
+
+        # Replace index with DateTime
+        df_data.index = pd.to_datetime(df_data.index)
+
+        return df_data
+```
+
+### Encoding Categorical Features (Python)
 
 Most machine learning algorithms and deep learning neural networks require that input and output variables are numbers [16] which means that categorical data must be encoded to numbers before we can use it to fit and evaluate a model.
 
@@ -701,7 +741,7 @@ There are several ways to encode categorical variables [9], [16]:
 
   4. Learned Embedding: a distributed representation of the categories is learned.
 
-### Integer (Ordinal) Encoding
+#### Integer (Ordinal) Encoding
 
 To make sure that the ML algorithm interprets the ordinal features correctly, we need to convert the categorical string values to integers.
 
@@ -714,7 +754,7 @@ Therefore, we need to define the mapping manually.
     df['size'] = df['size'].map(size_mapping)
 ```
 
-### Encoding Class Labels
+#### Encoding Class Labels
 
 Many machine learning libraries require that class labels are encoded as _integer_ values.
 
@@ -751,7 +791,7 @@ There is a convenient `LabelEncoder` class in scikit-learn to achieve the same r
 
 ```
 
-### One-Hot Encoding of Nominal Features
+#### One-Hot Encoding of Nominal Features
 
 A one-hot encoding is a type of encoding in which an element of a finite set is represented by the index in that set where only one element has its index set to “1” and all other elements are assigned indices within the range [0, n-1].
 
@@ -783,7 +823,7 @@ We can use the `OneHotEncoder` that is implemented in the `scikit-learn.preproce
 
 An even more convenient way to create the dummy features via one-hot encoding is to use the `get_dummies` method in pandas.
 
-### Dummy Variable Encoding
+#### Dummy Variable Encoding
 
 Most machine learning algorithms cannot directly handle categorical features that are _text values_.
 
@@ -801,8 +841,8 @@ Applied to a DataFrame, the `get_dummies` method will only convert string column
 
 ```py
     pd.get_dummies(df[['price', 'color', 'size']])
-    
-    # drops the header row 
+
+    # drops the header row
     df_encoded = pd.get_dummies(df, drop_first=True)
 ```
 
@@ -810,7 +850,7 @@ A dummy variable representation is required for some models such as linear regre
 
 However, we rarely encounter this problem in practice when evaluating machine learning algorithms other than linear regression.
 
-### One-Hot Encoding Example
+#### One-Hot Encoding Example
 
 A one-hot encoding is appropriate for categorical data where no relationship exists between categories.
 
@@ -873,49 +913,6 @@ By default the `OneHotEncoder` class will output data with a sparse representati
     print('Accuracy: %.2f' % (accuracy * 100))
 ```
 
-## Parsing dates (Python)
-
-Method 1: Parse date columns using `read_csv`
-
-```py
-    def parser(x):
-        return dt.datetime.strptime(x, "%Y-%m-%d")
-
-    def load_data(name):
-        df_data = pd.read_csv(
-            file_path,
-            header=0,
-            index_col=0,
-            parse_dates=["day"],
-            date_parser=parser    # optional
-        )
-
-        return df_data
-```
-
-Method 2: Parse dates using `to_datetime`
-
-```py
-    def load_data(name):
-        df_data = pd.read_csv(name, header=3, index_col=0)
-
-        # Replace index with DateTime
-        df_data.index = pd.to_datetime(df_data.index)
-
-        return df_data
-```
-
-## Imbalanced Datasets
-
-Imbalanced data occurs when there is an uneven distribution of classes or labels [10].
-
-Models trained with imbalanced data usually have high precision and recall scores for the majority class, whereas these scores will likely drop significantly for the minority class.
-
-In a credit card detection task, the number of non-fraudulent transactions will likely be much greater than the number of fraudulent credit card transactions.
-
-Need to upsample but categories with only 1 entry when oversampled will give a 100% accuracy and artificially inflate the total accuracy/precision.
-
-- We can use `UpSample` in Keras/PyTorch and `pd.resample()` in Pandas
 
 ## Data Splitting
 
@@ -936,18 +933,16 @@ A train-test split conists of the following:
 > Instead of discarding the allocated test data after model training and evaluation, it is a good idea to retrain a classifier on the entire dataset for optimal performance.
 
 
-----------
-
-
 ## Data Pipelines
 
 [Data Pipelines](./pipelines.md)
 
 There are multiple stages to running machine learning algorithms since it involves a sequence of tasks including pre-processing, feature extraction, model fitting, performance, and validation.
 
+
 ## Bootstrapping
 
-The goal of bootstrap is to create an estimate (sample mean x̄) for a population parameter (population mean θ) based on multiple data samples obtained from the original sample.
+The goal of _bootstrap_ is to create an estimate (sample mean x̄) for a population parameter (population mean θ) based on multiple data samples obtained from the original sample.
 
 Bootstrapping is done by repeatedly sampling (with replacement) the sample dataset to create many simulated samples.
 
@@ -955,7 +950,7 @@ Each simulated bootstrap sample is used to calculate an estimate of the paramete
 
 The bootstrap sampling distribution then allows us to draw statistical inferences such as estimating the standard error of the parameter.
 
-----------
+
 
 ## Examples and Tutorials
 
@@ -1040,6 +1035,18 @@ Here are some code samples and tutorials:
 
 ## Data Preprocessing Tools
 
+### Joblib
+
+**Joblib** is an open-source Python library that helps to save pipelines to a file that can be used later.
+
+[Using joblib to speed up your Python pipelines](https://medium.com/data-science/using-joblib-to-speed-up-your-python-pipelines-dd97440c653d)
+
+[Lightweight Pipelining In Python](https://medium.com/data-science/lightweight-pipelining-in-python-1c7a874794f4)
+
+### Kedro
+
+`Kedro` is an open-source Python framework for creating reproducible, maintainable, and modular data science code.
+
 ### Kestra
 
 **Kestra** is an infinitely scalable orchestration and scheduling platform, creating, running, scheduling, and monitoring millions of complex pipelines.
@@ -1111,9 +1118,7 @@ Kestra is able to handle both because all transformations are considered to be r
 
 [19]: [Understanding Outliers in Machine Learning](https://blog.gopenai.com/understanding-outliers-in-machine-learning-732e43566763)
 
-
 ----------
-
 
 [13 ways to access data in Python](https://towardsdatascience.com/13-ways-to-access-data-in-python-bac5683e0063)
 
@@ -1129,11 +1134,6 @@ Kestra is able to handle both because all transformations are considered to be r
 [6 Tips for Dealing With Null Values](https://towardsdatascience.com/6-tips-for-dealing-with-null-values-e16d1d1a1b33)
 
 
-[A Better Way for Data Preprocessing: Pandas Pipe](https://towardsdatascience.com/a-better-way-for-data-preprocessing-pandas-pipe-a08336a012bc)
-
-[Introduction to Scikit-learn’s Pipelines](https://towardsdatascience.com/introduction-to-scikit-learns-pipelines-565cc549754a)
-
-
 [INFOGRAPHIC: Data prep and Labeling](https://www.cognilytica.com/2019/04/19/infographic-data-prep-and-labeling/)
 
 [Kaggle Data Cleaning Challenge: Missing values](https://www.kaggle.com/rtatman/data-cleaning-challenge-handling-missing-values)
@@ -1142,11 +1142,4 @@ Kestra is able to handle both because all transformations are considered to be r
 
 
 [7 Cognitive Biases That Affect Your Data Analysis (and How to Overcome Them)](https://www.kdnuggets.com/7-cognitive-biases-that-affect-your-data-analysis-and-how-to-overcome-them)
-
-
-----------
-
-[Build an Anomaly Detection Pipeline with Isolation Forest and Kedro](https://towardsdatascience.com/build-an-anomaly-detection-pipeline-with-isolation-forest-and-kedro-db5f4437bfab)
-
-[Customizing Sklearn Pipelines: TransformerMixin](https://towardsdatascience.com/customizing-sklearn-pipelines-transformermixin-a54341d8d624?source=rss----7f60cf5620c9---4)
 

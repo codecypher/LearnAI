@@ -1,6 +1,6 @@
 # Python Data Prep Code
 
-Here are some code snippets which are helpful for data preparation. 
+Here are some helpful code snippets for data preparation.
 
 ## Data Cleaning (Python)
 
@@ -203,7 +203,7 @@ Some useful Python one-liners for common data cleaning tasks [30].
 
 ### Quick Data Quality Checks
 
-Here are some essential one-liners to help identify common data quality issues [30]. 
+Here are some essential one-liners to help identify common data quality issues [30].
 
 ```py
   df.info()
@@ -551,7 +551,7 @@ We can use the `counter` function to count values automatically.
 ```py
   data = [10, 10, 20, 20, 30, 35, 40, 40, 40, 50]
 
-  
+
   from collections import Counter
 
   Counter(data)
@@ -662,3 +662,12 @@ The above methods find the inter-quartile range on the salary column. Then, we c
 
 
 [36]: [How to Fully Automate Data Cleaning with Python in 5 Steps](https://www.kdnuggets.com/how-to-fully-automate-data-cleaning-with-python-in-5-steps)
+
+----------
+
+[10 Useful Python One-Liners for Data Engineering](https://www.kdnuggets.com/10-useful-python-one-liners-for-data-engineering)
+
+[10 Useful Python One-Liners for CSV Processing](https://www.kdnuggets.com/10-useful-python-one-liners-for-csv-processing)
+
+[7 Pandas Tricks to Handle Large Datasets](https://machinelearningmastery.com/7-pandas-tricks-to-handle-large-datasets/)
+
