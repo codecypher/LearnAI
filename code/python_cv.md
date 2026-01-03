@@ -1,6 +1,6 @@
-# Python Computer Vision Code Snippets
+# Python CV Code Snippets
 
-Here are some useful Python code snippets for CV tasks.
+Here are some useful Python code snippets for common computer vision (CV) tasks.
 
 ## Show samples from each class
 
@@ -167,6 +167,176 @@ This code will automate clicking of images for particular labels and it store th
 We can use many techniques such as pixel measurement and others but we have to do calibration before extracting areas to match the original dimensions and their representations in the image and their ratios.
 
 Many programmers use inbuilt ratios and reference object schemes, but here we try a new way of calculating the calibration factor: We draw a line to do the calibration.
+
+## Code Snippets
+
+Here are some useful code snippets for images.
+
+### Reading an image
+
+```py
+  def read_image(path):
+      im = cv2.imread(str(path))
+      return cv2.cvtColor(im, cv2.COLOR_BGR2RGB)
+```
+
+### Showing multiple images in a grid
+
+```py
+  image_paths = list(Path('./dogs').iterdir())
+  images = [read_image(p) for p in image_paths]
+
+  fig = plt.figure(figsize=(20, 20))
+  columns = 4
+  rows = 4
+
+  pics = []
+  for i in range(columns*rows):
+      pics.append(fig.add_subplot(rows, columns, i+1,title=image_paths[i].parts[-1].split('.')[0]))
+      plt.imshow(images[i])
+
+  plt.show()
+```
+
+## Kaggle Download
+
+We can download datasets from Kaggle using an API token.
+
+```bash
+  %%capture
+  !pip install kaggle
+
+  # upload your tokn
+  from google.colab import files
+  import time
+
+  uploaded = files.upload()
+  time.sleep(3)
+
+  # download directly from kaggle
+  !cp kaggle.json ~/.kaggle/
+  !chmod 600 ~/.kaggle/kaggle.json
+  !kaggle competitions download "dogs-vs-cats"
+```
+
+```py
+  import zipfile
+
+  # unzip the downloaded folder into a new folder
+  data_zip = "/content/dogs-vs-cats.zip"
+  data_dir = "./data"
+  data_zip_ref = zipfile.ZipFile(data_zip,"r")
+  data_zip_ref.extractall(data_dir)
+
+  # unzip the test subfolder
+  test_zip = "/content/data/test1.zip"
+  test_dir = "./data"
+  test_zip_ref = zipfile.ZipFile(test_zip,"r")
+  test_zip_ref.extractall(test_
+
+  # unzip the train subfolder
+  train_zip = "/content/data/train.zip"
+  train_dir = "./data"
+  train_zip_ref = zipfile.ZipFile(train_zip,"r")
+  train_zip_ref.extractall(train_dir)
+```
+
+### Structure and Populate Subfolders
+
+To facilitate the management of the dataset, we create an easy-to-manage folder structure.
+
+The goal is to have a folder called `train` that will contain the subfolders dog and cat which will obviously contain all the images of the respective pets.
+
+The same thing should be done for the validation folder.
+
+```py
+  import os
+  import glob
+
+  dat_dir = "/content/data"
+
+  # create training dir
+  training_dir = os.path.join(data_dir,"training")
+  if not os.path.isdir(training_dir):
+    os.mkdir(training_dir)
+
+  # create dog in training
+  dog_training_dir = os.path.join(training_dir,"dog")
+  if not os.path.isdir(dog_training_dir):
+    os.mkdir(dog_training_dir)
+
+  # create cat in training
+  cat_training_dir = os.path.join(training_dir,"cat")
+  if not os.path.isdir(cat_training_dir):
+    os.mkdir(cat_training_dir)
+
+  # create validation dir
+  validation_dir = os.path.join(data_dir,"validation")
+  if not os.path.isdir(validation_dir):
+    os.mkdir(validation_dir)
+
+  # create dog in validation
+  dog_validation_dir = os.path.join(validation_dir,"dog")
+  if not os.path.isdir(dog_validation_dir):
+    os.mkdir(dog_validation_dir)
+
+  # create cat in validation
+  cat_validation_dir = os.path.join(validation_dir,"cat")
+  if not os.path.isdir(cat_validation_dir):
+  os.mkdir(cat_validation_dir)
+```
+
+Now we shuffle the data and populate the new  subfolders.
+
+```py
+  import shutil
+
+  split_size = 0.80
+  cat_imgs_size = len(glob.glob("/content/data/train/cat*"))
+  dog_imgs_size = len(glob.glob("/content/data/train/dog*"))
+
+  for i,img in enumerate(glob.glob("/content/data/train/cat*")):
+    if i < (cat_imgs_size * split_size):
+      shutil.move(img,cat_training_dir)
+    else:
+      shutil.move(img,cat_validation_dir)
+
+  for i,img in enumerate(glob.glob("/content/data/train/dog*")):
+    if i < (dog_imgs_size * split_size):
+      shutil.move(img,dog_training_dir)
+    else:
+      shutil.move(img,dog_validation_dir)
+```
+
+### Plot some image examples
+
+```py
+  import matplotlib.pyplot as plt
+  import numpy as np
+  import cv2
+
+  from IPython.core.pylabtools import figsize
+
+  samples_dog = [os.path.join(dog_training_dir,np.random.choice(os.listdir(dog_training_dir),1)[0]) for _ in range(8)]
+  samples_cat = [os.path.join(cat_training_dir,np.random.choice(os.listdir(cat_training_dir),1)[0]) for _ in range(8)]
+
+  nrows = 4
+  ncols = 4
+
+  fig, ax = plt.subplots(nrows,ncols,figsize = (10,10))
+  ax = ax.flatten()
+
+  for i in range(nrows*ncols):
+    if i < 8:
+      pic = plt.imread(samples_dog[i%8])
+      ax[i].imshow(pic)
+      ax[i].set_axis_off()
+    else:
+      pic = plt.imread(samples_cat[i%8])
+      ax[i].imshow(pic)
+      ax[i].set_axis_off()
+      plt.show()
+```
 
 ## References
 
