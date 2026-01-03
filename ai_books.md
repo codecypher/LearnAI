@@ -6,7 +6,6 @@
 
 [Directory of Open Access Journals](https://doaj.org)
 
-
 ## Prerequisites
 
 ### Mathematics
@@ -43,7 +42,6 @@ M. Howard and D. LeBlanc, Writing Secure Code, 2nd ed., Microsoft Press Press, I
 
 E. Gamma, R. Helm, R. Johnson, and J. Vlissides, Design Patterns: Elements of Reusable Object-Oriented Software, 1st ed., Addison-Wesley Professionalw, ISBN-10: 0201633612, 1994.
 
-
 ## Quickstart Resources
 
 [Data Science Cheatsheet](https://github.com/aaronwangy/Data-Science-Cheatsheet)
@@ -54,10 +52,9 @@ E. Gamma, R. Helm, R. Johnson, and J. Vlissides, Design Patterns: Elements of Re
 
 [Mathematics for Machine Learning](https://mml-book.github.io/)
 
-
 ## O'Reilly Books Online
 
-If you have an .edu email account you can get free access to [oreilly.com](https://www.oreilly.com/) which has many good books on a variety of AI/ML topics for beginner to expert. 
+If you have an .edu email account you can get free access to [oreilly.com](https://www.oreilly.com/) which has many good books on a variety of AI/ML topics for beginner to expert.
 
 The following books on advanced topics can be found on O'Reilly online:
 
@@ -78,14 +75,13 @@ S. Raschka and V. Mirjalili, Python Machine Learning, 3rd ed., Birmingham, U.K.:
 
 Y. Liu, Python Machine Learning by Example, 3rd ed., Birmingham, U.K.: Packt Pub. Ltd., 2020.
 
-
 ## Recommended Books on Software Engineering
 
 Every software engineer and manager needs to read the following:
 
-T. Demarco, _Peopleware: Productive Projects and Teams_, 2nd ed., Dorset House, 1999. 
+T. Demarco, _Peopleware: Productive Projects and Teams_, 2nd ed., Dorset House, 1999.
 
-F. Brooks, _The Mythical Man-Month_, Anniversary Edition, Addison-Wesley Professional, 1995. 
+F. Brooks, _The Mythical Man-Month_, Anniversary Edition, Addison-Wesley Professional, 1995.
 
 R. L. Glass, _Facts and Fallacies of Software Engineering_, Addison-Wesley Professional, 1st ed., ISBN: 0321117425, 2002.
 
@@ -96,7 +92,6 @@ B. W. Kernighan, _The Practice of Programming_.
 
 J. Bentley, _Programming Pearls_.
 
-
 ## PyTorch Books
 
 A. R. Jha, Mastering PyTorch, Birmingham, U.K.: Packt Pub. Ltd., 2021.
@@ -105,7 +100,6 @@ J. Matthew, PyTorch Artificial Intelligence Fundamentals, Birmingham, U.K.: Pack
 
 - Deep Learning with PyTorch
 - PyTorch Computer Vision Cookbook
-
 
 ## AI Textbooks
 
@@ -119,31 +113,26 @@ S. Raschka. and V. Mirjalili, Python Machine Learning, 2nd ed. Packt, ISBN: 9781
 
 S. Bird, E. Klein, and E. Loper. Natural Language Processing with Python – Analyzing Text with the Natural Language Toolkit. Available online: https://www.nltk.org/book/
 
-D. Jurafsky and J. H. Martin, 2nd edition. Speech and Language Processing. Prentice Hall, ISBN: 978-0131873216, 2008. Available online: https://web.stanford.edu/~jurafsky/slp3/
-
+D. Jurafsky and J. H. Martin, 2nd edition. Speech and Language Processing. Prentice Hall, ISBN: 978-0131873216, 2008. Available online: https://web.stanford.edu/~jurafsky/slp3/.
 
 B. Siciliano, L. Sciavicco, L. Villani, and G. Oriolo, Robotics: Modeling, Planning and Control, London: Springer, ISBN: 978-1-84628-641-4, 2010.
 
-
 ## Software Engineering Ethics
 
-There seems to be a general problem with ethics in computer science in general but specifically in software engineering. A majority of researchers have admitted to manipulating data, and I worked with a professor who manipulated results for some NIH grants. I come across ethics problems a lot as a software engineer (and you will too) even when working on government projects, so I end up looking for another job. 
+There seems to be a general problem with ethics in computer science in general but specifically in software engineering. A majority of researchers have admitted to manipulating data, and I worked with a professor who manipulated results for some NIH grants. I come across ethics problems a lot as a software engineer (and you will too) even when working on government projects, so I end up looking for another job.
 
-Read the preface in "The Clean Coder" about the NASA shuttle disaster. Also think about the SpaceX shuttles that have blown up - there could have been people on board. SpaceX is a train wreck that needs to be put out of business. 
+Read the preface in "The Clean Coder" about the NASA shuttle disaster. Also think about the SpaceX shuttles that have blown up - there could have been people on board. SpaceX is a train wreck that needs to be put out of business.
 
-There are a lot of similarities in autonomous vehicles. In fact, there are now quite a few car companies dropping their AV projects which is probably for the best. 
-
+There are a lot of similarities in autonomous vehicles. In fact, there are now quite a few car companies dropping their AV projects which is probably for the best.
 
 R. Martin, _The Clean Coder: A Code of Conduct for Professional Programmers_, Pearson, 1st ed., ISBN: 0137081073, 2011.
 
-R. McGinn, _The Ethical Engineer: Contemporary Concepts and Cases_, Princeton University Press, ISBN: 0691177708, 2018. 
+R. McGinn, _The Ethical Engineer: Contemporary Concepts and Cases_, Princeton University Press, ISBN: 0691177708, 2018.
 
-B. Franks, _97 Things About Ethics Everyone in Data Science Should Know: Collective Wisdom from the Experts_, O'Reilly Media, 1st ed., ISBN: 1492072664, 2020. 
-
+B. Franks, _97 Things About Ethics Everyone in Data Science Should Know: Collective Wisdom from the Experts_, O'Reilly Media, 1st ed., ISBN: 1492072664, 2020.
 
 ## Code Repos
 
 aima-python: Python code for Artificial Intelligence: A Modern Approach. Accessed: June 14, 2020. [Online]. Available: https://github.com/aimacode/aima-python, 0.17.3. 2020.
 
 Python Machine Learning Code Repository, Accessed: 11/14/2021. [Online].  Available Online: https://github.com/rasbt/python-machine-learning-book-3rd-edition
-

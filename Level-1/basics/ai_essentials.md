@@ -1,7 +1,6 @@
 # AI Essentials
 
-The student of AI needs a healthy dose of _skepticism_, especially when reading research articles which is discussed in graduate textbooks on AI/ML [2]. 
-
+The student of AI needs a healthy dose of _skepticism_, especially when reading research articles which is discussed in graduate textbooks on AI/ML [2].
 
 ## Guiding Principles of AI
 
@@ -11,9 +10,7 @@ The student of AI needs a healthy dose of _skepticism_, especially when reading 
 
 - Prefer the simplest hypothesis consistent with the data.
 
-
 The term **bootstrap** means to randomly draw (with replacement) rows from the training dataset.
-
 
 > Torture the data, and it will confess to anything - Ronald Coase
 
@@ -27,7 +24,7 @@ There is no such thing as the _best_ learning algorithm. For any learning algori
 
 When we say that a learning algorithm is _good_, we only quantify how well its inductive bias matches the properties of the data.
 
-Thus, a general-purpose universal optimization strategy is theoretically impossible and the only way one strategy can outperform another is if it is specialized to the specific problem under consideration (expert system). 
+Thus, a general-purpose universal optimization strategy is theoretically impossible and the only way one strategy can outperform another is if it is specialized to the specific problem under consideration (expert system).
 
 ### The Curse of Dimensionality
 
@@ -41,13 +38,11 @@ The _curse of dimensionality_ refers to the problems that arise when working wit
 
 Avoiding overfitting is a major motivation for performing dimensionality reduction: the fewer features our training data has, the fewer assumptions our model makes and the simpler it will be.
 
-
 ## When You Should not use ML
 
 Always start with a feasibility study and know when not to use AI [7].
 
 Technically, AI/ML is a graduate level topic which has several undergraduate prerequisites in math and CS which is probably why 80% or more of AI projects fail [4][5].
-
 
 ### Systematic Generalization
 
@@ -56,7 +51,6 @@ Current Machine Learning has issues with reliability due to the poor performance
 We are used to relying on the IID (Independent & Identically Distributed) hypothesis that the test distribution and the training distribution are the same.
 
 Without this assumption, we need some alternative hypothesis to perform the generalization.
-
 
 ## Disinformation in AI Research
 
@@ -80,12 +74,6 @@ IEEE Dataport currently has almost 700,000 users and over 1,500 data sets.
 
 Most importantly, this offering should support reproducible research, a topic that Computer will discuss further in future issues.
 
-
-
-----------
-
-
-
 ## Choose the right algorithm
 
 How to choose the right machine learning algorithm [8]:
@@ -107,7 +95,6 @@ Categorize by output:
 - If the output of the model is a class, it is a classification problem.
 
 - If the output of the model is a set of input groups, it is a clustering problem.
-
 
 2. Understand the Data
 
@@ -159,7 +146,6 @@ Create an ML pipeline that compares the performance of each algorithm on the dat
 
 There are three main options for optimizing hyperparameters: grid search, random search, and Bayesian optimization.
 
-
 ### Choosing the right estimator
 
 Often the hardest part of solving a machine learning problem can be finding the right estimator for the job [11].
@@ -167,10 +153,6 @@ Often the hardest part of solving a machine learning problem can be finding the 
 Different estimators are better suited for different types of data and different problems.
 
 The [flowchart](https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html) is designed to give users a bit of a rough guide on how to approach problems with regard to which estimators to try on your data [11].
-
-
-------
-
 
 ## Artificial Intelligence
 
@@ -180,7 +162,6 @@ Machine Learning = A subset of AI which uses statistical methods to enable machi
 
 Deep Learning = A subset of ML which makes the computation of multi-layer neural networks feasible.
 
-
 ### How to Choose the Right AI Algorithm
 
 - [Artificial Intelligence Algorithms: All you need to know](https://www.edureka.co/blog/artificial-intelligence-algorithms)
@@ -188,10 +169,6 @@ Deep Learning = A subset of ML which makes the computation of multi-layer neural
 - [A Comprehensive Guide To Artificial Intelligence With Python](https://www.edureka.co/blog/artificial-intelligence-with-python/)
 
 - [AI vs Machine Learning vs Deep Learning](https://www.edureka.co/blog/ai-vs-machine-learning-vs-deep-learning/)
-
-
-------
-
 
 ### Artificial Intelligence Tutorial
 
@@ -204,18 +181,11 @@ Deep Learning = A subset of ML which makes the computation of multi-layer neural
 
 [Artificial Intelligence Tutorial : All you need to know about AI](https://www.edureka.co/blog/artificial-intelligence-tutorial/)
 
-
-------
+Helpful resources:
 
 K-Nearest Neighbors Algorithm in Python and Scikit-Learn (StackAbuse)
-
 k-nearest neighbor algorithm in Python (GeeksforGeeks)
-
 Building A Book Recommender System (DataScience+)
-
-
-------
-
 
 ## Deep Learning
 
@@ -255,10 +225,6 @@ DNNs must consider many training parameters, such as the size (number of layers 
 - Financial fraud detection
 - Military
 
-
-------
-
-
 ## Machine Learning for Humans
 
 **Artificial intelligence** is the study of agents that perceive the world around them, form plans, and make decisions to achieve their goals [9].
@@ -276,9 +242,6 @@ We are also continuing to make foundational advances towards human-level **artif
 The definition of AGI is an artificial intelligence that can successfully perform _any intellectual task_ that a human being can: learning, planning and decision-making under uncertainty, communicating in natural language, making jokes, manipulating people, trading stocks, or reprogramming itself.
 
 
-------
-
-
 ## Neural Networks and Deep Learning
 
 Some extensions and further concepts worth noting [10]:
@@ -290,7 +253,6 @@ Some extensions and further concepts worth noting [10]:
 - **Recurrent neural networks (RNNs)** have a kind of built-in memory and are well-suited for natural language problems. They are also important in reinforcement learning since they enable the agent to keep track of where things are and what happened historically even when those elements are not all visible at once. In fact, both RNNs and LSTMs are often used in the context of natural language problems.
 
 - **Deep reinforcement learning** is one of the most exciting areas of deep learning research, at the heart of recent achievements in AI. We will dive deeper in Part 5, but essentially the goal is to apply all of the techniques in this post to the problem of teaching an agent to maximize reward. This can be applied in any context that can be gamified — from actual games like Counter Strike or Pacman, to self-driving cars, to trading stocks, to real life and the real world.
-
 
 ## Deep learning applications
 
@@ -310,10 +272,6 @@ Here are a few examples of the incredible things that deep learning can do:
 
 - The Mars explorer robot Curiosity is autonomously selecting inspection-worthy soil targets based on visual examination
 
-
-------
-
-
 ## Gradient descent
 
 Gradient descent is used in ML and DL to optimize the models in an iterative process by taking the gradient (derivative) of the _loss_ function.
@@ -322,7 +280,6 @@ Gradient descent takes more computational resources to optimize, so SGD can be u
 
 Mini-batch gradient descent is the perfect balance between the above-spoken methods which takes fewer iterations than SGD to converge and less computation power than Gradient descent.
 
-
 ## What is online learning
 
 We define online learning as a training scenario in which the full dataset is never available to the model at the same time.
@@ -330,7 +287,6 @@ We define online learning as a training scenario in which the full dataset is ne
 The model is exposed to the portions of the dataset sequentially and expected to learn the full training task through such partial exposures.
 
 After being exposed to a certain portion of the dataset, the model is not allowed to re-visit this data later on. Otherwise, the model could simply loop over the dataset and perform a normal training procedure.
-
 
 ## References
 
@@ -350,6 +306,7 @@ S. Russell and P. Norvig, Artificial Intelligence: A Modern Approach, 4th ed. Up
 
 [7]: T. Shin, [4 Reasons Why You Shouldn't Use Machine Learning](https://towardsdatascience.com/4-reasons-why-you-shouldnt-use-machine-learning-639d1d99fe11), Towards Data Science, Oct 5, 2021.
 
+------
 
 [8]: [Do you know how to choose the right machine learning algorithm among 7 different types?](<https://towardsdatascience.com/do-you-know-how-to-choose-the-right-machine-learning-algorithm-among-7-different-types-295d0b0c7f60>
 
@@ -362,4 +319,3 @@ S. Russell and P. Norvig, Artificial Intelligence: A Modern Approach, 4th ed. Up
 [12]: [The Gap Between Deep Learning and Human Cognitive Abilities](https://www.kdnuggets.com/2022/10/gap-deep-learning-human-cognitive-abilities.html)
 
 [13]: [Is My Model Really Better?](https://towardsdatascience.com/is-my-model-really-better-560e729f81d2)
-

@@ -6,7 +6,7 @@ _AI Engineering_ is an emergent discipline focused on applying AI in real-world 
 
 AI Engineering (AIE) is a field of research and practice that combines the principles of systems engineering, software engineering, computer science, and human-centered design to create AI systems in accordance with human needs for mission outcomes.
 
-A successful AI engineer needs an thorough knowledge of applied mathematics, computer science, and software engineering as well as experience developing software solutions for a variety of real-world problems. 
+A successful AI engineer needs a thorough knowledge of applied mathematics, computer science, and software engineering as well as experience developing software solutions for a variety of real-world problems.
 
 AI/ML is not about algorithms, APIs, or frameworks.
 
@@ -15,7 +15,7 @@ AI/ML is not about algorithms, APIs, or frameworks.
 
 The need for a mature engineering discipline to guide AI capabilities is urgent.
 
-To realize the benefits of AI for such scenarios, we must successfully meet the challenges unique to AI systems. While the capability to develop AI systems has risen due to available computing power and datasets, these systems often work only in controlled environments and are difficult to replicate, verify, and validate in the real world. 
+To realize the benefits of AI for such scenarios, we must successfully meet the challenges unique to AI systems. While the capability to develop AI systems has risen due to available computing power and datasets, these systems often work only in controlled environments and are difficult to replicate, verify, and validate in the real world.
 
 AI Engineering aims to provide a framework and tools to proactively design AI systems to function in environments characterized by high degrees of complexity, ambiguity, and dynamism.
 
@@ -45,8 +45,7 @@ An AI Engineer needs to have a thorough understanding of the core software engin
 
 ## Lewis University ARTIFICIAL INTELLIGENCE, M.S.
 
-A Master of Science in Artificial Intelligence degree equips students with in-depth knowledge and practical skills needed to build and implement
-modern AI systems.
+A Master of Science in Artificial Intelligence degree equips students with in-depth knowledge and practical skills needed to build and implement modern AI systems.
 
 The degree provides the necessary theoretical background in machine learning and artificial intelligence, knowledge related to the application of artificial intelligence in computing systems and the ethical implication in the development and use of artificial intelligence.
 
@@ -61,7 +60,6 @@ The goals and objectives of the M.S. in AI program are:
 - Demonstrate the approach of Responsible AI where the ethical implications, risks, and responsibilities of AI solutions should be evaluated within global and societal contexts.
 
 - Design AI systems that are socially responsible, ensuring that AI applications benefit society as a whole.
-
 
 
 ## References
