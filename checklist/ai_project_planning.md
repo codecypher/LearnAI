@@ -161,70 +161,6 @@ You should start with the simplest solution that you can implement and iterative
 
 > Simpler = Better (Occam's Razor)
 
-## Integrating LLMs into Software System
-
-Despite the many advantages of integrating LLMs into existing software, there are many risks that need to be considered [10].
-
-> The tendency to make things up is holding chatbots back. But that’s just what they do. (MIT Technology Review)
-
-- Computational costs of training models and during model inferences due to heavy reliance on high-end GPUs and TPUs
-
-- Making frequent API calls can be expensive, especially for high-traffic applications
-
-- If sensitive data is sent to an LLM, it might be processed, stored, and exposed to another user, especially when the LLM being utilized is accessible to the public
-
-- Aside from properly fine-tuned custom models, most LLMs can only provide open-ended and generic responses and cannot provide domain-based knowledge
-
-- Training LLMs require high energy usage, which can lead to high carbon emissions and environmental pollution
-
-### Tips for LLM Integration
-
-Here is a guide for the process of integrating LLMs into your systems [22]:
-
-1. Identify suitable use cases for LLMs within your existing systems.
-2. Select the right LLM for your specific needs.
-3. Integrate LLMs with your current architecture seamlessly.
-4. Leverage the unique capabilities of LLMs to enhance your system’s functionality.
-
-- Integrating LLMs into System Architecture
-- Data Cleanup and Enrichment
-- Prompt Templating
-- Generalized Problem Solving
-- Systems that can Adapt and Grow
-
-#### Working with Non-Determinism
-
-Beyond testing and iterating on your prompts, you can design systems that anticipate and manage non-deterministic outputs from LLMs. We already have experience building fault-tolerant systems, so extending this mindset to handle the variability of LLM responses is a natural next step.
-
-By incorporating strategies such as:
-
-- Output validation
-- Fallback mechanisms
-- Confidence thresholding
-
-We can create robust systems that leverage the power of LLMs while accounting for their inherent non-determinism.
-
-#### Stigmergy: Inspiring Adaptive Systems
-
-In nature, stigmergy is a concept where the trace left in the environment by an individual action stimulates subsequent actions by the same or different agents. This principle can be effectively applied to building adaptive systems using LLMs and AI models.
-
-Rather than defining explicit behaviors, we can harness LLMs to create systems that evolve through data-driven traces left in their environment. This approach brings us closer to developing more generalized, adaptable systems that grow organically.
-
-We can achieve this using the following:
-
-1. Establish basic constraints and rules to enable the subsystem’s initial operation.
-
-2. Leave sufficient environmental traces for the system to infer its next steps autonomously.
-
-3. Leverage LLMs to fill gaps or resolve ambiguities, guiding the system through small, incremental progressions.
-
-These incremental steps can number in the thousands within a given system. The potential of a stigmergic system is both fascinating and promising.
-
-The stigmergic system represents a new paradigm in system building – one that embraces the generative nature of LLMs to create reliable, organic digital systems.
-
-By adopting this approach, we shift from prescribing every detail to fostering adaptive growth, allowing our systems to evolve and improve continually.
-
-
 ## Lessons Learned
 
 Here are some lessons learned in [24].
@@ -317,15 +253,11 @@ Here are eight mistakes to avoid when using machine learning [12]:
 
 ----------
 
-[10]: [Integrating Language Models into Existing Software Systems](https://www.kdnuggets.com/integrating-language-models-into-existing-software-systems)
-
 [12]: [8 Mistakes to avoid while using Machine Learning](https://medium.com/@monodeepets77/8-mistakes-to-avoid-while-using-machine-learning-d61af954b9c9)
 
 [13]: [5 Steps to follow for Successful Machine Learning Project](https://addiai.com/successful-machine-learning-project/)
 
 [21]: A. Romeu, [Hype v. Reality: 5 AI features that actually work in production](https://www.tinybird.co/blog-posts/ai-features-that-work), tinybird, April 2, 2025.
-
-[22]: [LLMs - A Ghost in the Machine](https://zacksiri.dev/posts/llms-a-ghost-in-the-machine/)
 
 [23]: B. Pearson and O. Affias, “The Matrix That Makes Your AI Strategy Make Sense,” Dev Interrupted, April 3, 2025.
 

@@ -15,32 +15,32 @@
 
 As an AI/ML engineer, you should be willing to settle for “good enough” which is called _satisﬁcing_ rather than trying to find the “best” model or approach.
 
-Scrum is a popular project management approach rather than a software development methodology [1].
-
-I prefer using an iterative, agile feature-driven development (FDD) methodology where team members are able to work independently without the rigid constraints of Scrum [2].
+Scrum is a popular project management approach rather than a software development methodology [1]. A better approach is an iterative, agile feature-driven development (FDD) methodology where team members are able to work independently without the rigid constraints of Scrum [2].
 
 Here are some lists of articles that cover some of the problems with **AI Engineering** which is required knowledge for an AI project to be successful.
 
 ## Key Concepts
 
-The student of AI needs the following:
+The student and practioner of AI needs a healthy dose of skepticism [4]
 
-- A healthy dose of skepticism [4].
-- Knowledge of the history and reasons that led to the _AI Winter_.
-- Be aware of the hype, misinformation, and  alchemy that is common in the field of AI.
+The practioner of AI needs an expert knowledge of the following:
+
+- The history and issues that led to the "AI Winter".
+- The hype, misinformation, and  alchemy that is common with AI.
+- The capabilities, risks, and limitations of AI.
+- AI Research: Reproducibility, Fabrication, and Falsification
+- The ethical implications, risks, and responsibilities of AI.
+
+- Why AI Projects Fail
+- How AI Projects are Different
+- Risks of agile approach for AI projects
+- AI alchemy = hype and false claims.
+- Problems with Cloud AI
 
 There are two guiding principles for AI engineering:
 
 1. Occam’s Razor: The simplest algorithm that fits the data is usually the best.
 2. No Free Lunch Theorem: There is no such thing as best, only good enough.
-
-The core problems with AI engineering:
-
-- Why AI Projects Fail?
-- AI Research: Reproducibility, Fabrication, and Falsification.
-- AI alchemy = hype and false claims.
-- Problems with Cloud AI
-- Risks of agile approach for AI projects
 
 ## Getting Started
 

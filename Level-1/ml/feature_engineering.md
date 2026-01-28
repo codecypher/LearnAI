@@ -4,7 +4,6 @@
 
 [Dimensionality Reduction](./dimensionality_reduction.md)
 
-
 ## Overview
 
 **Feature engineering (FE)** is a subset of data transformation which is a critical element of data preprocessing [13].
@@ -23,7 +22,6 @@ FP can help reduce computational time and effort while not significantly affecti
 
 There are two main classes of feature projection techniques: linear projection [linear discriminant analysis (LDA) and principal component analysis (PCA)] and non-linear projection [kernel principal component analysis (KPCA) and principal curves].
 
-
 Feature engineering consists of various processes [1]:
 
 - **Exploratory Data Analysis:** Exploratory data analysis (EDA) is a powerful and simple tool that can be used to improve your understanding of your data by exploring its properties.
@@ -35,7 +33,6 @@ Feature engineering consists of various processes [1]:
 - **Transformations:** Feature transformation is simply a function that transforms features from one representation to another.
 
   The goal is to plot and visualize the data. If something is not adding up with the new features we can reduce the number of features used, speed up training, or increase the accuracy of a model.
-
 
 - **Feature Selection:** The process of creating new variables that will be most helpful for our model which can include adding or removing some features.
 
@@ -53,20 +50,13 @@ Feature engineering consists of various processes [1]:
 
   Mutual information measures the reduction in the uncertainty of one variable based on the knowledge of another variable. A reduction in uncertainty results from having more information about the variable. Features with high mutual information scores are considered more relevant and are chosen for ML modeling.
 
-
 - **Feature Extraction:** The process of extracting new features from a dataset to identify useful information which often involves domain-specific knowledge.
 
   Without distorting the original relationships or other information, we compress the amount of data into manageable quantities for algorithms to process.
 
-
 - **Benchmark:** A Benchmark Model is the most user-friendly, dependable, transparent, and interpretable model against which you can measure your final model.
 
   It is a good idea to run test datasets to see if your new machine learning model outperforms a recognized benchmark which are often used as measures for comparing the performance of different ML models.
-
-
------
-
-
 
 ## Dimensionality Reduction
 
@@ -84,17 +74,11 @@ There are two main methods for reducing dimensionality:
 
   Examples: Backward elimination, Forward selection, and Random forests.
 
-
 - In **feature extraction**, we find a combination of new features and an appropriate transformation is applied to the set of features.
 
   The new set of features contains different values rather than the original values.
 
   Feature extraction can be further divided into _linear_ methods and _non-linear_ methods.
-
-
-----------
-
-
 
 ## Feature Selection vs Feature Engineering
 
@@ -103,8 +87,6 @@ Dimensionality reduction can be done using feature selection methods as well as 
 _Feature selection_ is the process of identifying and selecting relevant features for a sample.
 
 _Feature engineering_ is manually generating new features from existing features by applying some transformation or performing some operation on them.
-
-
 
 ## Feature Importance Techniques
 
@@ -122,12 +104,9 @@ When determining which features are the most important, algorithms such as Rando
 
 PCA is an algorithm used for dimensionality reduction based on the idea to choose features with high variance as high variance features contain more information.
 
-
-
 ## Correlation
 
 **Correlation** is a statistical measure that expresses the relation between two variables [10].
-
 
 A positive correlation occurs when an increase in variable A leads to an increase in variable B.
 
@@ -137,16 +116,15 @@ The range of correlation values is -1 to 1 where 1 represents completely, positi
 
 Having two or more highly correlated features in our training data will lead to the problem of **multicollinearity** which affects model performance.
 
-
 ## Feature Engineering Techniques
 
 Feature engineering involves modifying existing features or creating new ones to improve modeling results [15].
 
-Here are some common feature engineering methods [15]: 
+Here are some common feature engineering methods [15]:
 
 1. Convert text data features into vectors
 
-Since ML is based on linear algebra, it is necessary to convert textual data features into vectors. 
+Since ML is based on linear algebra, it is necessary to convert textual data features into vectors.
 
 Techniques used to convert text data to features are Bag of Words(BOW), TF-IDF(Term Frequency-Inverse Document Frequency), Avg Word2Vec, and TF-IDF Word2Vec.
 
@@ -160,13 +138,9 @@ New features can also be created using existing features such as the featurizati
 
 There are more essential feature engineering techniques such as creating polynomial features, generating interaction terms, using log transformations for skewed data, and binning continuous variables [14].
 
-
-----------
-
-
 ## Scaling vs Normalization
 
-Scaling and normalization are very similar, but they have different effects on the data [17]. 
+Scaling and normalization are very similar, but they have different effects on the data [17].
 
 In both scaling and normalization, we transform the values of numeric variables so that the transformed data points have specific properties that can be exploited to create better features and models [17].
 
@@ -174,17 +148,17 @@ In both scaling and normalization, we transform the values of numeric variables 
 
 - In normalization, we are changing the _shape_ of the distribution of the data.
 
-Many machine learning algorithms perform better when numerical input variables are scaled to a standard range [18]. 
+Many machine learning algorithms perform better when numerical input variables are scaled to a standard range [18].
 
 This includes algorithms that use a weighted sum of the input such Z linear regression, and algorithms that use distance measures, like k-nearest neighbors. [18].
 
-The two most popular techniques for scaling numerical data are normalization and standardization [18]. 
+The two most popular techniques for scaling numerical data are normalization and standardization [18].
 
 ### Scaling
 
 In scaling, we transform the data so that it fits within a specific scale such as 0-100 or 0-1.
 
-It is common to have data where the scale of values differs from variable to variable. 
+It is common to have data where the scale of values differs from variable to variable.
 
 Example: one variable may be in feet and another in meters (pounds vs inches, kilograms vs meters).
 
@@ -214,7 +188,7 @@ Notice that the shape of our data has changed.
 
 ### Normalization vs Standardization
 
-_Feature scaling_ is a crucial step in a preprocessing pipeline that can easily be forgotten [B1]. 
+_Feature scaling_ is a crucial step in a preprocessing pipeline that can easily be forgotten [B1].
 
 Decision trees and random forests are one of the few machine learning algorithms where we do not need to worry about feature scaling [B1].
 
@@ -231,7 +205,6 @@ The majority of machine learning and optimization algorithms behave much better 
 NOTE: We fit the `StandardScaler` on the training data then use those parameters to transform the test set or any new data point.
 
 Regularization is another reason to use feature scaling such as standardization. For regularization to work properly, all features must be on comparable scales.
-
 
 ### Choose between Standardization vs Normalization
 
@@ -261,7 +234,6 @@ Standardization can be more practical for many machine learning algorithms since
 
 In addition, standardization maintains useful information about outliers and makes the algorithm less sensitive to them whereas min-max only scales the data to a limited range of values.
 
-
 ## Non-Normal Distribution of Data
 
 It is important for most machine learning algorithms that features should follow a normal distribution since non-normal distribution of data affects model performance and generates wrong predictions [11].
@@ -274,15 +246,11 @@ There are many transformation methods that are used to convert non-normal distri
 
 ### Log Transform
 
-Log Transformation is a technique to change the value of a feature from x to log(x) which can be used to overcome the problem of data distribution that is too skewed or has too many outliers [16]. 
+Log Transformation is a technique to change the value of a feature from x to log(x) which can be used to overcome the problem of data distribution that is too skewed or has too many outliers [16].
 
-The log transform can be useful in models such as linear regression or logistic regression, but many algorithms themselves are not affected by a skewed dataset [16]. 
+The log transform can be useful in models such as linear regression or logistic regression, but many algorithms themselves are not affected by a skewed dataset [16].
 
-Log Transform is the most common technique used to turn a skewed distribution into a normal or less-skewed distribution [11]. 
-
-
-----------
-
+Log Transform is the most common technique used to turn a skewed distribution into a normal or less-skewed distribution [11].
 
 ## Normalization Techniques
 
@@ -311,7 +279,7 @@ We can apply the maximum absolute scaling in Pandas using the `.max()` and `.abs
 
 The _min-max_ scaling (normalization) rescales the feature to the range of [0, 1] by subtracting the minimum value of the feature then dividing by the range.
 
-```
+```pre
   y = (x – min) / (max – min)
 ```
 
@@ -340,14 +308,13 @@ We can apply the min-max scaling in Pandas using the `.min()` and `.max()` metho
 
 We can also use `RobustScaler` when we want to reduce the effects of outliers compared to `MinMaxScaler`.
 
-
 ### Using z-score scaling
 
-The _z-score_ scaling (standardization) transforms the data into a **normal (Gaussian) distribution** with a mean of 0 and a typical deviation of 1. 
+The _z-score_ scaling (standardization) transforms the data into a **normal (Gaussian) distribution** with a mean of 0 and a typical deviation of 1.
 
 Each standardized value is computed by subtracting the mean of the corresponding feature then dividing by the quality deviation.
 
-```
+```pre
   y = (x – mean) / standard_deviation
 ```
 
@@ -380,10 +347,6 @@ We can apply the standardization in Pandas using the `.mean()` and `.std()` meth
     for column in df_z_scaled.columns:
         df_z_scaled[column] = (df_z_scaled[column] - df_z_scaled[column].mean()) / df_z_scaled[column].std()
 ```
-
-
-----------
-
 
 ## Transform Target Variables for Regression
 
@@ -479,7 +442,6 @@ It will prepare the transform of the target variable using the same training dat
 
 This is much easier and allows the use of helper functions such as `cross_val_score()` to evaluate a model.
 
-
 ## Complete Regression Example
 
 ```py
@@ -552,10 +514,9 @@ By default, the `PowerTransformer` also performs a standardization of each varia
     print('Mean MAE: %.3f' % (s_mean))
 ```
 
-
 ## Feature Engineering Examples
 
-Feature Engineering is the process of modifying raw data into more informative features [16]. 
+Feature Engineering is the process of modifying raw data into more informative features [16].
 
 The article [16] discusses ten basic feature engineering techniques with code examples.
 
@@ -570,7 +531,6 @@ The article [16] discusses ten basic feature engineering techniques with code ex
 9. TF-IDF
 10. Text Embeddings
 
-
 ## Feature Selection in Scikit-learn
 
 Simple ways to filter features for simpler and faster model [5].
@@ -579,11 +539,9 @@ It is often useful to filter out non-predictive features and keep the model lean
 
 The article [5] five different ways to do feature selection for supervised machine learning problem.
 
-
 Determining which features are most relevant to a particular task is not always straightforward. It may be helpful to use a feature selection technique to help identify features with less importance [10].
 
 These feature selection techniques often rank features based on their importance in predicting an outcome. Then we can filter all the features using a threshold value for extracting the most important features.
-
 
 ## Distance Metrics
 
@@ -655,8 +613,6 @@ We can also calculate the mean absolute interaction effect to highlight importan
 
 Another metric used to highlight interactions is the **Friedman’s h-statistic**.
 
-
-
 ## Time Series Data Preparation
 
 [How to Normalize and Standardize Time Series Data in Python](https://machinelearningmastery.com/how-to-scale-data-for-long-short-term-memory-networks-in-python/)
@@ -677,18 +633,13 @@ It is common to:
 
 The order that the transform operations are applied is important.
 
-
-## Books
-
-[B1]: S. Raschka and V. Mirjalili, Python Machine Learning, 3rd ed., Birmingham, U.K.: Packt Pub. Ltd., 2019.
-
-
 ## References
+
+S. Raschka and V. Mirjalili, Python Machine Learning, 3rd ed., Birmingham, U.K.: Packt Pub. Ltd., 2019.
 
 [1]: [What is Feature Engineering?](https://towardsdatascience.com/what-is-feature-engineering-importance-tools-and-techniques-for-machine-learning-2080b0269f10)
 
 [2]: [3 Essential Ways to Calculate Feature Importance in Python](https://towardsdatascience.com/3-essential-ways-to-calculate-feature-importance-in-python-2f9149592155)
-
 
 [3]: [The Lazy Data Scientist’s Guide to AI/ML Troubleshooting](https://medium.com/@ODSC/the-lazy-data-scientists-guide-to-ai-ml-troubleshooting-abaf20479317?source=linkShare-d5796c2c39d5-1638394993&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXz8nMy9bLTU3JLM3VS87P1Xcxy8xID4gMc8lJAgCSs4wwIwAAAA%3D%3D&_branch_match_id=994707642716437243)
 
@@ -701,7 +652,6 @@ The order that the transform operations are applied is important.
 [7]: [How to decide the perfect distance metric for your machine learning model](https://towardsdatascience.com/how-to-decide-the-perfect-distance-metric-for-your-machine-learning-model-2fa6e5810f11)
 
 [8]: [What we can Learn from Black-box Models](https://towardsdatascience.com/what-we-can-learn-from-black-box-models-eda3677c42f2)
-
 
 [9]: [Major Problems of Machine Learning Datasets: Part 1](https://heartbeat.comet.ml/major-problems-of-machine-learning-datasets-part-1-5d5a06221c90)
 
@@ -727,17 +677,26 @@ The order that the transform operations are applied is important.
 
 [20]: [The Mystery of Feature Scaling is Finally Solved](https://towardsdatascience.com/the-mystery-of-feature-scaling-is-finally-solved-29a7bb58efc2)
 
+-----
 
-[Best Practice to Calculate and Interpret Model Feature Importance](https://towardsdatascience.com/best-practice-to-calculate-and-interpret-model-feature-importance-14f0e11ee660)
+[Complete Feature Engineering In a Nutshell](https://medium.com/towards-data-engineering/complete-feature-engineering-in-a-nutshell-d49edcb863c9)
+
+[A Comprehensive Guide to Feature Engineering for Improved Model Performance](https://medium.com/@dharamratan22/a-comprehensive-guide-to-feature-engineering-for-improved-model-performance-5ba685962aae)
+
+[The Concise Guide to Feature Engineering for Better Model Performance](https://machinelearningmastery.com/the-concise-guide-to-feature-engineering-for-better-model-performance/)
+
+[Feature engineering A-Z](https://feaz-book.com)
+
+-----
 
 [How to Perform Feature Selection in a Data Science Project](https://towardsdatascience.com/how-to-perform-feature-selection-in-a-data-science-project-591ba96f86eb)
 
-
-[Representation: Feature Engineering](https://developers.google.com/machine-learning/crash-course/representation/feature-engineering)
+[Best Practice to Calculate and Interpret Model Feature Importance](https://towardsdatascience.com/best-practice-to-calculate-and-interpret-model-feature-importance-14f0e11ee660)
 
 [Basic Feature Discovering for Machine Learning](https://medium.com/diko-hary-adhanto-portfolio/basic-feature-discovering-for-machine-learning-cbd47bf4b651)
 
 [Alternative Feature Selection Methods in Machine Learning](https://www.kdnuggets.com/2021/12/alternative-feature-selection-methods-machine-learning.html)
 
+[Representation: Feature Engineering](https://developers.google.com/machine-learning/crash-course/representation/feature-engineering)
 
 [Techniques for Dimensionality Reduction](https://towardsdatascience.com/techniques-for-dimensionality-reduction-927a10135356)
