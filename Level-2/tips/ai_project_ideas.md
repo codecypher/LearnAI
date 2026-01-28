@@ -54,14 +54,3 @@
 [Learn Deep Learning by Building 15 Neural Network Projects in 2022](https://www.kdnuggets.com/2022/01/15-neural-network-projects-build-2022.html)
 
 [Top 10 Projects for Beginners in Computer Vision and Medical Imaging](https://towardsdatascience.com/top-10-projects-for-beginners-in-computer-vision-and-medical-imaging-c138a646e44e)
-
-
-## NLP Projects
-
-[5 Amazing Ideas For Your Next NLP Project](https://medium.com/pythoneers/5-amazing-ideas-for-your-next-nlp-project-97eb14ebb38)
-
-[Python Chatbot Project](https://data-flair.training/blogs/python-chatbot-project/)
-
-[10 Exciting Project Ideas Using Large Language Models (LLMs) for Your Portfolio](https://towardsdatascience.com/10-exciting-project-ideas-using-large-language-models-llms-for-your-portfolio-970b7ab4cf9e)
-
-

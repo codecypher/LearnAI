@@ -1,12 +1,12 @@
 # AI Checklists
 
-The first step is to understand how AI projects are different from traditional software projects [19] and [20].
+The first step is to understand how AI projects are different from traditional software projects [8] and [9].
 
 ## Getting Started
 
-A checklist for transforming features for better model performance.
+Here is a checklist for transforming features for better model performance.
 
-The software development lifecycle (SDLC) of an AI project can be divided into six stages [2]:
+The software development lifecycle (SDLC) of an AI project can be divided into six stages [3]:
 
 1. **Problem definition:** The formative stage of defining the scope, value definition, timelines, governance, resources associated with the deliverable.
 
@@ -16,11 +16,27 @@ The software development lifecycle (SDLC) of an AI project can be divided into s
 
 4. **Design:** This phase involves feature selection, reasoning algorithms, decomposing the problem, and formulating the right model algorithms.
 
-5. **Training:** Building the model, evaluating with the hold-out examples, and online experimentation. 
+5. **Training:** Building the model, evaluating with the hold-out examples, and online experimentation.
 
 6. **Deployment:** Once the model is trained and tested to verify that it met the business requirements for model accuracy and other performance metrics, the model is ready for deployment. There are two common approaches to deployment of ML models to production: embed models into a web server or offload the model to an external service. Both ML model serving approaches have pros and cons.
 
 7. **Monitoring:** This is the post-deployment phase involving observability of the model and ML pipelines, refresh of the model with new data, and tracking success metrics in the context of the original problem.
+
+## AI/ML Checklists
+
+Here are some articles with tips on AI/ML:
+
+[AI Checklist](https://towardsdatascience.com/the-ai-checklist-fe2d76907673)
+
+[ML Checklist — Best Practices for a Successful Model Deployment](https://medium.com/analytics-vidhya/ml-checklist-best-practices-for-a-successful-model-deployment-2cff5495efed)
+
+[Machine Learning Model Deployment — A Simple Checklist](https://towardsdatascience.com/machine-learning-model-deployment-a-simplistic-checklist-dc5558a88d1b)
+
+[The Machine Learning Engineer’s Checklist: Best Practices for Reliable Models](https://machinelearningmastery.com/the-machine-learning-engineers-checklist-best-practices-for-reliable-models/)
+
+[Machine Learning Performance Improvement Cheat Sheet](https://machinelearningmastery.com/machine-learning-performance-improvement-cheat-sheet/)
+
+[Deploy Your Predictive Model To Production](https://machinelearningmastery.com/deploy-machine-learning-model-to-production/)
 
 ## Feature Engineering
 
@@ -28,10 +44,9 @@ Feature engineering is the process of transforming data to extract valuable info
 
 If done correctly, feature engineering can play even a bigger role in model performance than hyperparameter tuning.
 
-A checklist for transforming features for better model performance is given in [5]. 
+A checklist for transforming features for better model performance is given in [3].
 
-The article [6] explains and implements PCA in Python. 
-
+The article [4] explains and implements PCA in Python.
 
 ## Common Architectures
 
@@ -55,12 +70,11 @@ For example, when we predict ad-click probability we can get feedback (clicked o
 
 Offline Training: The model is re-trained from scratch, so we have full control over the new model and data to train. The new model is pushed in production using A/B testing or shadow testing.
 
-
 ## AI Process Checklists
 
 ### Problem Definition Checklist
 
-1. Verify there is quantifiable business value in solving the problem. 
+1. Verify there is quantifiable business value in solving the problem.
 
 2. Verify that simpler alternatives (such as hand-crafted heuristics) are not sufficient to address the problem.
 
@@ -75,7 +89,6 @@ Offline Training: The model is re-trained from scratch, so we have full control 
 7. Verify impact when the logistic classification prediction is incorrect.
 
 8. Ensure project costs include the cost of managing the corresponding data pipelines.
-
 
 ### Dataset Selection Checklist
 
@@ -94,7 +107,6 @@ Offline Training: The model is re-trained from scratch, so we have full control 
 7. Verify dataset is not biased.
 
 8. Verify the datasets being used are not orphaned (without data stewards).
-
 
 ### Data Preparation Checklist
 
@@ -119,7 +131,6 @@ Offline Training: The model is re-trained from scratch, so we have full control 
 10. Verify outliers have been properly handled.
 
 11. Verify proper sampling of selected samples from a large dataset.
-
 
 ### Design Checklist
 
@@ -148,7 +159,6 @@ Offline Training: The model is re-trained from scratch, so we have full control 
 12. Verify the impact of features that were discarded because they only apply to a small fraction of data.
 
 13. Check if feature count is proportional to the amount of data available for model training.
-
 
 ### Training Checklist
 
@@ -206,7 +216,6 @@ Offline Training: The model is re-trained from scratch, so we have full control 
 
 27. Verify multiple hyperparameters are not tuned at the same time.
 
-
 ### Pre-deployment Checklist
 
 1. How is the model going to be deployed (microservice, package, stand-alone app)?
@@ -225,15 +234,14 @@ Offline Training: The model is re-trained from scratch, so we have full control 
 
 8. How to unroll the deployment if something goes wrong?
 
-
 ### Deployment Checklist
 
 1. Verify CI is in place
- 
+
 2. Verify tests for the full training pipeline
 
 3. Check validation tests
- 
+
 4. Verfify functionality tests
 
 5. Verify unit tests
@@ -241,7 +249,7 @@ Offline Training: The model is re-trained from scratch, so we have full control 
 6. Verify CD is in place
 
 7. Verify CT is in place
- 
+
 8. Verify blue/green deployment is in place
 
 9. Verify deployment of a model in shadow mode
@@ -252,10 +260,9 @@ Offline Training: The model is re-trained from scratch, so we have full control 
 
 12. Verify detection of failed model on a given datapoint and a corresponding fallback
 
-13. Verify reasonable “ML Test Score” (Table 3-4) [10]
+13. Verify reasonable “ML Test Score” (Table 3-4) in [5]
 
 14. How does the model interact with other services or parts of the software? What could go wrong?
-
 
 ### Monitoring Checklist
 
@@ -295,19 +302,16 @@ Offline Training: The model is re-trained from scratch, so we have full control 
 
 18. Verify monitoring to detect slow poisoning of the model due to intermittent errors.
 
-
 ### Key Performance Indicator (KPI)
 
-[Key Performance Indicators (KPIs)][^kpi] are the essential indicators of progress toward an intended result. 
+[Key Performance Indicators (KPIs)][^kpi] are the essential indicators of progress toward an intended result.
 KPIs provides a focus for strategic and operational improvement, create an analytical basis for decision making and help focus attention on what matters most. As Peter Drucker famously said, “What gets measured gets done.”
 
-Managing with the use of KPIs includes setting targets (the desired level of performance) and tracking progress against that target. Managing with KPIs often means working to improve leading indicators that will later drive lagging benefits. Leading indicators are precursors of future success; lagging indicators show how successful the organization was at achieving results in the past. 
-
-
+Managing with the use of KPIs includes setting targets (the desired level of performance) and tracking progress against that target. Managing with KPIs often means working to improve leading indicators that will later drive lagging benefits. Leading indicators are precursors of future success; lagging indicators show how successful the organization was at achieving results in the past.
 
 ## Common Machine Learning Techniques
 
-The article [14] discusses ten ML techniques for AI development:
+The article [7] discusses ten ML techniques for AI development:
 
 Supervised ML
 
@@ -318,150 +322,43 @@ Supervised ML
 
 Unsupervised ML
 
-5. Clustering
-6. Neural Networks and Deep Learning
-7. Dimensionality Reduction (Supervised and Unsupervised)
-8. Word Embeddings (dimensionality reduction)
-9. Natural Language Processing 
-10. Reinforcement Learning 
-
-
+1. Clustering
+2. Neural Networks and Deep Learning
+3. Dimensionality Reduction (Supervised and Unsupervised)
+4. Word Embeddings (dimensionality reduction)
+5. Natural Language Processing
+6. Reinforcement Learning
 
 ## NLP Checklist
 
-There is an NLP checklist given in [7] and project guide in [18]. 
-
-### NLP Python Libraries
-
-- spacy
-- NLTK
-- genism
-- lexnlp
-- Holmes
-- Pytorch-Transformers
-
-### Text Preprocessing
-
-Text Preprocessing is the data cleaning process for an NLP application. 
-
-When we are dealing with text removing null values and imputing them with mean and median isn’t enough.
-
-- Removing punctuations like . , ! $( ) * % @
-- Removing URLs
-- Conver to Lowercase
-- Converting numbers into words / removing numbers
-
-Some code examples using NLTK are given for the following:
-
-- Removing Stop words
-- Tokenization
-- Stemming
-- Lemmatization
-- Part-of-Speech Tagging
-
-### Word Embeddings
-
-Word Embeddings are used to convert the text into a vector of numerical values. The dimensions differ for each model. 
-
-Word Embeddings help in faster calculations and reduce storage space. 
-
-There are two types of word embeddings: Context-less and Context-driven.
-
-**Context-Less Word Embeddings**
-
-These models are used to convert each word to vector without taking into what situation the text was written. 
-
-They focus more on the statistical part of the sentence structure rather than the context. 
-
-TF-IDF uses how many times (frequency) a word is used in a sentence and gives priority accordingly.
-
-- Term Frequency-Inverse Document Frequency (TF-IDF)
-- Word2Vec
-- GloVe
-
-**Context-Driven Word Embeddings**
-
-Context-Driven Word Embeddings holds the context of the sentence together. 
-
-These models will be able to differentiate between the nuances of how a single word can be used in different contexts. 
-
-This drastically increases the model’s understanding of the data compared to Context-less Word Embeddings.
-
-- Elmo
-- OpenAI GPT
-- BERT
-- RoBERTa
-- ALBERT
-- ELECTRA
-- Distil BERT
-- XLNet
-
-Pre-trained word embeddings:
-
-- Word2Vec (Google, 2013), uses Skip Gram and CBOW
-- Vectors trained on Google News (1.5GB)
-- Stanford Named Entity Recognizer (NER)
-- LexPredict: pre-trained word embedding models for legal or regulatory text
-
-### Text Similarity
-
-Text Similarity means to find out how similar sentences or words are (King and Male), (Queen, Female, Mother. These groups are similar to each other this can be found out using text similarity.
-
-Note: The words have to be converted to vectors using any of the models above to find the similarity. 
-
-1. Euclidean distance
-2. Cosine Similarity
-
-### Named Entity Recognition
-
-NER is the process to find the important labels that are present in the text.
-
-
-### Deep Learning Models for NLP
-
-- Seq2Seq Models
-- RNN
-- N-gram Language Models
-- LSTM
-
+There is an NLP checklist given in [1] and project guide in [2].
 
 ## References
 
-[2]: [AI Checklist](https://towardsdatascience.com/the-ai-checklist-fe2d76907673)
+[1]: [NLP Cheatsheet](https://medium.com/javarevisited/nlp-cheatsheet-2b19ebcc5d2e)
 
-[3]: [Machine Learning Performance Improvement Cheat Sheet](https://machinelearningmastery.com/machine-learning-performance-improvement-cheat-sheet/)
+[2]: [LLMs Project Guide: Key Considerations](https://learn.microsoft.com/en-us/ai/playbook/technology-guidance/generative-ai/getting-started/llmops-checklist)
 
-[4]: [Deploy Your Predictive Model To Production](https://machinelearningmastery.com/deploy-machine-learning-model-to-production/)
+[3]: [Feature engineering A-Z](https://medium.com/data-science/feature-engineering-a-z-aa8ce9639632)
 
-[5]: [Feature engineering A-Z](https://towardsdatascience.com/feature-engineering-a-z-aa8ce9639632)
+[4]: [Dimensionality Reduction Explained](https://towardsdatascience.com/dimensionality-reduction-explained-5ae45ae3058e)
 
-[6]: [Dimensionality Reduction Explained](https://towardsdatascience.com/dimensionality-reduction-explained-5ae45ae3058e)
+[5]: [Machine Learning Project Checklist](https://github.com/sjosund/ml-project-checklist)
 
-[7]: [NLP Cheatsheet](https://medium.com/javarevisited/nlp-cheatsheet-2b19ebcc5d2e)
+[6]: [Deploying Machine Learning Models: A Checklist](https://twolodzko.github.io/ml-checklist)
 
-[8]: [ML Checklist — Best Practices for a Successful Model Deployment](https://medium.com/analytics-vidhya/ml-checklist-best-practices-for-a-successful-model-deployment-2cff5495efed)
+[7]: [10 Machine Learning Techniques for AI Development](https://daffodilsw.medium.com/10-machine-learning-techniques-for-ai-development-15df0953f05f)
 
-[9]: [Machine Learning Model Deployment — A Simple Checklist](https://towardsdatascience.com/machine-learning-model-deployment-a-simplistic-checklist-dc5558a88d1b)
+[8]: [How are AI Projects Different](https://pub.towardsai.net/how-are-ai-projects-different-ccfdedb7ff99)
 
-[10]: [Machine Learning Project Checklist](https://github.com/sjosund/ml-project-checklist)
+[9]: [Elements of AI Project Management](https://pub.towardsai.net/elements-of-ai-project-management-6cac1826bdbb)
 
-[11]: [Deploying Machine Learning Models: A Checklist](https://twolodzko.github.io/ml-checklist)
+[10]: [7 Tips for Choosing the Right Machine Learning Infrastructure](https://www.aiiottalk.com/right-machine-learning-infrastructure/)
 
+----------
 
-[14]: [10 Machine Learning Techniques for AI Development](https://daffodilsw.medium.com/10-machine-learning-techniques-for-ai-development-15df0953f05f)
+[The Data Quality Hierarchy of Needs](https://www.kdnuggets.com/2022/08/data-quality-hierarchy-needs.html)
 
-[15]: [The Data Quality Hierarchy of Needs](https://www.kdnuggets.com/2022/08/data-quality-hierarchy-needs.html)
-
-[16]: [Major Problems of Machine Learning Datasets: Part 3](https://heartbeat.comet.ml/major-problems-of-machine-learning-datasets-part-3-eae18ab40eda)
-
-[17]: [7 Tips for Choosing the Right Machine Learning Infrastructure](https://www.aiiottalk.com/right-machine-learning-infrastructure/)
-
-[18]: [LLMs Project Guide: Key Considerations](https://learn.microsoft.com/en-us/ai/playbook/technology-guidance/generative-ai/getting-started/llmops-checklist)
-
-[19]: [How are AI Projects Different](https://pub.towardsai.net/how-are-ai-projects-different-ccfdedb7ff99)
-
-[20]: [Elements of AI Project Management](https://pub.towardsai.net/elements-of-ai-project-management-6cac1826bdbb)
-
-[The Machine Learning Engineer’s Checklist: Best Practices for Reliable Models](https://machinelearningmastery.com/the-machine-learning-engineers-checklist-best-practices-for-reliable-models/)
+[Major Problems of Machine Learning Datasets: Part 3](https://heartbeat.comet.ml/major-problems-of-machine-learning-datasets-part-3-eae18ab40eda)
 
 [^kpi]: <https://kpi.org/KPI-Basics>
