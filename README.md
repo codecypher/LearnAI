@@ -10,7 +10,7 @@ If you are like me and try to follow the principles of DRY, KISS, Design Pattern
 
 ## Learning Paths
 
-- [Into to AI](./ai_intro.md)
+- [Intro to AI](./ai_intro.md)
 - [AI Alchemy](./ai_alchemy.md)
 - [Books](.ai_books.md)
 
