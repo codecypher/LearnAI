@@ -1,29 +1,31 @@
 # Reinforcement Learning
 
+TODO: Merge content from rl_lewisu.md
+
 ## Overview
 
-[Reinforcement learning](https://en.wikipedia.org/wiki/Reinforcement_learning?wprov=sfti1) (RL) is an area of machine learning concerned with how intelligent agents ought to take actions in an environment in order to maximize the notion of cumulative reward. 
+[Reinforcement learning](https://en.wikipedia.org/wiki/Reinforcement_learning?wprov=sfti1) (RL) is an area of machine learning concerned with how intelligent agents ought to take actions in an environment in order to maximize the notion of cumulative reward.
 
-The three basic machine learning paradigms are: supervised learning, unsupervised learning, and reinforcement learning. 
+The three basic machine learning paradigms are: supervised learning, unsupervised learning, and reinforcement learning.
 
 RL differs from supervised learning:
 
-- RL does not need labeled input/output pairs. 
+- RL does not need labeled input/output pairs.
 
 - RL focuses on finding a balance between exploration (of uncharted territory) and exploitation (of current knowledge).
 
-The environment is typically stated in the form of a _Markov decision process (MDP)_ since many RL algorithms use dynamic programming techniques. 
+The environment is typically stated in the form of a _Markov decision process (MDP)_ since many RL algorithms use dynamic programming techniques.
 
 
 ## Reinforcement Learning
 
 Reinforcement learning is an artificial intelligence approach that focuses on the learning of the system through its interactions with the environment.
 
-In reinforcement learning, the system’s parameters are adapted based on the feedback obtained from the environment which in turn provides feedback on the decisions made by the system. 
+In reinforcement learning, the system’s parameters are adapted based on the feedback obtained from the environment which in turn provides feedback on the decisions made by the system.
 
 The following diagram shows a person making decisions in order to arrive at their destination.
 
-One day you and decide to try a different route with a view to finding the shortest path. 
+One day you and decide to try a different route with a view to finding the shortest path.
 
 This dilemma of trying out new routes or sticking to the best-known route is an example of **exploration** versus **exploitation**:
 
@@ -35,11 +37,11 @@ The main difference between the classical dynamic programming methods and RL alg
 
 For every state, we want the ability to make a good decision. Decisions are made sequentially: we order a combination of products, observe the products sold, and at the end of the day we must be able to make a re-order decision for every possible scenario that may unfold.
 
-Thus, _deterministic_ optimization provides decisions whereas _stochastic_ optimization provides decision-making policies. 
+Thus, _deterministic_ optimization provides decisions whereas _stochastic_ optimization provides decision-making policies.
 
-Deterministic optimization solves a single problem whereas stochastic optimization solves all problems that may arise. 
+Deterministic optimization solves a single problem whereas stochastic optimization solves all problems that may arise.
 
-> RL does not tell us _what_ decisions to make but _how_ to make them. 
+> RL does not tell us _what_ decisions to make but _how_ to make them.
 
 
 ## Summary
@@ -96,7 +98,7 @@ Deterministic optimization solves a single problem whereas stochastic optimizati
 
 Here are some articles covering some of the key RL concepts: `A*` search algorithm, Markov Decision Process (MDP), Partially Observable Environment, and Multi-Agent RL (MARL).
 
-Some of the articles are a series covering several RL topics. 
+Some of the articles are a series covering several RL topics.
 
 [From A* to MARL](https://omrikaduri.medium.com/from-a-to-marl-part-1-mapf-d4c0796ce1af)
 
