@@ -1,0 +1,12 @@
+[project]
+name = "learnai"
+version = "0.1.0"
+description = "LearnAI: A Markdown repo for learning AI concepts."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "indexgen>=0.1.3",
+]
