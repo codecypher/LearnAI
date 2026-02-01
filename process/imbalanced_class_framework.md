@@ -45,7 +45,7 @@ Selecting a metric might be the most important step in the project.
 
 The metric must capture those details about a model or its predictions that are most important to the project or project stakeholders.
 
-First, you must decide whether you want to predict probabilities or crisp class labels. 
+First, you must decide whether you want to predict probabilities or crisp class labels.
 
 For binary imbalanced classification tasks, the majority class is called the “negative class“ and the minority class is called the “positive class“.
 
@@ -57,7 +57,7 @@ For binary imbalanced classification tasks, the majority class is called the “
 
 If probabilities are intended to be used directly, a good metric might be the Brier Score and the Brier Skill score.
 
-As an alternative, You may want to predict probabilities and allow the user to map them to crisp class labels themselves via a user-selected threshold. 
+As an alternative, You may want to predict probabilities and allow the user to map them to crisp class labels themselves via a user-selected threshold.
 
 In this case, a measure can be chosen that summarizes the performance of the model across the range of possible thresholds.
 
@@ -67,17 +67,17 @@ If both classes are equally important, the ROC Curve and area under curve (ROC A
 
 ### Predict Class Labels
 
-If class labels are required and both classes are equally important, a good default metric is classification accuracy. 
+If class labels are required and both classes are equally important, a good default metric is classification accuracy.
 
 Accuracy only makes sense if the majority class is less than about 80 percent off the data. A majority class that has a greater than 80 percent or 90 percent skew will swamp the accuracy metric and it will lose its meaning for comparing algorithms.
 
 If the class distribution is severely skewed, the G-mean metric can be used which will optimize the sensitivity and specificity metrics.
 
-If the positive class is more important, variations of the F-Measure can be used that optimize the precision and recall. 
+If the positive class is more important, variations of the F-Measure can be used that optimize the precision and recall.
 
-If both false positive and false negatives are equally important, F1 can be used. 
+If both false positive and false negatives are equally important, F1 can be used.
 
-If false negatives are more costly, the F2-Measure can be used. 
+If false negatives are more costly, the F2-Measure can be used.
 
 If false positives are more costly, the F0.5-Measure can be used.
 
@@ -116,13 +116,13 @@ Spot checking machine learning algorithms means evaluating a suite of different 
 
 This means giving each algorithm a good chance to learn about the problem, including performing any required data preparation expected by the algorithm and using best-practice configuration options or defaults.
 
-The objective is to quickly test a range of standard machine learning algorithms and provide a baseline in performance to which techniques specialized for imbalanced classification must be compared and outperform in order to be considered skillful. 
+The objective is to quickly test a range of standard machine learning algorithms and provide a baseline in performance to which techniques specialized for imbalanced classification must be compared and outperform in order to be considered skillful.
 
 The idea is that there is little point in using fancy imbalanced algorithms if they cannot outperform so-called unbalanced algorithms.
 
-A robust test harness must be defined which often involves k-fold cross-validation usually with k-10 as a sensible default. 
+A robust test harness must be defined which often involves k-fold cross-validation usually with k-10 as a sensible default.
 
-Stratified cross-validation is often required to ensure that each fold has the same class distribution as the original dataset. 
+Stratified cross-validation is often required to ensure that each fold has the same class distribution as the original dataset.
 
 The cross-validation procedure is often repeated multiple times such as 3, 10, or 30 in order to effectively capture a sample of model performance on the dataset and summarized with a mean and standard deviation of the scores.
 
@@ -137,7 +137,7 @@ There are perhaps four levels of algorithms to spot check:
 
 First. a naive classification must be evaluated which provides a rock-bottom baseline in performance that any algorithm must overcome in order to have skill on the dataset.
 
-Naive means that the algorithm has no logic other than an if-statement or predicting a constant value. 
+Naive means that the algorithm has no logic other than an if-statement or predicting a constant value.
 
 The choice of naive algorithm is based on the choice of performance metric.
 
@@ -175,11 +175,11 @@ Some options include:
 
 Linear algorithms are those that are often drawn from the field of statistics and make strong assumptions about the functional form of the problem.
 
-We can refer to them as linear because the output is a linear combination of the inputs or weighted inputs, although this definition is stretched. 
+We can refer to them as linear because the output is a linear combination of the inputs or weighted inputs, although this definition is stretched.
 
 You might also refer to these algorithms as probabilistic algorithms since they are often fit under a probabilistic framework.
 
-They are often fast to train and often perform very well. 
+They are often fast to train and often perform very well.
 
 Examples of linear algorithms you should consider trying include:
 
@@ -193,7 +193,7 @@ Nonlinear algorithms are drawn from the field of machine learning and make few a
 
 We can refer to them as nonlinear because the output is often a nonlinear mapping of inputs to outputs.
 
-They often require more data than linear algorithms and are slower to train. 
+They often require more data than linear algorithms and are slower to train.
 
 Examples of nonlinear algorithms you should consider trying include:
 
@@ -276,9 +276,9 @@ There are perhaps three main types of data sampling techniques; they are:
 - Data Undersampling
 - Combined Oversampling and Undersampling.
 
-Data oversampling involves duplicating examples of the minority class or synthesizing new examples from the minority class from existing examples. 
+Data oversampling involves duplicating examples of the minority class or synthesizing new examples from the minority class from existing examples.
 
-Perhaps the most popular methods is SMOTE and variations such as Borderline SMOTE. 
+Perhaps the most popular methods is SMOTE and variations such as Borderline SMOTE.
 
 Perhaps the most important hyperparameter to tune is the amount of oversampling to perform.
 
@@ -310,7 +310,7 @@ Data sampling algorithms may perform differently depending on the choice of mach
 
 Therefore, it may be beneficial to test a suite of standard machine learning algorithms such as all or a subset of those algorithms used when spot checking in the previous section.
 
-Most data sampling algorithms also make use of the k-nearest neighbor algorithm internally which is very sensitive to the data types and scale of input variables. 
+Most data sampling algorithms also make use of the k-nearest neighbor algorithm internally which is very sensitive to the data types and scale of input variables.
 
 Thus, it may be important to at least normalize input variables that have differing scales prior to testing the methods and perhaps use specialized methods if some input variables are categorical instead of numerical.
 
@@ -374,7 +374,7 @@ Some algorithms are designed to naively predict probabilities that later must be
 
 This is the case if class labels are required as output for the problem or the model is evaluated using class labels.
 
-Probabilities are mapped to class labels using a _threshold_ probability value. 
+Probabilities are mapped to class labels using a _threshold_ probability value.
 
 All probabilities below the threshold are mapped to class 0 and all probabilities equal-to or above the threshold are mapped to class 1.
 
