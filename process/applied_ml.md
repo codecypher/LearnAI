@@ -14,7 +14,6 @@ Here is a 5-step process that you can follow to consistently achieve above avera
 4. Improve Results
 5. Present Results
 
-
 ### Step 1: Define the problem
 
 Describe the problem informally and formally and list assumptions and similar problems.
@@ -37,10 +36,9 @@ Use this formalism to define the T, P, and E for your problem:
 
 - Performance (P): Classification accuracy, the number of tweets predicted correctly out of all tweets considered as a percentage.
 
-
 ##### Assumptions
 
-Create a list of assumptions about the problem and its phrasing. 
+Create a list of assumptions about the problem and its phrasing.
 
 These may be rules of thumb and domain specific information that you think will get you to a viable solution faster.
 
@@ -48,12 +46,11 @@ It can also be useful to highlight areas of the problem specification that may n
 
 ##### Similar problems
 
-What other problems have you seen or can you think of that are similar to the problem you are trying to solve? 
+What other problems have you seen or can you think of that are similar to the problem you are trying to solve?
 
-Other problems can inform the problem you are trying to solve by highlighting limitations in your phrasing of the problem such as time dimensions and conceptual drift (where the concept being modeled changes over time). 
+Other problems can inform the problem you are trying to solve by highlighting limitations in your phrasing of the problem such as time dimensions and conceptual drift (where the concept being modeled changes over time).
 
 Other problems can also point to algorithms and data transformations that could be adopted to spot check performance.
-
 
 #### Step 1-2: Why does the the problem need to be solved?
 
@@ -63,10 +60,9 @@ Think deeply about why you want or need the problem solved.
 
 Describe how the problem would be solved manually to flush domain knowledge.
 
-List out step-by-step what data you would collect, how you would prepare it and how you would design a program to solve the problem. 
+List out step-by-step what data you would collect, how you would prepare it and how you would design a program to solve the problem.
 
 This may include prototypes and experiments you would need to perform which are a gold mine because they will highlight questions and uncertainties you have about the domain that could be explored.
-
 
 ### Step 2: Prepare your data
 
@@ -78,7 +74,7 @@ Even if you have good data, you need to make sure that it is in a useful scale, 
 
 #### Data Preparation Process
 
-The more disciplined you are in your handling of data, the more consistent and better results you are like likely to achieve. 
+The more disciplined you are in your handling of data, the more consistent and better results you are like likely to achieve.
 
 The process for getting data ready for a machine learning algorithm can be summarized in three steps:
 
@@ -87,7 +83,6 @@ The process for getting data ready for a machine learning algorithm can be summa
 - Step 2-2: Data Preprocessing: Organize your selected data by formatting, cleaning, and sampling from it.
 
 - Step 2-3: Data Transformation: Transform preprocessed data ready for machine learning by engineering features using scaling, attribute decomposition, and attribute aggregation.
-
 
 #### How to Identify Outliers in your Data
 
@@ -117,7 +112,7 @@ NOTE: the interpretability of an outlier model is critically important. Context 
 
 ##### Get Started
 
-There are many methods and much research put into outlier detection. 
+There are many methods and much research put into outlier detection.
 
 Start by making some assumptions and design experiments where you can clearly observe the effects of the those assumptions against some performance or accuracy measure.
 
@@ -125,21 +120,19 @@ Work through a stepped process from extreme value analysis, proximity methods, a
 
 ##### Methods Robust to Outliers
 
-An alternative strategy is to move to models that are robust to outliers. 
+An alternative strategy is to move to models that are robust to outliers.
 
-There are robust forms of regression that minimize the median least square errors rather than mean (so-called robust regression) but are more computationally intensive. 
+There are robust forms of regression that minimize the median least square errors rather than mean (so-called robust regression) but are more computationally intensive.
 
 There are also methods like decision trees that are robust to outliers.
 
 You could spot check some methods that are robust to outliers. If there are significant model accuracy benefits then there may be an opportunity to model and filter out outliers from your training data.
-
 
 - Improve Model Accuracy with Data Pre-Processing
 - Discover Feature Engineering
 - An Introduction to Feature Selection
 - Tactics to Combat Imbalanced Classes in Your Machine Learning Dataset
 - Data Leakage in Machine Learning
-
 
 ### Step 3: Spot-check algorithms
 
@@ -148,13 +141,11 @@ You could spot check some methods that are robust to outliers. If there are sign
 - How To Choose The Right Test Options When Evaluating Machine Learning Algorithms
 - A Data-Driven Approach to Choosing Machine Learning Algorithms
 
-
 ### Step 4: Improve results
 
 - How to Improve Machine Learning Results
 - Machine Learning Performance Improvement Cheat Sheet
 - How To Improve Deep Learning Performance
-
 
 ### Step 5: Present results
 
@@ -162,41 +153,37 @@ You could spot check some methods that are robust to outliers. If there are sign
 - How to Train a Final Machine Learning Model
 - How To Deploy Your Predictive Model To Production
 
-
-
-
 ## Model Selection
 
-Choosing the right machine learning model for your data is of major importance in any data science project [4]. 
+Choosing the right machine learning model for your data is of major importance in any data science project [4].
 
-The model you select will have a significant impact on the insights you derive from your data and ultimately determine the usefulness of a project. 
+The model you select will have a significant impact on the insights you derive from your data and ultimately determine the usefulness of a project.
 
 Here are some tips when choosing machine learning models:
 
 1. Understand your data
 
-Understand your data types and quality for better model selection
+   Understand your data types and quality for better model selection
 
 2. Define the Problem Clearly
 
-Clearly state your problem and goals to guide model selection
+   Clearly state your problem and goals to guide model selection
 
 3. Start Simple
 
-Start with simple models to establish a solid performance baseline
+   Start with simple models to establish a solid performance baseline
 
 4. Evaluate multiple models
 
-Evaluate multiple models and use cross-validation for robust performance. 
+   Evaluate multiple models and use cross-validation for robust performance.
 
-Comparing multiple metrics across models can provide some of the best insights, even if you make your selection based primarily on one of them.
+   Comparing multiple metrics across models can provide some of the best insights, even if you make your selection based primarily on one of them.
 
-Cross-validation is a technique to assess the robustness of your model. It involves dividing your data into multiple folds and training and testing the model on different combinations of these folds.
+   Cross-validation is a technique to assess the robustness of your model. It involves dividing your data into multiple folds and training and testing the model on different combinations of these folds.
 
 5. Consider Computational Resources
 
-Balance model complexity with available computational resources and deployment needs
-
+   Balance model complexity with available computational resources and deployment needs
 
 ## References
 
@@ -207,4 +194,3 @@ Balance model complexity with available computational resources and deployment n
 [3]: [How to Use a Machine Learning Checklist](https://machinelearningmastery.com/machine-learning-checklist/)
 
 [4]: [Tips for Choosing the Right Machine Learning Model for Your Data](https://machinelearningmastery.com/tips-for-choosing-the-right-machine-learning-model-for-your-data/)
-

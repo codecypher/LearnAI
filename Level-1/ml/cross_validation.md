@@ -102,7 +102,6 @@ We start by graphing our given target data vs our predicted target data to give 
     plt.plot(x_plot, y_plot, color='r')
 ```
 
-
 ## What are bias and variance in the context of model validation?
 
 To understand bias and variance, let us first address overfitiing and underfitting.
@@ -144,7 +143,6 @@ In machine learning, bias and variance are often discussed together as a **bias-
 Ideally, we would seek a model whose tradeoff results in both low bias and low variance and we would look to achieve this by using _cross validation_.
 
 Depending on characteristics of the dataset, one method of cross validation is likely to be more ideal to achieving the bias-variance tradeoff when creating and assessing a model.
-
 
 ## What is cross validation?
 
@@ -236,7 +234,6 @@ The methods are quire similar but you will notice that running the following cod
 
 Cross-validation implemented using _stratified_ sampling ensures that the proportion of the feature of interest is the same across the original data, training set, and the test set so that no value is over/under-represented in the training and test sets which gives a more accurate estimate of performance/error.
 
-
 ## Where and when should different methods be implemented?
 
 As we noticed in the results of our comparison, we can see that the LOOCV method takes a lot longer to complete than the other two methods. This is because that method creates and evaluates a model for each row in the dataset (in this case over 20,000). Even though our MSE is a little lower, this may not be worth it given the additional computational requirements.
@@ -247,14 +244,13 @@ Here are some heuristics which can help in choosing a method.
 
 The hold out method can be effective and computationally inexpensive on very large datasets, or on limited computational resources. It is also often easier to implement and understand for beginners. However, it is very rarely good to apply to small datasets since it can significantly reduce the training data available and hurt model performance.
 
-### K-Fold Cross Validation
+### K-Fold Validation
 
 K-Fold can be very effective on medium sized datasets, though by adjusting the K value we can significantly alter the results of the validation. Let us add to our rule from earlier: as k increases, bias decreases, and variance and computational requirements increase. K-Fold cross validation is likely the most common of the three methods due to the versatility of adjusting K-values.
 
-### LOOCV
+### Leave One Out Cross-Validation (LOOCV)
 
 LOOCV is most useful in small datasets as it allows for the smallest amount of data to be removed from the training data in each iteration. However, in large datasets the process of generating a model for each row in the dataset can be incredibly computationally expensive and thus prohibitive for larger datasets.
-
 
 ## What are some advantages and disadvantages of the different cross validation techniques?
 
@@ -276,17 +272,15 @@ We will see an example of this later in this article when we attempt to apply k-
 
 ### LOOCV
 
-LOOCV is very similar to K-fold, with a special case in which _k_ is equal to the length (or number of samples/rows) of the whole dataset. Thus, the training set will be of length k-1, and the testing set will be a single sample of the data. LOOCV is particularly useful in the case that our data set is not large enough to sensibly do Kfold. LOOCV is also less computationally expensive in general, although it is usually due to the inherently smaller datasets that tend utilize it.
+LOOCV is very similar to K-fold, with a special case in which _k_ is equal to the length (or number of samples/rows) of the whole dataset. Thus, the training set will be of length k-1, and the testing set will be a single sample of the data. LOOCV is useful when the data set is not large enough for Kfold. LOOCV is less computationally expensive, but it is usually due to the inherently smaller datasets that use it.
 
-However, LOOCV tends to yield high variance due to the fact that the method would pick up on all of the possible noise and outlier values in the data through the individual testing values. LOOCV would be very computationally expensive for very large data sets; in this case, it would be better to use regular k-fold.
-
+LOOCV tends to yield high variance due to the fact that the method would pick up on all of the possible noise and outlier values in the data through the individual testing values. LOOCV would be very computationally expensive for very large data sets; in this case, it would be better to use regular k-fold.
 
 ## When would you not want to use cross validation?
 
 Cross validation becomes a computationally expensive and taxing method of model evaluation when dealing with large datasets. Generating prediction values ends up taking a very long time because the validation method has to run _k_ times in K-Fold strategy, iterating through the entire dataset. Thus, cross validation becomes a very costly model evaluation strategy in terms of time complexity.
 
 We will examine this phenomenon by performing a normal holdout validation and a K-Fold cross validation on a very large dataset with approximately 580,000 rows. See if you can figure it out, why it works the way it does (and the new data visualizations). Good luck!
-
 
 ## Key Terminology
 
@@ -307,8 +301,6 @@ We will examine this phenomenon by performing a normal holdout validation and a 
 **Overfit:** Occurs when the model is not complex enough to account for general trends in the data which would be useful in predicting targets in subsequent datasets, such as using a linear fit on a polynomial trend.
 
 **Bias-Variance Trade-off:** The idea that as error due to bias decreases error due to variance increases, creating a trade-off which should be minimized in model validation, and other circumstances.
-
-
 
 ## Guide to Cross-Validation Techniques
 
@@ -366,7 +358,6 @@ In stratified k-fold, data is split in a stratified manner.
 
 Here, the data gets split in such a way that it represents all classes from the population data. It splits the data into k folds in such a way that each fold has the same ratio of instances of the target variable that are in the complete dataset.
 
-
 ## Five Cross-validation Techniques
 
 The article [3] discusses five different ways to split your data for validation along with the code from scikit-learn:
@@ -376,7 +367,6 @@ The article [3] discusses five different ways to split your data for validation 
 3. Group K-fold
 4. StratifiedGroupKFold
 5. TimeSeriesSplit
-
 
 ## References
 
