@@ -4,7 +4,16 @@ version = "0.1.0"
 description = "LearnAI: A Markdown repo for learning AI concepts."
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "graphviz>=0.21",
+    "matplotlib>=3.10.8",
+    "numpy>=2.4.2",
+    "pandas>=3.0.0",
+    "pydot>=4.0.1",
+    "scikit-learn>=1.8.0",
+    "seaborn>=0.13.2",
+    "statsmodels>=0.14.6",
+]
 
 [dependency-groups]
 dev = [
