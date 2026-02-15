@@ -29,7 +29,7 @@ The two guiding principles of AI engineering are:
 
 ## The AI Collaboration Matrix
 
-The AI Collaboration Matrix is a straightforward way to visualize and guide your AI journey [23].
+The AI Collaboration Matrix is a straightforward way to visualize and guide your AI journey [5].
 
 The AI Collaboration Matrix examines two simple questions: who is making your stuff (humans or AI?) and who ia running the show (humans or AI?).
 
@@ -47,7 +47,7 @@ By placing AI’s role on a two-dimensional spectrum that compares human vs. AI-
 
 ## 5 Steps for Successful AI Projects
 
-Using machine learning to help your business achieve edge on competition requires a plan and roadmap [13].
+Using machine learning to help your business achieve edge on competition requires a plan and roadmap [3].
 
 You cannot simply hire a group of data scientists and hope that they will be able to produce results for the business.
 
@@ -72,7 +72,7 @@ You cannot simply hire a group of data scientists and hope that they will be abl
 
 ## AI Use Cases
 
-Here are 5 AI features you can build that add immediate value to an application [21]:
+Here are 5 AI features you can build that add immediate value to an application [4]:
 
 1. Vector search
 
@@ -163,19 +163,19 @@ You should start with the simplest solution that you can implement and iterative
 
 ## Lessons Learned
 
-Here are some lessons learned in [24].
+The following are some lessons learned in [6].
 
 ### The Pilot Paradox
 
-Projects stayed siloed as pilot or POC and were never deployed to prodyction [24].
+Projects stayed siloed as pilot or POC and were never deployed to prodyction.
 
-LESSON: Teams never defined success or ROI [24].
+LESSON: Teams never defined success or ROI.
 
-What Actually Worked: Solving specific, unglamorous problems with clear success metrics [24].
+What Actually Worked: Solving specific, unglamorous problems with clear success metrics.
 
-The biggest returns came from the least revolutionary applications: automating repetitive internal tasks, extracting insight from messy datasets, accelerating early-phase ideation [24].
+The biggest returns came from the least revolutionary applications: automating repetitive internal tasks, extracting insight from messy datasets, accelerating early-phase ideation.
 
-MIT’s Work of the Future initiative [24]:
+MIT’s Work of the Future initiative:
 
 - Organizations using AI to replace workers saw productivity gains of 8–12%.
 
@@ -185,35 +185,32 @@ MIT’s Work of the Future initiative [24]:
 
 The most strategically sound organisations are deliberately slowing down.
 
-They are asking different questions [24]:
+They are asking different questions:
 
 - What are we actually trying to solve with this technology?
-
 - Who is accountable when it produces unexpected outcomes?
-
 - How does this tool align with our values, not just our KPIs?
-
 - What human capabilities need strengthening before we add machine capabilities?
 
 ### The Governance Gap: The Phase 2 Problem
 
 Ethics, compliance, explainability? They were “Phase 2” problems. We will sort them out later, once we’d proven value.
 
-Harvard Business School’s research on AI governance found that organisations with clear AI principles and decision-making frameworks were three times more likely to successfully scale AI implementations beyond pilot phase [24].
+Harvard Business School’s research on AI governance found that organisations with clear AI principles and decision-making frameworks were three times more likely to successfully scale AI implementations beyond pilot phase.
 
-The organizations winning with AI in 2026 are not those moving fastest: they are companies who built the governance infrastructure first, then accelerated within it [24].
+The organizations winning with AI in 2026 are not those moving fastest: they are companies who built the governance infrastructure first, then accelerated within it.
 
 ### Need for Strategic Thinking
 
 > The $847 Million Question: According to Gartner’s post-mortem analysis, organisations collectively wasted $847M in 2025 on AI implementations that never delivered measurable value.
 
-Strategic thinking is the new scarce resource. AI just makes its absence more expensive [24].
+Strategic thinking is the new scarce resource. AI just makes its absence more expensive.
 
-The businesses that will do best in 2026 and beyond will be the ones that build systems where human insight and machine capability work in genuine tandem, responsibly, repeatably, and with clear strategic purpose [24].
+The businesses that will do best in 2026 and beyond will be the ones that build systems where human insight and machine capability work in genuine tandem, responsibly, repeatably, and with clear strategic purpose.
 
 ## Mistakes to Avoid in AI
 
-Here are eight mistakes to avoid when using machine learning [12]:
+Here are eight mistakes to avoid when using machine learning [2]:
 
 1. Not understanding the user
 
@@ -251,27 +248,21 @@ Here are eight mistakes to avoid when using machine learning [12]:
 
 [1]: T. Shin, [4 Reasons Why You Shouldn't Use Machine Learning](https://towardsdatascience.com/4-reasons-why-you-shouldnt-use-machine-learning-639d1d99fe11), Towards Data Science, Oct 5, 2021.
 
-----------
+[2]: [8 Mistakes to avoid while using Machine Learning](https://medium.com/@monodeepets77/8-mistakes-to-avoid-while-using-machine-learning-d61af954b9c9)
 
-[12]: [8 Mistakes to avoid while using Machine Learning](https://medium.com/@monodeepets77/8-mistakes-to-avoid-while-using-machine-learning-d61af954b9c9)
+[3]: [5 Steps to follow for Successful Machine Learning Project](https://addiai.com/successful-machine-learning-project/)
 
-[13]: [5 Steps to follow for Successful Machine Learning Project](https://addiai.com/successful-machine-learning-project/)
+[4]: A. Romeu, [Hype v. Reality: 5 AI features that actually work in production](https://www.tinybird.co/blog-posts/ai-features-that-work), tinybird, April 2, 2025.
 
-[21]: A. Romeu, [Hype v. Reality: 5 AI features that actually work in production](https://www.tinybird.co/blog-posts/ai-features-that-work), tinybird, April 2, 2025.
+[5]: B. Pearson and O. Affias, “The Matrix That Makes Your AI Strategy Make Sense,” Dev Interrupted, April 3, 2025.
 
-[23]: B. Pearson and O. Affias, “The Matrix That Makes Your AI Strategy Make Sense,” Dev Interrupted, April 3, 2025.
-
-[24]: C. Cooper, [The Multi Million Question Nobody’s Asking About AI](https://medium.com/codex/the-multi-million-question-nobodys-asking-about-ai-b3501979c5b9?source=rss----29038077e4c6---4), CodeX, Dec. 4, 2025.
-
-[Thirty Years, Five Technologies, One Failure Pattern: From Lean to AI](https://itnext.io/thirty-years-five-technologies-one-failure-pattern-from-lean-to-ai-628b8d7195a1)
-
-[One real reason AI isn't delivering: Meatbags in manglement](https://www.theregister.com/2025/12/24/reason_ai_isnt_delivering/)
+[6]: C. Cooper, [The Multi Million Question Nobody’s Asking About AI](https://medium.com/codex/the-multi-million-question-nobodys-asking-about-ai-b3501979c5b9?source=rss----29038077e4c6---4), CodeX, Dec. 4, 2025.
 
 ----------
+
+[Strategic ROI Assessment for AI Projects: A Pre-Implementation Framework](https://pub.towardsai.net/strategic-roi-assessment-for-ai-projects-a-pre-implementation-framework-24dd9827d140)
 
 [How Strategic AI Consulting Converts Potential into Performance](https://pub.towardsai.net/how-strategic-ai-consulting-converts-potential-into-performance-aeb0c2019a44?source=rss----98111c9905da---4)
-
-[Why AI projects fail, and how developers can help them succeed](https://www.infoworld.com/article/4010313/why-ai-projects-fail-and-how-developers-can-help-them-succeed.html)
 
 [Governing the Unseen Risks of GenAI: Why Bias Mitigation and Human Oversight Matter Most](https://securityboulevard.com/2025/11/governing-the-unseen-risks-of-genai-why-bias-mitigation-and-human-oversight-matter-most/)
 

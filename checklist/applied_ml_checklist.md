@@ -4,14 +4,13 @@
 
 You can use a checklist to structure your search for the right combination of elements to consistently deliver a good solution to any machine learning (ML) problem.
 
-A checklist is a simple tool that guarantees an outcome, not a panacea or silver bullet. 
-
+A checklist is a simple tool that guarantees an outcome, not a panacea or silver bullet.
 
 ## Each Data Problem is Different
 
 You have no idea what algorithm will work best on a problem before you start. Even expert data scientists cannot tell you.
 
-This problem is not limited to the selection of ML algorithms. 
+This problem is not limited to the selection of ML algorithms.
 
 You cannot know what data transforms and what features in the data that if exposed would best present the structure of the problem to the algorithms.
 
@@ -20,7 +19,6 @@ You may have some ideas and you may have some favorite techniques, but how do yo
 How do you know that the techniques are transferable from one problem to another?
 
 _Heuristics_ are a good starting point (such as random forest does well on most problems) but they are just a starting point, not the end.
-
 
 ## The Checklist
 
@@ -41,7 +39,7 @@ It is important to have a well developed understanding of the problem before tou
 This section is intended to capture a clear statement of the problem plus any expectations that may have been set and biases that may exist.
 
 - Define the problem informally and formally.
-- List the assumptions about the problem or about the data. 
+- List the assumptions about the problem or about the data.
 - List known problems similar to your problem.
 
 #### 1.2 Why does the problem need to be solved
@@ -60,10 +58,9 @@ Here we try to discover any remaining domain knowledge and to determine if a mac
 - Describe how a subject matter expert would make manual predictions.
 - Describe how a programmer might hand code a classifier.
 
-
 ### 2. Prepare The Data
 
-You should spend most of your time trying to understand your data [2]: [3]. 
+You should spend most of your time trying to understand your data [2]: [3].
 
 #### 2.1 Data Description
 
@@ -81,9 +78,9 @@ Here we try to to organize the raw data into a form that we can work with in mod
 - Clean the data so that it is uniform and consistent.
 - Sample the data in order to best trade-off redundancy and problem fidelity.
 
-**Shortlist of Data Sampling**
+##### Shortlist of Data Sampling
 
-**Sample instances:** Create a sample of the data that is both representative of the various attribute densities and small enough that you can build and evaluate models quickly. 
+**Sample instances:** Create a sample of the data that is both representative of the various attribute densities and small enough that you can build and evaluate models quickly.
 
 **Sample attributes:** Select attributes that best expose the structures in the data to the models. Different models have different requirements,
 
@@ -105,7 +102,7 @@ This section is intended to create multiple views on the data in order to expose
 - Decompose complex attributes into their constituent parts.
 - Aggregate denormalized attributes into higher-order quantities.
 
-**Shortlist of Data Transformations**
+##### Shortlist of Data Transformations
 
 There are a limited number of data transforms that you can use.
 
@@ -125,8 +122,7 @@ Here we try to find any obvious relationships in the data.
 
 - Create univariate plots of each attribute.
 - Create bivariate plots of each attribute with every other attribute.
-- Create bivariate plots of each attribute with the class variable. 
-
+- Create bivariate plots of each attribute with the class variable.
 
 ### 3. Spot Check Algorithms
 
@@ -152,22 +148,17 @@ Here we try to quickly find how learnable the problem might be and what algorith
 
 - Evaluate each algorithm on each prepared view of the data.
 
-**Shortlist of Algorithms To Try on Classification Problems**
+##### Shortlist of Algorithms To Try on Classification Problems
 
 Here the list does not matter as much as the strategy of spot checking and not going with your favorite algorithm.
 
-Try to evaluate a good mix of algorithms that model the problem quite differently [6]. 
+Try to evaluate a good mix of algorithms that model the problem quite differently [6].
 
 - Instance-based like k-Nearest Neighbors and Learning Vector Quantization
-
 - Simpler methods such as Naive Bayes, Logistic Regression and Linear Discriminant Analysis
-
 - Decision Trees such as CART and C4.5/C5.0
-
 - Complex non-linear approaches like Backpropagation and Support Vector Machines
-
 - Always try random forest and gradient boosted machines
-
 
 ### 4. Improve Results
 
@@ -197,14 +188,13 @@ Here we try to verify that the process of model selection is well-rounded.
 - Evaluate well performing models on a hold out validation dataset.
 - Select a small pool (1-3) of well performing models.
 
-
 ### 5. Finalize Project
 
 Now that we have some results, we can review the problem definition to make good use of the results [8]]. This includes training the chosen model on the entire dataset.
 
 #### 5.1 Present Results
 
-Here we try to ensure that we capture what we have done and learned so that we can make the best use of it later. 
+Here we try to ensure that we capture what we have done and learned so that we can make the best use of it later.
 
 - Write up project in a short report (1-5 pages).
 - Convert write-up to a slide deck to share findings with others.
@@ -218,11 +208,9 @@ Here we try to make sure that we deliver on the solution promise that we made up
 - Deliver and make use of the predictions.
 - Deliver and make use of the predictive model.
 
-
 ### Next Step
 
 Pick a problem that you can complete in 1-to-2 hours and use the checklist to complete a project.
-
 
 ## References
 
@@ -244,5 +232,8 @@ Pick a problem that you can complete in 1-to-2 hours and use the checklist to co
 
 [9]: [Save And Finalize Your Machine Learning Model in R](https://machinelearningmastery.com/finalize-machine-learning-models-in-r/)
 
+----------
 
 [^ml_checklist_howto]: <https://machinelearningmastery.com/machine-learning-checklist/> "How to Use a Machine Learning Checklist to Get Accurate Predictions, Reliably"
+
+[AI Model Selection Decision Matrix (Part 2)](https://pub.towardsai.net/ai-model-selection-decision-matrix-part-2-c7ba639f6783)

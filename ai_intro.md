@@ -141,3 +141,11 @@ B. Hubert, "[Why Bloat is Still Software's Biggest Vulnerability](https://spectr
 [13]: B. Gain, [Most DevOps Plans Fail, but Things Are Getting Better](https://thenewstack.io/most-devops-plans-fail-but-things-are-getting-better/), The New Stack, Nov. 30, 2021.
 
 [14]: J. Ali, [268% Higher Failure Rates for Agile Software Projects, Study Finds](https://www.engprax.com/post/268-higher-failure-rates-for-agile-software-projects-study-finds/), Impact Engineering, Engprax Ltd, ISBN-10: 106860574X, July 14, 2024.
+
+----------
+
+[Why AI projects fail, and how developers can help them succeed](https://www.infoworld.com/article/4010313/why-ai-projects-fail-and-how-developers-can-help-them-succeed.html)
+
+[Thirty Years, Five Technologies, One Failure Pattern: From Lean to AI](https://itnext.io/thirty-years-five-technologies-one-failure-pattern-from-lean-to-ai-628b8d7195a1)
+
+[One real reason AI isn't delivering: Meatbags in manglement](https://www.theregister.com/2025/12/24/reason_ai_isnt_delivering/)

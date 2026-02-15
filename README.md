@@ -6,7 +6,7 @@ If you are like me and try to follow the principles of DRY, KISS, Design Pattern
 
 [Medium](https://aicoder.medium.com)
 
-[Raindrop](https://raindrop.io/codecypher)
+[Raindrop](https://raindrop.io/aicoder)
 
 ## Learning Paths
 
@@ -20,9 +20,9 @@ If you are like me and try to follow the principles of DRY, KISS, Design Pattern
 
 ## Noteworthy Quotes
 
-> Software Half-Life: The frameworks that help us build software in half the time become outdated in half the time.
+Software Half-Life: The frameworks that help us build software in half the time become outdated in half the time.
 
-> I'm not in this world to live up to your expectations and you're not in this world to live up to mine - Bruce Lee
+I'm not in this world to live up to your expectations and you're not in this world to live up to mine - Bruce Lee
 
 ## Guiding Principles for AI
 
