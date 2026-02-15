@@ -1,36 +1,38 @@
 #!/usr/bin/env python3
 """
-  eda.py
-  This program contains code snippets for Exploratory Data Analysis (EDA)
+eda.py
+This program contains code snippets for Exploratory Data Analysis (EDA)
 """
-import numpy as np
+import datetime as dt
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-import pandas_datareader as pdr
-import pandas_datareader.data as web
-
-import datetime as dt
-import json
-import math
-import os
-import sys
-
-from dataprep.datasets import load_dataset
-from dataprep.eda import create_report
-
 from pandas import option_context
+from sklearn import metrics
 
-from sys import exit
-from time import time
+# import numpy as np
+# import pandas_datareader as pdr
+# import pandas_datareader.data as web
 
-from statsmodels.stats import weightstats as stests
-from statsmodels.tsa.seasonal import seasonal_decompose, STL
-from statsmodels.tsa.stattools import adfuller
-from statsmodels.stats.stattools import jarque_bera
-from statsmodels.stats.stattools import omni_normtest as omb
-from statsmodels.compat import lzip
+# import json
+# import math
+# import os
+# import sys
+
+# from sys import exit
+# from time import time
+
+# from dataprep.datasets import load_dataset
+# from dataprep.eda import create_report
+
+from statsmodels.tsa.seasonal import seasonal_decompose
+
+# from statsmodels.stats import weightstats as stests
+# from statsmodels.tsa.stattools import adfuller
+# from statsmodels.stats.stattools import jarque_bera
+# from statsmodels.stats.stattools import omni_normtest as omb
+# from statsmodels.compat import lzip
 
 
 def parser(x):
@@ -48,13 +50,12 @@ def load_data(name):
         parse_dates=["timestamp"],
         # date_parser=parser,
     )
-    
-        # Rename index
+
+    # Rename index
     data_df.index.name = "row"
 
     return data_df
 
-    
 
 def plot(df):
     """
@@ -68,11 +69,11 @@ def plot(df):
     groups = range(len(df.columns))
 
     # Plot each column
-    fig = plt.figure(figsize=(8, 10))
+    # fig = plt.figure(figsize=(8, 10))
     for i, grp in enumerate(groups):
-    	plt.subplot(len(groups), 1, i + 1)
-    	plt.plot(values[:, grp])
-    	plt.title(df.columns[grp], y=0.5, loc='right')
+        plt.subplot(len(groups), 1, i + 1)
+        plt.plot(values[:, grp])
+        plt.title(df.columns[grp], y=0.5, loc='right')
 
     # Save image and return fig
     # fig.savefig("box_plot.png")
@@ -131,13 +132,13 @@ def explore(df, title='Plot each column'):
     #         sns.countplot(y=column, data=data)
     #         plt.show()
 
-    fig = plt.figure(figsize=(12,8))
+    # fig = plt.figure(figsize=(12, 8))
 
     sns.lineplot(data=df['nbdi'])
     sns.lineplot(data=df['temp'])
 
     # plt.ylabel("Col_1 and Col_2")
-    plt.xticks(rotation = 25)
+    plt.xticks(rotation=25)
     plt.show()
 
 
@@ -150,12 +151,12 @@ def plot_confusion_matrix(model, X_test, y_test, y_hat):
     # print(cm)
 
     # Plot confusion matrix using seaborn
-    plt.figure(figsize=(12,12))
-    sns.heatmap(cm, annot=True, fmt=".3f", linewidths=.5, square = True, cmap = 'Blues_r');
-    plt.ylabel('Actual label');
-    plt.xlabel('Predicted label');
+    plt.figure(figsize=(12, 12))
+    sns.heatmap(cm, annot=True, fmt=".3f", linewidths=.5, square=True, cmap='Blues_r')
+    plt.ylabel('Actual label')
+    plt.xlabel('Predicted label')
     all_sample_title = 'Accuracy Score: {0}'.format(score)
-    plt.title(all_sample_title, size = 15);
+    plt.title(all_sample_title, size=15)
     plt.show()
 
 
@@ -165,7 +166,7 @@ def plot_decomp(df):
     Classical Decomposition
     """
     result = seasonal_decompose(df, model='multiplicative')
-    plt.rcParams["figure.figsize"] = (10,8)
+    plt.rcParams["figure.figsize"] = (10, 8)
     result.plot()
     # plt.show()
 
@@ -178,7 +179,7 @@ def heatmap(df):
     corrs = df.corr()
 
     # Plot heatmp
-    plt.figure(figsize=(20,12))
+    plt.figure(figsize=(20, 12))
     sns.heatmap(corrs, cmap='RdBu_r', annot=True)
     plt.show()
 
@@ -196,5 +197,4 @@ def main():
 # Check that code is under main function
 if __name__ == "__main__":
     main()
-
     print('Done')
