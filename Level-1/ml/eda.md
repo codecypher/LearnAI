@@ -1,4 +1,215 @@
-# Exploratory Data Analysis (EDA)
+# Exploratory Data Analysis
+
+Exploratory Data Analysis (EDA) is a statistical approach used to analyze and summarize the main characteristics of a dataset, often employing visual methods.
+
+EDA helps identify patterns, identify anomalies, and understand relationships between variables before formal modeling or hypothesis testing.
+
+It is often best complete the EDA stage before performing data preprocessing.
+
+## Data Preparation
+
+The data preparation stage usually involves the following steps that may overlap [5] and [6]:
+
+1. Exploratory Data Analysis (EDA): Get to know the data. Check if data is normally distributed or heavy-tailed; check for outliers; check if clustering of the data will help; check for imbalanced data.
+
+2. Data Selection: Consider what data is available, what data is missing, and what data can be removed.
+
+3. Data Preprocessing: Organize the selected data by formatting, cleaning, and sampling from it.
+
+4. Data Transformation: Change the scale or distribution of variables using scaling, attribute decomposition, and attribute aggregation.
+
+  Split first and normalize later which means that we should perform the train-test split first then normalize the datasets.
+
+5. Feature Selection: Identify the input variables that are most relevant to the task.
+
+6. Feature Engineering: Derive new variables from the available data.
+
+7. Dimensionality Reduction: Create compact projections of the data.
+
+## Key Benefits
+
+The key benefits of EDA are [19]:
+
+- Provides a clear understanding of the dataset, including the number of features, data types and data distribution.
+
+- Reveals patterns and relationships between different variables in the data.
+
+- Identifies errors and outliers that may affect analysis.
+
+- Highlights the most important features useful for building models.
+
+- Supports selecting suitable modelling techniques for better results.
+
+EDA is essential in the data science process for several reasons [19]:
+
+Hypothesis Generation: EDA allows data scientists to formulate hypotheses based on observed data patterns.
+
+Data Quality Assessment: EDA helps identify issues such as missing values, duplicates, and inconsistencies in the dataset.
+
+Model Readiness: EDA informs whether the dataset is suitable for modeling or requires further cleaning and preparation.
+
+
+## Types of Exploratory Data Analysis
+
+1. Univariate Analysis
+
+Univariate analysis studies one variable at a time to understand its characteristics and distribution.
+
+Common techniques include [19]:
+
+- Histograms: Show how data values are distributed.
+
+- Box plots: Help detect outliers and show data spread.
+
+- Bar charts: Used for categorical variables.
+
+2. Bivariate Analysis
+
+Bivariate analysis examines the relationship between two variables to understand how they interact or influence each other.
+
+Common techniques include [19]:
+
+- Scatter plots: Show the relationship between two numerical variables.
+
+- Correlation coefficient: Measures the strength of the relationship between variables.
+
+- Cross-tabulation: Displays the relationship between two categorical variables.
+
+- Line graphs: Compare two variables over time to identify trends.
+
+- Covariance: Shows how two variables change together.
+
+3. Multivariate Analysis
+
+Multivariate analysis studies three or more variables together to understand complex relationships within the dataset.
+
+Common techniques include [19]:
+
+- Pair plots: Show relationships between multiple variables at once.
+
+- Principal Component Analysis (PCA): Reduces dimensionality while preserving important information.
+
+- Spatial analysis: Analyzes geographical patterns using maps and location-based data.
+
+
+## Steps for Performing EDA
+
+EDA involves a set of steps that help us understand the data, find patterns, detect issues and prepare the data for further analysis or modeling [19].
+
+EDA can be performed using different tools such as Pandas, matplotlib, and seaborn.
+
+We can also analyze the data in three formats: temporal, location, and categorical [20].
+
+### Step 1: Understanding the Problem and the Data
+
+The first step in any data analysis project is to fully understand the problem we're solving and the data we have. This includes asking questions like:
+
+- What is the goal or problem we are trying to solve?
+
+- What variables are present in the dataset and what do they represent?
+
+- What types of data are available (numerical, categorical, text etc.)?
+
+- Are there any data quality issues or limitations?
+
+### Step 2: Importing and Inspecting the Data
+
+The next step is to load the dataset into tools such as Python or R to obtain a basic understanding of the dataset.
+
+- Load the dataset properly.
+- Check the number of rows and columns.
+- Identify missing values.
+- Verify the data type of each variable.
+- Look for errors, invalid values or unusual data points.
+
+### Step 3: Handling Missing Data
+
+Missing data is common in many datasets and can affect the quality of analysis.
+
+During EDA, it is important to identify and handle missing values properly to avoid incorrect results.
+
+- Understand why data is missing, as this helps in selecting the right approach.
+
+- Decide whether to remove or fill missing values, since removal can cause bias while imputation preserves data.
+
+- Use suitable imputation methods such as mean, median, regression or machine learning techniques such as KNN or decision trees.
+
+- Consider the impact of missing data, as it can still introduce uncertainty even after imputation.
+
+### Step 4: Exploring Data Characteristics
+
+After handling missing data, the next step is to examine the main characteristics of the dataset.
+
+This helps us understand how the data is distributed, detect unusual values, and identify potential issues before further analysis.
+
+- Check data distribution to understand how values are spread across the dataset.
+
+- Measure central tendency using mean, median and mode to find the typical value of the data.
+
+- Measure variability using standard deviation to see how much the values vary.
+
+- Analyze distribution shape using skewness and kurtosis.
+
+- Identify outliers or anomalies that may affect the analysis.
+
+### Step 5: Performing Data Transformation
+
+Data transformation prepares the dataset for better analysis and modelling.
+
+We may need to modify or convert the data so that it is in a suitable format for analysis.
+
+- Scaling or normalizing numerical variables like min-max scaling or standardization.
+
+- Encoding categorical variables for machine learning like one-hot encoding or label encoding.
+
+- Applying mathematical transformations such as logarithmic square root to correct skewness or non linearity.
+
+- Creating new features by deriving useful information from existing variables.
+
+- Aggregating or grouping data based on specific variables or conditions.
+
+### Step 6: Visualizing Relationship of Data
+
+Data visualization helps us understand patterns, trend and relationships in the dataset that may not be clear from numbers alone.
+
+- Bar charts and pie charts help analyze categorical data distribution.
+
+- Histograms, box plots and density plots show distribution and detect outliers in numerical data.
+
+- Scatter plots and correlation measures help analyze relationships between variables.
+
+### Step 7: Handling Outliers
+
+Outliers are data points that differ significantly from other observations.
+
+Outliers can occur due to errors or genuine variations in the data.
+
+- Using statistical methods such as Interquartile Range (IQR) or Z-score to identify extreme values.
+
+- Analyze outliers carefully before taking any action.
+
+- Use domain knowledge to determine whether they are valid or erroneous.
+
+- Apply techniques like capping or transformation if necessary.
+
+- Remove outliers only when they are clearly incorrect or harmful to analysis.
+
+### Step 8: Communicate Findings and Insights
+
+The final step in EDA is to clearly present the results of the analysis which helps to understand the insights discovered and the conclusions drawn from the data.
+
+- State the goal and scope of the analysis.
+
+- Provide background or context so the approach is easy to understand.
+
+- Use visualizations to support findings and make results clearer.
+
+- Highlight key insights, patterns, or anomalies discovered in the data.
+
+- Mention limitations or challenges faced during the analysis.
+
+- Suggest next steps or areas that require further investigation.
+
 
 ## Summary Statistics
 
@@ -22,35 +233,6 @@ It is important to know how to extract information from descriptive statistics.
     # include string and categorical features
     df.describe(include=['int', 'float', 'object', 'category'])
 ```
-
-## Python Graphing Libraries
-
-Here are some useful Python graphing libraries [17]:
-
-Altair: Declarative Visualization Made Simple
- 
-Altair is a declarative statistical visualization library focusing on simplicity and expressiveness that minimizes boilerplate code and emphasizes interactive charts.
-
-DuckDB: High-Performance SQL OLAP
- 
-DuckDB is an in-process SQL OLAP database optimized for analytical workload which allows seamless integration with Python tools like Pandas and Jupyter.
-
-FlashText: Efficient Text Search and Replacement
-
-FlashText is a lightweight library for keyword extraction and replacement, outperforming regex in speed and simplicity for many use cases.
-
-Missingno: Visualizing Missing Data
-
-Missingno provides quick and intuitive visualizations for missing data, helping identify patterns and correlations.
-
-NetworkX: Analyzing Graph Data
- 
-NetworkX is a versatile library for analyzing and visualizing graph structures from social networks to transportation systems.
-
-Ydata Profiling: Automated Data Insights
- 
-Ydata Profiling automates dataset exploration by generating detailed HTML reports that highlight distributions, correlations, and data quality.
-
 
 ## Exploratory Data Analysis
 
@@ -203,7 +385,7 @@ Pair Plots is to a correlation matrix, but gives a scatterplot for each of the X
 
 ## Guide to EDA and Data Preparation
 
-Here is a guide to the fundamental pre-processing techniques and how to address some common problems [15]. 
+Here is a guide to the fundamental pre-processing techniques and how to address some common problems [15].
 
 ```py
 # Load the dataset
@@ -300,7 +482,7 @@ print(missing_percentage)
 
 - For qualitative variables, we study association.
 
-We can use methods such as ANOVA (Analysis of Variance) To study the relationship between a quantitative and a qualitative variable. 
+We can use methods such as ANOVA (Analysis of Variance) To study the relationship between a quantitative and a qualitative variable.
 
 Association Between Qualitative Variables — Chi-Squared Test, Cramer’s V Test
 
@@ -661,8 +843,11 @@ These are obvious indications that there are issues in the data and need further
 
 [18]: [Understanding Outliers in Machine Learning](https://blog.gopenai.com/understanding-outliers-in-machine-learning-732e43566763)
 
+[19]: [Exploratory Data Analysis](https://www.geeksforgeeks.org/data-analysis/what-is-exploratory-data-analysis/)
 
-[Data Analytics: The Four Approaches to Analyzing Data and How To Use Them Effectively](https://www.kdnuggets.com/2023/04/data-analytics-four-approaches-analyzing-data-effectively.html)
+[20]: [Visual inspection finds the stories hidden in your charts](https://thenewstack.io/art-of-visual-inspection-spot-the-hidden-story-in-your-charts/)
+
+[Data Analytics:"" The Four Approaches to Analyzing Data and How To Use Them Effectively](https://www.kdnuggets.com/2023/04/data-analytics-four-approaches-analyzing-data-effectively.html)
 
 [How to build a Machine Learning (ML) Predictive System](https://towardsdatascience.com/machine-learning-ml-based-predictive-system-to-predict-the-satisfaction-level-of-airlines-f0780dbdbc87?source=rss----7f60cf5620c9---4)
 
