@@ -118,9 +118,9 @@ Having two or more highly correlated features in our training data will lead to 
 
 ## Feature Engineering Techniques
 
-Feature engineering involves modifying existing features or creating new ones to improve modeling results [15].
+Feature engineering involves modifying existing features or creating new ones to improve modeling results [3].
 
-Here are some common feature engineering methods [15]:
+Here are some common feature engineering methods [3]:
 
 1. Convert text data features into vectors
 
@@ -140,19 +140,19 @@ There are more essential feature engineering techniques such as creating polynom
 
 ## Scaling vs Normalization
 
-Scaling and normalization are very similar, but they have different effects on the data [17].
+Scaling and normalization are very similar, but they have different effects on the data [16].
 
-In both scaling and normalization, we transform the values of numeric variables so that the transformed data points have specific properties that can be exploited to create better features and models [17].
+In both scaling and normalization, we transform the values of numeric variables so that the transformed data points have specific properties that can be exploited to create better features and models [16].
 
 - In scaling, we are changing the _range_ of the data.
 
 - In normalization, we are changing the _shape_ of the distribution of the data.
 
-Many machine learning algorithms perform better when numerical input variables are scaled to a standard range [18].
+Many machine learning algorithms perform better when numerical input variables are scaled to a standard range [17].
 
-This includes algorithms that use a weighted sum of the input such Z linear regression, and algorithms that use distance measures, like k-nearest neighbors. [18].
+This includes algorithms that use a weighted sum of the input such Z linear regression, and algorithms that use distance measures, like k-nearest neighbors. [17].
 
-The two most popular techniques for scaling numerical data are normalization and standardization [18].
+The two most popular techniques for scaling numerical data are normalization and standardization [17].
 
 ### Scaling
 
@@ -208,9 +208,9 @@ Regularization is another reason to use feature scaling such as standardization.
 
 ### Choose between Standardization vs Normalization
 
-If the distribution of the quantity is normal, the data should be standardized. Otherwise, the data should be normalized [18].
+If the distribution of the quantity is normal, the data should be standardized. Otherwise, the data should be normalized [17].
 
-Data-centric heuristics include the following [20]:
+Data-centric heuristics include the following [19]:
 
 1. If your data has outliers, use standardization or robust scaling.
 
@@ -218,7 +218,7 @@ Data-centric heuristics include the following [20]:
 
 3. If your data has a non-normal distribution, use normalization.
 
-Model-centric rules include the following [20]:
+Model-centric rules include the following [19]:
 
 1. If your modeling algorithm assumes (but does not require) a normal distribution of the residuals (such as regularized linear regression, regularized logistic regression, or linear discriminant analysis), use standardization.
 
@@ -246,9 +246,9 @@ There are many transformation methods that are used to convert non-normal distri
 
 ### Log Transform
 
-Log Transformation is a technique to change the value of a feature from x to log(x) which can be used to overcome the problem of data distribution that is too skewed or has too many outliers [16].
+Log Transformation is a technique to change the value of a feature from x to log(x) which can be used to overcome the problem of data distribution that is too skewed or has too many outliers [15].
 
-The log transform can be useful in models such as linear regression or logistic regression, but many algorithms themselves are not affected by a skewed dataset [16].
+The log transform can be useful in models such as linear regression or logistic regression, but many algorithms themselves are not affected by a skewed dataset [15].
 
 Log Transform is the most common technique used to turn a skewed distribution into a normal or less-skewed distribution [11].
 
@@ -516,9 +516,9 @@ By default, the `PowerTransformer` also performs a standardization of each varia
 
 ## Feature Engineering Examples
 
-Feature Engineering is the process of modifying raw data into more informative features [16].
+Feature Engineering is the process of modifying raw data into more informative features [15].
 
-The article [16] discusses ten basic feature engineering techniques with code examples.
+The article [15] discusses ten basic feature engineering techniques with code examples.
 
 1. Imputation
 2. Binning
@@ -637,47 +637,47 @@ The order that the transform operations are applied is important.
 
 S. Raschka and V. Mirjalili, Python Machine Learning, 3rd ed., Birmingham, U.K.: Packt Pub. Ltd., 2019.
 
-[1]: [What is Feature Engineering?](https://towardsdatascience.com/what-is-feature-engineering-importance-tools-and-techniques-for-machine-learning-2080b0269f10)
+[1]: https://towardsdatascience.com/what-is-feature-engineering-importance-tools-and-techniques-for-machine-learning-2080b0269f10 "What is Feature Engineering?"
 
-[2]: [3 Essential Ways to Calculate Feature Importance in Python](https://towardsdatascience.com/3-essential-ways-to-calculate-feature-importance-in-python-2f9149592155)
+[2]: https://towardsdatascience.com/3-essential-ways-to-calculate-feature-importance-in-python-2f9149592155 "3 Essential Ways to Calculate Feature Importance in Python"
 
-[3]: [The Lazy Data Scientist’s Guide to AI/ML Troubleshooting](https://medium.com/@ODSC/the-lazy-data-scientists-guide-to-ai-ml-troubleshooting-abaf20479317?source=linkShare-d5796c2c39d5-1638394993&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXz8nMy9bLTU3JLM3VS87P1Xcxy8xID4gMc8lJAgCSs4wwIwAAAA%3D%3D&_branch_match_id=994707642716437243)
+[3]: https://medium.com/@ODSC/the-lazy-data-scientists-guide-to-ai-ml-troubleshooting-abaf20479317?source=linkShare-d5796c2c39d5-1638394993 "The Lazy Data Scientist’s Guide to AI/ML Troubleshooting"
 
-[4]: [How to Transform Target Variables for Regression in Python](https://machinelearningmastery.com/how-to-transform-target-variables-for-regression-with-scikit-learn/)
+[4]: https://machinelearningmastery.com/how-to-transform-target-variables-for-regression-with-scikit-learn/ "How to Transform Target Variables for Regression in Python"
 
-[5]: [Feature Selection in Scikit-learn](https://towardsdatascience.com/feature-selection-in-scikit-learn-dc005dcf38b7?source=rss----7f60cf5620c9---4)
+[5]: https://towardsdatascience.com/feature-selection-in-scikit-learn-dc005dcf38b7?source=rss----7f60cf5620c9---4 "Feature Selection in Scikit-learn]"
 
-[6]: [Guide to Distance Metrics in Machine Learning Algorithms](https://heartbeat.comet.ml/guide-to-distance-metrics-in-machine-learning-algorithms-33754203526f)
+[6]: https://heartbeat.comet.ml/guide-to-distance-metrics-in-machine-learning-algorithms-33754203526f "Guide to Distance Metrics in Machine Learning Algorithms"
 
-[7]: [How to decide the perfect distance metric for your machine learning model](https://towardsdatascience.com/how-to-decide-the-perfect-distance-metric-for-your-machine-learning-model-2fa6e5810f11)
+[7]: https://towardsdatascience.com/how-to-decide-the-perfect-distance-metric-for-your-machine-learning-model-2fa6e5810f11 "How to decide the perfect distance metric for your machine learning model"
 
-[8]: [What we can Learn from Black-box Models](https://towardsdatascience.com/what-we-can-learn-from-black-box-models-eda3677c42f2)
+[8]: https://towardsdatascience.com/what-we-can-learn-from-black-box-models-eda3677c42f2 "What we can Learn from Black-box Models"
 
-[9]: [Major Problems of Machine Learning Datasets: Part 1](https://heartbeat.comet.ml/major-problems-of-machine-learning-datasets-part-1-5d5a06221c90)
+[9]: https://heartbeat.comet.ml/major-problems-of-machine-learning-datasets-part-1-5d5a06221c90 "Major Problems of Machine Learning Datasets: Part 1"
 
-[10]: [Major Problems of Machine Learning Datasets: Part 2](https://heartbeat.comet.ml/major-problems-of-machine-learning-datasets-part-2-ba82e551fee2)
+[10]: https://heartbeat.comet.ml/major-problems-of-machine-learning-datasets-part-2-ba82e551fee2 "Major Problems of Machine Learning Datasets: Part 2"
 
-[11]: [Major Problems of Machine Learning Datasets: Part 3](https://heartbeat.comet.ml/major-problems-of-machine-learning-datasets-part-3-eae18ab40eda)
+[11]: https://heartbeat.comet.ml/major-problems-of-machine-learning-datasets-part-3-eae18ab40eda "Major Problems of Machine Learning Datasets: Part 3"
 
-[12]: [How to Use Power Transforms for Machine Learning](https://machinelearningmastery.com/power-transforms-with-scikit-learn/)
+[12]: https://machinelearningmastery.com/power-transforms-with-scikit-learn/ "How to Use Power Transforms for Machine Learning"
 
-[13]: [3 Fundamental Processes in Feature Engineering](https://towardsdatascience.com/3-fundamental-processes-in-feature-engineering-d6b84983754)
+[13]: https://towardsdatascience.com/3-fundamental-processes-in-feature-engineering-d6b84983754 "3 Fundamental Processes in Feature Engineering"
 
-[14]: [5 Essential Machine Learning Techniques to Master Your Data Preprocessing](https://pub.towardsai.net/5-machine-learning-data-preprocessing-techniques-e888f6d220e1)
+[14]: https://pub.towardsai.net/5-machine-learning-data-preprocessing-techniques-e888f6d220e1 "5 Essential Machine Learning Techniques to Master Your Data Preprocessing"
 
-[15]: [The Lazy Data Scientist’s Guide to AI/ML Troubleshooting](https://opendatascience.com/the-lazy-data-scientists-guide-to-ai-ml-troubleshooting/)
+[15]: https://pub.towardsai.net/10-basic-feature-engineering-techniques-to-prepare-your-data-a43e99a0bf00 "10 Basic Feature Engineering Techniques to Prepare Your Data"
 
-[16]: [10 Basic Feature Engineering Techniques to Prepare Your Data](https://pub.towardsai.net/10-basic-feature-engineering-techniques-to-prepare-your-data-a43e99a0bf00)
+[16]: https://towardsai.net/p/data-science/scaling-vs-normalizing-data-5c3514887a84 "Scaling vs Normalizing Data"
 
-[17]: [Scaling vs Normalizing Data](https://towardsai.net/p/data-science/scaling-vs-normalizing-data-5c3514887a84)
+[17]: https://machinelearningmastery.com/standardscaler-and-minmaxscaler-transforms-in-python/ "How to Use StandardScaler and MinMaxScaler Transforms in Python"
 
-[18]: [How to Use StandardScaler and MinMaxScaler Transforms in Python](https://machinelearningmastery.com/standardscaler-and-minmaxscaler-transforms-in-python/)
+[18]: https://letsdatascience.com/scaling-and-normalization/ "Scaling and Normalization: Standardizing Numerical Data"
 
-[19]: [Scaling and Normalization: Standardizing Numerical Data](https://letsdatascience.com/scaling-and-normalization/)
-
-[20]: [The Mystery of Feature Scaling is Finally Solved](https://towardsdatascience.com/the-mystery-of-feature-scaling-is-finally-solved-29a7bb58efc2)
+[19]: https://towardsdatascience.com/the-mystery-of-feature-scaling-is-finally-solved-29a7bb58efc2 "The Mystery of Feature Scaling is Finally Solved"
 
 -----
+
+[Feature Selection Techniques: More Features Does Not Mean a Better Model](https://pub.towardsai.net/feature-selection-techniques-more-features-does-not-mean-a-better-model-33ba863b3c44)
 
 [Complete Feature Engineering In a Nutshell](https://medium.com/towards-data-engineering/complete-feature-engineering-in-a-nutshell-d49edcb863c9)
 
