@@ -40,7 +40,7 @@ Use this formalism to define the T, P, and E for your problem:
 
 ##### Assumptions
 
-Create a list of assumptions about the problem and its phrasing. 
+Create a list of assumptions about the problem and its phrasing.
 
 These may be rules of thumb and domain specific information that you think will get you to a viable solution faster.
 
@@ -48,9 +48,9 @@ It can also be useful to highlight areas of the problem specification that may n
 
 ##### Similar problems
 
-What other problems have you seen or can you think of that are similar to the problem you are trying to solve? 
+What other problems have you seen or can you think of that are similar to the problem you are trying to solve?
 
-Other problems can inform the problem you are trying to solve by highlighting limitations in your phrasing of the problem such as time dimensions and conceptual drift (where the concept being modeled changes over time). 
+Other problems can inform the problem you are trying to solve by highlighting limitations in your phrasing of the problem such as time dimensions and conceptual drift (where the concept being modeled changes over time).
 
 Other problems can also point to algorithms and data transformations that could be adopted to spot check performance.
 
@@ -63,7 +63,7 @@ Think deeply about why you want or need the problem solved.
 
 Describe how the problem would be solved manually to flush domain knowledge.
 
-List out step-by-step what data you would collect, how you would prepare it and how you would design a program to solve the problem. 
+List out step-by-step what data you would collect, how you would prepare it and how you would design a program to solve the problem.
 
 This may include prototypes and experiments you would need to perform which are a gold mine because they will highlight questions and uncertainties you have about the domain that could be explored.
 
@@ -78,7 +78,7 @@ Even if you have good data, you need to make sure that it is in a useful scale, 
 
 #### Data Preparation Process
 
-The more disciplined you are in your handling of data, the more consistent and better results you are like likely to achieve. 
+The more disciplined you are in your handling of data, the more consistent and better results you are like likely to achieve.
 
 The process for getting data ready for a machine learning algorithm can be summarized in three steps:
 
@@ -117,7 +117,7 @@ NOTE: the interpretability of an outlier model is critically important. Context 
 
 ##### Get Started
 
-There are many methods and much research put into outlier detection. 
+There are many methods and much research put into outlier detection.
 
 Start by making some assumptions and design experiments where you can clearly observe the effects of the those assumptions against some performance or accuracy measure.
 
@@ -125,9 +125,9 @@ Work through a stepped process from extreme value analysis, proximity methods, a
 
 ##### Methods Robust to Outliers
 
-An alternative strategy is to move to models that are robust to outliers. 
+An alternative strategy is to move to models that are robust to outliers.
 
-There are robust forms of regression that minimize the median least square errors rather than mean (so-called robust regression) but are more computationally intensive. 
+There are robust forms of regression that minimize the median least square errors rather than mean (so-called robust regression) but are more computationally intensive.
 
 There are also methods like decision trees that are robust to outliers.
 
@@ -163,13 +163,11 @@ You could spot check some methods that are robust to outliers. If there are sign
 - How To Deploy Your Predictive Model To Production
 
 
-
-
 ## Model Selection
 
-Choosing the right machine learning model for your data is of major importance in any data science project [4]. 
+Choosing the right machine learning model for your data is of major importance in any data science project [4].
 
-The model you select will have a significant impact on the insights you derive from your data and ultimately determine the usefulness of a project. 
+The model you select will have a significant impact on the insights you derive from your data and ultimately determine the usefulness of a project.
 
 Here are some tips when choosing machine learning models:
 
@@ -187,7 +185,7 @@ Start with simple models to establish a solid performance baseline
 
 4. Evaluate multiple models
 
-Evaluate multiple models and use cross-validation for robust performance. 
+Evaluate multiple models and use cross-validation for robust performance.
 
 Comparing multiple metrics across models can provide some of the best insights, even if you make your selection based primarily on one of them.
 

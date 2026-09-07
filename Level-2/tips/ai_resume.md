@@ -1,6 +1,5 @@
 # AI Job Search Tools
 
-
 ## AI Resume Buuilders
 
 Condensing an entire job into three high-impact bullet points is no easy feat, and if you're like most humans, there is nothing you dread more than talking about yourself.

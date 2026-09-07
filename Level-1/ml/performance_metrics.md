@@ -164,7 +164,7 @@ What dataset do you use to calculate model skill?
 
 It is a good practice to hold out a validation dataset from the modeling process.
 
-This means a sample of the available data is randomly selected and removed from the available data, such that it is not used during model selection or configuration.
+This means a sample of the available data is randomly selected and removed from the available data so it is not used during model selection or configuration.
 
 After the final model has been prepared on the training data, it can be used to make predictions on the validation dataset which are used to calculate a classification accuracy or classification error.
 

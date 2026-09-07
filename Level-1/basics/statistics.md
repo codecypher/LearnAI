@@ -1,6 +1,5 @@
 # Statistics
 
-
 ## What is Statistics
 
 Statistics is a collection of tools that you can use to get answers to important questions about data.
