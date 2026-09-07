@@ -8,7 +8,24 @@ A successful AI engineer needs a thorough knowledge of applied mathematics, comp
 
 AI/ML is not about algorithms, APIs, or frameworks.
 
-> Any competent software engineer become proficient with any software development tool. In a nutshell, it's not about code; it's knowing the theory and best practices for AI, especially the limitations.
+> Any competent software engineer can become proficient with any software development tool. The key to a successful AI project is knowlege of the theory, capabilities, limitations, and best practices for AI.
+
+The successful AI engineer will have the following:
+
+- A graduate degree in Artificial Intelligence.
+
+- Expertise in Applied Mathematics, Aritificial Intelligence, and Software Engineering
+
+- Excellent research, analytical, and problem-solving skills.
+
+- Expert knowlege of the theory, capabilities, limitations, and best practices for AI.
+
+- Experience solving a variety of real-world problems. 
+
+- Experience developing commercial applications using a variety of programming languages, tools, and technologies.
+
+
+## SEI AI Engineering
 
 The need for a mature engineering discipline to guide AI capabilities is urgent.
 
@@ -18,15 +35,15 @@ AI Engineering aims to provide a framework and tools to proactively design AI sy
 
 SEI has developed three pillars to guide our approach to AI Engineering:
 
-Human-centered AI
+### Human-centered AI
 
 Key to the implementation of AI in context is a deep understanding of the people who will use the technology. This pillar examines how AI systems are designed to align with humans, their behaviors, and their values.
 
-Scalable AI
+### Scalable AI
 
 Effective AI systems require large investments of time and money to develop. This pillar examines how AI infrastructure, data, and models may be reused across problem domains and deployments.
 
-Robust and Secure AI
+### Robust and Secure AI
 
 One of the biggest challenges facing the broad adoption of AI technologies and systems is knowing that AI systems will work as expected when they are deployed outside of closely controlled development, laboratory, and test environments. This pillar examines how we develop and test resilient AI systems.
 

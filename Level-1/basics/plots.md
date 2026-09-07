@@ -9,20 +9,6 @@ Matplolib is the basis of image visualization in Python but there are other alte
 [An Atlas of Simple Matplotlib Charts](https://medium.com/geekculture/an-atlas-of-simple-matplotlib-charts-2f6fd32ca4cf)
 
 
-## Python Graphing Libraries
-
-- Plotly
-- Seaborn
-- Bokeh
-- Cufflinks
-
-- Altair
-- Ydata Profiling
-
-- SciPy
-- Statsmodels
-
-
 ## Tips for Improving Charts with Matplotlib
 
 ### Remove Chart Junk

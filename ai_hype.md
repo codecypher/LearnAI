@@ -1,4 +1,4 @@
-# The Alchemy of AI
+# AI Hype
 
 ## Background
 
@@ -15,6 +15,7 @@ The two guiding principles of AI engineering are:
 1. Occam's Razor
 2. No Free Lunch Theorem
 
+
 ## The AI Hype
 
 L. Chu, [GenAI’s products: Move fast and fail](https://pub.towardsai.net/genais-products-move-fast-and-fail-795697674039), Towards AI, Dec. 3, 2023.
@@ -25,9 +26,12 @@ M. Asay, [AI’s moment of disillusionment](https://www.infoworld.com/article/37
 
 S. Collins, [Beyond the Hype: The $40B GenAI Mistake and the “Learning Gap” 95% of Companies Don’t See](https://pub.towardsai.net/beyond-the-hype-the-40b-genai-mistake-and-the-learning-gap-95-of-companies-dont-see-aacc3bf446b0), Towards AI, Oct. 22, 2025.
 
+
 ## AI Failures in the News
 
-K. Ahuja, [Why a $1.2M AI Project Failed (And How to Avoid the Same Mistake)](https://pub.towardsai.net/why-a-1-2m-ai-project-failed-and-how-to-avoid-the-same-mistake-c873235b5d1d), Towards AI, Aug. 24, 2025.
+S. Estrada, [MIT report: 95% of generative AI pilots at companies are failing](https://fortune.com/2025/08/18/mit-report-95-percent-generative-ai-pilots-at-companies-failing-cfo/), Fortune, Aug. 18, 2025. 
+
+T. Claburn, [AI agents? Yes, let's automate all sorts of things that don't actually need it](https://www.theregister.com/2025/01/27/ai_agents_automate_argument/), The Register, Jan. 27, 2025. 
 
 M. Oitzman, [OpenAI abandons robotics research](https://www.therobotreport.com/openai-abandons-robotics-research/), The Robot Report, July 20, 2021.
 
@@ -88,3 +92,4 @@ R. Mariani et al., "[Trustworthy AI — Part III](https://ieeexplore.ieee.org/do
 [8]: M. Parashar, M. A. Heroux,and V. Stodden, "Research Reproducibility," Computer, vol. 55, no. 8, pp. 16-18, Aug. 2022, doi: 10.1109/MC.2022.3176988.
 
 [9]: T. Shin, “4 Reasons Why You Shouldn’t Use Machine Learning,” Towards Data Science, Oct. 5, 2021.
+
