@@ -2,77 +2,6 @@
 
 Here are some notes on web development.
 
-## CSS Tips
-
-Here are a few handy CSS tips and features [1].
-
-### Centered
-
-Position an element at the center of the screen.
-
-```css
-  .centered {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, 50%);
-  }
-
-  // position in the center of another element
-  .block {
-      display: grid;
-      place-items: center;
-  }
-```
-
-### Border vs Outline
-
-The border is inside the element — if we increase the size of the border, then we increase the size of the element.
-
-The outline is outside the element — if we increase the size of the outline, the element will keep its size and the ribbon around it will grow.
-
-### Auto-numbering sections
-
-We can create a CSS counter and use it in a tag type content, so we can auto-increment a variable and prefix some elements with it.
-
-This is done using the counter-increment and content properties:
-
-
-## Design Responsive Website
-
-Here are some tips for designing responsive websites [2];
-
-1. em and rem units instead of px
-
-Always try to use em, percentage, rem units instead of px for sizing so that the size of text, images etc adjust according to the device
-
-2. Proper use of Margin and Padding
-
-We usually use a lot of padding and margin when we make websites for desktops , to make them more attractive. While making it responsive for mobiles, tablets try decreasing the existing padding and margin
-
-3. Use Box-sizing property
-
-It resolves a lot of problems caused by padding. Using box sizing on HTML elements with a percentage width will take padding into account rather than having to adjust the width because of padding
-
-4. Use flex-box property to align content
-Use flexbox to align your HTML elements, such as <div>, <img> etc.It forces elements that can wrap onto multiple lines according to their width
-
-5. Use grid property to design layouts
-
-Use grid property in CSS sheet to create layout of website . Rather than creating extra HTML elements to contain your grid, coloumns and rows, your grid tracks are created within your style sheet
-
-6. Use media query for different screen sizes
-
-Media query should be used to set width and height according to the breakpoints. Breakpoints refer to the width at which the websites look distorted on a particular size of device
-
-7. Use CSS frameworks for Responsive websites
-
-CSS frameworks are great way to build fast and responsive websites.A framework has ready to use code snippets for different purposes. They are very easy to use and embed in your website
-
-
-----------
-
-
 
 ## Python Web Development
 
@@ -97,7 +26,7 @@ FastAPI is a web framework for Python and in many ways resembles the simplicity 
 
 In short: with asynchronous code, threads can do more work in the same amount of time which results in more work done per unit time that results in a performance boost.
 
-A comparison of two different RestAPI frameworks [4]:
+A comparison of two different RestAPI frameworks [1]:
 
 **Flask** was released in 2010, a micro web framework written in python to support the deployment of web applications with a minimal amount of code.
 
@@ -170,7 +99,7 @@ Deta does not require GitHub account or repo access which is perhaps more flexib
 
 ## State Preservation
 
-State preservation is a mechanism to store data [8].
+State preservation is a mechanism to store data [3].
 
 It comes in three variations:
 
@@ -191,26 +120,21 @@ A clear example of authentication is when you access a portal and you must enter
 Authorization is the process of granting someone access to a resource such as a file or web page.
 
 
-
-
 ## References
 
-[1]: [Some handy CSS tricks](https://medium.com/codex/some-handy-css-tricks-8e5a0d3ac25c)
+[1]: [Understanding Flask vs FastAPI Web Framework](https://towardsdatascience.com/understanding-flask-vs-fastapi-web-framework-fe12bb58ee75)
 
-[2]: [7 Tips to Design Responsive Website](https://medium.com/@monocosmo77/7-tips-to-design-responsive-website-6adf4f38a487)
-
-[3]: [FastAPI Tutorial](https://fastapi.tiangolo.com/tutorial/)
-
-[4]: [Understanding Flask vs FastAPI Web Framework](https://towardsdatascience.com/understanding-flask-vs-fastapi-web-framework-fe12bb58ee75)
-
-[5]: [Speed Up Your Python Code With 100% Thread Utilization using FastAPI](https://betterprogramming.pub/speed-up-your-python-code-with-100-thread-utilization-using-this-library-31378a45f0ec)
+[2]: [FastAPI Tutorial](https://fastapi.tiangolo.com/tutorial/)
 
 
-[6]: [Deploying Your First Machine Learning API](https://www.kdnuggets.com/2021/10/deploying-first-machine-learning-api.html)
+[6 Concepts Every Backend Engineer Should Know](https://techwithmaddy.com/concepts-every-backend-engineer-should-know#heading-6-state-preservation)
 
-[7]: [How to Dockerize Machine Learning Applications Built with H2O, MLflow, FastAPI, and Streamlit](https://towardsdatascience.com/how-to-dockerize-machine-learning-applications-built-with-h2o-mlflow-fastapi-and-streamlit-a56221035eb5)
+[Speed Up Your Python Code With 100% Thread Utilization using FastAPI](https://betterprogramming.pub/speed-up-your-python-code-with-100-thread-utilization-using-this-library-31378a45f0ec)
 
-[8]: [6 Concepts Every Backend Engineer Should Know](https://techwithmaddy.com/concepts-every-backend-engineer-should-know#heading-6-state-preservation)
+
+[Deploying Your First Machine Learning API](https://www.kdnuggets.com/2021/10/deploying-first-machine-learning-api.html)
+
+[How to Dockerize Machine Learning Applications Built with H2O, MLflow, FastAPI, and Streamlit](https://towardsdatascience.com/how-to-dockerize-machine-learning-applications-built-with-h2o-mlflow-fastapi-and-streamlit-a56221035eb5)
 
 
 [10 Google Fonts Every Web Designer Needs To Know](https://uxplanet.org/10-google-fonts-every-web-designer-needs-to-know-de7dc3352d2c)

@@ -11,8 +11,8 @@ If you are like me and try to follow the principles of DRY, KISS, Design Pattern
 ## Learning Paths
 
 - [Intro to AI](./ai_intro.md)
-- [AI Alchemy](./ai_alchemy.md)
-- [Books](.ai_books.md)
+- [AI Alchemy](./ai_hype.md)
+- [Books](./ai_books.md)
 
 - Level-1 (Beginner)
 - Level-2 (Advanced)
@@ -46,11 +46,11 @@ The field of AI requires:
 
 - Don't reinvent the wheel (DRTW)
 
-The quote from Ronald Coase tells us that most any model can be made to fit the data using a brute-force approach which is a naive, unscientific approach to AI engineering.
+Most any model can be made to fit the data using a brute-force approach which is a naive, unscientific approach to AI engineering.
 
-In a data-centric approach, the data should drive the model selection process. Therefore, SOTA algorithms such as DL and LLM should be our last choice only after all simpler algorithms have been shown to perform poorly on the dataset.
+In a data-centric approach, the data should drive the model selection process. Therefore, SOTA algorithms such as DL and LLM should be the last choice only after all simpler algorithms have been shown to perform poorly on the dataset.
 
-Software developers and even companies seem obsessed with using a model-centric, brute-force approach to apply the latest complex SOTA algorithms with no regard to accuracy or the scientific method, espcially when simpler algorithms often perform better with much less effort.
+Companies seem obsessed with using a model-centric, brute-force approach to apply the latest complex SOTA algorithms with no regard to accuracy or the scientific method, especially when simpler algorithms often perform better with much less effort.
 
 ## Background
 

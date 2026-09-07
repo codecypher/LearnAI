@@ -4,13 +4,25 @@
 
 ### Terminology
 
-Starting with the smallest unit of data, a **character** is a single letter, number, or punctuation [6]. 
+Starting with the smallest unit of data, a **character** is a single letter, number, or punctuation [6].
 
-A **word** is a list of characters and a **sentence** is a list of words. 
+A **word** is a list of characters and a **sentence** is a list of words.
 
 A **document** is a list of sentences and a **corpus** is a list of documents.
 
-Figure: Venn diagram for NLP [6]. 
+Figure: Venn diagram for NLP [6].
+
+A text **corpus** is a large body of text.
+
+Many corpora are designed to contain a careful balance of material in one or more genres.
+
+We examined some small text collections in chapter 1 such as the speeches known as the US Presidential Inaugural Addresses.
+
+Chapter 1 also used various pre-defined texts that we accessed by typing
+
+```py
+  from nltk.book import *
+```
 
 ### Python Libraries
 
@@ -20,21 +32,29 @@ There are three leading Python libraries for NLP. These tools will handle most o
 
 - NLTK
 
-The Natural Language Tool Kit (NLTK) is the most widely-used NLP library for Python. Developed at UPenn for academic purposes, NLTK has a plethora of features and corpora. NLTK is great for playing with data and running pre-processing.
+The Natural Language Tool Kit (NLTK) is the most widely-used NLP library for Python.
+
+Developed at UPenn for academic purposes, NLTK has a plethora of features and corpora.
+
+NLTK is great for playing with data and running pre-processing.
 
 - SpaCy
 
-SpaCy is a modern and opinionated package. While NLTK has multiple implementations of each feature, SpaCy keeps only the best performing ones. Spacy supports a wide range of features. 
+SpaCy is a modern and opinionated package.
+
+While NLTK has multiple implementations of each feature, SpaCy keeps only the best performing ones.
+
+Spacy supports a wide range of features.
 
 - GenSim
 
-Unlike NLTK and SpaCy, GenSim specifically tackles the problem of information retrieval (IR). 
+Unlike NLTK and SpaCy, GenSim specifically tackles the problem of information retrieval (IR).
 
-Developed with an emphasis on memory management, GenSim contains many models for document similarity, including Latent Semantic Indexing, Word2Vec, and FastText.
+Developed with an emphasis on memory management, GenSim contains many models for document similarity including Latent Semantic Indexing, Word2Vec, and FastText.
 
 ### Applications
 
-Now that we have discussed pre-processing methods and Python libraries, we can put it all together with a few examples. 
+Now that we have discussed pre-processing methods and Python libraries, we can put it all together with a few examples.
 
 For each example, we discuss a couple of NLP algorithms, pick one based on our rapid development goals, and create a simple implementation using one of the libraries [6]:
 
@@ -44,7 +64,7 @@ For each example, we discuss a couple of NLP algorithms, pick one based on our r
 
 - Document Clustering
 
-The general idea with document clustering is to assign each document a vector representing the topics discussed. 
+The general idea with document clustering is to assign each document a vector representing the topics discussed.
 
 - Sentiment Analysis: Naive Bayes, gradient boosting, and random forest
 
@@ -96,9 +116,9 @@ In Data Science (and NLP) there is a workflow or pipeline that can be described 
 
 1. **Define the question** that you want to answer out of your data.
 
-Usually this question is given to you as the problem but sometimes it is your job to articulate it. 
+Usually this question is given to you as the problem but sometimes it is your job to articulate it.
 
-2. Get and collect the data. 
+2. Get and collect the data.
 
 If your problem is in the domain of movie reviews your data would be viewers posted reviews along with the ratings. ￼
 
@@ -106,29 +126,29 @@ It is critical that your data is in the same domain as your question/problem and
 
 3. Clean the data. ￼
 
-Almost 90% of the time the data you have is raw, unclean, contains missing fields/outliers/misspellings and so on. 
+Almost 90% of the time the data you have is raw, unclean, contains missing fields/outliers/misspellings and so on.
 
-4. Perform Exploratory Analysis of the Data (EDA). 
+4. Perform Exploratory Analysis of the Data (EDA).
 
-EDA is one of the most important steps in any Data Science or NLP task. 
+EDA is one of the most important steps in any Data Science or NLP task.
 
-After you have brought your data into a clean ready-to-use state, you want to explore it such that you understand more of its nature and content. 
+After you have brought your data into a clean ready-to-use state, you want to explore it such that you understand more of its nature and content.
 
-Your analysis should keep the problem’s question in mind and your job is to try to connect the dots as this step might yield in finding useful correlations/outliers and trends in your data. 
+Your analysis should keep the problem’s question in mind and your job is to try to connect the dots as this step might yield in finding useful correlations/outliers and trends in your data.
 
-5. Run the NLP technique which best suits the problem. 
+5. Run the NLP technique which best suits the problem.
 
-This means deciding whether your problem requires sentiment analysis, topic modeling, or other advanced technique that deals with textual data. 
+This means deciding whether your problem requires sentiment analysis, topic modeling, or other advanced technique that deals with textual data.
 
-With some practice and experience, we should be able to quickly identify the best NLP approach to solve a certain problem. 
+With some practice and experience, we should be able to quickly identify the best NLP approach to solve a certain problem.
 
 Keep in mind that we can also perform multiple techniques on a single problem so we can draw conclusions and obtain insights that will answer the main question in step 1. ￼
 
-Deciding on an approach or technique usually means choosing the suitable model or library/package to perform the task. 
+Deciding on an approach or technique usually means choosing the suitable model or library/package to perform the task.
 
-6. Obtain knowledge and insights. 
+6. Obtain knowledge and insights.
 
-In this step, we need to make use of ourp communication and representation skills as a data scientist. 
+In this step, we need to make use of ourp communication and representation skills as a data scientist.
 
 
 
@@ -138,40 +158,40 @@ In this step, we need to make use of ourp communication and representation skill
 
 # Introduction to NLP
 
-**Natural Language Processing (NLP)** is concerned with the analysis and building of intelligent systems that can function in languages that humans speak [2]. 
+**Natural Language Processing (NLP)** is concerned with the analysis and building of intelligent systems that can function in languages that humans speak [2].
 
 Processing of language is needed when a system wants to work based on input from a user in the form of text or speech and the user is adding input in regular use English.
 
 
-**Natural Language Understanding (NLU):** the understanding phase is responsible for mapping the input that is given in natural language to a beneficial representation. 
+**Natural Language Understanding (NLU):** the understanding phase is responsible for mapping the input that is given in natural language to a beneficial representation.
 
 NLU also analyzes different aspects of the input language that is given to the program.
 
 
-**Natural Language Generation (NLG):** the generation phase of the processing is used in creating Natural Languages from the first phase. 
+**Natural Language Generation (NLG):** the generation phase of the processing is used in creating Natural Languages from the first phase.
 
-Generation starts with Text Planning which is the extraction of relevant content from the base of knowledge. 
-  
-Next, the Sentence Planning phase chooses the words that will form the sentence. 
-  
+Generation starts with Text Planning which is the extraction of relevant content from the base of knowledge.
+
+Next, the Sentence Planning phase chooses the words that will form the sentence.
+
 Finally, the Text Realization phase is the final creation of the sentence structure.
 
-  
+
 ### NLU vs NLG
 
 NLP is used to turn sets of unstructured data into formats that computers can convert to speech and text.
 
 Natural Language Understanding (NLU)
 
-- NLU reads and makes sense of natural language. 
-- NLU assigns meaning to speech and text. 
-- NLU extracts facts from language. 
+- NLU reads and makes sense of natural language.
+- NLU assigns meaning to speech and text.
+- NLU extracts facts from language.
 
 Natural Language Generation (NLG)
 
-- NLG creates and outputs more language. 
-- NLG outputs language with the help of machines. 
-- NLG takes the insights that NLU extracts in order to create natural language. 
+- NLG creates and outputs more language.
+- NLG outputs language with the help of machines.
+- NLG takes the insights that NLU extracts in order to create natural language.
 
 
 
@@ -179,25 +199,25 @@ Natural Language Generation (NLG)
 
 There are a total of five execution steps when building a Natural Language Processor [2]:
 
-1. **Lexical Analysis:** Processing of Natural Languages by the NLP algorithm starts with identifying and analyzing the structure of the input words. 
+1. **Lexical Analysis:** Processing of Natural Languages by the NLP algorithm starts with identifying and analyzing the structure of the input words.
 
 Lexicon stands for an anthology of the various words and phrases used in a language. It is dividing a large chunk of words into structural paragraphs and sentences.
 
-2. **Syntactic Analysis/Parsing:** Once the sentence structure is formed, syntactic analysis works on checking the grammar of the formed sentences and phrases. 
+2. **Syntactic Analysis/Parsing:** Once the sentence structure is formed, syntactic analysis works on checking the grammar of the formed sentences and phrases.
 
-This step also forms a relationship among words and eliminates logically incorrect sentences. 
+This step also forms a relationship among words and eliminates logically incorrect sentences.
 
 For example, the English Language analyzer rejects the sentence ‘An umbrella opens a man’.
 
-3. **Semantic Analysis:** The input text is checked for meaning such as it draws the exact dictionary of all the words present in the sentence and subsequently checks every word and phrase for meaningfulness. 
+3. **Semantic Analysis:** The input text is checked for meaning such as it draws the exact dictionary of all the words present in the sentence and subsequently checks every word and phrase for meaningfulness.
 
 This is done by understanding the task at hand and correlating it with the semantic analyzer. For example, a phrase like ‘hot ice’ is rejected.
 
-4. **Discourse Integration:** The discourse integration step forms the story of the sentence. 
+4. **Discourse Integration:** The discourse integration step forms the story of the sentence.
 
 Every sentence should have a relationship with its preceding and succeeding sentences. These relationships are checked by Discourse Integration.
 
-5. **Pragmatic Analysis:** Once all grammatical and syntactic checks are complete, the sentences are now checked for their relevance in the real world. 
+5. **Pragmatic Analysis:** Once all grammatical and syntactic checks are complete, the sentences are now checked for their relevance in the real world.
 
 During Pragmatic Analysis, each sentence is revisited and evaluated again to check for its applicability to the real world using general knowledge.
 
@@ -208,9 +228,9 @@ Here are some tasks used for preprocessing text [2]:
 
 ### Tokenization
 
-**Tokenization** or word segmentation is the process that breaks the sequence into smaller units called tokens in order to read and understand the sequence of words within the sentence, 
+**Tokenization** or word segmentation is the process that breaks the sequence into smaller units called tokens in order to read and understand the sequence of words within the sentence,
 
-The tokens can be words, numerals, or even punctuation marks. 
+The tokens can be words, numerals, or even punctuation marks.
 
 Here is a sample example of how Tokenization works:
 
@@ -224,11 +244,11 @@ The start and end of sentences are called **word boundaries** which are used to 
 
 - **Sent_tokenize package:** This package performs sentence tokenization and converts the input into sentences.
 
-- **Word_tokenize package:** Similar to sentence tokenization, this package divides the input text into words. 
+- **Word_tokenize package:** Similar to sentence tokenization, this package divides the input text into words.
 
-- **WordPunctTokenizer package:** In addition to the word tokenization, this package also works on punctuation marks as a token. 
+- **WordPunctTokenizer package:** In addition to the word tokenization, this package also works on punctuation marks as a token.
 
-```py 
+```py
     from nltk.tokenize import sent_tokenize
     from nltk.tokenize import word_tokenize
     from nltk.tokenize import WordPuncttokenizer
@@ -238,17 +258,17 @@ The start and end of sentences are called **word boundaries** which are used to 
 
 When studying the languages that humans use in conversations, some variations occur due to grammatical reasons.
 
-For example, words such as virtual, virtuality, and virtualization all basically mean the same in but can have different meaning in varied sentences. 
+For example, words such as virtual, virtuality, and virtualization all basically mean the same in but can have different meaning in varied sentences.
 
-For NLTK algorithms to work correctly, they must understand these variations. 
+For NLTK algorithms to work correctly, they must understand these variations.
 
 **Stemming** is a heuristic process that understands the word’s root form and helps in analyzing its meanings.
 
-- **PorterStemmer package:** This package is built into Python and uses Porter’s algorithm to compute stems. Basically, the process is to take an input word of "running" and produce a stemmed word "run" as the output of the algorithm. 
+- **PorterStemmer package:** This package is built into Python and uses Porter’s algorithm to compute stems. Basically, the process is to take an input word of "running" and produce a stemmed word "run" as the output of the algorithm.
 
-- **LancasterStemmer package:** The functionality of the Lancaster stemmer is similar to Porter’s algorithm but has a lower level of strictness. It only removes the verb portion of the word from its source. 
-  
-  For example, the word ‘writing’ after running through the Lancaster algorithm returns ‘writ’. 
+- **LancasterStemmer package:** The functionality of the Lancaster stemmer is similar to Porter’s algorithm but has a lower level of strictness. It only removes the verb portion of the word from its source.
+
+  For example, the word ‘writing’ after running through the Lancaster algorithm returns ‘writ’.
 
 - **SnowballStemmer package:** This also works the same way as the other two and can be imported using the command . These algorithms have interchangeable use cases although they vary in strictness.
 
@@ -260,13 +280,13 @@ For NLTK algorithms to work correctly, they must understand these variations.
 
 ### Lemmatization
 
-Adding a morphological detail to words helps in extracting their base forms which is performed using lemmatization. 
+Adding a morphological detail to words helps in extracting their base forms which is performed using lemmatization.
 
-Both vocabulary and morphological analysis result in lemmatization. 
+Both vocabulary and morphological analysis result in lemmatization.
 
 This procedure aims to remove inflectional endings. The attained base form is called a lemma.
 
-- **WordNetLemmatizer:** The wordnet function extracts the base form of a word depending on whether the word is being used as a noun or pronoun. 
+- **WordNetLemmatizer:** The wordnet function extracts the base form of a word depending on whether the word is being used as a noun or pronoun.
 
 ```py
     from nltk.stem import WordNetLemmatizer
@@ -275,40 +295,40 @@ This procedure aims to remove inflectional endings. The attained base form is ca
 
 ## Data Chunking
 
-**Chunking** is the process of dividing data into chunks which is important in NLP. 
+**Chunking** is the process of dividing data into chunks which is important in NLP.
 
-The primary function of chunking is to classify different parts of speech and short word phrases such as noun phrases. 
+The primary function of chunking is to classify different parts of speech and short word phrases such as noun phrases.
 
-After tokenization is complete and input is divided into tokens, chunking labels them for the algorithm to better understand them. 
+After tokenization is complete and input is divided into tokens, chunking labels them for the algorithm to better understand them.
 
 Two methodologies are used for chunking and we will be reading about those below [2]:
 
-- **Chunking Up:** Going up or chunking upwards is zooming out on the problem. In the process of chunking up, the sentences become abstract and individual words and phrases of the input are generalized. 
+- **Chunking Up:** Going up or chunking upwards is zooming out on the problem. In the process of chunking up, the sentences become abstract and individual words and phrases of the input are generalized.
 
   For example, the question "What is the purpose of a bus?"" after chunking up will answer "Transport"
 
-- **Chunking Down:** The opposite of chunking up. During downward chunking, we move deeper into the language and objects become more specific. 
+- **Chunking Down:** The opposite of chunking up. During downward chunking, we move deeper into the language and objects become more specific.
 
   For example, "What is a car?"" will yield specific details such as color, shape, brand, size, etc. of the car post being chunked down.
 
 Example: Building Virtual Display Engines on Google Colab
 
-**Noun-Phrase Chunking:** In the code below, we will perform Noun-Phrase (NP) chunking where we search for chunks corresponding to individual noun phrases. 
+**Noun-Phrase Chunking:** In the code below, we will perform Noun-Phrase (NP) chunking where we search for chunks corresponding to individual noun phrases.
 
-To create an NP-chunker, we will define a chunk grammar rule (shown in the code below). 
+To create an NP-chunker, we will define a chunk grammar rule (shown in the code below).
 
 The flow of the algorithm will be as follows:
 
 
 ## Topic Modeling and Identifying Patterns in Data
 
-Documents and discussions are usually revolve around topics. 
+Documents and discussions are usually revolve around topics.
 
-The base of every conversation is one topic and discussions revolve around it. 
+The base of every conversation is one topic and discussions revolve around it.
 
-For NLP to understand and work on human conversations, it needs to derive the topic of discussion within the given input. 
+For NLP to understand and work on human conversations, it needs to derive the topic of discussion within the given input.
 
-To compute the topic, algorithms run pattern matching theories on the input to determine the topic which is called **topic modeling**. 
+To compute the topic, algorithms run pattern matching theories on the input to determine the topic which is called **topic modeling**.
 
 Topic modeling is used to uncover the hidden topics/core of documents that need processing.
 
@@ -340,36 +360,36 @@ The article [4] discusses six fundamental techniques of NLP.
 
 Here are some common NLP projects:
 
-- NLP project to perform Information Extraction including Named Entity Recognition (NER) using simple regex named entity chunkers and taggers using Python and NLTK. 
+- NLP project to perform Information Extraction including Named Entity Recognition (NER) using simple regex named entity chunkers and taggers using Python and NLTK.
 
-- NLP project to categorize and tag words (N-Gram Tagging) and perform feature extraction using Python. 
+- NLP project to categorize and tag words (N-Gram Tagging) and perform feature extraction using Python.
 
 - NLP project to create an embedding from one of the texts in the Gutenberg corpus and compute some statistics related to the embedding using the Gensim library.
 
 ### Lemmatization and Stemming
 
-Stemming and lemmatization are probably the first two steps to build an NLP project — we often use one of the two. 
+Stemming and lemmatization are probably the first two steps to build an NLP project — we often use one of the two.
 
-- Stemming: Stemming is a collection of algorithms that work by clipping off the end of the beginning of the word to reach its infinitive form. 
+- Stemming: Stemming is a collection of algorithms that work by clipping off the end of the beginning of the word to reach its infinitive form.
 
-  These algorithms find the common prefixes and suffixes of the language being analyzed. 
+  These algorithms find the common prefixes and suffixes of the language being analyzed.
 
-Clipping off the words can lead to the correct infinitive form, but that is not always the case. 
+Clipping off the words can lead to the correct infinitive form, but that is not always the case.
 
 There are many algorithms to perform stemming; the most common one used in English is the Porter stemmer which contains 5 phases that work sequentially to obtain the word’s root.
 
-- Lemmatization: To overcome the flaws of stemming, lemmatization algorithms were designed. 
+- Lemmatization: To overcome the flaws of stemming, lemmatization algorithms were designed.
 
-In these types of algorithms, some linguistic and grammar knowledge needs to be fed to the algorithm to make better decisions when extracting a word’s infinitive form. 
+In these types of algorithms, some linguistic and grammar knowledge needs to be fed to the algorithm to make better decisions when extracting a word’s infinitive form.
 
 For lemmatization algorithms to perform accurately, they need to extract the correct lemma of each word. Thus, they often require a _dictionary_ of the language to be able to categorize each word correctly.
 
 
 ### Keyword extraction
 
-Keyword extraction (keyword detection or keyword analysis) is an NLP technique used for text analysis. 
+Keyword extraction (keyword detection or keyword analysis) is an NLP technique used for text analysis.
 
-The main purpose of keyword extraction (KE) is to automatically extract the most frequent words and expressions from the body of a text. 
+The main purpose of keyword extraction (KE) is to automatically extract the most frequent words and expressions from the body of a text.
 
 KE is often used as a first step to summarize the main ideas of a text and to deliver the key ideas presented in the text.
 
@@ -378,10 +398,10 @@ KE is often used as a first step to summarize the main ideas of a text and to de
 
 Similar to stemming and lemmatization, named entity recognition (NER) is a technique used to extract entities from a body of text to identify basic concepts within the text such as names, places, dates, etc.
 
-The NER algorithm mainly has two steps. 
+The NER algorithm mainly has two steps.
 
-  1. It needs to detect an entity in the text. 
-  2. It categorizes the text into one category. 
+  1. It needs to detect an entity in the text.
+  2. It categorizes the text into one category.
 
 The performance of NER depends heavily on the training data used to develop the model. The more relevant the training data to the actual data, the more accurate the results will be.
 
@@ -395,41 +415,41 @@ Another, more advanced technique to identify the topic of text is topic modeling
 
 ### Sentiment Analysis
 
-The most famous and most commonly used NLP technique is sentiment analysis (SA). 
+The most famous and most commonly used NLP technique is sentiment analysis (SA).
 
 The core function of SA is to extract the sentiment behind a body of text by analyzing the containing words.
 
-The most simple results of the the technique lay on a trinary scale: negative, positive, and neutral. 
+The most simple results of the the technique lay on a trinary scale: negative, positive, and neutral.
 
-The SA algorithm can be more complex and advanced; however, the results will be numeric in this case. 
+The SA algorithm can be more complex and advanced; however, the results will be numeric in this case.
 
 If the result is a negative number, the sentiment behind the text has a negative tone to it, and if it is positive then some positivity is present in the text.
 
 
 ### Summarization
 
-One of the useful and promising applications of NLP is text summarization which is reducing a large body of text into a smaller chunk containing the main message of the text. 
+One of the useful and promising applications of NLP is text summarization which is reducing a large body of text into a smaller chunk containing the main message of the text.
 
 This technique is often used in long news articles and to summarize research papers.
 
-Text summarization is an advanced technique that uses other techniques that we just mentioned to establish its goals such as topic modeling and keyword extraction. 
+Text summarization is an advanced technique that uses other techniques that we just mentioned to establish its goals such as topic modeling and keyword extraction.
 
 Summarization is accomplished in two steps: extract and abstract.
 
 
 ### Sentiment Analysis
 
-Perhaps the most common NLP technique is sentiment analysis. 
+Perhaps the most common NLP technique is sentiment analysis.
 
 This core function of Sentiment Analysis is to extract the sentiment behind a body of text by analyzing the containing words.
 
-The most simple results lay on a scale with 3 areas, negative, positive, and neutral; the algorithm can be more complex and advanced in which the results will be numeric. 
+The most simple results lay on a scale with 3 areas, negative, positive, and neutral; the algorithm can be more complex and advanced in which the results will be numeric.
 
-If the result is a negative number, the sentiment behind the text has a negative tone. 
+If the result is a negative number, the sentiment behind the text has a negative tone.
 
 If the result is positive, the sentiment behind the text has a poaitive tone.
 
-Sentiment analysis is one of the broad applications of machine learning techniques which can be implemented using either supervised or unsupervised techniques. 
+Sentiment analysis is one of the broad applications of machine learning techniques which can be implemented using either supervised or unsupervised techniques.
 
 Perhaps the most common supervised technique used to perform sentiment analysis is the Naive Bayes algorithm, but other supervised ML algorithms that can be used are Gradient Boosting and Random Forest.
 
@@ -454,12 +474,12 @@ BoW has several downsides such as the absence of semantic meaning and context an
 However, there are techniques to overcome these issues.
 
 
-**Bag of Words:** Converting words to numbers with no semantic information. 
+**Bag of Words:** Converting words to numbers with no semantic information.
 
 BoW is simply an unordered collection of words and their frequencies (counts) where the tokens (words) have to be 2 or more characters in length.
 
 
-fastText: Enriching Word Vectors with Subword Information [9]. 
+fastText: Enriching Word Vectors with Subword Information [9].
 
 fastText: Using Subword-Based Bag-of-Words Outperforms CBOW in Word2Vec
 
@@ -474,16 +494,16 @@ By considering subword units, and words are represented by a sum of its characte
 
 In Term Frequency-Inverse Document Frequency (TF-IDF), some semantic information is collected by giving importance to uncommon words than common words.
 
-Instead of giving more weight to words that occur more frequently, TF-IDF gives a higher weight to words that occur less frequently (across the entire corpus). 
+Instead of giving more weight to words that occur more frequently, TF-IDF gives a higher weight to words that occur less frequently (across the entire corpus).
 
-When have more domain-specific language in your text, this model performs better by giving weight to these less frequently occurring words. 
+When have more domain-specific language in your text, this model performs better by giving weight to these less frequently occurring words.
 
 
 ### Tokenization
 
-**Tokenization** the process of segmenting running text into sentences and words. 
+**Tokenization** the process of segmenting running text into sentences and words.
 
-In essence, tokenization is the task of cutting a text into pieces called tokens and at the same time throwing away certain characters such as punctuation. 
+In essence, tokenization is the task of cutting a text into pieces called tokens and at the same time throwing away certain characters such as punctuation.
 
 Tokenization can remove punctuation too, easing the path to a proper word segmentation but also triggering possible complications. In the case of periods that follow abbreviation (e.g. dr.), the period following that abbreviation should be considered as part of the same token and not be removed.
 
@@ -491,13 +511,13 @@ The tokenization process can be particularly problematic when dealing with biome
 
 ### Stop Words Removal
 
-Stop words removal includes getting rid of common language articles, pronouns, and prepositions such as “and”, “the” or “to” in English. 
+Stop words removal includes getting rid of common language articles, pronouns, and prepositions such as “and”, “the” or “to” in English.
 
 In the process, some very common words that appear to provide little or no value to the NLP objective are filtered and excluded from the text to be processed, removing widespread and frequent terms that are not informative about the corresponding text.
 
 Stop words can be safely ignored by carrying out a lookup in a pre-defined list of keywords, freeing up database space and improving processing time.
 
-**There is no universal list of stop words.** 
+**There is no universal list of stop words.**
 
 A stop words list can be pre-selected or built from scratch. A potential approach is to begin by adopting pre-defined stop words and add words to the list later on. Nevertheless, it seems that the general trend has been to move from the use of large standard stop word lists to the use of no lists at all.
 
@@ -510,19 +530,19 @@ For example, if we are performing a sentiment analysis we might throw our algori
 
 Stemming refere to the process of slicing the end or the beginning of words with the intention of removing _affixes_ (lexical additions to the root of the word).
 
-The problem is that affixes can create or expand new forms of the same word called _inflectional affixes_ or even create new words themselves called _derivational affixes_. 
+The problem is that affixes can create or expand new forms of the same word called _inflectional affixes_ or even create new words themselves called _derivational affixes_.
 
 In English, prefixes are always derivational (the affix creates a new word as in the example of the prefix “eco” in the word “ecosystem”), but suffixes can be derivational (the affix creates a new word as in the example of the suffix “ist” in the word “guitarist”) or inflectional (the affix creates a new form of word as in the example of the suffix “er” in the word “faster”).
 
-So if stemming has serious limitations, why do we use it? 
+So if stemming has serious limitations, why do we use it?
 
-- Stemming can be used to correct spelling errors from the tokens. 
+- Stemming can be used to correct spelling errors from the tokens.
 - Stemmers are simple to use and run very fast (they perform simple operations on a string).
 
 
 ### Lemmatization
 
-The objective of **Lemmatization** is to reduce a word to its base form and group together different forms of the same word. 
+The objective of **Lemmatization** is to reduce a word to its base form and group together different forms of the same word.
 
 For example, verbs in past tense are changed into present tense (e.g. “went” is changed to “go”) and synonyms are unified (such as “best” is changed to “good”). Thus, standardizing words with similar meaning to their root.
 
@@ -530,9 +550,9 @@ Although it seems closely related to the stemming process, lemmatization uses a 
 
 Lemmatization resolves words to their dictionary form (known as lemma) which requires detailed dictionaries that the algorithm can use to link words to their corresponding lemmas.
 
-Lemmatization also takes into consideration the context of the word to solve other problems such as disambiguation which means it can discriminate between identical words that have different meanings depending on the specific context. 
+Lemmatization also takes into consideration the context of the word to solve other problems such as disambiguation which means it can discriminate between identical words that have different meanings depending on the specific context.
 
-For example, think about words like “bat” (which can correspond to the animal or to the metal/wooden club used in baseball) or “bank” (corresponding to the financial institution or to the land alongside a body of water). 
+For example, think about words like “bat” (which can correspond to the animal or to the metal/wooden club used in baseball) or “bank” (corresponding to the financial institution or to the land alongside a body of water).
 
 By providing a part-of-speech parameter to a word (noun, verb, etc.) it is possible to define a role for that word in the sentence and remove disambiguation.
 
@@ -541,13 +561,13 @@ Thus, lemmatization is a much more resource-intensive task than performing a ste
 
 ### Topic Modeling
 
-**Topic Modeling** (TM) is a method for discovering hidden structures in sets of texts or documents. 
+**Topic Modeling** (TM) is a method for discovering hidden structures in sets of texts or documents.
 
-In essence, TM clusters text to discover latent topics based on their contents, processing individual words and assigning them values based on their distribution. 
+In essence, TM clusters text to discover latent topics based on their contents, processing individual words and assigning them values based on their distribution.
 
 TM is based on the assumptions that each document consists of a mixture of topics and that each topic consists of a set of words which means that if we can spot these hidden topics we can unlock the meaning of our texts.
 
-From the universe of topic modelling techniques, _Latent Dirichlet Allocation (LDA)_ is perhaps the most commonly used. 
+From the universe of topic modelling techniques, _Latent Dirichlet Allocation (LDA)_ is perhaps the most commonly used.
 
 LDA is a relatively new algorithm (invented less than 20 years ago) that works as an unsupervised learning method that discovers different topics underlying a collection of documents.
 
@@ -563,18 +583,18 @@ In recent years, the field has come to be dominated by [deep learning](../dl/dl.
 
 ## Data Mining
 
-Data mining is the process of analyzing data by searching for patterns to turn the data into information and better decisions. 
+Data mining is the process of analyzing data by searching for patterns to turn the data into information and better decisions.
 
-Data mining is algorithm-based and finds patterns in large collections of data. 
+Data mining is algorithm-based and finds patterns in large collections of data.
 
 Data mining is also important because it presents a potentially more efficient and thorough way of interpreting data.
 
 
 ## Pattern Recognition
 
-Pattern recognition is a branch of ML that is focused on categorizing information or finding anomalies in data. For example, facial pattern recognition might be used to determine the age and gender of a person in a photo. 
+Pattern recognition is a branch of ML that is focused on categorizing information or finding anomalies in data. For example, facial pattern recognition might be used to determine the age and gender of a person in a photo.
 
-Pattern recognition tends to be based on probability, so there is a chance that it does not accurately categorize information. 
+Pattern recognition tends to be based on probability, so there is a chance that it does not accurately categorize information.
 
 Pattern recognition is also typically controlled by an algorithm which means that the computer will continue to make guesses until it finds a pattern that matches what we know is true or until the probability of any other pattern remaining is too small to be considered.
 
@@ -594,7 +614,7 @@ Pattern recognition is also typically controlled by an algorithm which means tha
 
 ## Tutorials
 
-Here are some useful NLP tutorials and examples.  
+Here are some useful NLP tutorials and examples.
 
 ### HuggingFace Transformers for NLP With Python
 
@@ -607,7 +627,7 @@ This article [10] explores the use of a simple pre-trained HuggingFace transform
 
 ### Haystack
 
-Haystack is an open-source NLP framework that leverages Transformer models, designed to be the bridge between research and industry on neural search, question answering, semantic document search, and summarization. 
+Haystack is an open-source NLP framework that leverages Transformer models, designed to be the bridge between research and industry on neural search, question answering, semantic document search, and summarization.
 
 Haystack is a modular framework that integrates with other open-source projects such as Huggingface (Transformers, Elasticsearch, or Milvus).
 
@@ -637,11 +657,11 @@ Haystack can also [10]:
 
 Haystack works by leveraging **Retriever-Reader** pipelines which harnesses the reading comprehension power of the Reader and applies it to large document bases with the help of the Retriever.
 
-- **Readers** are Closed-Domain Question Answering systems: powerful models that analyze documents and perform the question answering task on them. 
+- **Readers** are Closed-Domain Question Answering systems: powerful models that analyze documents and perform the question answering task on them.
 
 Readers are based on the latest transformer-based language models which benefit from GPU acceleration. However, it is not efficient to use the Reader directly on a large collection of documents.
 
-- **Retriever** helps the Reader by acting as a filter that reduces the number of documents that the Reader has to process. 
+- **Retriever** helps the Reader by acting as a filter that reduces the number of documents that the Reader has to process.
 
 Retriever achieves this by scanning through all documents in the database, identifying the relevant ones (usually a small subset), and passing them to the Reader.
 
@@ -685,15 +705,15 @@ The article [7] covers 5 useful Python recipes for your next NLP projects:
 
 ## Semantic similarity analysis
 
-_semantic similarity_ measures the likeness of documents/sentences/phrases based on their meaning whereas 
+_semantic similarity_ measures the likeness of documents/sentences/phrases based on their meaning whereas
 
-_Lexical similarity_ is a measure of the degree to which the word sets or vocabulary of two given languages are similar. 
+_Lexical similarity_ is a measure of the degree to which the word sets or vocabulary of two given languages are similar.
 
-_Semantic similarity_ is a metric defined over a set of documents or terms where the idea of distance between items is based on the likeness of their meaning or semantic content. 
+_Semantic similarity_ is a metric defined over a set of documents or terms where the idea of distance between items is based on the likeness of their meaning or semantic content.
 
 The most effective methodology is to use a powerful transformer to encode sentences, get their embeddings, and then use cosine similarity to calculate their distance/similarity score.
 
-Calculating the cosine distance between two embeddings gives us the similarity score which is widely used in information retrieval and text summarization such as extract top N most similar sentences from multiple documents. 
+Calculating the cosine distance between two embeddings gives us the similarity score which is widely used in information retrieval and text summarization such as extract top N most similar sentences from multiple documents.
 
 The similarity scores can also be used to reduce the dimensionality and to find similar resources.
 
