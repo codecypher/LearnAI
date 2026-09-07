@@ -87,41 +87,32 @@ Here are some things to keep in mind about data preparation:
 
 ## Data Preparation
 
-The types of data preparation performed usually involve the following tasks [6], depending on the data:
+Here is a basic framework for exploring different data preparation algorithms that we may consider on a given project with structured or tabular data [5].
 
-- Exploratory Data Analysis (EDA): Get to know the data. Check if data is normally distributed or heavy-tailed; check for outliers; check if clustering of the data will help; check for imbalanced data.
+The data preparation stage usually involves the following steps that may overlap [5] and [6]:
 
-- Data Preprocessing: Organize the selected data by formatting, cleaning, and sampling from it.
+1. Exploratory Data Analysis (EDA): Get to know the data. Check if data is normally distributed or heavy-tailed; check for outliers; check if clustering of the data will help; check for imbalanced data.
 
-- Feature Selection: Identify the input variables that are most relevant to the task.
+2. Data Selection: Consider what data is available, what data is missing, and what data can be removed.
 
-- Feature Engineering: Derive new variables from the available data.
+3. Data Preprocessing: Organize the selected data by formatting, cleaning, and sampling from it.
 
-- Data Transforms: Change the scale or distribution of variables.
-
-- Dimensionality Reduction: Create compact projections of the data.
-
-This provides a basic framework for exploring different data preparation algorithms that we may consider on a given project with structured or tabular data.
-
-Depending on the project, there may be other steps as well [4]:
-
-- Project Scoping: Sometimes we need to roadmap the project and anticipate data needs.
-
-- Data Wrangling: We may need to restructure the dataset into a format that can be used by algorithms.
-
-----------
-
-The data preparation stage usually involves three steps that may overlap [5]:
-
-1. Data Selection: Consider what data is available, what data is missing, and what data can be removed.
-
-2. Data Preprocessing: Organize the selected data by formatting, cleaning, and sampling from it.
-
-3. Data Transformation: Transform preprocessed data ready for machine learning by engineering features using scaling, attribute decomposition, and attribute aggregation.
+4. Data Transformation: Change the scale or distribution of variables using scaling, attribute decomposition, and attribute aggregation.
 
   Split first and normalize later which means that we should perform the train-test split first then normalize the datasets.
 
-Data preparation is a large topic that can involve a lot of iterations, exploration, and analysis.
+5. Feature Selection: Identify the input variables that are most relevant to the task.
+
+6. Feature Engineering: Derive new variables from the available data.
+
+7. Dimensionality Reduction: Create compact projections of the data.
+
+Depending on the project, there may be other steps as well [4]:
+
+- Data Wrangling: We may need to restructure the dataset into a format that can be used by algorithms.
+
+- Project Scoping: Sometimes we need to roadmap the project and anticipate data needs.
+
 
 ## 6 Steps for Data Preparation
 
@@ -1031,51 +1022,6 @@ Here are some code samples and tutorials:
 [Data Sampling Methods in Python](https://towardsdatascience.com/data-sampling-methods-in-python-a4400628ea1b)
 
 [Common Data Problems (and Solutions)](https://www.kdnuggets.com/2022/02/common-data-problems-solutions.html)
-
-
-## Data Preprocessing Tools
-
-### Joblib
-
-**Joblib** is an open-source Python library that helps to save pipelines to a file that can be used later.
-
-[Using joblib to speed up your Python pipelines](https://medium.com/data-science/using-joblib-to-speed-up-your-python-pipelines-dd97440c653d)
-
-[Lightweight Pipelining In Python](https://medium.com/data-science/lightweight-pipelining-in-python-1c7a874794f4)
-
-### Kedro
-
-`Kedro` is an open-source Python framework for creating reproducible, maintainable, and modular data science code.
-
-### Kestra
-
-**Kestra** is an infinitely scalable orchestration and scheduling platform, creating, running, scheduling, and monitoring millions of complex pipelines.
-
-Kestra can manage ETL and ELT in the same solution, handling even the most complex workflows.
-
-ETL processes can be used to scrub sensitive data, ensuring compliance, loading the transformed data within a temporary table.
-
-With Kestra’s capacity for parallel flows, the rest of the data can be handled by ELT.
-
-Kestra is able to perform ELT workloads on its own or with integrations to many popular solutions.
-
-Kestra can handle loading data from BigQuery, CopyIn, Postgres, and more.
-
-A simple query can be performed to move the data, for example, SQL INSERT INTO SELECT statements.
-
-Dependencies between flows can be handled with Kestra’s trigger mechanisms to transform the data within the database (cloud or physical).
-
-ETL is just as easily managed by Kestra’s flexible workflows.
-
-FileTransform plugins are one possible method, but you can write a simple Python/Javascript/Groovy script to transform an extracted dataset data row per row.
-
-For example, you can remove columns with personal data, clean columns by removing dates, and more. Integrating a custom docker image into your workflow is another method that can be used to transform the data.
-
-Not only can you transform data row per row, you can potentially handle conversion of data between formats, for example, transforming AVRO data to JSON or CSV, or vice versa.
-
-This is not usually possible with most solutions. Most ELT tools often prevent ETL processes by design because they cannot handle heavy transform operations.
-
-Kestra is able to handle both because all transformations are considered to be row per row, and therefore do not use any memory to perform the function, only CPU.
 
 
 ## References

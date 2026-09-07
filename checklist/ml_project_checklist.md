@@ -122,15 +122,15 @@ Work on copies of the data (keep the original dataset intact).
 
 Write functions for all data transformations you apply, for five reasons:
 
-1. So you can easily prepare the data the next time you get a fresh dataset. 
+1. So you can easily prepare the data the next time you get a fresh dataset.
 
-2. So you can apply these transformations in future projects. 
+2. So you can apply these transformations in future projects.
 
-3. To clean and prepare the test set. 
+3. To clean and prepare the test set.
 
-4. To clean and prepare new data instances once your solution is live. 
+4. To clean and prepare new data instances once your solution is live.
 
-5. To make it easy to treat your preparation choices as hyperparameters. 
+5. To make it easy to treat your preparation choices as hyperparameters.
 
 
 1. Data cleaning:
@@ -177,7 +177,7 @@ For each model, use N-fold cross-validation and compute the mean and standard de
 
 - What data would a human have used to avoid these errors?
 
-5. Perform a quick round of feature selection and engineering. 
+5. Perform a quick round of feature selection and engineering.
 
 6. Perform one or two more quick iterations of the five previous steps.
 
@@ -223,7 +223,7 @@ Make sure you highlight the big picture first.
 5. Ensure your key findings are communicated through beautiful visualizations or easy-to-remember statements (such as the median income is the number-one predictor of housing prices).
 
 
-## Launch!
+## Project Deployment
 
 1. Get your solution ready for production (plug into production data inputs, write unit tests, etc.).
 
@@ -233,13 +233,17 @@ Beware of slow degradation: models tend to “rot” as data evolves.
 
 Measuring performance may require a human pipeline (such as via a crowd-sourcing service).
 
-Also monitor your inputs’ quality (such as a malfunctioning sensor sending random values, or another team’s output becoming stale). This is particularly important for online learning systems.
+Also monitor your inputs’ quality (such as a malfunctioning sensor sending random values, or another team’s output becoming stale) which is important for online learning systems.
 
 3. Retrain your models on a regular basis on fresh data (automate as much as possible).
 
 
-
 ## References
 
-A. Geron, _Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow_, 2nd ed., Oreilly Media, 2019. 
+A. Geron, _Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow_, 2nd ed., Oreilly Media, 2019.
 
+-----
+
+[Feature Selection Techniques: More Features Does Not Mean a Better Model](https://pub.towardsai.net/feature-selection-techniques-more-features-does-not-mean-a-better-model-33ba863b3c44)
+
+[Complete Feature Engineering In a Nutshell](https://medium.com/towards-data-engineering/complete-feature-engineering-in-a-nutshell-d49edcb863c9)
