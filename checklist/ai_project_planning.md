@@ -244,19 +244,79 @@ Here are eight mistakes to avoid when using machine learning [2]:
 
    Before starting a machine learning project, it is important to determine whether the project is worth doing and to consider its ramifications.
 
+
+## Using AI Tools for Development
+
+Faster code does not mean better engineering [7].
+
+AI does not fix poor engineering habits [7].
+
+If a team already skips design discussions, ignores observability, avoids refactoring, merges weak pull requests, and treats production issues as surprises, AI will not solve the root problem. AI will simply create bad code faster.
+
+AI is a multiplier, not a foundation
+
+AI tools work best when they operate inside strong engineering boundaries.
+
+AI improves disciplined teams more than undisciplined ones.
+
+AI does not replace discipline [7]:
+
+- It does not define the problem.
+
+- It does not protect your architecture.
+
+- It does not guarantee secure code.
+
+- It does not create meaningful tests by itself.
+
+- It does not understand your users unless you bring that context.
+
+- It does not own the production system after launch.
+
+Here is a checklist for using AI Tools [7]:
+
+1. Is the user problem clear?
+
+2. Is AI the simplest useful solution?
+
+3. Do we understand the data flow?
+
+4. Are permissions enforced before model calls?
+
+5. What should never be sent to the model?
+
+6. What happens when output is wrong?
+
+7. What happens when the provider is slow or unavailable?
+
+8. Do we have tests for important failure modes?
+
+9. Can we monitor latency, cost, and errors?
+
+10. Can users verify or reject the output?
+
+11. Is there a rollout and rollback plan?
+
+12. Does this follow existing architecture?
+
+13. Who owns this after launch?
+
+
 ## References
 
-[1]: T. Shin, [4 Reasons Why You Shouldn't Use Machine Learning](https://towardsdatascience.com/4-reasons-why-you-shouldnt-use-machine-learning-639d1d99fe11), Towards Data Science, Oct 5, 2021.
+[1]: https://towardsdatascience.com/4-reasons-why-you-shouldnt-use-machine-learning-639d1d99fe11 "4 Reasons Why You Shouldn't Use Machine Learning"
 
-[2]: [8 Mistakes to avoid while using Machine Learning](https://medium.com/@monodeepets77/8-mistakes-to-avoid-while-using-machine-learning-d61af954b9c9)
+[2]: https://medium.com/@monodeepets77/8-mistakes-to-avoid-while-using-machine-learning-d61af954b9c9 "8 Mistakes to avoid while using Machine Learning"
 
-[3]: [5 Steps to follow for Successful Machine Learning Project](https://addiai.com/successful-machine-learning-project/)
+[3]: https://addiai.com/successful-machine-learning-project/ "5 Steps to follow for Successful Machine Learning Project"
 
-[4]: A. Romeu, [Hype v. Reality: 5 AI features that actually work in production](https://www.tinybird.co/blog-posts/ai-features-that-work), tinybird, April 2, 2025.
+[4]: https://www.tinybird.co/blog-posts/ai-features-that-work/ "Hype v. Reality: 5 AI features that actually work in production"
 
-[5]: B. Pearson and O. Affias, “The Matrix That Makes Your AI Strategy Make Sense,” Dev Interrupted, April 3, 2025.
+[5]: https://devinterrupted.substack.com/p/the-matrix-that-makes-your-ai-strategy "The Matrix That Makes Your AI Strategy Make Sense"
 
-[6]: C. Cooper, [The Multi Million Question Nobody’s Asking About AI](https://medium.com/codex/the-multi-million-question-nobodys-asking-about-ai-b3501979c5b9?source=rss----29038077e4c6---4), CodeX, Dec. 4, 2025.
+[6]: https://medium.com/codex/the-multi-million-question-nobodys-asking-about-ai-b3501979c5b9?source=rss----29038077e4c6---4 "The Multi Million Question Nobody’s Asking About AI"
+
+[7]: https://pub.towardsai.net/ai-will-not-fix-a-team-that-lacks-engineering-discipline-db1697eca7c5?source=rss----98111c9905da---4 "AI Will Not Fix a Team That Lacks Engineering Discipline"
 
 ----------
 
@@ -267,5 +327,7 @@ Here are eight mistakes to avoid when using machine learning [2]:
 [Governing the Unseen Risks of GenAI: Why Bias Mitigation and Human Oversight Matter Most](https://securityboulevard.com/2025/11/governing-the-unseen-risks-of-genai-why-bias-mitigation-and-human-oversight-matter-most/)
 
 ----------
+
+[Generative AI System Design Interview: A Step-by-Step Guide](https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/)
 
 [^ai_hierarchy]: <https://hackernoon.com/the-ai-hierarchy-of-needs-18f111fcc007>
