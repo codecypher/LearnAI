@@ -4,13 +4,19 @@
 
 There is an NLP checklist given in [1] and project guide in [2].
 
+- Prompt Engineering
+- Context Engineering
+- Harness Engineering
+- FinOps
+- AI Gateway
+
 ### NLP Python Libraries
 
 - spacy
 - NLTK
 - genism
 - lexnlp
-- Holmes
+- holmes-extractor
 - Pytorch-Transformers
 
 ### Text Preprocessing
@@ -19,7 +25,7 @@ Text Preprocessing is the data cleaning process for an NLP application.
 
 When we are dealing with text removing null values and imputing them with mean and median isn’t enough.
 
-- Removing punctuations like . , ! $( ) * % @
+- Removing punctuations: . , ! $( ) * % @
 - Removing URLs
 - Conver to Lowercase
 - Converting numbers into words / removing numbers
@@ -96,7 +102,7 @@ NER is the process to find the important labels that are present in the text.
 - N-gram Language Models
 - LSTM
 
-## NLP Projects
+## NLP Projects Ideas
 
 [5 Amazing Ideas For Your Next NLP Project](https://medium.com/pythoneers/5-amazing-ideas-for-your-next-nlp-project-97eb14ebb38)
 
@@ -104,11 +110,27 @@ NER is the process to find the important labels that are present in the text.
 
 [10 Exciting Project Ideas Using Large Language Models (LLMs) for Your Portfolio](https://towardsdatascience.com/10-exciting-project-ideas-using-large-language-models-llms-for-your-portfolio-970b7ab4cf9e)
 
-## LLM Tools
 
-LangChain is a framework to help developers build LLM applications that combine LLMs with other sources of computation or knowledge.
+## LLM Tools and Lubraries
 
-LlamaIndex is a framework to help developers connect custom data with LLMs by providing the framework for ingesting, structuring, and accessing private or domain-specific data in LLM applications.
+Ollama: a local runtime that allows you to run open-source AI models on your machine, making it easy to integrate and use various AI applications. Ollama supports multiple models and provides tools for building AI-powered applications.
+
+vLLM: an open-source framework designed for serving large language models (LLMs) efficiently, focusing on high throughput and batch workloads. It provides an OpenAI-compatible server, allowing easy integration into applications like chatbots and other AI products.
+
+Semantic Kernel: an open-source development kit that allows developers to build and integrate AI agents into applications using languages like C#, Python, and Java. Semantic Kernel provides a flexible framework for creating intelligent systems that can automate tasks and interact with users effectively.
+
+Hugging Face: an American company that develops tools for building applications using machine learning, particularly known for its transformers library used in natural language processing. Hugging Face allows users to share machine learning models and datasets.
+
+LangChain: a framework to help developers build LLM applications that combine LLMs with other sources of computation or knowledge.
+
+LangGraph is an open-source AI agent framework designed to build, deploy, and manage complex generative AI workflows. LangGraph utilizes graph-based architectures to model relationships within AI workflows to enhance decision-making and performance.
+
+LangGraph represents an agent as a directed graph instead of a flat chain. Nodes are functions, edges connect them with optional conditional routing, and the entire execution is tracked as a series of state transitions rather than a flat message list.
+
+LlamaIndex: a framework to help developers connect custom data with LLMs by providing the framework for ingesting, structuring, and accessing private or domain-specific data in LLM applications.
+
+
+## LLMOps
 
 ChromaDB is an open-source embeddings database for AI applications that provides efficient storage and retrieval of vector embeddings which is ideal for semantic search and information retrieval systems.
 
@@ -116,7 +138,8 @@ Weaviate is a vector search engine that enables semantic search across multiple 
 
 Weights and Biases is an experiment tracking and model monitoring platform.
 
-LangSmith is a model monitoring and evaluation platform for LLM applications.
+LangSmith is a platform for monitoring, evaluating, and deploying AI agents and LLM applications. 
+
 
 ## Integrating LLMs into Software System
 
@@ -197,16 +220,19 @@ By adopting this approach, we shift from prescribing every detail to fostering a
 
 [Machine Bullshit: Why AI Systems Care More About Sounding Good Than Being Right](https://pub.towardsai.net/machine-bullshit-why-ai-systems-care-more-about-sounding-good-than-being-right-052f88dd5d6d)
 
+
 ## References
 
-[1]: [NLP Cheatsheet](https://medium.com/javarevisited/nlp-cheatsheet-2b19ebcc5d2e)
+[1]: https://medium.com/javarevisited/nlp-cheatsheet-2b19ebcc5d2e "NLP Cheatsheet"
 
-[2]: [LLMs Project Guide: Key Considerations](https://learn.microsoft.com/en-us/ai/playbook/technology-guidance/generative-ai/getting-started/llmops-checklist)
+[2]: https://learn.microsoft.com/en-us/ai/playbook/technology-guidance/generative-ai/getting-started/llmops-checklist "LLMs Project Guide: Key Considerations"
 
-[3]: [Integrating Language Models into Existing Software Systems](https://www.kdnuggets.com/integrating-language-models-into-existing-software-systems)
+[3]: https://www.kdnuggets.com/integrating-language-models-into-existing-software-systems "Integrating Language Models into Existing Software Systems"
 
-[4]: [LLMs - A Ghost in the Machine](https://zacksiri.dev/posts/llms-a-ghost-in-the-machine/)
+[4]: https://zacksiri.dev/posts/llms-a-ghost-in-the-machine/ "LLMs - A Ghost in the Machine"
 
 ----------
+
+[5 Tools for Building and Deploying AI Agents in Production](https://www.kdnuggets.com/5-tools-for-building-and-deploying-ai-agents-in-production)
 
 [Monitoring unstructured data for LLM and NLP](https://towardsdatascience.com/monitoring-unstructured-data-for-llm-and-nlp-efff42704e5b?source=rss----7f60cf5620c9---4)
