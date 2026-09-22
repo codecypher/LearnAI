@@ -302,10 +302,6 @@ paket-files/
 # CodeRush personal settings
 .cr/personal
 
-# Python Tools for Visual Studio (PTVS)
-__pycache__/
-*.pyc
-
 # Cake - Uncomment if you are using it
 # tools/**
 # !tools/packages.config
@@ -350,10 +346,40 @@ MigrationBackup/
 .ionide/
 
 
-# Add files to ignore
-.env
+# ==========
 
-# Add folders to ignore
+
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.env
+.venv/
+
+
+# Flask-specific files
+*.pyc
+__pycache__/
+
+instance/
+
+.pytest_cache/
+.coverage
+htmlcov/
+node_modules/
+
+dist/
+build/
+*.egg-info/
+
+# Project folders
+data/
+logs/
+output/
+
 .idea/
 .nova/
 data/
