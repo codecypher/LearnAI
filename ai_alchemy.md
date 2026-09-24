@@ -1,12 +1,12 @@
 # AI Alchemy
- 
+
 The term _alchemy_ in the context of AI refers to the way benefits of AI are often exaggerated and presenting as a "silver bullet" or magical solution to complex problems.
 
-The term _AI-washing_ occurs when companies generate false hype and deceive investors by sharing misleading information about the capabilities and risks of their AI products, or by lying about how and when they use AI [5]. 
+The term _AI-washing_ occurs when companies generate false hype and deceive investors by sharing misleading information about the capabilities and risks of their AI products, or by lying about how and when they use AI [5].
 
 The alchemy metaphor highlights the disconnect between the promises made by AI proponents and the actual benefits of its deployment. AI hype obscures the real challenges and limitations associated with using AI.
 
-The metaphor of alchemy serves as a cautionary reminder that while AI holds potential, it is essential to critically assess its promises against the backdrop of real-world consequences or "healthy dose of skepticism". 
+The metaphor of alchemy serves as a cautionary reminder that while AI holds potential, it is essential to critically assess its promises against the backdrop of real-world consequences or "healthy dose of skepticism".
 
 Recognizing the limitations and ethical implications of AI is crucial to ensure that AI development benefits society as a whole rather than exacerbating existing issues.
 
@@ -26,7 +26,7 @@ Artificial intelligence further accelerates this dynamic: A task that previously
 
 - Not everything meaningful in our lives is efficient, nor should it be.
 
-- Growth is supposed to be slow. 
+- Growth is supposed to be slow.
 
 - Creativity and effort should be messy.
 
@@ -42,13 +42,13 @@ The central thesis of [2] is that AI dynamics have consistently been accompanied
 
 There are four stages to the thesis argument [2]:
 
-1. The concept of promising technology and its interrelated dynamics will be elaborated. 
+1. The concept of promising technology and its interrelated dynamics will be elaborated.
 
-2. The current dynamics of AI and the role of exaggerated technological promises will be highlighted. 
+2. The current dynamics of AI and the role of exaggerated technological promises will be highlighted.
 
-3. The often overlooked challenges within the AI discourse will be outlined. 
+3. The often overlooked challenges within the AI discourse will be outlined.
 
-4. The realistic prospects of AI will be sketched out. 
+4. The realistic prospects of AI will be sketched out.
 
 The concluding section contains a summary of the arguments and further research questions with conclusion of the persistence of utopian technological visions and the influential myth of the intelligent machine will be discussed.
 
@@ -107,7 +107,6 @@ There is a recognized pattern for emerging technologies known as the _Gartner Hy
 After the hype phase, the market naturally collapses. Subsequently, the companies that survive re-enter the market with genuine value and lead the development of the new technology until it matures [5].
 
 If we closely examine the cycle diagram proposed by Gartner, it seems that we are nearing the final stages of the peak of inflated expectations and are slowly moving into the trough of disillusionment [5].
-
 
 ## References
 
