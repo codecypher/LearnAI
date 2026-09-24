@@ -22,6 +22,8 @@ _Heuristics_ are a good starting point (such as random forest does well on most 
 
 ## The Checklist
 
+Here is the checklist for the ML Process [1].
+
 ### 5-Step Systematic Process
 
 1. Define the Problem
@@ -216,7 +218,7 @@ Pick a problem that you can complete in 1-to-2 hours and use the checklist to co
 
 [1]: [How to Define Your Machine Learning Problem](https://machinelearningmastery.com/how-to-define-your-machine-learning-problem/)
 
-[2]: [How to Prepare Data For Machine Learnin](https://machinelearningmastery.com/how-to-prepare-data-for-machine-learning/)
+[2]: [How to Prepare Data For Machine Learning](https://machinelearningmastery.com/how-to-prepare-data-for-machine-learning/)
 
 [3]: [Quick and Dirty Data Analysis for your Machine Learning Problem](https://machinelearningmastery.com/quick-and-dirty-data-analysis-for-your-machine-learning-problem/)
 
@@ -232,7 +234,7 @@ Pick a problem that you can complete in 1-to-2 hours and use the checklist to co
 
 [9]: [Save And Finalize Your Machine Learning Model in R](https://machinelearningmastery.com/finalize-machine-learning-models-in-r/)
 
-----------
+-----
 
 [^ml_checklist_howto]: <https://machinelearningmastery.com/machine-learning-checklist/> "How to Use a Machine Learning Checklist to Get Accurate Predictions, Reliably"
 

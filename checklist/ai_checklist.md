@@ -329,9 +329,36 @@ Unsupervised ML
 5. Natural Language Processing
 6. Reinforcement Learning
 
+
+## Using AI Tools for Development
+
+AI tools work best when they operate inside strong engineering boundaries [11].
+
+AI improves disciplined teams more than undisciplined ones.
+
+AI does not replace discipline.
+
+Here is a checklist for using AI Tools [11]:
+
+1. Is the user problem clear?
+2. Is AI the simplest useful solution?
+3. Do we understand the data flow?
+4. Are permissions enforced before model calls?
+5. What should never be sent to the model?
+6. What happens when output is wrong?
+7. What happens when the provider is slow or unavailable?
+8. Do we have tests for important failure modes?
+9. Can we monitor latency, cost, and errors?
+10. Can users verify or reject the output?
+11. Is there a rollout and rollback plan?
+12. Does this follow existing architecture?
+13. Who owns this after launch?
+
+
 ## NLP Checklist
 
 There is an NLP checklist given in [1] and project guide in [2].
+
 
 ## References
 
@@ -354,6 +381,8 @@ There is an NLP checklist given in [1] and project guide in [2].
 [9]: [Elements of AI Project Management](https://pub.towardsai.net/elements-of-ai-project-management-6cac1826bdbb)
 
 [10]: [7 Tips for Choosing the Right Machine Learning Infrastructure](https://www.aiiottalk.com/right-machine-learning-infrastructure/)
+
+[11]: https://pub.towardsai.net/ai-will-not-fix-a-team-that-lacks-engineering-discipline-db1697eca7c5?source=rss----98111c9905da---4 "AI Will Not Fix a Team That Lacks Engineering Discipline"
 
 ----------
 

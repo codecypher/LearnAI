@@ -7,7 +7,6 @@ The student of AI needs a healthy dose of _skepticism_, especially when reading 
 > Occam’s Razor: The simplest model that fits the data is usually the best.
 
 - The simplest model that correctly fits the data is also the most consistent.
-
 - Prefer the simplest hypothesis consistent with the data.
 
 The term **bootstrap** means to randomly draw (with replacement) rows from the training dataset.
@@ -74,7 +73,7 @@ IEEE Dataport currently has almost 700,000 users and over 1,500 data sets.
 
 Most importantly, this offering should support reproducible research, a topic that Computer will discuss further in future issues.
 
-## Choose the right algorithm
+## Choose the Right Algorithm
 
 How to choose the right machine learning algorithm [8]:
 
@@ -306,7 +305,7 @@ S. Russell and P. Norvig, Artificial Intelligence: A Modern Approach, 4th ed. Up
 
 [7]: T. Shin, [4 Reasons Why You Shouldn't Use Machine Learning](https://towardsdatascience.com/4-reasons-why-you-shouldnt-use-machine-learning-639d1d99fe11), Towards Data Science, Oct 5, 2021.
 
-------
+-----
 
 [8]: [Do you know how to choose the right machine learning algorithm among 7 different types?](<https://towardsdatascience.com/do-you-know-how-to-choose-the-right-machine-learning-algorithm-among-7-different-types-295d0b0c7f60>
 

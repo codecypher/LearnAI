@@ -111,7 +111,7 @@ NER is the process to find the important labels that are present in the text.
 [10 Exciting Project Ideas Using Large Language Models (LLMs) for Your Portfolio](https://towardsdatascience.com/10-exciting-project-ideas-using-large-language-models-llms-for-your-portfolio-970b7ab4cf9e)
 
 
-## LLM Tools and Lubraries
+## LLM Tools and Libraries
 
 Ollama: a local runtime that allows you to run open-source AI models on your machine, making it easy to integrate and use various AI applications. Ollama supports multiple models and provides tools for building AI-powered applications.
 
@@ -138,7 +138,7 @@ Weaviate is a vector search engine that enables semantic search across multiple 
 
 Weights and Biases is an experiment tracking and model monitoring platform.
 
-LangSmith is a platform for monitoring, evaluating, and deploying AI agents and LLM applications. 
+LangSmith is a platform for monitoring, evaluating, and deploying AI agents and LLM applications.
 
 
 ## Integrating LLMs into Software System

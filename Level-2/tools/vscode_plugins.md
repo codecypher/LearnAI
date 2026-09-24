@@ -27,12 +27,10 @@
 - Regex Snippets
 - Postman VS Code Extension
 
-
 ### Code Snapsbots
 
 - CodeSnap
 - Pola Code
-
 
 ### Python
 
@@ -50,7 +48,6 @@
 - Python Test Explorer
 
 - LiveCode for python (optional)
-
 
 ### Development
 
@@ -74,7 +71,6 @@
 - Notion
 - Remote WSL
 
-
 ### Themes
 
 - Atom One Dark Theme
@@ -84,7 +80,6 @@
 - Material Icon Theme
 - Noctis
 - Peacock
-
 
 ### JavaScript
 
@@ -98,7 +93,6 @@
 - JavaScript Booster
 - Turbo Console Log
 - VS Code React Refactor
-
 
 ## References
 
@@ -115,5 +109,3 @@
 [My Favorite VS Code Extensions For Flutter and Programming](https://itnext.io/my-favorite-vs-code-extensions-for-flutter-and-programming-bc87b3284c0a)
 
 [Top 10 VS Code Extensions to Boost Productivity](https://towardsdatascience.com/top-10-vs-code-extensions-to-boost-productivity-526595b18325)
-
-
