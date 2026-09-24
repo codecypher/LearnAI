@@ -45,30 +45,82 @@ The AI Collaboration Matrix provides a snapshot of AI usage and a flexible, forw
 
 By placing AI’s role on a two-dimensional spectrum that compares human vs. AI-produced resources and human vs. AI-led processes, we can track an organization’s journey toward fully agentic, AI-powered work and identify where to focus next.
 
-## 5 Steps for Successful AI Projects
+## Tips for Successful AI Projects
 
-Using machine learning to help your business achieve edge on competition requires a plan and roadmap [3].
+Using machine learning to help your business achieve edge on competition requires a plan.
 
-You cannot simply hire a group of data scientists and hope that they will be able to produce results for the business.
+### Focus on the Business Problem
 
-1. Focus on the Business Problem
+- Identify Business Problem
+- Identify hidden data resources that you can take advantage of
 
-   Identify Business Problem
+### The Machine Learning Cycle
 
-   Where are the hidden data resources that you can take advantage of?
+The Machine Learning Lifecycle is a structured process used to develop, train, deploy and maintain machine learning models efficiently [3].
 
-2. The Machine Learning Cycle
+- Provides a systematic workflow for building scalable and reliable ML models
+- Helps continuously improve model performance through monitoring and retraining
 
-3. Pilot Project
+### Pilot Project
 
-   Step 1: Define an opportunity for growth
-   Step 2: Conduct pilot project with your concrete idea from Step 1
-   Step 3: Evaluation
-   Step 4: Next actions
+- Define an opportunity for growth
+- Conduct pilot project with your concrete idea from Step 1
+- Evaluation
+- Next actions
 
-4. Determining the Best Learning Model
+### Determining the Best Learning Model
 
-5. Tools to determine algorithm selection
+Here are some  tips for choosing machine learning models [8]:
+
+- Understand the data
+- Define the Problem Clearly
+- Start Simple
+- Evaluate Multiple Models
+- Consider Computational Resources
+
+### Choosing the Right Algorithm for Your Problem
+
+Here is a Question-Based Template designed to guide AI, ML, and data analysis project leaders to the right choice of ML algorithm to use for addressing their specific problem [9].
+
+There is also a visual, decision tree-based guide to navigate you towards the most suitable machine learning algorithm for your task, depending on the nature and complexity of your available data [10].
+
+#### Key Question 1: What type of problem do you need to solve?
+
+- 1.A. Do you need to predict something?
+- 1.B. If so, is it a numerical value, or classification into categories?
+- 1.C. If you want to predict a numerical value, is it based on other variables or features? Or are you predicting future values based on past historical ones?
+
+#### Key Question 2: What type of data do you have?
+
+2.A. Structured and simpler data arranged in tables with few attributes can be leveraged with simple ML algorithms like linear regression, decision tree classifiers, k-means clustering, etc.
+
+2.B. Data with intermediate complexity (structured but having dozens of attributes, or low-resolution images) can be addressed with ensemble methods for classification and regression, which combine multiple ML model instances into one to attain better predictive results.
+
+Examples of ensemble methods are random forests, gradient boosting, and XGBoost. For other tasks like clustering, try algorithms like DBSCAN or spectral clustering.
+
+2.C. Last, highly complex data such as images, text, and audio usually require more advanced architectures such as deep neural networks or even transformer-based architectures like large language models (LLMs
+
+#### Key Question 3: What level of interpretability do you need?
+
+In certain contexts where it is important to understand how an ML algorithm makes decisions like predictions, which input factors influence the decision, and how, interpretability is another important aspect that may influence your algorithm choice.
+
+Rule of thumb: the simpler the algorithm, the more interpretable.
+
+#### Key Question 4: What volume of data do you handle?
+
+This one is closely related to key question 2. Some ML algorithms are more efficient than others, depending on the volume of data used for training them.
+
+In contast, complex options such as neural networks normally require larger amounts of data to learn to perform the task they are built for, even at the cost of sacrificing efficient training.
+
+A good rule here is that data volume is in most cases tightly related to data complexity when it comes to choosing the right type of algorithm.
+
+#### Application Examples
+
+Here is a table with some real-world use cases where the decision factors considered in this article are outlined [10]:
+
+### Tools to perform algorithm selection
+
+TODO: Add notes on AutoML tools for model selection.
 
 ## AI Use Cases
 
@@ -244,7 +296,6 @@ Here are eight mistakes to avoid when using machine learning [2]:
 
    Before starting a machine learning project, it is important to determine whether the project is worth doing and to consider its ramifications.
 
-
 ## Using AI Tools for Development
 
 Faster code does not mean better engineering [7].
@@ -253,7 +304,7 @@ AI does not fix poor engineering habits [7].
 
 If a team already skips design discussions, ignores observability, avoids refactoring, merges weak pull requests, and treats production issues as surprises, AI will not solve the root problem. AI will simply create bad code faster.
 
-AI is a multiplier, not a foundation
+AI is a multiplier and not a foundation.
 
 AI tools work best when they operate inside strong engineering boundaries.
 
@@ -262,45 +313,11 @@ AI improves disciplined teams more than undisciplined ones.
 AI does not replace discipline [7]:
 
 - It does not define the problem.
-
 - It does not protect your architecture.
-
 - It does not guarantee secure code.
-
 - It does not create meaningful tests by itself.
-
 - It does not understand your users unless you bring that context.
-
 - It does not own the production system after launch.
-
-Here is a checklist for using AI Tools [7]:
-
-1. Is the user problem clear?
-
-2. Is AI the simplest useful solution?
-
-3. Do we understand the data flow?
-
-4. Are permissions enforced before model calls?
-
-5. What should never be sent to the model?
-
-6. What happens when output is wrong?
-
-7. What happens when the provider is slow or unavailable?
-
-8. Do we have tests for important failure modes?
-
-9. Can we monitor latency, cost, and errors?
-
-10. Can users verify or reject the output?
-
-11. Is there a rollout and rollback plan?
-
-12. Does this follow existing architecture?
-
-13. Who owns this after launch?
-
 
 ## References
 
@@ -308,7 +325,7 @@ Here is a checklist for using AI Tools [7]:
 
 [2]: https://medium.com/@monodeepets77/8-mistakes-to-avoid-while-using-machine-learning-d61af954b9c9 "8 Mistakes to avoid while using Machine Learning"
 
-[3]: https://addiai.com/successful-machine-learning-project/ "5 Steps to follow for Successful Machine Learning Project"
+[3]: https://www.geeksforgeeks.org/machine-learning/machine-learning-lifecycle/ "Machine Learning Lifecycle"
 
 [4]: https://www.tinybird.co/blog-posts/ai-features-that-work/ "Hype v. Reality: 5 AI features that actually work in production"
 
@@ -318,7 +335,13 @@ Here is a checklist for using AI Tools [7]:
 
 [7]: https://pub.towardsai.net/ai-will-not-fix-a-team-that-lacks-engineering-discipline-db1697eca7c5?source=rss----98111c9905da---4 "AI Will Not Fix a Team That Lacks Engineering Discipline"
 
-----------
+[8]: https://machinelearningmastery.com/tips-for-choosing-the-right-machine-learning-model-for-your-data/ "Tips for Choosing the Right Machine Learning Model for Your Data"
+
+[9]: https://machinelearningmastery.com/practical-guide-choosing-right-algorithm-your-problem/ "A Practical Guide to Choosing the Right Algorithm for Your Problem"
+
+[10]: https://www.kdnuggets.com/choosing-the-right-machine-learning-algorithm-a-decision-tree-approach "Choosing the Right Machine Learning Algorithm: A Decision Tree Approach"
+
+-----
 
 [Strategic ROI Assessment for AI Projects: A Pre-Implementation Framework](https://pub.towardsai.net/strategic-roi-assessment-for-ai-projects-a-pre-implementation-framework-24dd9827d140)
 
@@ -326,8 +349,8 @@ Here is a checklist for using AI Tools [7]:
 
 [Governing the Unseen Risks of GenAI: Why Bias Mitigation and Human Oversight Matter Most](https://securityboulevard.com/2025/11/governing-the-unseen-risks-of-genai-why-bias-mitigation-and-human-oversight-matter-most/)
 
-----------
+-----
 
 [Generative AI System Design Interview: A Step-by-Step Guide](https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/)
 
-[^ai_hierarchy]: <https://hackernoon.com/the-ai-hierarchy-of-needs-18f111fcc007>
+[^ai_hierarchy]: https://hackernoon.com/the-ai-hierarchy-of-needs-18f111fcc007 "The AI Hierarchy of Needs"
