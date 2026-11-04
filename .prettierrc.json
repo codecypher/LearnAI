@@ -1,0 +1,15 @@
+{
+    "trailingComma": "none",
+    "tabWidth": 4,
+    "useTabs": false,
+    "semi": false,
+    "singleQuote": true,
+    "overrides": [
+        {
+            "files": "*.css",
+            "options": {
+                "semi": true
+            }
+        }
+    ]
+}
