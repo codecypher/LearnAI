@@ -84,7 +84,6 @@ Perhaps the only way to truly settle the debt is to shift the conversation—fro
 
 The future of AI depends not on how much it can promise, but on how much it can actually deliver. If that shift does not happen soon, the reckoning will be inevitable.
 
-
 ## False Promises of AI
 
 A new report states that the artificial intelligence boom has been wildly profitable for tech billionaires and catastrophically hollow for everyone else [4]:
@@ -93,12 +92,11 @@ Jeff Bezos, Mark Zuckerberg, Elon Musk, and Sam Altman have built fortunes on AI
 
 The report documents a pattern of deception and excess: "Beyond the hype, you can find a litany of false promises, questionable investments, and just plain decadence, complicating both their predictions for the future and claims to come in peace."
 
-Zuckerberg burned through $77 billion before pivoting to AI. The report finds that 10 percent of Meta's profits came from scam ads — funds that also financed his 4,500 square foot underground bunker in Hawaii.
+Zuckerberg burned through $77 billion on VR before pivoting to AI. The report finds that 10 percent of Meta's profits came from scam ads — funds that also financed his 4,500 square foot underground bunker in Hawaii.
 
 Musk's AI platform X has been hit with allegations of 679,584 antisemitic posts over a one-year period between 2024 and 2025. Musk's Grok generated 1.8 million graphic images of women during a nine-day period last winter as his net worth continued to ascend to $850 billion.
 
 Despite a promise by OpenAI to invest $1.4 trillion in AI infrastructure over the next eight years, the company's reported revenue in 2025 came in at $20 billion, a 70-to-1 spending-to-revenue ratio for a company promising to reshape the economy.
-
 
 ## AI Bubble
 

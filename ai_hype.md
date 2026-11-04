@@ -5,16 +5,13 @@
 The student of AI needs the following:
 
 - A healthy dose of skepticism [4].
-
 - Knowledge of the history and reasons that led to the _AI Winter_.
-
 - Be aware of the hype, misinformation, and  alchemy that is common in the field of AI.
 
 The two guiding principles of AI engineering are:
 
 1. Occam's Razor
 2. No Free Lunch Theorem
-
 
 ## The AI Hype
 
@@ -26,12 +23,11 @@ M. Asay, [AI’s moment of disillusionment](https://www.infoworld.com/article/37
 
 S. Collins, [Beyond the Hype: The $40B GenAI Mistake and the “Learning Gap” 95% of Companies Don’t See](https://pub.towardsai.net/beyond-the-hype-the-40b-genai-mistake-and-the-learning-gap-95-of-companies-dont-see-aacc3bf446b0), Towards AI, Oct. 22, 2025.
 
-
 ## AI Failures in the News
 
-S. Estrada, [MIT report: 95% of generative AI pilots at companies are failing](https://fortune.com/2025/08/18/mit-report-95-percent-generative-ai-pilots-at-companies-failing-cfo/), Fortune, Aug. 18, 2025. 
+S. Estrada, [MIT report: 95% of generative AI pilots at companies are failing](https://fortune.com/2025/08/18/mit-report-95-percent-generative-ai-pilots-at-companies-failing-cfo/), Fortune, Aug. 18, 2025.
 
-T. Claburn, [AI agents? Yes, let's automate all sorts of things that don't actually need it](https://www.theregister.com/2025/01/27/ai_agents_automate_argument/), The Register, Jan. 27, 2025. 
+T. Claburn, [AI agents? Yes, let's automate all sorts of things that don't actually need it](https://www.theregister.com/2025/01/27/ai_agents_automate_argument/), The Register, Jan. 27, 2025.
 
 M. Oitzman, [OpenAI abandons robotics research](https://www.therobotreport.com/openai-abandons-robotics-research/), The Robot Report, July 20, 2021.
 
@@ -57,13 +53,13 @@ J. F. DeFranco and J. Voas, "[Reproducibility, Fabrication, and Falsification](h
 
 M. Parashar, M. A. Heroux,and V. Stodden, "[Research Reproducibility](https://ieeexplore.ieee.org/document/9847295)," Computer, vol. 55, no. 8, pp. 16-18, Aug. 2022, doi: 10.1109/MC.2022.3176988.
 
-----------
+-----
 
 T. Hoefler, "[Benchmarking Data Science: 12 Ways to Lie With Statistics and Performance on Parallel Computers](https://ieeexplore.ieee.org/document/9847318)," Computer, vol. 55, no. 8, pp. 49-56, Aug. 2022, doi: 10.1109/MC.2022.3152681.
 
 D. Kreps and M. d. Roche, "[The International Federation for Information Processing Code of Ethics in Context](https://ieeexplore.ieee.org/document/10417801)," Computer, vol. 57, no. 2, pp. 24-32, Feb. 2024, doi: 10.1109/MC.2023.3327628.
 
-----------
+-----
 
 R. Mariani et al., "[Trustworthy AI — Part I](https://ieeexplore.ieee.org/document/10042078)," Computer, vol. 56, no. 2, pp. 14-18, Feb. 2023, doi: 10.1109/MC.2022.3227683.
 
@@ -92,4 +88,3 @@ R. Mariani et al., "[Trustworthy AI — Part III](https://ieeexplore.ieee.org/do
 [8]: M. Parashar, M. A. Heroux,and V. Stodden, "Research Reproducibility," Computer, vol. 55, no. 8, pp. 16-18, Aug. 2022, doi: 10.1109/MC.2022.3176988.
 
 [9]: T. Shin, “4 Reasons Why You Shouldn’t Use Machine Learning,” Towards Data Science, Oct. 5, 2021.
-
