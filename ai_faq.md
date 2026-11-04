@@ -1,6 +1,5 @@
 # Frequently Asked Questions
 
-
 ## What is the difference between AI and ML
 
 In AI, we define things in terms of _agents_ (agent programs) and the _standard model_ (rational agents). Thus, we are performing _machine learning_ when the agent is a _computer_ versus Robot, AV, or UAV.
@@ -9,13 +8,11 @@ Answer: When the agent is a computer.
 
 If you did not know the answer, you need to reevaluate your approach to learning AI. You need to concentrate on learning the key concepts, theory, and algorithms but avoid study of SOTA algorithms since the algorithms are constantly changing.
 
-
 ## Do I need a Master’s Degree
 
 If you are going to spend the time to study AI/ML then you might as well invest in an online degree which will greatly increase your career opportunities (and a requirement for most all AI/ML engineer positions).
 
 The best approach would be to find several job postings that look interesting to you and see what skills and tools they require.
-
 
 ## Recommended Tutorials and Books
 
@@ -24,16 +21,6 @@ The best approach would be to find several job postings that look interesting to
 Open source projects can be a good resume builder such as PyCaret, scikit-learn, etc. GitHub repos usually have a “good first issue” or "help wanted" tags on the Issues tab. It can be a bit of work but u should be able to find some open-source project that u can contribute to.
 
 It is also good to do some small projects yourself to create a portfolio that you can share on your own GitHub repos, even if it is just to fork and add some features/enhancements yourself to some small ML repo that you find interesting.
-
-
-## How to access Safari Online
-
-If you have an .edu email account you can get free access to [Safari Online][^safari_online] which has some good books for beginners as well as advanced books on various AI/ML topics.
-
-[Creating an Account](https://ecpi.libguides.com/SafariOReilly)
-
-Some good books are “Artificial Intelligence with Python”, “Artificial Intelligence by Example”, and “Programming Machine Learning”.
-
 
 ## What software do you recommend
 
@@ -45,29 +32,25 @@ Some cloud tools that I use are comet.ml, DagsHub, and Deta.
 
 There are also some AutoML tools that I use a lot such as AutoGluon, DataPrep, and Orange. You can take a look at my Github Stars lists and LearnAI repo.
 
-https://github.com/codecypher
-
-
+[codecypher](https://github.com/codecypher)
 
 ## Can I learn AI from research papers
 
 Research papers are not a good resource for learning a topic. The reader is assumed to already know the core theory and concepts covered in textbooks. Thus, the best approach to learning AI is a good _textbook_.
 
+-----
 
-A textbook is a summary of the core knowledge for a topic and meant to be a reputable source of information. A research paper is attempting to add the that body of knowledge so I is meant to be read critically and the results should not be accepted as true. 
-
+A textbook is a summary of the core knowledge for a topic and meant to be a reputable source of information. A research paper is attempting to add the that body of knowledge so I is meant to be read critically and the results should not be accepted as true.
 
 AI is considered a graduate level topic in computer science, so there a lot of Math and CS prerequisites that are needed first to properly learn the core theory and concepts. Otherwise, it will be problematic at some point when you try to actually use AI to solve a real-world problem.
 
+In a recent IEEE survey, 34% of authors admitted to manipulating their results and that’s only the ones that would admit it. I think it is a common practice, so I believe the actual number is 70% or higher.
 
-In a recent IEEE survey, 34% of authors admitted to manipulating their results and that’s only the ones that would admit it. I think it is a common practice, so I believe the actual number is 70% or higher. 
+In general, the results of AI research articles are irreproducible. In fact, there is a major problem with integrity in AI research right now.
 
-In general, the results of AI research articles are irreproducible. In fact, there is a major problem with integrity in AI research right now. 
-
-The further away you get from reputable publications such as IEEE, the worse it gets.  I have seen numerous articles that I have no idea how they were ever published (major mistakes and errors). 
+The further away you get from reputable publications such as IEEE, the worse it gets.  I have seen numerous articles that I have no idea how they were ever published (major mistakes and errors).
 
 When learning AI, you need a healthy dose of skepticism in what you read, especially research articles which discussed in the Russell and Norivg and other graduate textbooks.
-
 
 ## How to ask an AI/ML question
 
@@ -91,22 +74,17 @@ Briefly describe the following (1-2 sentences per item):
 
 In AI and CS, you should always be able to describe in a few sentences what you are doing and why you are doing it. It is the first step in defining an AI problem. Also, there is a category and/or terminology for everything we do in CS. It always applies whether you are doing research or working on a simple problem. If you have not taken the time to think about the problem and put it into writing then u really don’t know what you are doing, do you?
 
-
-
 ## How to choose a performance metric
 
 [Machine Learning Performance Metrics](./ml/performance_metrics.md)
 
 In general, all the data preparation, memory optimization, and hypertuning methods and techniques that you can possibly apply to the model and dataset will result in only a small performance improvement, say 3-5% improvement in accuracy. Therefore, it is always best to obtain a baseline for many models using the dataset with AutoML tools then choose the top performers for further study.
 
-
-
 ## How to Choose an ML Algorithm
 
 First, remember to take a data-centric approach, so avoid asking “what models should I use”. Thus, the first step in ML process would be to perform EDA to understand the properties of your model such as balanced (classification) or Gaussian (regression).
 
 Concentrate on learning the key concepts such as data preparation, feature engineering, model selection, sklearn and tflow and pipelines, tflow Dataset class, etc. It also would be good to work through a few end-to-end classification/regression examples to get an idea for some of the steps involved.
-
 
 There are some applied AI/ML processes and techniques given in Chapter 19 of the following textbooks that include a procedure for model selection:
 
@@ -118,19 +96,17 @@ J Brownlee also describes an “Applied Machine Learning Process” that I have 
 
 I have some notes and checklists that I have created concerning the applied AI process in general. The process is  similar to the approach of SWE best practices given in SWEBOK.
 
-
 [Getting Started with AI](https://medium.com/towards-artificial-intelligence/getting-started-with-ai-f565c7877bee)
 
 [LearnML](https://github.com/codecypher/LearnML)
 
+-----
 
 [An End-to-End Machine Learning Project — Heart Failure Prediction](https://towardsdatascience.com/an-end-to-end-machine-learning-project-heart-failure-prediction-part-1-ccad0b3b468a?gi=498f31004bdf)
 
 [A Beginner’s Guide to End to End Machine Learning](https://towardsdatascience.com/a-beginners-guide-to-end-to-end-machine-learning-a42949e15a47?gi=1736097101b9)
 
 [End-to-End Machine Learning Workflow](https://medium.com/mlearning-ai/end-to-end-machine-learning-workflow-part-1-b5aa2e3d30e2)
-
-
 
 ## How to choose classification model
 
@@ -168,8 +144,6 @@ I have lots of notes on text classification/sentiment analysis and NLP data prep
 
 There are a lot of steps to text preprocessing in which mistakes can be made and it is often trial-and-error, so I prefer using AutoML to obtain baselines first before spending a lot of effort in coding.
 
-
-
 ## Should I start learning ML by coding an algorithm from scratch
 
 I would recommend using Orange, AutoGluon, PyCaret and similar tools to evaluate many models (10-20) on your dataset. The tools will also help detect any issues with the data as well as perform the most common transforms needed for the various algorithms. Then, select the top 3 for further study.
@@ -177,7 +151,6 @@ I would recommend using Orange, AutoGluon, PyCaret and similar tools to evaluate
 AutoML tools are the future of AI, so now would be a good time to see how they work rather than spend a lot of time coding the wrong algorithm from scratch which is a common beginner mistake. In short, you need to learn a data-centric approach.
 
 The rule of thumb is that a deep learning model should be your last choice (Occam's Razor).
-
 
 ## The obsession to understand how algorithms work
 
@@ -197,9 +170,7 @@ Here are a few points to keep in mind:
 
 6. With effort, almost any algorithm can be made to fit any dataset (brute-force) which is not the proper approach to AI.
 
-6. Any competent software engineer can implement any algorithm.
-
-
+7. Any competent software engineer can implement any algorithm.
 
 A common misconception when people begin learning ML is to implement algorithms from scratch.
 
@@ -223,10 +194,7 @@ Note that J. Brownlee has a PhD in CS. Thus, this is not just my personal opinio
 
 The problem with users posting this kind of material is that they inadvertently drag other newcomers down the same futile rabbit hole of code from scratch.
 
-
 [Stop Coding Machine Learning Algorithms From Scratch](https://machinelearningmastery.com/dont-implement-machine-learning-algorithms/)
-
-
 
 ## Is image channels first or last
 
@@ -238,9 +206,7 @@ A huge gotcha with both PyTorch and Keras. Actually, you need to sometimes need 
 
 [A Gentle Introduction to Channels-First and Channels-Last Image Formats](https://machinelearningmastery.com/a-gentle-introduction-to-channels-first-and-channels-last-image-formats-for-deep-learning/)
 
-
 [Learning to Resize in Computer Vision](https://keras.io/examples/vision/learnable_resizer/)
-
 
 ## How to share your work
 
@@ -248,15 +214,11 @@ Your are always welcome to share your work in the following Discord AI forum cha
 
 A key ML skill needed is deployment. There are several options available but the simplest method to try first would be streamlit or deta cloud services.
 
-
-
 ## How to choose a Cloud Platform
 
 [Comparison of Basic Deep Learning Cloud Platforms](TODO)
 
 [Colaboratory FAQ](https://research.google.com/colaboratory/faq.html#resource-limits)
-
-
 
 ## How to Choose a Dataset
 
@@ -273,8 +235,6 @@ When learning ML, it is best to look for the following properies in a dataset:
 5. Try to keep the maximum number of features to 10 or so.
 
 6. Try to avoid datasets for anomaly or fraud detection since they are almost always imbalanced and difficult to solve.
-
-
 
 ## Common Questions on Encoding
 
@@ -298,14 +258,14 @@ You will need to prepare or encode each variable (column) in your dataset separa
 
 Alternately, you can use the `ColumnTransformer` to conditionally apply different data transforms to different input variables.
 
-
 ## Common Questions on Normalization
 
 This section lists some common questions and answers when scaling numerical data.
 
 ### Which Scaling Technique is Best
 
-This is impossible to answer. The best approach would be to evaluate models on data prepared with each transform and use the transform or combination of transforms that result in the best performance for your data set and model.
+This is impossible to answer. The best approach would be to evaluate models on data prepared with each transform and use the transform or combination of transforms that result in the b
+est performance for your data set and model.
 
 ### Should I Normalize or Standardize
 
@@ -337,8 +297,6 @@ Later, you may have new data with values smaller or larger than the minimum or m
 
 One simple approach to handling this may be to check for out-of-bound values and change their values to the known minimum or maximum prior to scaling. Alternately, you can estimate the minimum and maximum values used in the normalization manually based on domain knowledge.
 
-
-
 ## Optimize Performance
 
 Performance is always an issue with ML models upon deployment.
@@ -348,8 +306,6 @@ Rather than trying to find the perfect tool, I would 1) analyze your system arch
 I have some notes on memory optimization and performance in the tips folder under LearnAI. The first step would be to identify the bottlenecks or performance issues.
 
 The simplest things to try would be modin and parquet which can greatly improve performance for common ML use cases. The other approaches or even trying another tool will require a lot more time and effort.
-
-
 
 ## How does NLP work
 
@@ -361,23 +317,19 @@ In general, there are few common issues with NLP: Lexical Ambiguity, Syntax Leve
 
 The most common approach to NLP right now is to start with a pretrained model and then retrain/extend to your own custom dataset.
 
-
-
 ## TextRank
 
 Can someone explain to me the damping factor `d` in the TextRank formula? `S = d*S.M + (1 - d)` where `M` is the adjacency matrix of nodes.
 
 It js explained in Mihalcea & Tarau (2004) as "the probability of jumping from a given vertex to another random vertex in the graph" but it does noy quite sink it for me.
 
+-----
 
 TextRank is a classic technique for keyword extraction and text summarization that is based on PageSearch except for text rather than pages. Recall that d is the damping constant and it comes from the PageRank algorithm. Basically, d is the probability (at any step) that an imaginary web surfer will continue clicking on page links.
 
 In general, you should be cautious about giving into the temptation to try to understand the internal details of ML algorithms. 1) there are simply too many algorithms for any person to fully understand and 2) any competent software engineer can implement any algorithm, so u really haven’t accomplished very much 3) it is paramount to learn how to _use_ the algorithms to solve common textbook problems and eventually be able to solve real-world problems, in that order. Exploring the implementation details should come much later, if at all. Anyway, that’s my expert advice.
 
-
 [PageRank](https://en.wikipedia.org/wiki/PageRank?wprov=sfti1)
-
-
 
 ## How to Develop a Chatbot
 
@@ -389,8 +341,6 @@ Chatbots are better to use pretrained model and software. You can take a look at
 
 [Python Chatbot Project – Learn to build your first chatbot using NLTK and Keras](https://data-flair.training/blogs/python-chatbot-project/)
 
-
-
 ## Why are Robots not more common
 
 Robot soccer is one type of classic robotics toy problem, often involving multiagent reinforcement learning (MARL).
@@ -399,13 +349,10 @@ In robotics, there are a lot of technical issues (mainly safety related) involve
 
 There has been limited success for certain application areas such as the robot dog and of course robotic kits for arduino and raspberry pi (for hobbyists) but more practical applications still seem to be more elusive.
 
-In general, it costs a lot of money for R&D in robotics and it takes a long time for ROI. For example, openai recently disbanded its robotics division dues to lack of data and capital. Perhaps more interesting is the lack of a proper dataset which is needed for real-world robotics applications in the wild.
+In general, it costs a lot of money for R&D in robotics and it takes a long time for ROI. For example, openai recently disbanded its robotics division dues to lack of data and capital.
 
+Perhaps more interesting is the lack of a proper dataset which is needed for real-world robotics applications in the wild.
 
 [OpenAI disbands its robotics research team](https://venturebeat.com/2021/07/16/openai-disbands-its-robotics-research-team/)
 
 [Boston Dynamics now sells a robot dog to the public, starting at $74,500](https://arstechnica.com/gadgets/2020/06/boston-dynamics-robot-dog-can-be-yours-for-the-low-low-price-of-74500/)
-
-
-
-[^safari_online]: https://www.oreilly.com/member/login/?next=%2Fapi%2Fv1%2Fauth%2Fopenid%2Fauthorize%2F%3Fclient_id%3D235442%26redirect_uri%3Dhttps%3A%2F%2Flearning.oreilly.com%2Fcomplete%2Funified%2F%26state%3DC3l2tLIMbQr0lpQKLDHucVJomOkg52rX%26response_type%3Dcode%26scope%3Dopenid%2Bprofile%2Bemail&locale=en "Safari Online"
