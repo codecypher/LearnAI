@@ -1,0 +1,72 @@
+{
+    "code-block-style": {
+        "style": "fenced"
+    },
+    "code-fence-style": {
+        "style": "backtick"
+    },
+    "emphasis-style": {
+        "style": "underscore"
+    },
+    "extended-ascii": {
+        "ascii-only": true
+    },
+    "fenced-code-language": {
+        "allowed_languages": [
+            "bash",
+            "html",
+            "javascript",
+            "json",
+            "markdown",
+            "py",
+            "python",
+            "txt",
+            "zsh"
+        ],
+        "language_only": true
+    },
+    "heading-style": {
+        "style": "atx"
+    },
+    "hr-style": {
+        "style": "-----"
+    },
+    "line-length": {
+        "strict": false,
+        "code_blocks": false,
+        "line_length": 80
+    },
+    "link-image-style": {
+        "collapsed": false,
+        "shortcut": true,
+        "url_inline": false
+    },
+    "no-duplicate-heading": {
+        "siblings_only": true
+    },
+    "ol-prefix": {
+        "style": "ordered"
+    },
+    "proper-names": {
+        "code_blocks": false,
+        "names": [
+            "CommonMark",
+            "JavaScript",
+            "Markdown",
+            "markdown-it",
+            "markdownlint",
+            "Node.js"
+        ]
+    },
+    "reference-links-images": {
+        "shortcut_syntax": false
+    },
+    "strong-style": {
+        "style": "asterisk"
+    },
+    "ul-style": {
+        "style": "dash"
+    },
+    "MD010": false,
+    "MD013": false
+}
